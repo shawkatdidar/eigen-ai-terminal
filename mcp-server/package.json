@@ -1,11 +1,9 @@
 {
   "name": "eigen-ai-radar-mcp",
-  "version": "0.1.0",
-  "description": "MCP server for AI Radar — live intelligence on the AI landscape. 10 tools for signals, ripple effects, wiki knowledge base, and personalized filtering.",
+  "version": "0.2.0",
+  "description": "MCP server for Eigen AI Terminal — live intelligence on the AI landscape. 10 tools for signals, ripple effects, wiki knowledge base, and personalized filtering.",
   "type": "module",
-  "bin": {
-    "eigen-ai-radar-mcp": "./dist/index.js"
-  },
+  "bin": "./dist/index.js",
   "files": [
     "dist",
     "src"
@@ -21,7 +19,8 @@
     "intelligence",
     "agents",
     "openclaw",
-    "claude-code"
+    "claude-code",
+    "eigen"
   ],
   "license": "MIT",
   "dependencies": {

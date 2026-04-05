@@ -130,7 +130,7 @@ async function loadData(): Promise<RadarData> {
   }
 
   // Fall back to hosted URL (once deployed)
-  const DATA_URL = process.env.AI_RADAR_DATA_URL || "https://eigen-ai-terminal.vercel.app/data/radar.json";
+  const DATA_URL = process.env.EIGEN_DATA_URL || "https://web-one-wine-82.vercel.app/data/radar.json";
   try {
     const res = await fetch(DATA_URL);
     cachedData = await res.json() as RadarData;
@@ -462,7 +462,7 @@ server.tool(
 
 // ── Wiki Knowledge Base Tools ───────────────────────────────
 
-const WIKI_BASE_URL = process.env.AI_RADAR_WIKI_URL || "https://web-one-wine-82.vercel.app/wiki";
+const WIKI_BASE_URL = process.env.EIGEN_WIKI_URL || "https://web-one-wine-82.vercel.app/wiki";
 
 interface WikiManifest {
   lastUpdated: string;
@@ -704,7 +704,7 @@ server.tool(
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("AI Radar MCP server running");
+  console.error("Eigen AI Terminal MCP server running");
 }
 
 main().catch(console.error);
