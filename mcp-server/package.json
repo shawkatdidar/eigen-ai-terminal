@@ -1,15 +1,29 @@
 {
-  "name": "ai-radar-mcp",
+  "name": "eigen-ai-radar-mcp",
   "version": "0.1.0",
-  "description": "MCP server for AI Radar — live intelligence on the AI landscape",
+  "description": "MCP server for AI Radar — live intelligence on the AI landscape. 10 tools for signals, ripple effects, wiki knowledge base, and personalized filtering.",
   "type": "module",
   "bin": {
-    "ai-radar-mcp": "./dist/index.js"
+    "eigen-ai-radar-mcp": "./dist/index.js"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/index.ts"
   },
+  "keywords": [
+    "mcp",
+    "ai",
+    "radar",
+    "intelligence",
+    "agents",
+    "openclaw",
+    "claude-code"
+  ],
+  "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
     "zod": "^4.3.6"
