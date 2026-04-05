@@ -1,0 +1,1914 @@
+{
+  "description": "AI Radar Knowledge Base — the full wiki of AI landscape intelligence",
+  "lastUpdated": "2026-04-05T23:37:25.683Z",
+  "totalFiles": 49,
+  "structure": {
+    "nodes": "16 domain trackers covering the AI landscape",
+    "entities": "Company and model pages with timelines and connections",
+    "briefs": "Daily intelligence summaries (last 7 days)",
+    "force-dynamics": "Causal chains between domains",
+    "convergences": "Multiple signals pointing at the same outcome",
+    "bottleneck-map": "Constraints blocking progress",
+    "velocity-trackers": "Rate-of-change metrics",
+    "predictions": "Falsifiable predictions with check dates",
+    "frameworks": "Judgment frameworks for evaluating AI developments"
+  },
+  "navigation": "Files use [[wikilinks]] for cross-references and #tags for categorization. Follow wikilinks to navigate the knowledge graph.",
+  "files": [
+    {
+      "path": "nodes/ai-agents.md",
+      "frontmatter": {
+        "name": "AI Agents & Autonomy",
+        "id": "ai-agents",
+        "status": "accelerating",
+        "impact": "high",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-03-30T00:00:00.000Z",
+        "related_nodes": [
+          "frontier-models",
+          "ai-coding-tools",
+          "ai-infrastructure",
+          "ai-safety-alignment"
+        ],
+        "tags": [
+          "node",
+          "agents",
+          "autonomy",
+          "tools"
+        ]
+      },
+      "wikilinks": [
+        "frontier-models",
+        "ai-coding-tools",
+        "ai-infrastructure",
+        "ai-safety-alignment"
+      ],
+      "tags": [
+        "node",
+        "agents",
+        "autonomy",
+        "tools"
+      ],
+      "size": 12743
+    },
+    {
+      "path": "nodes/ai-business-funding.md",
+      "frontmatter": {
+        "name": "AI Business & Funding",
+        "id": "ai-business-funding",
+        "status": "accelerating",
+        "impact": "high",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-03-30T00:00:00.000Z",
+        "related_nodes": [
+          "frontier-models",
+          "ai-in-enterprise",
+          "ai-policy-regulation"
+        ],
+        "tags": [
+          "node",
+          "business",
+          "funding",
+          "startups",
+          "acquisitions"
+        ]
+      },
+      "wikilinks": [
+        "frontier-models",
+        "ai-in-enterprise",
+        "ai-policy-regulation"
+      ],
+      "tags": [
+        "node",
+        "business",
+        "funding",
+        "startups",
+        "acquisitions"
+      ],
+      "size": 13997
+    },
+    {
+      "path": "nodes/ai-coding-tools.md",
+      "frontmatter": {
+        "name": "AI Coding Tools",
+        "id": "ai-coding-tools",
+        "status": "accelerating",
+        "impact": "high",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-03-30T00:00:00.000Z",
+        "related_nodes": [
+          "ai-agents",
+          "frontier-models",
+          "ai-in-enterprise"
+        ],
+        "tags": [
+          "node",
+          "coding",
+          "developer-tools",
+          "productivity"
+        ]
+      },
+      "wikilinks": [
+        "ai-agents",
+        "frontier-models",
+        "ai-in-enterprise"
+      ],
+      "tags": [
+        "node",
+        "coding",
+        "developer-tools",
+        "productivity"
+      ],
+      "size": 8715
+    },
+    {
+      "path": "nodes/ai-for-science.md",
+      "frontmatter": {
+        "name": "AI for Science",
+        "id": "ai-for-science",
+        "status": "accelerating",
+        "impact": "medium",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-03-30T00:00:00.000Z",
+        "related_nodes": [
+          "ai-research-breakthroughs",
+          "frontier-models",
+          "compute-hardware"
+        ],
+        "tags": [
+          "node",
+          "science",
+          "drug-discovery",
+          "materials",
+          "biology"
+        ]
+      },
+      "wikilinks": [
+        "ai-research-breakthroughs",
+        "frontier-models",
+        "compute-hardware"
+      ],
+      "tags": [
+        "node",
+        "science",
+        "drug-discovery",
+        "materials",
+        "biology"
+      ],
+      "size": 7216
+    },
+    {
+      "path": "nodes/ai-in-enterprise.md",
+      "frontmatter": {
+        "name": "AI in Enterprise",
+        "id": "ai-in-enterprise",
+        "status": "accelerating",
+        "impact": "high",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-03-30T00:00:00.000Z",
+        "related_nodes": [
+          "ai-coding-tools",
+          "ai-infrastructure",
+          "ai-agents",
+          "ai-business-funding"
+        ],
+        "tags": [
+          "node",
+          "enterprise",
+          "adoption",
+          "vertical",
+          "workflow"
+        ]
+      },
+      "wikilinks": [
+        "ai-coding-tools",
+        "ai-infrastructure",
+        "ai-agents",
+        "ai-business-funding"
+      ],
+      "tags": [
+        "node",
+        "enterprise",
+        "adoption",
+        "vertical",
+        "workflow"
+      ],
+      "size": 8936
+    },
+    {
+      "path": "nodes/ai-infrastructure.md",
+      "frontmatter": {
+        "name": "AI Infrastructure",
+        "id": "ai-infrastructure",
+        "status": "accelerating",
+        "impact": "high",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-03-30T00:00:00.000Z",
+        "related_nodes": [
+          "compute-hardware",
+          "ai-agents",
+          "ai-in-enterprise",
+          "open-source-models"
+        ],
+        "tags": [
+          "node",
+          "infrastructure",
+          "mlops",
+          "serving",
+          "rag"
+        ]
+      },
+      "wikilinks": [
+        "compute-hardware",
+        "ai-agents",
+        "ai-in-enterprise",
+        "open-source-models"
+      ],
+      "tags": [
+        "node",
+        "infrastructure",
+        "mlops",
+        "serving",
+        "rag"
+      ],
+      "size": 10877
+    },
+    {
+      "path": "nodes/ai-policy-regulation.md",
+      "frontmatter": {
+        "name": "AI Policy & Regulation",
+        "id": "ai-policy-regulation",
+        "status": "accelerating",
+        "impact": "high",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-03-30T00:00:00.000Z",
+        "related_nodes": [
+          "ai-safety-alignment",
+          "ai-business-funding",
+          "frontier-models"
+        ],
+        "tags": [
+          "node",
+          "policy",
+          "regulation",
+          "government"
+        ]
+      },
+      "wikilinks": [
+        "ai-safety-alignment",
+        "ai-business-funding",
+        "frontier-models"
+      ],
+      "tags": [
+        "node",
+        "policy",
+        "regulation",
+        "government"
+      ],
+      "size": 8477
+    },
+    {
+      "path": "nodes/ai-research-breakthroughs.md",
+      "frontmatter": {
+        "name": "AI Research Breakthroughs",
+        "id": "ai-research-breakthroughs",
+        "status": "accelerating",
+        "impact": "high",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-03-27T00:00:00.000Z",
+        "related_nodes": [
+          "frontier-models",
+          "open-source-models",
+          "ai-for-science"
+        ],
+        "tags": [
+          "node",
+          "research",
+          "papers",
+          "architecture",
+          "training"
+        ]
+      },
+      "wikilinks": [
+        "frontier-models",
+        "open-source-models",
+        "ai-for-science"
+      ],
+      "tags": [
+        "node",
+        "research",
+        "papers",
+        "architecture",
+        "training"
+      ],
+      "size": 7834
+    },
+    {
+      "path": "nodes/ai-safety-alignment.md",
+      "frontmatter": {
+        "name": "AI Safety & Alignment",
+        "id": "ai-safety-alignment",
+        "status": "accelerating",
+        "impact": "high",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-03-30T00:00:00.000Z",
+        "related_nodes": [
+          "frontier-models",
+          "ai-agents",
+          "ai-policy-regulation"
+        ],
+        "tags": [
+          "node",
+          "safety",
+          "alignment",
+          "interpretability"
+        ]
+      },
+      "wikilinks": [
+        "frontier-models",
+        "ai-agents",
+        "ai-policy-regulation"
+      ],
+      "tags": [
+        "node",
+        "safety",
+        "alignment",
+        "interpretability"
+      ],
+      "size": 13174
+    },
+    {
+      "path": "nodes/compute-hardware.md",
+      "frontmatter": {
+        "name": "Compute & Hardware",
+        "id": "compute-hardware",
+        "status": "accelerating",
+        "impact": "high",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-03-30T00:00:00.000Z",
+        "related_nodes": [
+          "frontier-models",
+          "edge-on-device-ai",
+          "ai-business-funding"
+        ],
+        "tags": [
+          "node",
+          "hardware",
+          "compute",
+          "gpu"
+        ]
+      },
+      "wikilinks": [
+        "frontier-models",
+        "edge-on-device-ai",
+        "ai-business-funding"
+      ],
+      "tags": [
+        "node",
+        "hardware",
+        "compute",
+        "gpu"
+      ],
+      "size": 12019
+    },
+    {
+      "path": "nodes/edge-on-device-ai.md",
+      "frontmatter": {
+        "name": "Edge & On-Device AI",
+        "id": "edge-on-device-ai",
+        "status": "accelerating",
+        "impact": "high",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-03-27T00:00:00.000Z",
+        "related_nodes": [
+          "open-source-models",
+          "compute-hardware",
+          "ai-infrastructure"
+        ],
+        "tags": [
+          "node",
+          "edge",
+          "on-device",
+          "local",
+          "privacy"
+        ]
+      },
+      "wikilinks": [
+        "open-source-models",
+        "compute-hardware",
+        "ai-infrastructure"
+      ],
+      "tags": [
+        "node",
+        "edge",
+        "on-device",
+        "local",
+        "privacy"
+      ],
+      "size": 5348
+    },
+    {
+      "path": "nodes/frontier-edges.md",
+      "frontmatter": {
+        "name": "Frontier Edges",
+        "id": "frontier-edges",
+        "status": "accelerating",
+        "impact": "critical",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-04-03T00:00:00.000Z",
+        "related_nodes": [
+          "ai-research-breakthroughs",
+          "frontier-models",
+          "compute-hardware",
+          "ai-agents",
+          "ai-safety-alignment",
+          "ai-for-science",
+          "robotics-embodied-ai"
+        ],
+        "tags": [
+          "node",
+          "edges",
+          "breakthroughs",
+          "frontier",
+          "moonshots"
+        ]
+      },
+      "wikilinks": [
+        "ai-research-breakthroughs",
+        "frontier-models",
+        "ai-agents",
+        "ai-in-enterprise",
+        "edge-on-device-ai",
+        "multimodal-ai",
+        "robotics-embodied-ai",
+        "ai-safety-alignment",
+        "compute-hardware",
+        "ai-infrastructure",
+        "ai-business-funding",
+        "ai-for-science",
+        "ai-coding-tools"
+      ],
+      "tags": [
+        "node",
+        "edges",
+        "breakthroughs",
+        "frontier",
+        "moonshots"
+      ],
+      "size": 29687
+    },
+    {
+      "path": "nodes/frontier-models.md",
+      "frontmatter": {
+        "name": "Frontier Models",
+        "id": "frontier-models",
+        "status": "accelerating",
+        "impact": "high",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-03-30T00:00:00.000Z",
+        "related_nodes": [
+          "open-source-models",
+          "ai-safety-alignment",
+          "compute-hardware",
+          "ai-research-breakthroughs"
+        ],
+        "tags": [
+          "node",
+          "models",
+          "frontier"
+        ]
+      },
+      "wikilinks": [
+        "open-source-models",
+        "ai-safety-alignment",
+        "compute-hardware",
+        "ai-research-breakthroughs"
+      ],
+      "tags": [
+        "node",
+        "models",
+        "frontier"
+      ],
+      "size": 10266
+    },
+    {
+      "path": "nodes/multimodal-ai.md",
+      "frontmatter": {
+        "name": "Multimodal AI",
+        "id": "multimodal-ai",
+        "status": "accelerating",
+        "impact": "high",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-03-30T00:00:00.000Z",
+        "related_nodes": [
+          "frontier-models",
+          "ai-research-breakthroughs",
+          "robotics-embodied-ai"
+        ],
+        "tags": [
+          "node",
+          "multimodal",
+          "vision",
+          "audio",
+          "video"
+        ]
+      },
+      "wikilinks": [
+        "frontier-models",
+        "ai-research-breakthroughs",
+        "robotics-embodied-ai"
+      ],
+      "tags": [
+        "node",
+        "multimodal",
+        "vision",
+        "audio",
+        "video"
+      ],
+      "size": 7730
+    },
+    {
+      "path": "nodes/open-source-models.md",
+      "frontmatter": {
+        "name": "Open Source Models",
+        "id": "open-source-models",
+        "status": "accelerating",
+        "impact": "high",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-03-30T00:00:00.000Z",
+        "related_nodes": [
+          "frontier-models",
+          "edge-on-device-ai",
+          "ai-infrastructure",
+          "ai-research-breakthroughs"
+        ],
+        "tags": [
+          "node",
+          "models",
+          "open-source"
+        ]
+      },
+      "wikilinks": [
+        "frontier-models",
+        "edge-on-device-ai",
+        "ai-infrastructure",
+        "ai-research-breakthroughs"
+      ],
+      "tags": [
+        "node",
+        "models",
+        "open-source"
+      ],
+      "size": 9106
+    },
+    {
+      "path": "nodes/robotics-embodied-ai.md",
+      "frontmatter": {
+        "name": "Robotics & Embodied AI",
+        "id": "robotics-embodied-ai",
+        "status": "accelerating",
+        "impact": "medium",
+        "created": "2026-03-19T00:00:00.000Z",
+        "last_updated": "2026-03-30T00:00:00.000Z",
+        "related_nodes": [
+          "multimodal-ai",
+          "compute-hardware",
+          "ai-research-breakthroughs",
+          "ai-business-funding"
+        ],
+        "tags": [
+          "node",
+          "robotics",
+          "embodied",
+          "humanoid",
+          "autonomous"
+        ]
+      },
+      "wikilinks": [
+        "multimodal-ai",
+        "compute-hardware",
+        "ai-research-breakthroughs",
+        "ai-business-funding"
+      ],
+      "tags": [
+        "node",
+        "robotics",
+        "embodied",
+        "humanoid",
+        "autonomous"
+      ],
+      "size": 7472
+    },
+    {
+      "path": "entities/anthropic.md",
+      "frontmatter": {
+        "name": "Anthropic",
+        "id": "anthropic",
+        "type": "company",
+        "status": "active",
+        "created": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-04T00:00:00.000Z",
+        "related_nodes": [
+          "frontier-models",
+          "ai-safety-alignment",
+          "ai-coding-tools",
+          "ai-agents",
+          "ai-business-funding",
+          "ai-policy-regulation",
+          "ai-in-enterprise",
+          "ai-research-breakthroughs"
+        ],
+        "related_entities": [
+          "[[openai]]",
+          "[[google-deepmind]]",
+          "[[apple]]",
+          "[[amazon]]"
+        ],
+        "tags": [
+          "entity",
+          "company",
+          "frontier-lab",
+          "safety"
+        ]
+      },
+      "wikilinks": [
+        "openai",
+        "google-deepmind",
+        "apple",
+        "amazon",
+        "frontier-models",
+        "ai-safety-alignment",
+        "ai-coding-tools",
+        "ai-agents",
+        "ai-business-funding",
+        "ai-policy-regulation",
+        "ai-in-enterprise",
+        "ai-research-breakthroughs"
+      ],
+      "tags": [
+        "entity",
+        "company",
+        "frontier-lab",
+        "safety"
+      ],
+      "size": 16924
+    },
+    {
+      "path": "entities/apple.md",
+      "frontmatter": {
+        "name": "Apple",
+        "id": "apple",
+        "type": "company",
+        "status": "active",
+        "created": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-04T00:00:00.000Z",
+        "related_nodes": [
+          "edge-on-device-ai",
+          "frontier-models",
+          "ai-in-enterprise",
+          "ai-business-funding",
+          "compute-hardware"
+        ],
+        "related_entities": [
+          "microsoft",
+          "deepseek"
+        ],
+        "tags": [
+          "entity",
+          "company",
+          "big-tech",
+          "on-device-ai",
+          "consumer-hardware"
+        ]
+      },
+      "wikilinks": [
+        "edge-on-device-ai",
+        "frontier-models",
+        "ai-in-enterprise",
+        "ai-business-funding",
+        "compute-hardware",
+        "microsoft",
+        "deepseek"
+      ],
+      "tags": [
+        "entity",
+        "company",
+        "big-tech",
+        "on-device-ai",
+        "consumer-hardware"
+      ],
+      "size": 8216
+    },
+    {
+      "path": "entities/cursor.md",
+      "frontmatter": {
+        "name": "Cursor",
+        "id": "cursor",
+        "type": "company",
+        "status": "active",
+        "created": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-04T00:00:00.000Z",
+        "related_nodes": [
+          "ai-coding-tools",
+          "ai-agents",
+          "ai-in-enterprise",
+          "ai-business-funding"
+        ],
+        "related_entities": [
+          "microsoft",
+          "xai"
+        ],
+        "tags": [
+          "entity",
+          "company",
+          "ai-coding",
+          "developer-tools"
+        ]
+      },
+      "wikilinks": [
+        "ai-coding-tools",
+        "ai-agents",
+        "ai-in-enterprise",
+        "ai-business-funding",
+        "microsoft",
+        "xai"
+      ],
+      "tags": [
+        "entity",
+        "company",
+        "ai-coding",
+        "developer-tools"
+      ],
+      "size": 6604
+    },
+    {
+      "path": "entities/deepseek.md",
+      "frontmatter": {
+        "name": "DeepSeek",
+        "id": "deepseek",
+        "type": "company",
+        "status": "active",
+        "created": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-04T00:00:00.000Z",
+        "related_nodes": [
+          "frontier-models",
+          "open-source-models",
+          "compute-hardware",
+          "ai-research-breakthroughs",
+          "ai-policy-regulation"
+        ],
+        "related_entities": [
+          "apple",
+          "microsoft"
+        ],
+        "tags": [
+          "entity",
+          "company",
+          "chinese-ai",
+          "frontier-lab",
+          "open-source"
+        ]
+      },
+      "wikilinks": [
+        "frontier-models",
+        "open-source-models",
+        "compute-hardware",
+        "ai-research-breakthroughs",
+        "ai-policy-regulation",
+        "apple",
+        "microsoft"
+      ],
+      "tags": [
+        "entity",
+        "company",
+        "chinese-ai",
+        "frontier-lab",
+        "open-source"
+      ],
+      "size": 7243
+    },
+    {
+      "path": "entities/google-deepmind.md",
+      "frontmatter": {
+        "name": "Google / DeepMind",
+        "id": "google-deepmind",
+        "type": "company",
+        "status": "active",
+        "created": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-04T00:00:00.000Z",
+        "related_nodes": [
+          "frontier-models",
+          "open-source-models",
+          "ai-research-breakthroughs",
+          "ai-for-science",
+          "compute-hardware",
+          "multimodal-ai",
+          "robotics-embodied-ai",
+          "edge-on-device-ai",
+          "ai-in-enterprise"
+        ],
+        "related_entities": [
+          "nvidia",
+          "meta"
+        ],
+        "tags": [
+          "entity",
+          "company",
+          "frontier",
+          "open-source",
+          "research"
+        ]
+      },
+      "wikilinks": [
+        "frontier-models",
+        "open-source-models",
+        "ai-research-breakthroughs",
+        "ai-for-science",
+        "compute-hardware",
+        "multimodal-ai",
+        "robotics-embodied-ai",
+        "edge-on-device-ai",
+        "nvidia",
+        "meta"
+      ],
+      "tags": [
+        "entity",
+        "company",
+        "frontier",
+        "open-source",
+        "research"
+      ],
+      "size": 11966
+    },
+    {
+      "path": "entities/index.md",
+      "frontmatter": {
+        "name": "Entity Index",
+        "description": "Catalog of all tracked entities in the AI Radar wiki",
+        "type": "index",
+        "last_updated": "2026-04-04T00:00:00.000Z",
+        "entity_count": 10,
+        "tags": [
+          "index",
+          "entities"
+        ]
+      },
+      "wikilinks": [
+        "anthropic",
+        "openai",
+        "nvidia",
+        "google-deepmind",
+        "meta",
+        "microsoft",
+        "deepseek",
+        "cursor",
+        "xai",
+        "apple"
+      ],
+      "tags": [
+        "index",
+        "entities"
+      ],
+      "size": 2409
+    },
+    {
+      "path": "entities/meta.md",
+      "frontmatter": {
+        "name": "Meta",
+        "id": "meta",
+        "type": "company",
+        "status": "active",
+        "created": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-04T00:00:00.000Z",
+        "related_nodes": [
+          "open-source-models",
+          "compute-hardware",
+          "ai-research-breakthroughs",
+          "ai-agents",
+          "ai-in-enterprise",
+          "ai-for-science",
+          "robotics-embodied-ai",
+          "ai-infrastructure",
+          "ai-business-funding"
+        ],
+        "related_entities": [
+          "nvidia",
+          "google-deepmind"
+        ],
+        "tags": [
+          "entity",
+          "company",
+          "open-source",
+          "infrastructure",
+          "research"
+        ]
+      },
+      "wikilinks": [
+        "open-source-models",
+        "compute-hardware",
+        "ai-research-breakthroughs",
+        "ai-agents",
+        "ai-in-enterprise",
+        "ai-for-science",
+        "robotics-embodied-ai",
+        "ai-infrastructure",
+        "ai-business-funding",
+        "nvidia",
+        "google-deepmind"
+      ],
+      "tags": [
+        "entity",
+        "company",
+        "open-source",
+        "infrastructure",
+        "research"
+      ],
+      "size": 13697
+    },
+    {
+      "path": "entities/microsoft.md",
+      "frontmatter": {
+        "name": "Microsoft",
+        "id": "microsoft",
+        "type": "company",
+        "status": "active",
+        "created": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-04T00:00:00.000Z",
+        "related_nodes": [
+          "ai-in-enterprise",
+          "ai-coding-tools",
+          "ai-agents",
+          "compute-hardware",
+          "ai-safety-alignment",
+          "frontier-models",
+          "edge-on-device-ai"
+        ],
+        "related_entities": [
+          "openai",
+          "anthropic",
+          "cursor",
+          "apple"
+        ],
+        "tags": [
+          "entity",
+          "company",
+          "big-tech",
+          "enterprise-ai",
+          "copilot"
+        ]
+      },
+      "wikilinks": [
+        "ai-in-enterprise",
+        "ai-coding-tools",
+        "ai-agents",
+        "compute-hardware",
+        "ai-safety-alignment",
+        "frontier-models",
+        "edge-on-device-ai",
+        "openai",
+        "anthropic",
+        "cursor",
+        "apple"
+      ],
+      "tags": [
+        "entity",
+        "company",
+        "big-tech",
+        "enterprise-ai",
+        "copilot"
+      ],
+      "size": 7883
+    },
+    {
+      "path": "entities/nvidia.md",
+      "frontmatter": {
+        "name": "NVIDIA",
+        "id": "nvidia",
+        "type": "company",
+        "status": "active",
+        "created": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-04T00:00:00.000Z",
+        "related_nodes": [
+          "compute-hardware",
+          "ai-infrastructure",
+          "ai-research-breakthroughs",
+          "open-source-models",
+          "robotics-embodied-ai",
+          "edge-on-device-ai"
+        ],
+        "related_entities": [
+          "google-deepmind",
+          "meta"
+        ],
+        "tags": [
+          "entity",
+          "company",
+          "hardware",
+          "gpu",
+          "compute"
+        ]
+      },
+      "wikilinks": [
+        "compute-hardware",
+        "ai-infrastructure",
+        "ai-research-breakthroughs",
+        "open-source-models",
+        "robotics-embodied-ai",
+        "edge-on-device-ai",
+        "google-deepmind",
+        "meta"
+      ],
+      "tags": [
+        "entity",
+        "company",
+        "hardware",
+        "gpu",
+        "compute"
+      ],
+      "size": 10802
+    },
+    {
+      "path": "entities/openai.md",
+      "frontmatter": {
+        "name": "OpenAI",
+        "id": "openai",
+        "type": "company",
+        "status": "active",
+        "created": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-04T00:00:00.000Z",
+        "related_nodes": [
+          "frontier-models",
+          "ai-coding-tools",
+          "ai-agents",
+          "ai-business-funding",
+          "ai-policy-regulation",
+          "ai-in-enterprise",
+          "ai-safety-alignment",
+          "compute-hardware"
+        ],
+        "related_entities": [
+          "[[anthropic]]",
+          "[[google-deepmind]]",
+          "[[microsoft]]",
+          "[[softbank]]",
+          "[[apple]]"
+        ],
+        "tags": [
+          "entity",
+          "company",
+          "frontier-lab"
+        ]
+      },
+      "wikilinks": [
+        "anthropic",
+        "google-deepmind",
+        "microsoft",
+        "softbank",
+        "apple",
+        "frontier-models",
+        "ai-coding-tools",
+        "ai-agents",
+        "ai-business-funding",
+        "ai-policy-regulation",
+        "ai-in-enterprise",
+        "ai-safety-alignment",
+        "compute-hardware"
+      ],
+      "tags": [
+        "entity",
+        "company",
+        "frontier-lab"
+      ],
+      "size": 16829
+    },
+    {
+      "path": "entities/xai.md",
+      "frontmatter": {
+        "name": "xAI",
+        "id": "xai",
+        "type": "company",
+        "status": "active",
+        "created": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-04T00:00:00.000Z",
+        "related_nodes": [
+          "frontier-models",
+          "compute-hardware",
+          "ai-business-funding",
+          "ai-policy-regulation"
+        ],
+        "related_entities": [
+          "microsoft",
+          "deepseek"
+        ],
+        "tags": [
+          "entity",
+          "company",
+          "frontier-lab",
+          "elon-musk"
+        ]
+      },
+      "wikilinks": [
+        "frontier-models",
+        "compute-hardware",
+        "ai-business-funding",
+        "ai-policy-regulation",
+        "microsoft",
+        "deepseek"
+      ],
+      "tags": [
+        "entity",
+        "company",
+        "frontier-lab",
+        "elon-musk"
+      ],
+      "size": 7111
+    },
+    {
+      "path": "briefs/2026-04-04.md",
+      "frontmatter": {
+        "date": "2026-04-04T00:00:00.000Z",
+        "scan_time": "14:00",
+        "signals_total": 20,
+        "signals_notable": 13,
+        "signals_significant": 7,
+        "signals_breakthrough": 0,
+        "signals_filtered_noise": 14,
+        "signals_deduped": 8,
+        "nodes_updated": 13,
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "ai-coding-tools",
+        "ai-agents",
+        "ai-business-funding",
+        "ai-safety-alignment",
+        "frontier-models",
+        "ai-for-science",
+        "ai-policy-regulation",
+        "compute-hardware",
+        "ai-infrastructure",
+        "ai-research-breakthroughs",
+        "multimodal-ai",
+        "ai-in-enterprise",
+        "open-source-models",
+        "edge-on-device-ai"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 18975
+    },
+    {
+      "path": "briefs/2026-04-03.md",
+      "frontmatter": {
+        "date": "2026-04-03T00:00:00.000Z",
+        "scan_time": "11:30",
+        "signals_total": 35,
+        "signals_notable": 22,
+        "signals_significant": 10,
+        "signals_breakthrough": 0,
+        "signals_filtered_noise": 18,
+        "signals_deduped": 12,
+        "nodes_updated": 15,
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "ai-coding-tools",
+        "ai-agents",
+        "ai-research-breakthroughs",
+        "ai-safety-alignment",
+        "frontier-models",
+        "compute-hardware",
+        "ai-in-enterprise",
+        "ai-policy-regulation",
+        "ai-business-funding",
+        "edge-on-device-ai",
+        "multimodal-ai",
+        "open-source-models"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 26812
+    },
+    {
+      "path": "briefs/2026-04-02.md",
+      "frontmatter": {
+        "date": "2026-04-02T00:00:00.000Z",
+        "scan_time": "12:00",
+        "signals_total": 21,
+        "signals_notable": 12,
+        "signals_significant": 9,
+        "signals_breakthrough": 0,
+        "signals_filtered_noise": 15,
+        "signals_deduped": 8,
+        "nodes_updated": 14,
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "open-source-models",
+        "edge-on-device-ai",
+        "frontier-models",
+        "ai-coding-tools",
+        "ai-agents",
+        "multimodal-ai",
+        "ai-in-enterprise",
+        "ai-business-funding",
+        "ai-policy-regulation",
+        "ai-safety-alignment",
+        "compute-hardware",
+        "ai-infrastructure"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 23081
+    },
+    {
+      "path": "briefs/2026-04-01.md",
+      "frontmatter": {
+        "date": "2026-04-01T00:00:00.000Z",
+        "scan_time": "11:30",
+        "signals_total": 11,
+        "signals_notable": 8,
+        "signals_significant": 3,
+        "signals_breakthrough": 0,
+        "signals_filtered_noise": 7,
+        "signals_deduped": 2,
+        "nodes_updated": 8,
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "ai-business-funding",
+        "frontier-models",
+        "ai-in-enterprise",
+        "ai-agents",
+        "ai-research-breakthroughs",
+        "frontier-edges",
+        "ai-safety-alignment",
+        "ai-policy-regulation",
+        "ai-for-science",
+        "multimodal-ai",
+        "open-source-models"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 19367
+    },
+    {
+      "path": "briefs/2026-03-31.md",
+      "frontmatter": {
+        "date": "2026-03-31T00:00:00.000Z",
+        "scan_time": 660,
+        "signals_total": 16,
+        "signals_notable": 10,
+        "signals_significant": 6,
+        "signals_breakthrough": 0,
+        "signals_filtered_noise": 12,
+        "signals_deduped": 5,
+        "nodes_updated": 9,
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "compute-hardware",
+        "ai-business-funding",
+        "frontier-edges",
+        "ai-coding-tools",
+        "ai-safety-alignment",
+        "ai-in-enterprise",
+        "ai-policy-regulation",
+        "ai-infrastructure",
+        "frontier-models",
+        "open-source-models",
+        "ai-agents",
+        "robotics-embodied-ai"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 21359
+    },
+    {
+      "path": "briefs/2026-03-30.md",
+      "frontmatter": {
+        "date": "2026-03-30T00:00:00.000Z",
+        "scan_time": 1080,
+        "signals_total": 38,
+        "signals_notable": 28,
+        "signals_significant": 10,
+        "signals_breakthrough": 0,
+        "signals_filtered_noise": 0,
+        "signals_deduped": 0,
+        "nodes_updated": 13,
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "ai-in-enterprise",
+        "ai-for-science",
+        "robotics-embodied-ai",
+        "open-source-models",
+        "multimodal-ai",
+        "ai-infrastructure",
+        "frontier-models",
+        "ai-agents",
+        "compute-hardware",
+        "ai-safety-alignment",
+        "ai-business-funding",
+        "ai-coding-tools",
+        "ai-policy-regulation",
+        "edge-on-device-ai"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 27810
+    },
+    {
+      "path": "briefs/2026-03-27.md",
+      "frontmatter": {
+        "date": "2026-03-27T00:00:00.000Z",
+        "scan_time": "15:30",
+        "signals_total": 28,
+        "signals_notable": 11,
+        "signals_significant": 10,
+        "signals_breakthrough": 0,
+        "signals_filtered_noise": "~40",
+        "signals_deduped": 8,
+        "nodes_updated": 14,
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "frontier-models",
+        "ai-safety-alignment",
+        "ai-policy-regulation",
+        "ai-business-funding",
+        "multimodal-ai",
+        "ai-coding-tools",
+        "ai-agents",
+        "ai-in-enterprise",
+        "robotics-embodied-ai",
+        "edge-on-device-ai",
+        "open-source-models",
+        "compute-hardware",
+        "ai-infrastructure",
+        "ai-research-breakthroughs"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 20368
+    },
+    {
+      "path": "force-dynamics.md",
+      "frontmatter": {
+        "name": "Force Dynamics — Propagation Graph",
+        "description": "Maps causal force propagation between AI Radar nodes",
+        "tags": [
+          "system",
+          "force-dynamics",
+          "causal"
+        ],
+        "last_updated": "2026-04-03T00:00:00.000Z"
+      },
+      "wikilinks": [
+        "ai-business-funding",
+        "compute-hardware",
+        "ai-infrastructure",
+        "frontier-models",
+        "ai-safety-alignment",
+        "ai-in-enterprise",
+        "ai-research-breakthroughs",
+        "ai-agents",
+        "ai-coding-tools",
+        "edge-on-device-ai",
+        "robotics-embodied-ai",
+        "ai-policy-regulation",
+        "open-source-models",
+        "multimodal-ai"
+      ],
+      "tags": [
+        "system",
+        "force-dynamics",
+        "causal"
+      ],
+      "size": 29904
+    },
+    {
+      "path": "convergences.md",
+      "frontmatter": {
+        "name": "Convergence Detector",
+        "description": "Tracks when multiple independent forces converge on the same outcome",
+        "tags": [
+          "system",
+          "force-dynamics",
+          "convergence",
+          "predictions"
+        ],
+        "last_updated": "2026-04-03T00:00:00.000Z"
+      },
+      "wikilinks": [
+        "ai-business-funding",
+        "ai-policy-regulation",
+        "robotics-embodied-ai",
+        "ai-research-breakthroughs",
+        "compute-hardware",
+        "open-source-models",
+        "frontier-models",
+        "ai-in-enterprise",
+        "ai-safety-alignment",
+        "ai-coding-tools",
+        "ai-agents"
+      ],
+      "tags": [
+        "system",
+        "force-dynamics",
+        "convergence",
+        "predictions"
+      ],
+      "size": 16963
+    },
+    {
+      "path": "bottleneck-map.md",
+      "frontmatter": {
+        "name": "Bottleneck Map",
+        "description": "Constraints blocking progress across multiple nodes — clearing creates disproportionate value",
+        "tags": [
+          "system",
+          "force-dynamics",
+          "bottlenecks",
+          "constraints"
+        ],
+        "last_updated": "2026-04-03T00:00:00.000Z"
+      },
+      "wikilinks": [
+        "ai-agents",
+        "ai-in-enterprise",
+        "ai-coding-tools",
+        "ai-safety-alignment",
+        "compute-hardware",
+        "ai-infrastructure",
+        "open-source-models",
+        "ai-research-breakthroughs"
+      ],
+      "tags": [
+        "system",
+        "force-dynamics",
+        "bottlenecks",
+        "constraints"
+      ],
+      "size": 16551
+    },
+    {
+      "path": "velocity-trackers.md",
+      "frontmatter": {
+        "name": "Velocity Trackers",
+        "description": "Tracks rate-of-change and acceleration of key AI landscape metrics",
+        "tags": [
+          "system",
+          "force-dynamics",
+          "velocity",
+          "metrics"
+        ],
+        "last_updated": "2026-04-02T00:00:00.000Z"
+      },
+      "wikilinks": [],
+      "tags": [
+        "system",
+        "force-dynamics",
+        "velocity",
+        "metrics"
+      ],
+      "size": 8162
+    },
+    {
+      "path": "predictions.md",
+      "frontmatter": {
+        "name": "Prediction Registry",
+        "description": "Dated, falsifiable predictions with check dates and outcome tracking",
+        "tags": [
+          "system",
+          "force-dynamics",
+          "predictions",
+          "accountability"
+        ],
+        "last_updated": "2026-04-02T00:00:00.000Z",
+        "total_predictions": 5,
+        "correct": 0,
+        "incorrect": 0,
+        "pending": 5,
+        "accuracy_rate": "N/A"
+      },
+      "wikilinks": [],
+      "tags": [
+        "system",
+        "force-dynamics",
+        "predictions",
+        "accountability"
+      ],
+      "size": 10028
+    },
+    {
+      "path": "opportunity-pipeline.md",
+      "frontmatter": {
+        "name": "Opportunity Pipeline",
+        "description": "Personal opportunity tracker — from detection to action",
+        "tags": [
+          "system",
+          "force-dynamics",
+          "opportunities",
+          "personal",
+          "action"
+        ],
+        "last_updated": "2026-03-30T00:00:00.000Z"
+      },
+      "wikilinks": [],
+      "tags": [
+        "system",
+        "force-dynamics",
+        "opportunities",
+        "personal",
+        "action"
+      ],
+      "size": 11239
+    },
+    {
+      "path": "frameworks/README.md",
+      "frontmatter": {
+        "name": "Framework Library Index",
+        "description": "Mental models and judgment frameworks discovered during teaching sessions — standalone reference docs for evaluating AI signals, companies, and technologies",
+        "tags": [
+          "index",
+          "frameworks",
+          "learning"
+        ]
+      },
+      "wikilinks": [
+        "ai-self-improvement-hierarchy",
+        "who-controls-the-dial",
+        "compound-reliability-agent-workflows",
+        "reward-signal-evaluation",
+        "revenue-per-compute",
+        "ai-compute-evaluation-framework",
+        "agent-architecture-skeleton"
+      ],
+      "tags": [
+        "index",
+        "frameworks",
+        "learning"
+      ],
+      "size": 2493
+    },
+    {
+      "path": "frameworks/ai-self-improvement-hierarchy.md",
+      "frontmatter": {
+        "name": "AI Self-Improvement Hierarchy",
+        "description": "Framework for evaluating \"AI improves itself\" claims — where does the new information come from, and what's the ceiling?",
+        "tags": [
+          "self-improvement",
+          "evaluation",
+          "training",
+          "reasoning"
+        ],
+        "discovered": "2026-04-04T00:00:00.000Z",
+        "session": 9,
+        "related": [
+          "[[ai-research-breakthroughs]]",
+          "[[ai-coding-tools]]",
+          "[[ai-safety-alignment]]",
+          "[[reward-signal-evaluation]]"
+        ],
+        "nodes": [
+          "ai-research-breakthroughs",
+          "ai-coding-tools",
+          "ai-safety-alignment"
+        ]
+      },
+      "wikilinks": [
+        "ai-research-breakthroughs",
+        "ai-coding-tools",
+        "ai-safety-alignment",
+        "reward-signal-evaluation"
+      ],
+      "tags": [
+        "self-improvement",
+        "evaluation",
+        "training",
+        "reasoning"
+      ],
+      "size": 4435
+    },
+    {
+      "path": "frameworks/compound-reliability-agent-workflows.md",
+      "frontmatter": {
+        "name": "Compound Reliability in Agent Workflows",
+        "description": "Framework for evaluating agent performance in multi-step tasks — why per-step accuracy compounds exponentially and how to engineer around it",
+        "tags": [
+          "framework",
+          "agents",
+          "reliability",
+          "evaluation",
+          "pricing"
+        ],
+        "discovered": "2026-04-02T00:00:00.000Z",
+        "session": 7,
+        "related": [
+          "[[agent-architecture-skeleton]]",
+          "[[ai-compute-evaluation-framework]]",
+          "[[evolution-gpt-to-agents]]"
+        ],
+        "nodes": [
+          "[[ai-agents]]",
+          "[[ai-coding-tools]]",
+          "[[ai-in-enterprise]]"
+        ]
+      },
+      "wikilinks": [
+        "agent-architecture-skeleton",
+        "ai-compute-evaluation-framework",
+        "evolution-gpt-to-agents",
+        "ai-agents",
+        "ai-coding-tools",
+        "ai-in-enterprise",
+        "MCP"
+      ],
+      "tags": [
+        "framework",
+        "agents",
+        "reliability",
+        "evaluation",
+        "pricing"
+      ],
+      "size": 6018
+    },
+    {
+      "path": "frameworks/revenue-per-compute.md",
+      "frontmatter": {
+        "name": "Revenue-Per-Compute Strategic Framework",
+        "description": "Framework for analyzing AI company strategic moves by tracking revenue generated per unit of compute consumed — kills, launches, and pivots reveal optimization priorities",
+        "tags": [
+          "framework",
+          "strategy",
+          "business",
+          "compute-economics",
+          "evaluation"
+        ],
+        "discovered": "2026-03-25T00:00:00.000Z",
+        "session": 4,
+        "related": [
+          "[[ai-compute-evaluation-framework]]",
+          "[[compound-reliability-agent-workflows]]"
+        ],
+        "nodes": [
+          "[[ai-business-funding]]",
+          "[[compute-hardware]]",
+          "[[ai-in-enterprise]]"
+        ]
+      },
+      "wikilinks": [
+        "ai-compute-evaluation-framework",
+        "compound-reliability-agent-workflows",
+        "ai-business-funding",
+        "compute-hardware",
+        "ai-in-enterprise"
+      ],
+      "tags": [
+        "framework",
+        "strategy",
+        "business",
+        "compute-economics",
+        "evaluation"
+      ],
+      "size": 3158
+    },
+    {
+      "path": "frameworks/reward-signal-evaluation.md",
+      "frontmatter": {
+        "name": "Reward Signal Evaluation Framework",
+        "description": "Three questions for evaluating any AI training announcement — what gets rewarded, is the proxy real, what's the unintended incentive (Goodhart's Law)",
+        "tags": [
+          "framework",
+          "training",
+          "RLHF",
+          "safety",
+          "evaluation"
+        ],
+        "discovered": "2026-04-01T00:00:00.000Z",
+        "session": 6,
+        "related": [
+          "[[compound-reliability-agent-workflows]]"
+        ],
+        "nodes": [
+          "[[ai-safety-alignment]]",
+          "[[ai-research-breakthroughs]]",
+          "[[ai-in-enterprise]]"
+        ]
+      },
+      "wikilinks": [
+        "compound-reliability-agent-workflows",
+        "ai-safety-alignment",
+        "ai-research-breakthroughs",
+        "ai-in-enterprise"
+      ],
+      "tags": [
+        "framework",
+        "training",
+        "RLHF",
+        "safety",
+        "evaluation"
+      ],
+      "size": 2954
+    },
+    {
+      "path": "frameworks/who-controls-the-dial.md",
+      "frontmatter": {
+        "name": "Who Controls the Dial",
+        "description": "Framework for evaluating AI safety capabilities — any alignment tool is also a misalignment tool depending on who controls it and whether there's an audit trail",
+        "tags": [
+          "safety",
+          "evaluation",
+          "governance",
+          "alignment"
+        ],
+        "discovered": "2026-04-03T00:00:00.000Z",
+        "session": 8,
+        "related": [
+          "[[ai-safety-alignment]]",
+          "[[ai-agents]]",
+          "[[ai-in-enterprise]]"
+        ],
+        "nodes": [
+          "ai-safety-alignment",
+          "ai-agents",
+          "ai-in-enterprise"
+        ]
+      },
+      "wikilinks": [
+        "ai-safety-alignment",
+        "ai-agents",
+        "ai-in-enterprise"
+      ],
+      "tags": [
+        "safety",
+        "evaluation",
+        "governance",
+        "alignment"
+      ],
+      "size": 3667
+    },
+    {
+      "path": "radar.md",
+      "frontmatter": {
+        "tags": [
+          "dashboard",
+          "radar"
+        ],
+        "last_updated": "2026-04-04T00:00:00.000Z"
+      },
+      "wikilinks": [
+        "frontier-models",
+        "open-source-models",
+        "compute-hardware",
+        "ai-agents",
+        "ai-coding-tools",
+        "ai-infrastructure",
+        "ai-safety-alignment",
+        "ai-policy-regulation",
+        "ai-business-funding",
+        "multimodal-ai",
+        "ai-for-science",
+        "robotics-embodied-ai",
+        "ai-research-breakthroughs",
+        "edge-on-device-ai",
+        "ai-in-enterprise",
+        "frontier-edges",
+        "2026-04-04",
+        "2026-04-03",
+        "2026-04-02",
+        "2026-03-31",
+        "2026-03-30",
+        "2026-03-27",
+        "2026-03-26",
+        "2026-03-25",
+        "2026-03-24",
+        "2026-03-23",
+        "2026-03-19"
+      ],
+      "tags": [
+        "dashboard",
+        "radar"
+      ],
+      "size": 6711
+    },
+    {
+      "path": "index.md",
+      "frontmatter": {
+        "name": "Wiki Index",
+        "description": "Content catalog of the AI Radar wiki — navigational entry point",
+        "last_updated": "2026-04-04T00:00:00.000Z",
+        "tags": [
+          "index",
+          "navigation"
+        ]
+      },
+      "wikilinks": [
+        "radar",
+        "frontier-models",
+        "open-source-models",
+        "compute-hardware",
+        "ai-agents",
+        "ai-coding-tools",
+        "ai-infrastructure",
+        "ai-safety-alignment",
+        "ai-policy-regulation",
+        "ai-business-funding",
+        "multimodal-ai",
+        "ai-for-science",
+        "robotics-embodied-ai",
+        "ai-research-breakthroughs",
+        "edge-on-device-ai",
+        "ai-in-enterprise",
+        "frontier-edges",
+        "anthropic",
+        "openai",
+        "nvidia",
+        "google-deepmind",
+        "meta",
+        "microsoft",
+        "deepseek",
+        "cursor",
+        "xai",
+        "apple",
+        "entities/index",
+        "2026-04-03",
+        "2026-04-02",
+        "2026-03-31",
+        "2026-03-30",
+        "2026-03-27",
+        "2026-03-26",
+        "2026-03-25",
+        "2026-03-24",
+        "2026-03-23",
+        "2026-03-19",
+        "system/force-dynamics",
+        "system/convergences",
+        "system/predictions",
+        "system/bottleneck-map",
+        "system/velocity-trackers",
+        "system/calibration",
+        "resources/frameworks/README\\|Framework Library",
+        "resources/techniques/\\|Techniques",
+        "resources/build-ideas/explored-not-chosen\\|Build Ideas Archive",
+        "CLAUDE.md",
+        "log",
+        "system/lint-checks\\|Lint Checks",
+        "system/entity-template\\|Entity Template",
+        "system/learning-profile\\|Learning Profile",
+        "system/improvement-log\\|Improvement Log",
+        "system/queries\\|Search Queries"
+      ],
+      "tags": [
+        "index",
+        "navigation"
+      ],
+      "size": 5197
+    },
+    {
+      "path": "watchlist.md",
+      "frontmatter": {
+        "tags": [
+          "watchlist",
+          "emerging"
+        ],
+        "last_updated": "2026-03-19T00:00:00.000Z"
+      },
+      "wikilinks": [],
+      "tags": [
+        "watchlist",
+        "emerging"
+      ],
+      "size": 1516
+    }
+  ]
+}

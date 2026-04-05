@@ -731,7 +731,115 @@ function build() {
     },
   });
 
-  console.log("\n✅ Done! Data written to public/data/\n");
+  // 10. Publish wiki knowledge base — copy output files for agent consumption
+  console.log("\n  Publishing wiki knowledge base...");
+
+  const WIKI_OUTPUT = path.join(OUTPUT_DIR, "../wiki");
+  fs.mkdirSync(WIKI_OUTPUT, { recursive: true });
+
+  // Files/folders to INCLUDE (the intelligence output)
+  const wikiIncludes: Array<{ src: string; dest: string }> = [
+    // Nodes — the 16 domain trackers
+    ...fs.readdirSync(path.join(WIKI_ROOT, "nodes"))
+      .filter((f) => f.endsWith(".md"))
+      .map((f) => ({ src: `nodes/${f}`, dest: `nodes/${f}` })),
+    // Entities — company/model pages
+    ...fs.readdirSync(path.join(WIKI_ROOT, "entities"))
+      .filter((f) => f.endsWith(".md"))
+      .map((f) => ({ src: `entities/${f}`, dest: `entities/${f}` })),
+    // Briefs — last 7 daily briefs
+    ...fs.readdirSync(path.join(WIKI_ROOT, "briefs"))
+      .filter((f) => f.match(/^\d{4}-\d{2}-\d{2}\.md$/))
+      .sort()
+      .reverse()
+      .slice(0, 7)
+      .map((f) => ({ src: `briefs/${f}`, dest: `briefs/${f}` })),
+    // Force dynamics files
+    { src: "system/force-dynamics.md", dest: "force-dynamics.md" },
+    { src: "system/convergences.md", dest: "convergences.md" },
+    { src: "system/bottleneck-map.md", dest: "bottleneck-map.md" },
+    { src: "system/velocity-trackers.md", dest: "velocity-trackers.md" },
+    { src: "system/predictions.md", dest: "predictions.md" },
+    { src: "system/opportunity-pipeline.md", dest: "opportunity-pipeline.md" },
+    // Resources
+    ...fs.readdirSync(path.join(WIKI_ROOT, "resources/frameworks"))
+      .filter((f) => f.endsWith(".md"))
+      .map((f) => ({ src: `resources/frameworks/${f}`, dest: `frameworks/${f}` })),
+    // Top-level index files
+    { src: "radar.md", dest: "radar.md" },
+    { src: "index.md", dest: "index.md" },
+    { src: "watchlist.md", dest: "watchlist.md" },
+  ];
+
+  // Copy files and build manifest
+  interface ManifestEntry {
+    path: string;
+    frontmatter: Record<string, unknown>;
+    wikilinks: string[];
+    tags: string[];
+    size: number;
+  }
+  const manifest: ManifestEntry[] = [];
+
+  for (const { src, dest } of wikiIncludes) {
+    const srcPath = path.join(WIKI_ROOT, src);
+    if (!fs.existsSync(srcPath)) continue;
+
+    const destPath = path.join(WIKI_OUTPUT, dest);
+    fs.mkdirSync(path.dirname(destPath), { recursive: true });
+
+    const raw = fs.readFileSync(srcPath, "utf-8");
+    fs.writeFileSync(destPath, raw);
+
+    // Parse for manifest
+    const parsed = matter(raw);
+    const wikilinks = [...(raw.match(/\[\[([^\]]+)\]\]/g) || [])].map((l) =>
+      l.replace(/\[\[|\]\]/g, "")
+    );
+    const uniqueLinks = [...new Set(wikilinks)];
+    const tags = (parsed.data.tags as string[]) || [];
+
+    manifest.push({
+      path: dest,
+      frontmatter: parsed.data as Record<string, unknown>,
+      wikilinks: uniqueLinks,
+      tags,
+      size: raw.length,
+    });
+  }
+
+  // Write manifest
+  const manifestPath = path.join(WIKI_OUTPUT, "manifest.json");
+  fs.writeFileSync(
+    manifestPath,
+    JSON.stringify(
+      {
+        description: "AI Radar Knowledge Base — the full wiki of AI landscape intelligence",
+        lastUpdated: new Date().toISOString(),
+        totalFiles: manifest.length,
+        structure: {
+          nodes: "16 domain trackers covering the AI landscape",
+          entities: "Company and model pages with timelines and connections",
+          briefs: "Daily intelligence summaries (last 7 days)",
+          "force-dynamics": "Causal chains between domains",
+          convergences: "Multiple signals pointing at the same outcome",
+          "bottleneck-map": "Constraints blocking progress",
+          "velocity-trackers": "Rate-of-change metrics",
+          predictions: "Falsifiable predictions with check dates",
+          frameworks: "Judgment frameworks for evaluating AI developments",
+        },
+        navigation: "Files use [[wikilinks]] for cross-references and #tags for categorization. Follow wikilinks to navigate the knowledge graph.",
+        files: manifest,
+      },
+      null,
+      2
+    )
+  );
+
+  console.log(`    ✓ ${manifest.length} wiki files published to public/wiki/`);
+  console.log(`    ✓ manifest.json created`);
+
+  console.log("\n✅ Done! Data written to public/data/ and public/wiki/\n");
 }
 
 build();

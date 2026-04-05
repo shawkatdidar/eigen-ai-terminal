@@ -460,6 +460,245 @@ server.tool(
   }
 );
 
+// ── Wiki Knowledge Base Tools ───────────────────────────────
+
+const WIKI_BASE_URL = process.env.AI_RADAR_WIKI_URL || "https://web-one-wine-82.vercel.app/wiki";
+
+interface WikiManifest {
+  lastUpdated: string;
+  totalFiles: number;
+  structure: Record<string, string>;
+  navigation: string;
+  files: Array<{
+    path: string;
+    frontmatter: Record<string, unknown>;
+    wikilinks: string[];
+    tags: string[];
+    size: number;
+  }>;
+}
+
+let cachedManifest: WikiManifest | null = null;
+let manifestCacheTime = 0;
+
+async function loadManifest(): Promise<WikiManifest> {
+  const now = Date.now();
+  if (cachedManifest && now - manifestCacheTime < CACHE_TTL) return cachedManifest;
+
+  // Try local first
+  const localPaths = [
+    path.resolve(process.cwd(), "public/wiki/manifest.json"),
+    path.resolve(process.cwd(), "../public/wiki/manifest.json"),
+    path.resolve(__dirname, "../../public/wiki/manifest.json"),
+  ];
+  for (const p of localPaths) {
+    try {
+      cachedManifest = JSON.parse(fs.readFileSync(p, "utf-8"));
+      manifestCacheTime = now;
+      return cachedManifest!;
+    } catch { /* next */ }
+  }
+
+  const res = await fetch(`${WIKI_BASE_URL}/manifest.json`);
+  cachedManifest = await res.json() as WikiManifest;
+  manifestCacheTime = now;
+  return cachedManifest!;
+}
+
+async function readWikiFile(filePath: string): Promise<string | null> {
+  // Try local
+  const localPaths = [
+    path.resolve(process.cwd(), "public/wiki", filePath),
+    path.resolve(process.cwd(), "../public/wiki", filePath),
+    path.resolve(__dirname, "../../public/wiki", filePath),
+  ];
+  for (const p of localPaths) {
+    try { return fs.readFileSync(p, "utf-8"); } catch { /* next */ }
+  }
+
+  // Fetch from URL
+  try {
+    const res = await fetch(`${WIKI_BASE_URL}/${filePath}`);
+    if (res.ok) return await res.text();
+  } catch { /* fall through */ }
+
+  return null;
+}
+
+/**
+ * TOOL: radar_wiki_browse
+ * Browse the knowledge base — see all available files, their connections, and tags.
+ */
+server.tool(
+  "radar_wiki_browse",
+  "Browse the AI Radar knowledge base. Returns all available wiki files organized by type, with their tags and wikilink connections. Use this to discover what information is available, then use radar_wiki_read to read specific files.",
+  {
+    category: z.enum(["all", "nodes", "entities", "briefs", "forces", "frameworks"]).default("all")
+      .describe("Filter by category: nodes (16 domain trackers), entities (company pages), briefs (daily summaries), forces (dynamics/predictions), frameworks (judgment tools)"),
+  },
+  async ({ category }) => {
+    const manifest = await loadManifest();
+
+    const categoryFilter: Record<string, (p: string) => boolean> = {
+      all: () => true,
+      nodes: (p) => p.startsWith("nodes/"),
+      entities: (p) => p.startsWith("entities/"),
+      briefs: (p) => p.startsWith("briefs/"),
+      forces: (p) => ["force-dynamics.md", "convergences.md", "bottleneck-map.md", "velocity-trackers.md", "predictions.md", "opportunity-pipeline.md"].includes(p),
+      frameworks: (p) => p.startsWith("frameworks/"),
+    };
+
+    const filtered = manifest.files.filter((f) => categoryFilter[category](f.path));
+
+    const parts = [
+      `# AI Radar Knowledge Base`,
+      `${manifest.totalFiles} files | Updated: ${manifest.lastUpdated}`,
+      "",
+      `Navigation: ${manifest.navigation}`,
+      "",
+    ];
+
+    // Group by directory
+    const groups: Record<string, typeof filtered> = {};
+    for (const f of filtered) {
+      const dir = f.path.includes("/") ? f.path.split("/")[0] : "root";
+      if (!groups[dir]) groups[dir] = [];
+      groups[dir].push(f);
+    }
+
+    for (const [dir, files] of Object.entries(groups)) {
+      const dirDesc = manifest.structure[dir] || dir;
+      parts.push(`## ${dir}/ — ${dirDesc}`);
+      for (const f of files) {
+        const name = (f.frontmatter.name as string) || f.path;
+        const tags = f.tags.length > 0 ? ` [${f.tags.slice(0, 4).join(", ")}]` : "";
+        const links = f.wikilinks.length > 0 ? ` → links to: ${f.wikilinks.slice(0, 5).join(", ")}` : "";
+        parts.push(`- **${name}** (${f.path})${tags}${links}`);
+      }
+      parts.push("");
+    }
+
+    parts.push("Use radar_wiki_read with any file path to read the full content.");
+
+    return { content: [{ type: "text" as const, text: parts.join("\n") }] };
+  }
+);
+
+/**
+ * TOOL: radar_wiki_read
+ * Read a specific wiki file — full markdown content with wikilinks and structure.
+ */
+server.tool(
+  "radar_wiki_read",
+  "Read a specific file from the AI Radar knowledge base. Returns the full markdown content including frontmatter, wikilinks, and tags. The content uses [[wikilinks]] — you can follow any link by reading that file next. Example paths: 'nodes/ai-agents.md', 'entities/anthropic.md', 'convergences.md', 'briefs/2026-04-04.md'",
+  {
+    file_path: z.string().describe("Path to the wiki file, e.g. 'nodes/ai-agents.md' or 'entities/anthropic.md'"),
+  },
+  async ({ file_path }) => {
+    const content = await readWikiFile(file_path);
+    if (!content) {
+      // Help the agent find the right file
+      const manifest = await loadManifest();
+      const suggestions = manifest.files
+        .filter((f) => f.path.toLowerCase().includes(file_path.toLowerCase().replace(".md", "")))
+        .slice(0, 5);
+      const sugText = suggestions.length > 0
+        ? `\nDid you mean: ${suggestions.map((s) => s.path).join(", ")}?`
+        : "\nUse radar_wiki_browse to see all available files.";
+      return { content: [{ type: "text" as const, text: `File not found: ${file_path}${sugText}` }] };
+    }
+
+    // Extract wikilinks for navigation hints
+    const links = [...(content.match(/\[\[([^\]]+)\]\]/g) || [])].map((l) => l.replace(/\[\[|\]\]/g, ""));
+    const uniqueLinks = [...new Set(links)];
+
+    const footer = uniqueLinks.length > 0
+      ? `\n\n---\nThis file links to: ${uniqueLinks.join(", ")}\nUse radar_wiki_read to follow any link.`
+      : "";
+
+    return { content: [{ type: "text" as const, text: content + footer }] };
+  }
+);
+
+/**
+ * TOOL: radar_wiki_search
+ * Search across the entire knowledge base by keyword or tag.
+ */
+server.tool(
+  "radar_wiki_search",
+  "Search the AI Radar knowledge base by keyword or tag. Returns matching files with context snippets. Use this when you're looking for information about a specific topic, company, technology, or concept across the entire wiki.",
+  {
+    query: z.string().describe("Search term — a company name, technology, concept, or tag"),
+    max_results: z.number().default(10).describe("Maximum results to return"),
+  },
+  async ({ query, max_results }) => {
+    const manifest = await loadManifest();
+    const queryLower = query.toLowerCase();
+
+    // Score files by relevance
+    const scored = await Promise.all(
+      manifest.files.map(async (f) => {
+        let score = 0;
+
+        // Check frontmatter name/description
+        const name = ((f.frontmatter.name as string) || "").toLowerCase();
+        if (name.includes(queryLower)) score += 10;
+
+        // Check tags
+        if (f.tags.some((t) => t.toLowerCase().includes(queryLower))) score += 5;
+
+        // Check wikilinks
+        if (f.wikilinks.some((l) => l.toLowerCase().includes(queryLower))) score += 3;
+
+        // Check file path
+        if (f.path.toLowerCase().includes(queryLower)) score += 5;
+
+        // If decent match, read content for snippet
+        let snippet = "";
+        if (score > 0) {
+          const content = await readWikiFile(f.path);
+          if (content) {
+            const lines = content.split("\n");
+            for (const line of lines) {
+              if (line.toLowerCase().includes(queryLower)) {
+                snippet = line.trim().slice(0, 200);
+                score += 2;
+                break;
+              }
+            }
+          }
+        }
+
+        return { ...f, score, snippet };
+      })
+    );
+
+    const results = scored.filter((r) => r.score > 0).sort((a, b) => b.score - a.score).slice(0, max_results);
+
+    if (results.length === 0) {
+      return { content: [{ type: "text" as const, text: `No results for "${query}". Try a broader term or use radar_wiki_browse to see all files.` }] };
+    }
+
+    const parts = [
+      `# Search: "${query}" — ${results.length} results`,
+      "",
+      ...results.map((r) => {
+        const name = (r.frontmatter.name as string) || r.path;
+        return [
+          `## ${name} (${r.path})`,
+          r.snippet ? `> ${r.snippet}` : "",
+          r.tags.length ? `Tags: ${r.tags.join(", ")}` : "",
+          r.wikilinks.length ? `Links to: ${r.wikilinks.slice(0, 5).join(", ")}` : "",
+          "",
+        ].filter(Boolean).join("\n");
+      }),
+      "Use radar_wiki_read with any path to read the full file.",
+    ];
+
+    return { content: [{ type: "text" as const, text: parts.join("\n") }] };
+  }
+);
+
 // ── Start ───────────────────────────────────────────────────
 
 async function main() {
