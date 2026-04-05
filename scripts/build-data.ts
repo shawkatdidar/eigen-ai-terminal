@@ -1,0 +1,737 @@
+/**
+ * DATA CONVERTER — Reads the AI Radar markdown wiki and outputs JSON for the website.
+ *
+ * How it works:
+ *   1. Reads markdown files from the wiki (one directory up: ../nodes/, ../briefs/, etc.)
+ *   2. Parses the YAML frontmatter (the --- block at the top with metadata)
+ *   3. Extracts content sections (## headings, bullet points, tables)
+ *   4. Writes structured JSON files to public/data/ for the website to consume
+ *
+ * Run with: npx tsx scripts/build-data.ts
+ */
+
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+
+// The wiki lives one directory above the web app
+const WIKI_ROOT = path.resolve(__dirname, "../../");
+const OUTPUT_DIR = path.resolve(__dirname, "../public/data");
+
+// ── Helpers ──────────────────────────────────────────────────
+
+function readMd(filePath: string): { data: Record<string, unknown>; content: string } | null {
+  try {
+    const raw = fs.readFileSync(filePath, "utf-8");
+    const parsed = matter(raw);
+    return { data: parsed.data as Record<string, unknown>, content: parsed.content };
+  } catch {
+    return null;
+  }
+}
+
+/** Extract text under a ## heading (until the next ## or end of file) */
+function extractSection(content: string, heading: string): string {
+  const regex = new RegExp(`^## ${heading}\\s*\\n([\\s\\S]*?)(?=^## |$)`, "m");
+  const match = content.match(regex);
+  return match ? match[1].trim() : "";
+}
+
+/** Extract all ## headings and their content */
+function extractAllSections(content: string): Record<string, string> {
+  const sections: Record<string, string> = {};
+  const parts = content.split(/^## /m);
+  for (const part of parts.slice(1)) {
+    const newline = part.indexOf("\n");
+    if (newline === -1) continue;
+    const heading = part.slice(0, newline).trim();
+    const body = part.slice(newline + 1).trim();
+    sections[heading] = body;
+  }
+  return sections;
+}
+
+/** Parse markdown bullet list into array of strings */
+function parseBullets(text: string): string[] {
+  return text
+    .split("\n")
+    .filter((line) => line.match(/^[-*]\s/))
+    .map((line) => line.replace(/^[-*]\s+/, "").trim());
+}
+
+/** Parse the signal bullets from a brief (each starts with **bold title**) */
+function parseSignals(text: string): Array<{
+  title: string;
+  description: string;
+  nodes: string[];
+  source: string;
+}> {
+  if (!text || text.includes("*(None")) return [];
+
+  // Split by bullet points that start with **
+  const signals: Array<{ title: string; description: string; nodes: string[]; source: string }> =
+    [];
+  const bulletRegex = /^- \*\*(.+?)\*\*\s*—\s*([\s\S]*?)(?=^- \*\*|$)/gm;
+  let match;
+
+  while ((match = bulletRegex.exec(text)) !== null) {
+    const title = match[1].trim();
+    const body = match[2].trim();
+
+    // Extract node references like [[ai-coding-tools]]
+    const nodeMatches = body.match(/\[\[([^\]]+)\]\]/g) || [];
+    const nodes = nodeMatches.map((n) => n.replace(/\[\[|\]\]/g, ""));
+
+    // Extract source URL — last markdown link in the body
+    const linkMatches = [...body.matchAll(/\[([^\]]*)\]\(([^)]+)\)/g)];
+    const source = linkMatches.length > 0 ? linkMatches[linkMatches.length - 1][2] : "";
+
+    // Clean description: remove node tags and source link, take first part before →
+    let description = body;
+    // Remove the [[node]] tags
+    description = description.replace(/\[\[[^\]]+\]\]/g, "").trim();
+    // Remove trailing source links
+    description = description.replace(/\s*—\s*\[[^\]]*\]\([^)]*\)\s*$/, "").trim();
+
+    signals.push({ title, description, nodes, source });
+  }
+
+  return signals;
+}
+
+/** Node IDs that belong to each view */
+const BUILDER_NODES = new Set([
+  "ai-coding-tools",
+  "ai-agents",
+  "open-source-models",
+  "ai-infrastructure",
+  "multimodal-ai",
+  "edge-on-device-ai",
+  "frontier-edges",
+  "ai-research-breakthroughs",
+]);
+
+const STRATEGIC_NODES = new Set([
+  "ai-business-funding",
+  "ai-policy-regulation",
+  "ai-in-enterprise",
+  "compute-hardware",
+  "ai-safety-alignment",
+]);
+
+// Nodes in both views
+const BOTH_NODES = new Set(["frontier-models", "robotics-embodied-ai", "ai-for-science"]);
+
+function getSignalView(nodeIds: string[]): "builder" | "strategic" | "both" {
+  // Only count nodes that are SPECIFICALLY builder or strategic (not neutral/both)
+  const hasBuilderSpecific = nodeIds.some((n) => BUILDER_NODES.has(n));
+  const hasStrategicSpecific = nodeIds.some((n) => STRATEGIC_NODES.has(n));
+
+  if (hasBuilderSpecific && hasStrategicSpecific) return "both";
+  if (hasBuilderSpecific) return "builder";
+  if (hasStrategicSpecific) return "strategic";
+  // If only neutral nodes (frontier-models, robotics, etc), show in both
+  return "both";
+}
+
+/** Convert internal node IDs to human-readable names */
+const NODE_NAMES: Record<string, string> = {
+  "frontier-models": "Frontier Models",
+  "open-source-models": "Open Source Models",
+  "compute-hardware": "Compute & Hardware",
+  "ai-agents": "AI Agents",
+  "ai-coding-tools": "AI Coding Tools",
+  "ai-infrastructure": "AI Infrastructure",
+  "ai-safety-alignment": "AI Safety",
+  "ai-policy-regulation": "AI Policy & Regulation",
+  "ai-business-funding": "AI Business & Funding",
+  "multimodal-ai": "Multimodal AI",
+  "ai-for-science": "AI for Science",
+  "robotics-embodied-ai": "Robotics & Embodied AI",
+  "ai-research-breakthroughs": "Research Breakthroughs",
+  "edge-on-device-ai": "Edge & On-Device AI",
+  "ai-in-enterprise": "AI in Enterprise",
+  "frontier-edges": "Frontier Edges",
+};
+
+// ── Parse Force Chains ──────────────────────────────────────
+
+function parseForceChains(content: string): Array<{
+  id: string;
+  title: string;
+  origin: string;
+  targets: string[];
+  mechanism: string;
+  direction: string;
+  strength: string;
+  lag: string;
+  status: string;
+  dateIdentified: string;
+}> {
+  const chains: Array<{
+    id: string;
+    title: string;
+    origin: string;
+    targets: string[];
+    mechanism: string;
+    direction: string;
+    strength: string;
+    lag: string;
+    status: string;
+    dateIdentified: string;
+  }> = [];
+
+  // Split by ### FC-XXX headings
+  const chainBlocks = content.split(/^### (FC-\d+):/m);
+
+  for (let i = 1; i < chainBlocks.length; i += 2) {
+    const id = chainBlocks[i];
+    const body = chainBlocks[i + 1] || "";
+    const titleMatch = body.match(/^([^\n]+)/);
+    const title = titleMatch ? titleMatch[1].trim() : "";
+
+    const getField = (name: string): string => {
+      const re = new RegExp(`\\*\\*${name}:\\*\\*\\s*(.+?)(?:\\n|$)`, "i");
+      const m = body.match(re);
+      return m ? m[1].trim() : "";
+    };
+
+    const originRaw = getField("Origin signal");
+    const targetRaw = getField("Target\\(s\\)");
+    const targets = (targetRaw.match(/\[\[([^\]]+)\]\]/g) || []).map((t) =>
+      t.replace(/\[\[|\]\]/g, "")
+    );
+
+    const mechanismMatch = body.match(
+      /\*\*Mechanism:\*\*\s*([\s\S]*?)(?=\*\*Direction|\*\*Strength|---|$)/i
+    );
+    const mechanism = mechanismMatch ? mechanismMatch[1].trim() : "";
+
+    chains.push({
+      id,
+      title,
+      origin: originRaw,
+      targets,
+      mechanism,
+      direction: getField("Direction").replace(/`/g, ""),
+      strength: getField("Strength").replace(/`/g, ""),
+      lag: getField("Lag").replace(/`/g, ""),
+      status: getField("Status").replace(/`/g, ""),
+      dateIdentified: getField("Date identified"),
+    });
+  }
+
+  return chains;
+}
+
+// ── Parse Convergences ──────────────────────────────────────
+
+function parseConvergences(content: string): Array<{
+  id: string;
+  title: string;
+  confidence: string;
+  predictedOutcome: string;
+  timeline: string;
+  forces: Array<{ description: string; origin: string; strength: string }>;
+  invalidation: string;
+}> {
+  const convergences: Array<{
+    id: string;
+    title: string;
+    confidence: string;
+    predictedOutcome: string;
+    timeline: string;
+    forces: Array<{ description: string; origin: string; strength: string }>;
+    invalidation: string;
+  }> = [];
+
+  const blocks = content.split(/^### (CONV-\d+):/m);
+
+  for (let i = 1; i < blocks.length; i += 2) {
+    const id = blocks[i];
+    const body = blocks[i + 1] || "";
+    const titleMatch = body.match(/^([^\n]+)/);
+    const title = titleMatch ? titleMatch[1].trim() : "";
+
+    const getField = (name: string): string => {
+      const re = new RegExp(`\\*\\*${name}:\\*\\*\\s*(.+?)(?:\\n|$)`, "i");
+      const m = body.match(re);
+      return m ? m[1].replace(/`/g, "").trim() : "";
+    };
+
+    // Parse contributing forces table
+    const forces: Array<{ description: string; origin: string; strength: string }> = [];
+    const tableMatch = body.match(
+      /\*\*Contributing Forces:\*\*[\s\S]*?\|[^|]+\|[^|]+\|[^|]+\|[^|]+\|[^|]+\|\s*\n\|[-\s|]+\|\s*\n([\s\S]*?)(?=\n\n|\*\*What would)/
+    );
+    if (tableMatch) {
+      const rows = tableMatch[1].split("\n").filter((r) => r.includes("|"));
+      for (const row of rows) {
+        const cells = row
+          .split("|")
+          .map((c) => c.trim())
+          .filter(Boolean);
+        if (cells.length >= 4) {
+          forces.push({
+            description: cells[1].replace(/\[\[|\]\]/g, ""),
+            origin: (cells[2].match(/\[\[([^\]]+)\]\]/) || ["", cells[2]])[1],
+            strength: cells[4] || "moderate",
+          });
+        }
+      }
+    }
+
+    convergences.push({
+      id,
+      title,
+      confidence: getField("Confidence"),
+      predictedOutcome: getField("Predicted outcome"),
+      timeline: getField("Timeline"),
+      forces,
+      invalidation: getField("What would invalidate this"),
+    });
+  }
+
+  return convergences;
+}
+
+// ── Parse Bottlenecks ───────────────────────────────────────
+
+function parseBottlenecks(content: string): Array<{
+  id: string;
+  title: string;
+  type: string;
+  status: string;
+  blocks: string[];
+  attackers: number;
+  looseningSignals: number;
+  summary: string;
+}> {
+  const bottlenecks: Array<{
+    id: string;
+    title: string;
+    type: string;
+    status: string;
+    blocks: string[];
+    attackers: number;
+    looseningSignals: number;
+    summary: string;
+  }> = [];
+
+  const blocks = content.split(/^### (BN-\d+):/m);
+
+  for (let i = 1; i < blocks.length; i += 2) {
+    const id = blocks[i];
+    const body = blocks[i + 1] || "";
+    const titleMatch = body.match(/^([^\n]+)/);
+    const title = titleMatch ? titleMatch[1].trim() : "";
+
+    const getField = (name: string): string => {
+      const re = new RegExp("\\*\\*" + name + ":\\*\\*\\s*`?([^`\\n]+)", "i");
+      const m = body.match(re);
+      return m ? m[1].trim() : "";
+    };
+
+    // Count blocked nodes from table
+    const blockedNodes = (body.match(/\[\[([^\]]+)\]\]/g) || [])
+      .map((n) => n.replace(/\[\[|\]\]/g, ""))
+      .filter((v, i, a) => a.indexOf(v) === i);
+
+    // Count attackers (rows in "Who's attacking" table)
+    const attackerMatch = body.match(/\*\*Who's attacking.*?\n\|.*?\n\|[-\s|]+\n([\s\S]*?)(?=\n\n|\*\*Signals)/);
+    const attackerRows = attackerMatch
+      ? attackerMatch[1].split("\n").filter((r) => r.includes("|")).length
+      : 0;
+
+    // Count loosening signals
+    const looseningMatch = body.match(/\*\*Signals of loosening.*?\n\|.*?\n\|[-\s|]+\n([\s\S]*?)(?=\n\n|---|$)/);
+    const looseningRows = looseningMatch
+      ? looseningMatch[1].split("\n").filter((r) => r.includes("|")).length
+      : 0;
+
+    // Extract the "What it blocks" first row description for summary
+    const whatBlocksMatch = body.match(/\*\*What it blocks:\*\*[\s\S]*?\|[^|]+\|([^|]+)\|/);
+    const summary = whatBlocksMatch ? whatBlocksMatch[1].trim() : "";
+
+    bottlenecks.push({
+      id,
+      title,
+      type: getField("Type"),
+      status: getField("Status"),
+      blocks: blockedNodes,
+      attackers: attackerRows,
+      looseningSignals: looseningRows,
+      summary,
+    });
+  }
+
+  return bottlenecks;
+}
+
+// ── Parse Velocity Trackers ─────────────────────────────────
+
+function parseVelocity(content: string): Array<{
+  id: string;
+  metric: string;
+  currentValue: string;
+  date: string;
+  velocity: string;
+  acceleration: string;
+  category: string;
+}> {
+  const trackers: Array<{
+    id: string;
+    metric: string;
+    currentValue: string;
+    date: string;
+    velocity: string;
+    acceleration: string;
+    category: string;
+  }> = [];
+
+  let currentCategory = "";
+  const lines = content.split("\n");
+
+  for (const line of lines) {
+    // Track category headings
+    const catMatch = line.match(/^### Category: (.+)/);
+    if (catMatch) {
+      currentCategory = catMatch[1].trim();
+      continue;
+    }
+
+    // Parse table rows with V-XX IDs
+    const rowMatch = line.match(
+      /\|\s*(V-\d+)\s*\|\s*([^|]+)\|\s*([^|]*)\|\s*([^|]*)\|\s*[^|]*\|\s*[^|]*\|\s*([^|]*)\|\s*([^|]*)\|/
+    );
+    if (rowMatch) {
+      const [, id, metric, currentValue, date, velocity, acceleration] = rowMatch;
+      if (currentValue.trim() && currentValue.trim() !== "") {
+        trackers.push({
+          id: id.trim(),
+          metric: metric.trim(),
+          currentValue: currentValue.trim(),
+          date: date.trim(),
+          velocity: velocity.trim(),
+          acceleration: acceleration.trim(),
+          category: currentCategory,
+        });
+      }
+    }
+  }
+
+  return trackers;
+}
+
+// ── Parse Nodes ─────────────────────────────────────────────
+
+function parseNode(filePath: string): {
+  id: string;
+  name: string;
+  status: string;
+  currentState: string;
+  lastUpdated: string;
+} | null {
+  const parsed = readMd(filePath);
+  if (!parsed) return null;
+
+  const { data, content } = parsed;
+  const currentState = extractSection(content, "Current State");
+
+  return {
+    id: (data.id as string) || path.basename(filePath, ".md"),
+    name: (data.name as string) || path.basename(filePath, ".md"),
+    status: (data.status as string) || "unknown",
+    currentState: currentState.slice(0, 500) + (currentState.length > 500 ? "..." : ""),
+    lastUpdated: (data.last_updated as string) || "",
+  };
+}
+
+// ── Main Build ──────────────────────────────────────────────
+
+function build() {
+  console.log("📡 AI Radar — Building data from wiki...\n");
+
+  // Ensure output directory exists
+  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+
+  // 1. Parse the latest brief
+  console.log("  Reading briefs...");
+  const briefsDir = path.join(WIKI_ROOT, "briefs");
+  const briefFiles = fs
+    .readdirSync(briefsDir)
+    .filter((f) => f.match(/^\d{4}-\d{2}-\d{2}\.md$/))
+    .sort()
+    .reverse();
+
+  const latestBriefFile = briefFiles[0];
+  const latestBrief = readMd(path.join(briefsDir, latestBriefFile));
+
+  let briefData: Record<string, unknown> = {};
+  if (latestBrief) {
+    const sections = extractAllSections(latestBrief.content);
+    const significant = parseSignals(sections["Significant"] || "");
+    const notable = parseSignals(sections["Notable"] || "");
+    const breakthrough = parseSignals(sections["Breakthrough"] || "");
+
+    // Add view classification to each signal
+    const addViews = (
+      signals: Array<{ title: string; description: string; nodes: string[]; source: string }>
+    ) =>
+      signals.map((s) => ({
+        ...s,
+        nodeNames: s.nodes.map((n) => NODE_NAMES[n] || n),
+        view: getSignalView(s.nodes),
+      }));
+
+    briefData = {
+      date: latestBrief.data.date,
+      scanTime: latestBrief.data.scan_time,
+      signalsTotal: latestBrief.data.signals_total,
+      signalsNotable: latestBrief.data.signals_notable,
+      signalsSignificant: latestBrief.data.signals_significant,
+      signalsBreakthrough: latestBrief.data.signals_breakthrough,
+      nodesUpdated: latestBrief.data.nodes_updated,
+      breakthrough: addViews(breakthrough),
+      significant: addViews(significant),
+      notable: addViews(notable),
+    };
+    console.log(
+      `    Latest brief: ${latestBriefFile} (${significant.length} significant, ${notable.length} notable)`
+    );
+  }
+
+  // 2. Parse force dynamics
+  console.log("  Reading force dynamics...");
+  const forceDynamicsFile = path.join(WIKI_ROOT, "system/force-dynamics.md");
+  const forceDynamics = readMd(forceDynamicsFile);
+  const forceChains = forceDynamics ? parseForceChains(forceDynamics.content) : [];
+  console.log(`    ${forceChains.length} active force chains`);
+
+  // 3. Parse convergences
+  console.log("  Reading convergences...");
+  const convergencesFile = path.join(WIKI_ROOT, "system/convergences.md");
+  const convergences = readMd(convergencesFile);
+  const convergenceData = convergences ? parseConvergences(convergences.content) : [];
+  console.log(`    ${convergenceData.length} active convergences`);
+
+  // 4. Parse bottlenecks
+  console.log("  Reading bottlenecks...");
+  const bottlenecksFile = path.join(WIKI_ROOT, "system/bottleneck-map.md");
+  const bottlenecks = readMd(bottlenecksFile);
+  const bottleneckData = bottlenecks ? parseBottlenecks(bottlenecks.content) : [];
+  console.log(`    ${bottleneckData.length} active bottlenecks`);
+
+  // 5. Parse velocity trackers
+  console.log("  Reading velocity trackers...");
+  const velocityFile = path.join(WIKI_ROOT, "system/velocity-trackers.md");
+  const velocity = readMd(velocityFile);
+  const velocityData = velocity ? parseVelocity(velocity.content) : [];
+  console.log(`    ${velocityData.length} tracked metrics`);
+
+  // 6. Parse predictions
+  console.log("  Reading predictions...");
+  const predictionsFile = path.join(WIKI_ROOT, "system/predictions.md");
+  const predictions = readMd(predictionsFile);
+  const predictionsContent = predictions ? predictions.content : "";
+  // Extract prediction blocks
+  const predBlocks = predictionsContent.split(/^### (PRED-\d+):/m);
+  const predictionData: Array<{
+    id: string;
+    title: string;
+    confidence: string;
+    checkDate: string;
+    basedOn: string;
+  }> = [];
+  for (let i = 1; i < predBlocks.length; i += 2) {
+    const id = predBlocks[i];
+    const body = predBlocks[i + 1] || "";
+    const titleMatch = body.match(/^([^\n]+)/);
+    const title = titleMatch ? titleMatch[1].trim() : "";
+    const getField = (name: string): string => {
+      const re = new RegExp(`\\*\\*${name}:\\*\\*\\s*(.+?)(?:\\n|$)`, "i");
+      const m = body.match(re);
+      return m ? m[1].replace(/`/g, "").trim() : "";
+    };
+    predictionData.push({
+      id,
+      title,
+      confidence: getField("Confidence"),
+      checkDate: getField("Check date"),
+      basedOn: getField("Based on"),
+    });
+  }
+  console.log(`    ${predictionData.length} active predictions`);
+
+  // 7. Parse nodes
+  console.log("  Reading nodes...");
+  const nodesDir = path.join(WIKI_ROOT, "nodes");
+  const nodeFiles = fs.readdirSync(nodesDir).filter((f) => f.endsWith(".md"));
+  const nodes = nodeFiles.map((f) => parseNode(path.join(nodesDir, f))).filter(Boolean);
+  console.log(`    ${nodes.length} nodes`);
+
+  // 8. Build ripple connections — link each signal to its causal chain
+  console.log("  Building ripple connections...");
+
+  const activeChains = forceChains.filter((fc) => fc.status === "active");
+
+  /**
+   * For each signal, find connected force chains, convergences, bottlenecks, and predictions.
+   * We match by: (a) shared node overlap, (b) keyword overlap in titles/mechanisms.
+   */
+  function buildRipples(
+    signals: Array<{ title: string; description: string; nodes: string[] }>
+  ): Record<
+    number,
+    {
+      chains: Array<{ title: string; mechanism: string; direction: string; strength: string; targets: string[] }>;
+      convergences: Array<{ title: string; confidence: string; predictedOutcome: string; timeline: string }>;
+      bottlenecks: Array<{ title: string; status: string; summary: string }>;
+      predictions: Array<{ title: string; confidence: string; checkDate: string }>;
+    }
+  > {
+    const ripples: Record<number, {
+      chains: Array<{ title: string; mechanism: string; direction: string; strength: string; targets: string[] }>;
+      convergences: Array<{ title: string; confidence: string; predictedOutcome: string; timeline: string }>;
+      bottlenecks: Array<{ title: string; status: string; summary: string }>;
+      predictions: Array<{ title: string; confidence: string; checkDate: string }>;
+    }> = {};
+
+    // Extract keywords from a string (lowercase, 4+ chars, no common words)
+    const stopWords = new Set(["that", "this", "with", "from", "have", "been", "will", "than", "more", "also", "into", "their", "about", "would", "could", "most", "some", "other", "what", "when", "which", "only", "first", "just", "over"]);
+    function keywords(text: string): Set<string> {
+      return new Set(
+        text.toLowerCase()
+          .replace(/[^a-z0-9\s]/g, " ")
+          .split(/\s+/)
+          .filter((w) => w.length >= 4 && !stopWords.has(w))
+      );
+    }
+
+    function overlap(a: Set<string>, b: Set<string>): number {
+      let count = 0;
+      for (const word of a) if (b.has(word)) count++;
+      return count;
+    }
+
+    signals.forEach((signal, idx) => {
+      const sigNodes = new Set(signal.nodes);
+      const sigKeywords = keywords(signal.title + " " + signal.description);
+
+      // Match force chains: share a node AND have keyword overlap
+      const matchedChains = activeChains.filter((fc) => {
+        const chainNodes = new Set([
+          ...fc.targets,
+          // Extract origin node from the origin field
+          ...(fc.origin.match(/\[\[([^\]]+)\]\]/g) || []).map((n) => n.replace(/\[\[|\]\]/g, "")),
+        ]);
+        const nodeOverlap = [...sigNodes].some((n) => chainNodes.has(n));
+        const kwOverlap = overlap(sigKeywords, keywords(fc.title + " " + fc.mechanism));
+        return nodeOverlap && kwOverlap >= 2;
+      });
+
+      // Match convergences: any of its forces overlap with the signal's nodes
+      const matchedConvergences = convergenceData.filter((conv) => {
+        const convNodes = new Set(conv.forces.map((f) => f.origin));
+        const nodeOverlap = [...sigNodes].some((n) => convNodes.has(n));
+        const kwOverlap = overlap(sigKeywords, keywords(conv.title + " " + conv.predictedOutcome));
+        return nodeOverlap || kwOverlap >= 2;
+      });
+
+      // Match bottlenecks: blocks a node that the signal touches
+      const matchedBottlenecks = bottleneckData.filter((bn) => {
+        return bn.blocks.some((blocked) => sigNodes.has(blocked));
+      });
+
+      // Match predictions: based on matched convergences, or keyword overlap
+      const matchedPredictions = predictionData.filter((pred) => {
+        const kwOverlap = overlap(sigKeywords, keywords(pred.title + " " + pred.basedOn));
+        return kwOverlap >= 2;
+      });
+
+      // Only store if there's at least one connection
+      if (matchedChains.length + matchedConvergences.length + matchedBottlenecks.length + matchedPredictions.length > 0) {
+        ripples[idx] = {
+          chains: matchedChains.slice(0, 3).map((fc) => ({
+            title: fc.title,
+            mechanism: fc.mechanism.slice(0, 300) + (fc.mechanism.length > 300 ? "..." : ""),
+            direction: fc.direction,
+            strength: fc.strength,
+            targets: fc.targets.map((t) => NODE_NAMES[t] || t),
+          })),
+          convergences: matchedConvergences.slice(0, 2).map((c) => ({
+            title: c.title,
+            confidence: c.confidence,
+            predictedOutcome: c.predictedOutcome.slice(0, 200) + (c.predictedOutcome.length > 200 ? "..." : ""),
+            timeline: c.timeline,
+          })),
+          bottlenecks: matchedBottlenecks.slice(0, 2).map((bn) => ({
+            title: bn.title,
+            status: bn.status,
+            summary: bn.summary,
+          })),
+          predictions: matchedPredictions.slice(0, 2).map((p) => ({
+            title: p.title,
+            confidence: p.confidence,
+            checkDate: p.checkDate,
+          })),
+        };
+      }
+    });
+
+    return ripples;
+  }
+
+  // Build ripples for both significant and notable signals
+  const allSignals = [
+    ...((briefData as Record<string, unknown>).significant as Array<{ title: string; description: string; nodes: string[] }> || []),
+    ...((briefData as Record<string, unknown>).notable as Array<{ title: string; description: string; nodes: string[] }> || []),
+  ];
+  const rippleMap = buildRipples(allSignals);
+  const sigCount = ((briefData as Record<string, unknown>).significant as unknown[])?.length || 0;
+
+  // Split ripples back into significant and notable indices
+  const significantRipples: Record<number, unknown> = {};
+  const notableRipples: Record<number, unknown> = {};
+  for (const [idxStr, ripple] of Object.entries(rippleMap)) {
+    const idx = parseInt(idxStr);
+    if (idx < sigCount) {
+      significantRipples[idx] = ripple;
+    } else {
+      notableRipples[idx - sigCount] = ripple;
+    }
+  }
+
+  let connectedSignals = 0;
+  for (const key of Object.keys(rippleMap)) connectedSignals++;
+  console.log(`    ${connectedSignals} signals with ripple connections`);
+
+  // 9. Write output files
+  console.log("\n  Writing JSON...");
+
+  const writeJson = (filename: string, data: unknown) => {
+    const filePath = path.join(OUTPUT_DIR, filename);
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+    console.log(`    ✓ ${filename}`);
+  };
+
+  writeJson("radar.json", {
+    lastUpdated: new Date().toISOString(),
+    brief: briefData,
+    forceChains: activeChains,
+    convergences: convergenceData,
+    bottlenecks: bottleneckData,
+    velocity: velocityData,
+    predictions: predictionData,
+    nodes,
+    nodeNames: NODE_NAMES,
+    ripples: {
+      significant: significantRipples,
+      notable: notableRipples,
+    },
+  });
+
+  console.log("\n✅ Done! Data written to public/data/\n");
+}
+
+build();

@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+/*
+  DESIGN TOKENS — Raindrop AI inspired
+  Light, clean, generous whitespace, strong contrast.
+*/
+
+:root {
+  /* Brand */
+  --color-primary: #0A2833;
+  --color-primary-light: #0D3442;
+  --color-accent: #1D6FA5;
+  --color-accent-light: #EEF6FF;
+  --color-accent-sky: #D6E8FF;
+
+  /* Backgrounds */
+  --color-bg: #FFFFFF;
+  --color-bg-page: #F7F9FC;
+  --color-bg-card: #FFFFFF;
+  --color-bg-subtle: #F0F4F8;
+
+  /* Text — high contrast */
+  --color-text: #0F172A;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94A3B8;
+
+  /* Borders */
+  --color-border: #E2E8F0;
+  --color-border-light: #F1F5F9;
+
+  /* Signal severity */
+  --color-breakthrough: #DC2626;
+  --color-significant: #B45309;
+  --color-notable: #1D4ED8;
+
+  /* Status */
+  --color-accelerating: #059669;
+  --color-hardening: #DC2626;
+  --color-loosening: #059669;
+
+  /* Bars */
+  --color-bar-fill: #1D6FA5;
+  --color-bar-bg: #E2E8F0;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.02);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  --shadow-section: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Fonts — Geist loaded by Next.js */
+  --font-body: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+@theme inline {
+  --color-background: var(--color-bg-page);
+  --color-foreground: var(--color-text);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  background: var(--color-bg-page);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "ss02", "cv01";
+}
+
+/* Strong text rendering */
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.02em;
+}
+
+a, button, [role="button"] {
+  transition: all 0.2s ease-out;
+}
+
+/* Clean scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
