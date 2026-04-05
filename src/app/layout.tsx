@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Radar — What's happening in AI and what it means",
+  title: "Eigen AI Terminal — What's happening in AI and what it means",
   description:
     "Live intelligence on the AI landscape. See what's happening, what it causes, and what it means for your work. Connect your agent for personalized insights.",
 };

@@ -5,7 +5,7 @@
 set -e
 cd "$(dirname "$0")/.."
 
-echo "📡 Rebuilding data from wiki..."
+echo "📡 Eigen AI Terminal — Rebuilding data from wiki..."
 npx tsx scripts/build-data.ts
 
 echo "📤 Pushing to production..."

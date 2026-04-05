@@ -450,7 +450,7 @@ function parseNode(filePath: string): {
 // ── Main Build ──────────────────────────────────────────────
 
 function build() {
-  console.log("📡 AI Radar — Building data from wiki...\n");
+  console.log("📡 Eigen AI Terminal — Building data from wiki...\n");
 
   // Ensure output directory exists
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -814,7 +814,7 @@ function build() {
     manifestPath,
     JSON.stringify(
       {
-        description: "AI Radar Knowledge Base — the full wiki of AI landscape intelligence",
+        description: "Eigen AI Terminal Knowledge Base — the full wiki of AI landscape intelligence",
         lastUpdated: new Date().toISOString(),
         totalFiles: manifest.length,
         structure: {

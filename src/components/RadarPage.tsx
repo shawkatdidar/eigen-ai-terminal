@@ -86,7 +86,7 @@ export default function RadarPage({ data }: { data: RadarData }) {
           <div className="flex items-center gap-2.5">
             <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
             <span className="text-[15px] font-bold text-[var(--color-text)] tracking-tight">
-              AI Radar
+              Eigen
             </span>
           </div>
           <a
@@ -320,7 +320,7 @@ export default function RadarPage({ data }: { data: RadarData }) {
         {/* ── Footer ── */}
         <footer className="text-center py-10 border-t border-[var(--color-border)]">
           <p className="text-[13px] text-[var(--color-text-muted)] leading-relaxed">
-            AI Radar tracks 16 domains daily. Signals verified against primary sources.
+            Eigen AI Terminal tracks 16 domains daily. Signals verified against primary sources.
             <br />
             Your context stays local. We only serve the intelligence.
           </p>

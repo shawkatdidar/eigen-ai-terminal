@@ -1,5 +1,5 @@
 ---
-name: ai-radar
+name: eigen-ai-terminal
 description: Live AI landscape intelligence — signals, causal chains, developing trends, roadblocks, and predictions. Your agent gets daily intelligence across 16 domains and returns only what's relevant to your work.
 version: 0.1.0
 metadata:
@@ -11,7 +11,7 @@ metadata:
       command: npx
       args:
         - tsx
-        - node_modules/ai-radar-mcp/src/index.ts
+        - node_modules/eigen-ai-radar-mcp/src/index.ts
 tags:
   - ai
   - intelligence
@@ -21,13 +21,13 @@ tags:
   - research
 ---
 
-# AI Radar
+# Eigen AI Terminal
 
 Live intelligence on the AI landscape — what's happening, what it causes, and what it means for your work.
 
 ## What this does
 
-AI Radar tracks 16 domains of the AI landscape daily. Your agent gets access to:
+Eigen AI Terminal tracks 16 domains of the AI landscape daily. Your agent gets access to:
 
 - **Today's signals** — significant and notable developments, filtered by builder (tools/tech) or strategic (funding/policy) lens
 - **Ripple effects** — the causal chain behind each signal: what it's pushing, what trends it feeds, what it's blocked by
@@ -75,4 +75,4 @@ One-way data flow: your agent pulls our data, combines with your local context, 
 ## Links
 
 - Website: https://eigen-ai-terminal.vercel.app
-- MCP server: `ai-radar-mcp` on npm
+- MCP server: `eigen-ai-radar-mcp` on npm

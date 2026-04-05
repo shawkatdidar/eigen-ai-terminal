@@ -8,56 +8,54 @@ const tabs = [
     label: "OpenClaw",
     steps: [
       "Tell your OpenClaw agent:",
-      '"Install the AI Radar skill from ClawHub"',
+      '"Install the Eigen AI Terminal skill from ClawHub"',
       "",
       "Or run manually:",
-      "npx clawhub@latest install ai-radar",
+      "npx clawhub@latest install eigen-ai-terminal",
     ],
-    description: "Your OpenClaw agent gets 7 radar tools including personalized intelligence.",
+    description: "Your OpenClaw agent gets 10 tools — signals, ripple effects, the full wiki knowledge base, and personalized intelligence.",
   },
   {
     id: "claude-code",
     label: "Claude Code",
     steps: [
-      "1. Clone the radar MCP server:",
-      "git clone https://github.com/shawkatdidar/eigen-ai-terminal.git",
-      "cd eigen-ai-terminal/mcp-server && npm install",
+      "Add to your MCP settings (Settings → MCP Servers):",
       "",
-      "2. Add to your Claude Code MCP settings:",
       JSON.stringify({
         "mcpServers": {
-          "ai-radar": {
+          "eigen-ai-terminal": {
             "command": "npx",
-            "args": ["tsx", "/path/to/eigen-ai-terminal/mcp-server/src/index.ts"]
+            "args": ["eigen-ai-radar-mcp"]
           }
         }
       }, null, 2),
       "",
-      "3. Ask Claude: \"What happened in AI today that affects my work?\"",
+      "Then ask Claude:",
+      '"What happened in AI today that affects my work?"',
     ],
-    description: "Claude Code gets full radar access — signals, ripple effects, and personalized filtering.",
+    description: "Claude Code gets full access — signals, ripple effects, wiki knowledge base, and personalized filtering.",
   },
   {
     id: "api",
-    label: "Any Agent (API)",
+    label: "Any Agent",
     steps: [
-      "Radar data is available as structured JSON:",
+      "The full knowledge base is available as static files:",
       "",
-      "GET https://web-one-wine-82.vercel.app/data/radar.json",
+      "Manifest:  /wiki/manifest.json",
+      "Signals:   /data/radar.json",
+      "Wiki page: /wiki/nodes/ai-agents.md",
+      "Entity:    /wiki/entities/anthropic.md",
       "",
-      "Returns: signals, force chains, convergences,",
-      "bottlenecks, velocity metrics, predictions,",
-      "and ripple connections for every signal.",
-      "",
-      "Your agent can fetch this daily and process it",
-      "against your local context.",
+      "49 interconnected markdown files with [[wikilinks]]",
+      "and #tags. Your agent navigates the knowledge graph",
+      "the same way a human navigates Obsidian.",
     ],
-    description: "Fetch the full radar dataset and process it however you want.",
+    description: "Fetch the full knowledge base and navigate it however you want. All files use wikilinks for cross-references.",
   },
 ];
 
 export default function ConnectAgent() {
-  const [activeTab, setActiveTab] = useState("openclaw");
+  const [activeTab, setActiveTab] = useState("claude-code");
   const [copied, setCopied] = useState(false);
   const tab = tabs.find((t) => t.id === activeTab)!;
 
@@ -74,7 +72,7 @@ export default function ConnectAgent() {
           Connect Your Agent
         </h3>
         <p className="text-[14px] text-[var(--color-text-secondary)] mt-1.5 max-w-lg">
-          Your AI agent pulls radar data and combines it with{" "}
+          Your AI agent pulls intelligence from Eigen and combines it with{" "}
           <span className="font-bold text-[var(--color-text)]">your</span> local context — your codebase, your notes, your work.
           We never see your data.
         </p>
@@ -120,7 +118,7 @@ export default function ConnectAgent() {
         </div>
         <p className="text-[13px] text-[var(--color-text-muted)] mt-3">{tab.description}</p>
 
-        {/* What the agent gets */}
+        {/* Tools list */}
         <div className="mt-6 pt-5 border-t border-[var(--color-border)]">
           <p className="text-[12px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider mb-3">
             Your agent gets these tools
@@ -134,6 +132,9 @@ export default function ConnectAgent() {
               { name: "radar_roadblocks", desc: "What's blocked and who's fixing it" },
               { name: "radar_velocity", desc: "How fast things are changing" },
               { name: "radar_predictions", desc: "Falsifiable predictions we track" },
+              { name: "radar_wiki_browse", desc: "Browse the full knowledge base" },
+              { name: "radar_wiki_read", desc: "Read any wiki page, follow wikilinks" },
+              { name: "radar_wiki_search", desc: "Search across all 49 wiki files" },
             ].map((tool) => (
               <div key={tool.name} className="flex items-start gap-2 text-[13px]">
                 <code className="text-[12px] font-mono font-bold text-[var(--color-accent)] shrink-0 mt-0.5">
