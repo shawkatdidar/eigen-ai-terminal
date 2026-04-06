@@ -146,6 +146,23 @@ export default function WikiShell({
           `}
         >
           <div className="p-4">
+            {/* Force map — special link */}
+            <div className="mb-3">
+              <Link
+                href="/wiki/forces"
+                className={`
+                  flex items-center gap-2 px-2 py-2 rounded text-[13px] font-semibold transition-colors
+                  ${pathname === "/wiki/forces"
+                    ? "bg-[#eaf3ff] text-[#202122]"
+                    : "text-[#0645ad] hover:bg-[#eaf3ff]"
+                  }
+                `}
+              >
+                <span className="text-[15px]">🗺️</span>
+                Live Force Map
+              </Link>
+            </div>
+
             {/* Root files — the main navigation */}
             <div className="mb-4">
               <p className="text-[11px] font-bold text-[#54595d] uppercase tracking-wider mb-1.5 px-1">
