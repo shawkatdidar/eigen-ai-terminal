@@ -22,8 +22,8 @@ import { z } from "zod";
 
 // ── Constants ───────────────────────────────────────────────
 
-const DATA_URL = "https://web-one-wine-82.vercel.app/data/radar.json";
-const WIKI_URL = "https://web-one-wine-82.vercel.app/wiki";
+const DATA_URL = "https://eigenterminal.clawlab.dev/data/radar.json";
+const WIKI_URL = "https://eigenterminal.clawlab.dev/wiki";
 
 // ── Types ───────────────────────────────────────────────────
 

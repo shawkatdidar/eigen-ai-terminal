@@ -130,7 +130,7 @@ async function loadData(): Promise<RadarData> {
   }
 
   // Fall back to hosted URL (once deployed)
-  const DATA_URL = process.env.EIGEN_DATA_URL || "https://web-one-wine-82.vercel.app/data/radar.json";
+  const DATA_URL = process.env.EIGEN_DATA_URL || "https://eigenterminal.clawlab.dev/data/radar.json";
   try {
     const res = await fetch(DATA_URL);
     cachedData = await res.json() as RadarData;
@@ -462,7 +462,7 @@ server.tool(
 
 // ── Wiki Knowledge Base Tools ───────────────────────────────
 
-const WIKI_BASE_URL = process.env.EIGEN_WIKI_URL || "https://web-one-wine-82.vercel.app/wiki";
+const WIKI_BASE_URL = process.env.EIGEN_WIKI_URL || "https://eigenterminal.clawlab.dev/wiki";
 
 interface WikiManifest {
   lastUpdated: string;

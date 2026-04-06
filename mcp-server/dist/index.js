@@ -47,7 +47,7 @@ async function loadData() {
         }
     }
     // Fall back to hosted URL (once deployed)
-    const DATA_URL = process.env.EIGEN_DATA_URL || "https://web-one-wine-82.vercel.app/data/radar.json";
+    const DATA_URL = process.env.EIGEN_DATA_URL || "https://eigenterminal.clawlab.dev/data/radar.json";
     try {
         const res = await fetch(DATA_URL);
         cachedData = await res.json();
@@ -308,7 +308,7 @@ server.tool("radar_relevant", "Get radar intelligence relevant to a specific con
     return { content: [{ type: "text", text: parts.join("\n") }] };
 });
 // ── Wiki Knowledge Base Tools ───────────────────────────────
-const WIKI_BASE_URL = process.env.EIGEN_WIKI_URL || "https://web-one-wine-82.vercel.app/wiki";
+const WIKI_BASE_URL = process.env.EIGEN_WIKI_URL || "https://eigenterminal.clawlab.dev/wiki";
 let cachedManifest = null;
 let manifestCacheTime = 0;
 async function loadManifest() {

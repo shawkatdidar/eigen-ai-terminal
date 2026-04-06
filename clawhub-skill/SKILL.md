@@ -2,7 +2,7 @@
 name: eigen-ai-terminal
 description: Live AI landscape intelligence — signals, causal chains, developing trends, roadblocks, and predictions. Your agent gets daily intelligence across 16 domains and returns only what's relevant to your work.
 version: 0.4.0
-homepage: https://web-one-wine-82.vercel.app
+homepage: https://eigenterminal.clawlab.dev
 repository: https://github.com/shawkatdidar/eigen-ai-terminal
 metadata:
   openclaw:
@@ -30,8 +30,8 @@ Live intelligence on the AI landscape — what's happening, what it causes, and 
 
 This skill reads **public, read-only JSON** from the Eigen AI Terminal website. No authentication required. No user data is uploaded. One-way data flow only.
 
-- Data endpoint: `web-one-wine-82.vercel.app/data/radar.json`
-- Wiki endpoint: `web-one-wine-82.vercel.app/wiki/`
+- Data endpoint: `eigenterminal.clawlab.dev/data/radar.json`
+- Wiki endpoint: `eigenterminal.clawlab.dev/wiki/`
 
 ## What this does
 
