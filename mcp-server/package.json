@@ -1,12 +1,11 @@
 {
   "name": "eigen-ai-radar-mcp",
-  "version": "0.2.0",
-  "description": "MCP server for Eigen AI Terminal — live intelligence on the AI landscape. 10 tools for signals, ripple effects, wiki knowledge base, and personalized filtering.",
+  "version": "0.3.0",
+  "description": "MCP server for Eigen AI Terminal — live intelligence on the AI landscape. 10 tools for signals, ripple effects, wiki knowledge base, and personalized filtering. Reads public JSON from eigen terminal, no auth required, no user data uploaded.",
   "type": "module",
   "bin": "./dist/index.js",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
     "build": "tsc",
@@ -24,8 +23,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.12.1",
-    "zod": "^4.3.6"
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "zod": "4.3.6"
   },
   "devDependencies": {
     "tsx": "^4.19.4",

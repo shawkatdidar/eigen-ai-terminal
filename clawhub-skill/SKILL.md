@@ -1,17 +1,16 @@
 ---
 name: eigen-ai-terminal
 description: Live AI landscape intelligence — signals, causal chains, developing trends, roadblocks, and predictions. Your agent gets daily intelligence across 16 domains and returns only what's relevant to your work.
-version: 0.1.0
+version: 0.2.0
 metadata:
   openclaw:
     requires:
       bins:
-        - npx
+        - node
     mcp:
-      command: npx
+      command: node
       args:
-        - tsx
-        - node_modules/eigen-ai-radar-mcp/src/index.ts
+        - node_modules/eigen-ai-radar-mcp/dist/index.js
 tags:
   - ai
   - intelligence
@@ -25,6 +24,13 @@ tags:
 
 Live intelligence on the AI landscape — what's happening, what it causes, and what it means for your work.
 
+## Network behavior
+
+This skill reads **public, read-only JSON** from the Eigen AI Terminal website. No authentication required. No user data is uploaded. One-way data flow only.
+
+- Data endpoint: `web-one-wine-82.vercel.app/data/radar.json`
+- Wiki endpoint: `web-one-wine-82.vercel.app/wiki/`
+
 ## What this does
 
 Eigen AI Terminal tracks 16 domains of the AI landscape daily. Your agent gets access to:
@@ -35,9 +41,10 @@ Eigen AI Terminal tracks 16 domains of the AI landscape daily. Your agent gets a
 - **Roadblocks** — constraints holding back AI progress across multiple areas
 - **Velocity metrics** — how fast key things are changing and whether they're accelerating
 - **Predictions** — specific, dated, falsifiable claims we track for accuracy
+- **Full knowledge base** — 49 interconnected wiki files with [[wikilinks]] your agent can navigate
 - **Relevant intelligence** — describe what you're building, get back only what matters for your work
 
-## Tools
+## Tools (10)
 
 ### `radar_brief`
 Get today's AI signals. Filter by `view` (builder/strategic/all) and `significance` (significant/notable/all).
@@ -60,6 +67,15 @@ Get falsifiable predictions with confidence levels and check dates.
 ### `radar_relevant`
 **The key tool.** Describe what you're building or working on. Returns only the signals, trends, roadblocks, and predictions relevant to your specific context. Your agent combines this with your local context — your codebase, notes, and work — to deliver personalized intelligence. We never see your data.
 
+### `radar_wiki_browse`
+Browse the full knowledge base by category (nodes, entities, briefs, forces, frameworks).
+
+### `radar_wiki_read`
+Read any wiki page. Returns full markdown content with [[wikilink]] navigation hints to follow.
+
+### `radar_wiki_search`
+Search across all 49 wiki files by keyword or tag.
+
 ## Example usage
 
 Ask your agent:
@@ -67,12 +83,9 @@ Ask your agent:
 - "Are there any new tools or models I should evaluate?"
 - "What roadblocks should I be aware of for my MCP-based project?"
 - "Show me the ripple effects of the Anthropic/OpenClaw news"
+- "Read the Anthropic entity page from Eigen"
+- "Search the Eigen wiki for MCP protocol"
 
 ## Privacy
 
 One-way data flow: your agent pulls our data, combines with your local context, delivers insights to you. We never see what you're building, what you asked, or what your agent told you.
-
-## Links
-
-- Website: https://eigen-ai-terminal.vercel.app
-- MCP server: `eigen-ai-radar-mcp` on npm
