@@ -5,7 +5,7 @@ tags:
   - system
   - force-dynamics
   - causal
-last_updated: 2026-04-03
+last_updated: 2026-04-06
 ---
 
 # Force Dynamics — Propagation Graph
@@ -423,6 +423,60 @@ A **force** is a signal that pushes change in a domain other than its origin. Fo
 | Date | Update | Signal Evidence |
 |------|--------|----------------|
 | 2026-04-03 | Identified | Cursor 3 rebuild + Codex pay-as-you-go + ChatGPT Business $25→$20 |
+
+---
+
+### FC-020: OpenAI "Intelligence Age" Blueprint Forces Lab Policy Competition
+
+**Date identified:** 2026-04-06
+**Origin signal:** OpenAI publishes 13-page economic redistribution blueprint ([[ai-policy-regulation]])
+**Target(s):** [[ai-business-funding]], [[ai-in-enterprise]]
+**Mechanism:** First frontier lab publishing a comprehensive economic redistribution proposal forces all other labs to respond with competing policy positions or risk having OpenAI define the terms. Enterprise customers now face regulatory uncertainty — if robot taxes or capital taxation pass, AI deployment ROI calculations change fundamentally. Shifts lobbying from "don't regulate us" to "regulate us this way, not that way." Congressional hearings will reference this document.
+**Direction:** constraining (enterprise) / accelerating (policy)
+**Strength:** strong
+**Lag:** months
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-04-06 | Identified | OpenAI "Industrial Policy for the Intelligence Age" published |
+
+---
+
+### FC-021: GrandCode Live Competition Victory Validates Agentic RL for Coding
+
+**Date identified:** 2026-04-06
+**Origin signal:** GrandCode beats all humans in live Codeforces competitions ([[ai-research-breakthroughs]])
+**Target(s):** [[ai-coding-tools]], [[ai-business-funding]]
+**Mechanism:** Live competitive programming requires real-time strategic reasoning under time pressure — a superset of everyday coding challenges. GrandCode's Agentic GRPO algorithm (designed for multi-stage agent rollouts with delayed rewards) is directly applicable to production coding agents where quality feedback comes only at the end of complex multi-file changes. This result will be cited by every AI coding startup in fundraising decks within weeks.
+**Direction:** accelerating
+**Strength:** moderate
+**Lag:** weeks
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-04-06 | Identified | arXiv:2604.02721 — 1st place in 3 consecutive Codeforces rounds |
+
+---
+
+### FC-022: Single-Agent vs Multi-Agent Paper Constrains Agent Framework Investment
+
+**Date identified:** 2026-04-06
+**Origin signal:** Paper shows single-agent outperforms multi-agent when compute equalized ([[ai-research-breakthroughs]])
+**Target(s):** [[ai-agents]], [[ai-coding-tools]]
+**Mechanism:** The Data Processing Inequality argument that multi-agent coordination inherently loses information challenges the multi-agent trend (Cursor 3 Agents Window, oh-my-codex, CrewAI, AutoGen). If accepted, it constrains investment in multi-agent orchestration and redirects toward single-model inference scaling. The counterargument — that multi-agent provides fault tolerance and specialization beyond raw accuracy — will determine ecosystem direction.
+**Direction:** constraining
+**Strength:** moderate
+**Lag:** weeks
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-04-06 | Identified | arXiv:2604.02460 — DPI argument, tested across 3 model families |
 
 ---
 
