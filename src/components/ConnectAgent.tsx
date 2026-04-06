@@ -5,100 +5,109 @@ import { useState } from "react";
 type Platform = "openclaw" | "claude-code" | "any-agent";
 type OpenClawMethod = "direct" | "clawhub";
 
+const DIRECT_PROMPT = `Install the Eigen AI Terminal skill into my workspace by running:
+
+npx eigen-terminal-install
+
+After it installs, ask me what I'm building so you can personalize my morning briefings.`;
+
+const CLAWHUB_PROMPT = `Do two things:
+
+1. Install the Eigen AI Terminal skill from ClawHub:
+   npx clawhub@latest install eigen-ai-terminal
+
+2. After it installs, set up a daily cron job at 7:00 AM that does this every morning:
+
+   - Call radar_brief with view "builder" and significance "significant" to get today's top signals
+   - Call radar_relevant with what you know about my work to get personalized intelligence
+   - Call radar_trends to check if any major trend shifted overnight
+   - Send me a SHORT morning message (not a wall of text) with this format:
+
+     ☀️ Good morning — here's what matters in AI today:
+
+     [One sentence: the single most important development and why it affects my work]
+
+     What you should know:
+     • [Signal that directly impacts what I'm building — one line]
+     • [New tool, model, or capability I could use — one line]
+     • [Only include a third if it's genuinely relevant]
+
+     Trend to watch: [One developing trend in plain language with confidence %]
+
+     Say "dig deeper on [topic]" or "full brief" for more.
+
+   IMPORTANT rules for the morning brief:
+   - Maximum 3 bullet points. Less is more. Only include what I can ACT on today.
+   - Every bullet must pass the test: "Can I do something with this information today?"
+   - Never include funding rounds, IPO news, policy changes, or executive shuffles unless they DIRECTLY change a tool or API I use.
+   - If nothing significant happened that affects my work, say so in one line. Don't pad with generic AI news.
+   - Write like a sharp colleague giving me a 30-second update, not like a newsletter.
+
+Now ask me: "What are you building right now? I'll filter AI news to only what matters for your work — and deliver it every morning at 7am."`;
+
+const CLAUDE_CODE_CONFIG = JSON.stringify({
+  mcpServers: {
+    "eigen-ai-terminal": {
+      command: "npx",
+      args: ["eigen-ai-radar-mcp"],
+    },
+  },
+}, null, 2);
+
+const ANY_AGENT_PROMPT = `You now have access to the Eigen AI Terminal — a daily intelligence system tracking 16 domains of the AI landscape.
+
+Endpoints (public, read-only, no auth):
+- Today's signals + trends + predictions: https://eigenterminal.clawlab.dev/data/radar.json
+- Knowledge base index (49 files): https://eigenterminal.clawlab.dev/wiki/manifest.json
+- Any wiki page: https://eigenterminal.clawlab.dev/wiki/{path}
+  Examples: wiki/nodes/ai-agents.md, wiki/entities/anthropic.md, wiki/convergences.md
+
+Wiki files use [[wikilinks]] for cross-references — follow them to navigate the knowledge graph.
+
+How to use this:
+1. Fetch radar.json daily for signals, causal chains, trends, roadblocks, and predictions
+2. Filter by what the user is building — only surface what they can act on
+3. When the user asks about any AI topic, search the wiki for deep context
+4. For any signal, trace its ripple effects through the force chains and convergences
+
+Ask me what I'm building so you can start filtering.`;
+
 const openclawMethods: Record<OpenClawMethod, {
   label: string;
   tag: string;
-  command: string;
+  prompt: string;
+  subtitle: string;
   description: string;
 }> = {
   direct: {
     label: "Direct Install",
     tag: "Recommended",
-    command: "npx eigen-terminal-install",
-    description: "Installs with automatic daily morning briefing. Asks what you're building, then delivers personalized AI intelligence every morning at 7am.",
+    prompt: DIRECT_PROMPT,
+    subtitle: "Auto morning briefing included",
+    description: "Paste this in your OpenClaw chat. It installs the skill and sets up automatic onboarding.",
   },
   clawhub: {
     label: "Via ClawHub",
-    tag: "",
-    command: "npx clawhub@latest install eigen-ai-terminal",
-    description: "Installs from ClawHub registry. 11 tools available — you set up the morning briefing manually by saying \"set up my Eigen morning brief\".",
+    tag: "With morning brief",
+    prompt: CLAWHUB_PROMPT,
+    subtitle: "Installs skill + sets up daily cron",
+    description: "Paste this in your OpenClaw chat. It installs from ClawHub AND sets up the morning briefing — all in one prompt.",
   },
 };
-
-const platforms: Array<{
-  id: Platform;
-  label: string;
-  content: (copied: boolean, onCopy: (text: string) => void) => React.ReactNode;
-}> = [
-  {
-    id: "openclaw",
-    label: "OpenClaw",
-    content: (copied, onCopy) => <OpenClawPanel copied={copied} onCopy={onCopy} />,
-  },
-  {
-    id: "claude-code",
-    label: "Claude Code",
-    content: (copied, onCopy) => {
-      const config = JSON.stringify({
-        mcpServers: {
-          "eigen-ai-terminal": {
-            command: "npx",
-            args: ["eigen-ai-radar-mcp"],
-          },
-        },
-      }, null, 2);
-      return (
-        <div>
-          <p className="text-[13px] text-[var(--color-text-secondary)] mb-4 leading-relaxed">
-            Add this to your MCP settings (Settings → MCP Servers), then ask Claude anything about the AI landscape.
-          </p>
-          <CommandBlock text={config} copied={copied} onCopy={onCopy} />
-          <p className="text-[13px] text-[var(--color-text-muted)] mt-3">
-            Then try: <span className="font-semibold text-[var(--color-text)]">&quot;What happened in AI today that affects my work?&quot;</span>
-          </p>
-        </div>
-      );
-    },
-  },
-  {
-    id: "any-agent",
-    label: "Any Agent",
-    content: (copied, onCopy) => {
-      const prompt = `Connect to Eigen AI Terminal for daily AI landscape intelligence.
-
-Endpoints:
-- Signals & data: https://eigenterminal.clawlab.dev/data/radar.json
-- Wiki manifest: https://eigenterminal.clawlab.dev/wiki/manifest.json
-- Wiki pages: https://eigenterminal.clawlab.dev/wiki/{path}
-
-Fetch radar.json for today's signals, trends, roadblocks, velocity metrics, and predictions. Fetch wiki pages for deep context — 49 interconnected markdown files with [[wikilinks]] you can follow to navigate the knowledge graph.
-
-Filter signals by what the user is building. Deliver only what's relevant to their work.`;
-      return (
-        <div>
-          <p className="text-[13px] text-[var(--color-text-secondary)] mb-4 leading-relaxed">
-            Copy this prompt and give it to your agent. It works with any AI agent that can fetch URLs.
-          </p>
-          <CommandBlock text={prompt} copied={copied} onCopy={onCopy} />
-        </div>
-      );
-    },
-  },
-];
 
 function CommandBlock({ text, copied, onCopy }: { text: string; copied: boolean; onCopy: (t: string) => void }) {
   return (
     <div className="relative bg-[var(--color-bg-page)] rounded-[var(--radius-md)] border border-[var(--color-border)] p-4">
-      <pre className="text-[13px] font-mono font-medium text-[var(--color-text)] overflow-x-auto whitespace-pre-wrap leading-relaxed pr-16">
+      <pre className="text-[13px] font-mono font-medium text-[var(--color-text)] overflow-x-auto whitespace-pre-wrap leading-relaxed pr-16 max-h-[280px] overflow-y-auto">
         {text}
       </pre>
       <button
         onClick={() => onCopy(text)}
         className="absolute top-3 right-3 text-[12px] font-bold px-3 py-1.5 rounded-[var(--radius-sm)]
           bg-white border border-[var(--color-border)] text-[var(--color-text-secondary)]
-          hover:bg-[var(--color-bg-subtle)] transition-colors"
+          hover:bg-[var(--color-accent)] hover:text-white hover:border-[var(--color-accent)] transition-all"
       >
-        {copied ? "Copied!" : "Copy"}
+        {copied ? "✓ Copied!" : "Copy prompt"}
       </button>
     </div>
   );
@@ -110,7 +119,6 @@ function OpenClawPanel({ copied, onCopy }: { copied: boolean; onCopy: (t: string
 
   return (
     <div>
-      {/* Method toggle */}
       <div className="flex gap-2 mb-4">
         {(Object.entries(openclawMethods) as [OpenClawMethod, typeof openclawMethods.direct][]).map(([key, val]) => (
           <button
@@ -135,14 +143,13 @@ function OpenClawPanel({ copied, onCopy }: { copied: boolean; onCopy: (t: string
               )}
             </div>
             <p className="text-[12px] text-[var(--color-text-muted)] mt-0.5 leading-snug">
-              {key === "direct" ? "Auto morning briefing included" : "Manual setup, ClawHub verified"}
+              {val.subtitle}
             </p>
           </button>
         ))}
       </div>
 
-      {/* Command */}
-      <CommandBlock text={m.command} copied={copied} onCopy={onCopy} />
+      <CommandBlock text={m.prompt} copied={copied} onCopy={onCopy} />
       <p className="text-[13px] text-[var(--color-text-muted)] mt-3 leading-relaxed">{m.description}</p>
     </div>
   );
@@ -158,8 +165,6 @@ export default function ConnectAgent() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const platform = platforms.find((p) => p.id === activePlatform)!;
-
   return (
     <div>
       <div className="mb-6">
@@ -167,9 +172,7 @@ export default function ConnectAgent() {
           Connect Your Agent
         </h3>
         <p className="text-[14px] text-[var(--color-text-secondary)] mt-1.5 max-w-lg">
-          Your AI agent pulls intelligence from Eigen and combines it with{" "}
-          <span className="font-bold text-[var(--color-text)]">your</span> local context.
-          We never see your data.
+          Copy the prompt, paste it into your agent. It handles the rest — installs the skill, asks what you&apos;re building, and starts delivering personalized intelligence.
         </p>
       </div>
 
@@ -179,7 +182,11 @@ export default function ConnectAgent() {
       >
         {/* Platform tabs */}
         <div className="flex gap-1 mb-6">
-          {platforms.map((p) => (
+          {[
+            { id: "openclaw" as Platform, label: "OpenClaw" },
+            { id: "claude-code" as Platform, label: "Claude Code" },
+            { id: "any-agent" as Platform, label: "Any Agent" },
+          ].map((p) => (
             <button
               key={p.id}
               onClick={() => { setActivePlatform(p.id); setCopied(false); }}
@@ -196,10 +203,33 @@ export default function ConnectAgent() {
           ))}
         </div>
 
-        {/* Platform content */}
-        {platform.content(copied, onCopy)}
+        {/* Content */}
+        {activePlatform === "openclaw" && (
+          <OpenClawPanel copied={copied} onCopy={onCopy} />
+        )}
 
-        {/* Tools list */}
+        {activePlatform === "claude-code" && (
+          <div>
+            <p className="text-[13px] text-[var(--color-text-secondary)] mb-4 leading-relaxed">
+              Add this to your MCP settings, then ask Claude anything about the AI landscape.
+            </p>
+            <CommandBlock text={CLAUDE_CODE_CONFIG} copied={copied} onCopy={onCopy} />
+            <p className="text-[13px] text-[var(--color-text-muted)] mt-3">
+              Then try: <span className="font-semibold text-[var(--color-text)]">&quot;What happened in AI today that affects my work?&quot;</span>
+            </p>
+          </div>
+        )}
+
+        {activePlatform === "any-agent" && (
+          <div>
+            <p className="text-[13px] text-[var(--color-text-secondary)] mb-4 leading-relaxed">
+              Copy this prompt and give it to your agent. Works with any AI that can fetch URLs.
+            </p>
+            <CommandBlock text={ANY_AGENT_PROMPT} copied={copied} onCopy={onCopy} />
+          </div>
+        )}
+
+        {/* Tools */}
         <div className="mt-6 pt-5 border-t border-[var(--color-border)]">
           <p className="text-[12px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider mb-3">
             Your agent gets 11 tools
