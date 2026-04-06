@@ -2,68 +2,163 @@
 
 import { useState } from "react";
 
-const tabs = [
+type Platform = "openclaw" | "claude-code" | "any-agent";
+type OpenClawMethod = "direct" | "clawhub";
+
+const openclawMethods: Record<OpenClawMethod, {
+  label: string;
+  tag: string;
+  command: string;
+  description: string;
+}> = {
+  direct: {
+    label: "Direct Install",
+    tag: "Recommended",
+    command: "npx eigen-terminal-install",
+    description: "Installs with automatic daily morning briefing. Asks what you're building, then delivers personalized AI intelligence every morning at 7am.",
+  },
+  clawhub: {
+    label: "Via ClawHub",
+    tag: "",
+    command: "npx clawhub@latest install eigen-ai-terminal",
+    description: "Installs from ClawHub registry. 11 tools available — you set up the morning briefing manually by saying \"set up my Eigen morning brief\".",
+  },
+};
+
+const platforms: Array<{
+  id: Platform;
+  label: string;
+  content: (copied: boolean, onCopy: (text: string) => void) => React.ReactNode;
+}> = [
   {
     id: "openclaw",
     label: "OpenClaw",
-    steps: [
-      "Tell your OpenClaw agent:",
-      '"Install the Eigen AI Terminal skill from ClawHub"',
-      "",
-      "Or run manually:",
-      "npx clawhub@latest install eigen-ai-terminal",
-    ],
-    description: "Your OpenClaw agent gets 10 tools — signals, ripple effects, the full wiki knowledge base, and personalized intelligence.",
+    content: (copied, onCopy) => <OpenClawPanel copied={copied} onCopy={onCopy} />,
   },
   {
     id: "claude-code",
     label: "Claude Code",
-    steps: [
-      "Add to your MCP settings (Settings → MCP Servers):",
-      "",
-      JSON.stringify({
-        "mcpServers": {
+    content: (copied, onCopy) => {
+      const config = JSON.stringify({
+        mcpServers: {
           "eigen-ai-terminal": {
-            "command": "npx",
-            "args": ["eigen-ai-radar-mcp"]
-          }
-        }
-      }, null, 2),
-      "",
-      "Then ask Claude:",
-      '"What happened in AI today that affects my work?"',
-    ],
-    description: "Claude Code gets full access — signals, ripple effects, wiki knowledge base, and personalized filtering.",
+            command: "npx",
+            args: ["eigen-ai-radar-mcp"],
+          },
+        },
+      }, null, 2);
+      return (
+        <div>
+          <p className="text-[13px] text-[var(--color-text-secondary)] mb-4 leading-relaxed">
+            Add this to your MCP settings (Settings → MCP Servers), then ask Claude anything about the AI landscape.
+          </p>
+          <CommandBlock text={config} copied={copied} onCopy={onCopy} />
+          <p className="text-[13px] text-[var(--color-text-muted)] mt-3">
+            Then try: <span className="font-semibold text-[var(--color-text)]">&quot;What happened in AI today that affects my work?&quot;</span>
+          </p>
+        </div>
+      );
+    },
   },
   {
-    id: "api",
+    id: "any-agent",
     label: "Any Agent",
-    steps: [
-      "The full knowledge base is available as static files:",
-      "",
-      "Manifest:  /wiki/manifest.json",
-      "Signals:   /data/radar.json",
-      "Wiki page: /wiki/nodes/ai-agents.md",
-      "Entity:    /wiki/entities/anthropic.md",
-      "",
-      "49 interconnected markdown files with [[wikilinks]]",
-      "and #tags. Your agent navigates the knowledge graph",
-      "the same way a human navigates Obsidian.",
-    ],
-    description: "Fetch the full knowledge base and navigate it however you want. All files use wikilinks for cross-references.",
+    content: (copied, onCopy) => {
+      const prompt = `Connect to Eigen AI Terminal for daily AI landscape intelligence.
+
+Endpoints:
+- Signals & data: https://eigenterminal.clawlab.dev/data/radar.json
+- Wiki manifest: https://eigenterminal.clawlab.dev/wiki/manifest.json
+- Wiki pages: https://eigenterminal.clawlab.dev/wiki/{path}
+
+Fetch radar.json for today's signals, trends, roadblocks, velocity metrics, and predictions. Fetch wiki pages for deep context — 49 interconnected markdown files with [[wikilinks]] you can follow to navigate the knowledge graph.
+
+Filter signals by what the user is building. Deliver only what's relevant to their work.`;
+      return (
+        <div>
+          <p className="text-[13px] text-[var(--color-text-secondary)] mb-4 leading-relaxed">
+            Copy this prompt and give it to your agent. It works with any AI agent that can fetch URLs.
+          </p>
+          <CommandBlock text={prompt} copied={copied} onCopy={onCopy} />
+        </div>
+      );
+    },
   },
 ];
 
-export default function ConnectAgent() {
-  const [activeTab, setActiveTab] = useState("claude-code");
-  const [copied, setCopied] = useState(false);
-  const tab = tabs.find((t) => t.id === activeTab)!;
+function CommandBlock({ text, copied, onCopy }: { text: string; copied: boolean; onCopy: (t: string) => void }) {
+  return (
+    <div className="relative bg-[var(--color-bg-page)] rounded-[var(--radius-md)] border border-[var(--color-border)] p-4">
+      <pre className="text-[13px] font-mono font-medium text-[var(--color-text)] overflow-x-auto whitespace-pre-wrap leading-relaxed pr-16">
+        {text}
+      </pre>
+      <button
+        onClick={() => onCopy(text)}
+        className="absolute top-3 right-3 text-[12px] font-bold px-3 py-1.5 rounded-[var(--radius-sm)]
+          bg-white border border-[var(--color-border)] text-[var(--color-text-secondary)]
+          hover:bg-[var(--color-bg-subtle)] transition-colors"
+      >
+        {copied ? "Copied!" : "Copy"}
+      </button>
+    </div>
+  );
+}
 
-  const copyAll = () => {
-    navigator.clipboard.writeText(tab.steps.join("\n"));
+function OpenClawPanel({ copied, onCopy }: { copied: boolean; onCopy: (t: string) => void }) {
+  const [method, setMethod] = useState<OpenClawMethod>("direct");
+  const m = openclawMethods[method];
+
+  return (
+    <div>
+      {/* Method toggle */}
+      <div className="flex gap-2 mb-4">
+        {(Object.entries(openclawMethods) as [OpenClawMethod, typeof openclawMethods.direct][]).map(([key, val]) => (
+          <button
+            key={key}
+            onClick={() => setMethod(key)}
+            className={`
+              flex-1 px-4 py-3 rounded-[var(--radius-md)] text-left transition-all duration-200 border-2
+              ${method === key
+                ? "bg-white border-[var(--color-accent)] shadow-sm"
+                : "bg-transparent border-[var(--color-border)] hover:border-[var(--color-text-muted)]"
+              }
+            `}
+          >
+            <div className="flex items-center gap-2">
+              <span className={`text-[14px] font-bold ${method === key ? "text-[var(--color-accent)]" : "text-[var(--color-text)]"}`}>
+                {val.label}
+              </span>
+              {val.tag && (
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700">
+                  {val.tag}
+                </span>
+              )}
+            </div>
+            <p className="text-[12px] text-[var(--color-text-muted)] mt-0.5 leading-snug">
+              {key === "direct" ? "Auto morning briefing included" : "Manual setup, ClawHub verified"}
+            </p>
+          </button>
+        ))}
+      </div>
+
+      {/* Command */}
+      <CommandBlock text={m.command} copied={copied} onCopy={onCopy} />
+      <p className="text-[13px] text-[var(--color-text-muted)] mt-3 leading-relaxed">{m.description}</p>
+    </div>
+  );
+}
+
+export default function ConnectAgent() {
+  const [activePlatform, setActivePlatform] = useState<Platform>("openclaw");
+  const [copied, setCopied] = useState(false);
+
+  const onCopy = (text: string) => {
+    navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
+  const platform = platforms.find((p) => p.id === activePlatform)!;
 
   return (
     <div>
@@ -73,7 +168,7 @@ export default function ConnectAgent() {
         </h3>
         <p className="text-[14px] text-[var(--color-text-secondary)] mt-1.5 max-w-lg">
           Your AI agent pulls intelligence from Eigen and combines it with{" "}
-          <span className="font-bold text-[var(--color-text)]">your</span> local context — your codebase, your notes, your work.
+          <span className="font-bold text-[var(--color-text)]">your</span> local context.
           We never see your data.
         </p>
       </div>
@@ -82,46 +177,32 @@ export default function ConnectAgent() {
         className="bg-white rounded-[var(--radius-xl)] p-6 sm:p-8"
         style={{ boxShadow: "var(--shadow-card)" }}
       >
-        {/* Tabs */}
-        <div className="flex gap-1 mb-5">
-          {tabs.map((t) => (
+        {/* Platform tabs */}
+        <div className="flex gap-1 mb-6">
+          {platforms.map((p) => (
             <button
-              key={t.id}
-              onClick={() => setActiveTab(t.id)}
+              key={p.id}
+              onClick={() => { setActivePlatform(p.id); setCopied(false); }}
               className={`
                 px-4 py-2 text-[13px] font-bold rounded-[var(--radius-sm)] transition-all
-                ${
-                  activeTab === t.id
-                    ? "bg-[var(--color-primary)] text-white"
-                    : "text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-bg-subtle)]"
+                ${activePlatform === p.id
+                  ? "bg-[var(--color-primary)] text-white"
+                  : "text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-bg-subtle)]"
                 }
               `}
             >
-              {t.label}
+              {p.label}
             </button>
           ))}
         </div>
 
-        {/* Steps */}
-        <div className="relative bg-[var(--color-bg-page)] rounded-[var(--radius-md)] border border-[var(--color-border)] p-4">
-          <pre className="text-[13px] font-mono font-medium text-[var(--color-text)] overflow-x-auto whitespace-pre-wrap leading-relaxed">
-            {tab.steps.join("\n")}
-          </pre>
-          <button
-            onClick={copyAll}
-            className="absolute top-3 right-3 text-[12px] font-bold px-3 py-1.5 rounded-[var(--radius-sm)]
-              bg-white border border-[var(--color-border)] text-[var(--color-text-secondary)]
-              hover:bg-[var(--color-bg-subtle)] transition-colors"
-          >
-            {copied ? "Copied!" : "Copy"}
-          </button>
-        </div>
-        <p className="text-[13px] text-[var(--color-text-muted)] mt-3">{tab.description}</p>
+        {/* Platform content */}
+        {platform.content(copied, onCopy)}
 
         {/* Tools list */}
         <div className="mt-6 pt-5 border-t border-[var(--color-border)]">
           <p className="text-[12px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider mb-3">
-            Your agent gets these tools
+            Your agent gets 11 tools
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {[
@@ -135,9 +216,10 @@ export default function ConnectAgent() {
               { name: "radar_wiki_browse", desc: "Browse the full knowledge base" },
               { name: "radar_wiki_read", desc: "Read any wiki page, follow wikilinks" },
               { name: "radar_wiki_search", desc: "Search across all 49 wiki files" },
+              { name: "radar_morning_setup", desc: "Set up daily morning briefing" },
             ].map((tool) => (
               <div key={tool.name} className="flex items-start gap-2 text-[13px]">
-                <code className="text-[12px] font-mono font-bold text-[var(--color-accent)] shrink-0 mt-0.5">
+                <code className="text-[11px] font-mono font-bold text-[var(--color-accent)] shrink-0 mt-0.5">
                   {tool.name}
                 </code>
                 <span className="text-[var(--color-text-secondary)]">{tool.desc}</span>
