@@ -1,0 +1,26 @@
+{
+  "name": "eigen-terminal-install",
+  "version": "0.1.0",
+  "description": "Direct installer for Eigen AI Terminal — installs the skill into your OpenClaw workspace with automatic daily morning briefing.",
+  "type": "module",
+  "bin": "./dist/install.js",
+  "files": [
+    "dist",
+    "skill-files"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "eigen",
+    "ai",
+    "terminal",
+    "openclaw",
+    "installer",
+    "morning-brief"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
