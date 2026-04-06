@@ -1,18 +1,18 @@
 ---
 name: eigen-ai-terminal
 description: Live AI landscape intelligence — signals, causal chains, developing trends, roadblocks, and predictions. Your agent gets daily intelligence across 16 domains and returns only what's relevant to your work.
-version: 0.3.0
+version: 0.4.0
 homepage: https://web-one-wine-82.vercel.app
-repository: https://www.npmjs.com/package/eigen-ai-radar-mcp
+repository: https://github.com/shawkatdidar/eigen-ai-terminal
 metadata:
   openclaw:
     requires:
       bins:
-        - npx
+        - node
     mcp:
-      command: npx
+      command: node
       args:
-        - eigen-ai-radar-mcp@0.3.0
+        - index.js
 tags:
   - ai
   - intelligence
