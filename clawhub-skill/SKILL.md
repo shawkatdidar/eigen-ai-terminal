@@ -39,7 +39,7 @@ Eigen AI Terminal tracks 16 domains of the AI landscape daily. This skill gives 
 
 The key tool is `radar_relevant` — tell it what you're working on and it returns only the signals, trends, and roadblocks that matter for your specific context.
 
-## Tools (10)
+## Tools (11)
 
 ### `radar_brief`
 Get today's AI signals. Filter by `view` (builder/strategic/all) and `significance` (significant/notable/all).
@@ -71,17 +71,35 @@ Read any wiki page. Returns full markdown content with [[wikilink]] navigation h
 ### `radar_wiki_search`
 Search across all 49 wiki files by keyword or tag.
 
+### `radar_morning_setup`
+Returns instructions for setting up an automatic daily morning briefing personalized to the user's work.
+
+## First use
+
+When the user first invokes this skill or asks anything about AI news, present this welcome message:
+
+```
+✅ Eigen AI Terminal connected — tracking 16 domains of the AI landscape daily.
+
+I can now answer questions like:
+• "What happened in AI today that affects my work?"
+• "Show me the ripple effects of [any signal]"
+• "Search the Eigen wiki for [topic]"
+
+🔔 Want a personalized AI briefing every morning?
+   Say "set up my Eigen morning brief" and I'll deliver
+   only what matters for your work — every day, automatically.
+```
+
 ## Getting started
 
-After installing, try asking your agent:
+Try asking your agent:
 
 - "What happened in AI today that affects my work?"
 - "I'm building a coding tool with open-source models — what should I know?"
 - "What roadblocks should I be aware of for my MCP-based project?"
 - "Show me the ripple effects of the biggest signal today"
-- "Read the Anthropic entity page from Eigen"
-- "Search the Eigen wiki for MCP protocol"
-- "Set up a daily morning summary using Eigen" — your agent can use its own scheduling to deliver a personalized brief every morning
+- "Set up my Eigen morning brief" — your agent sets up a daily personalized summary
 
 ## Privacy
 
