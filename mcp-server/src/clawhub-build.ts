@@ -7,7 +7,7 @@
  * Fetches public read-only JSON from the Eigen AI Terminal website.
  * No local file access. No environment variables. No secrets.
  *
- * Data source: https://web-one-wine-82.vercel.app
+ * Data source: https://eigenterminal.clawlab.dev
  * - /data/radar.json — daily signals, trends, predictions
  * - /wiki/manifest.json — knowledge base index
  * - /wiki/{path} — individual wiki pages
