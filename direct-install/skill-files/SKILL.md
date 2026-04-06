@@ -2,7 +2,7 @@
 name: eigen-ai-terminal
 description: Live AI landscape intelligence with automatic daily morning briefing. 11 tools to query signals, causal chains, trends, roadblocks, predictions, and a full wiki knowledge base — personalized to what you're building.
 version: 0.9.0
-homepage: https://eigenterminal.clawlab.dev
+homepage: https://terminal.clawlab.dev
 repository: https://github.com/shawkatdidar/eigen-ai-terminal
 metadata:
   openclaw:
@@ -87,8 +87,8 @@ When this skill is first loaded, do the following immediately:
 
 This skill reads **public, read-only JSON** from the Eigen AI Terminal website. No authentication required. No user data is uploaded. One-way data flow only.
 
-- Data: `eigenterminal.clawlab.dev/data/radar.json`
-- Wiki: `eigenterminal.clawlab.dev/wiki/`
+- Data: `terminal.clawlab.dev/data/radar.json`
+- Wiki: `terminal.clawlab.dev/wiki/`
 
 ## Tools (11)
 

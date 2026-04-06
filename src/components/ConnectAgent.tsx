@@ -57,9 +57,9 @@ const CLAUDE_CODE_CONFIG = JSON.stringify({
 const ANY_AGENT_PROMPT = `You now have access to the Eigen AI Terminal — a daily intelligence system tracking 16 domains of the AI landscape.
 
 Endpoints (public, read-only, no auth):
-- Today's signals + trends + predictions: https://eigenterminal.clawlab.dev/data/radar.json
-- Knowledge base index (49 files): https://eigenterminal.clawlab.dev/wiki/manifest.json
-- Any wiki page: https://eigenterminal.clawlab.dev/wiki/{path}
+- Today's signals + trends + predictions: https://terminal.clawlab.dev/data/radar.json
+- Knowledge base index (49 files): https://terminal.clawlab.dev/wiki/manifest.json
+- Any wiki page: https://terminal.clawlab.dev/wiki/{path}
   Examples: wiki/nodes/ai-agents.md, wiki/entities/anthropic.md, wiki/convergences.md
 
 Wiki files use [[wikilinks]] for cross-references — follow them to navigate the knowledge graph.

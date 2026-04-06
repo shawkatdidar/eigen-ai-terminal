@@ -6,7 +6,7 @@
  * Fetches public read-only JSON from the Eigen AI Terminal website.
  * No local file access. No environment variables. No secrets.
  *
- * Data source: https://web-one-wine-82.vercel.app
+ * Data source: https://terminal.clawlab.dev
  * - /data/radar.json — daily signals, trends, predictions
  * - /wiki/manifest.json — knowledge base index
  * - /wiki/{path} — individual wiki pages
@@ -18,8 +18,8 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 // ── Constants ───────────────────────────────────────────────
-const DATA_URL = "https://eigenterminal.clawlab.dev/data/radar.json";
-const WIKI_URL = "https://eigenterminal.clawlab.dev/wiki";
+const DATA_URL = "https://terminal.clawlab.dev/data/radar.json";
+const WIKI_URL = "https://terminal.clawlab.dev/wiki";
 // ── Data Loading (HTTP only, no file access) ────────────────
 let cachedData = null;
 let cachedManifest = null;
@@ -79,7 +79,8 @@ function relevanceScore(text, context) {
     return score;
 }
 // ── MCP Server ──────────────────────────────────────────────
-const server = new McpServer({ name: "eigen-ai-terminal", version: "0.4.0" });
+const server = new McpServer({ name: "eigen-ai-terminal", version: "0.8.0" });
+const MORNING_NUDGE = "\n\n---\n💡 Say \"set up my Eigen morning brief\" to get this delivered automatically every day.";
 server.tool("radar_brief", "Get today's AI signals. Returns significant and notable developments. Use 'view' to filter: 'builder' for tools/models/tech, 'strategic' for funding/policy/market, 'all' for everything.", {
     view: z.enum(["builder", "strategic", "all"]).default("all").describe("Filter lens"),
     significance: z.enum(["significant", "notable", "all"]).default("all").describe("Filter by significance"),
@@ -91,7 +92,7 @@ server.tool("radar_brief", "Get today's AI signals. Returns significant and nota
         signals.push(...filterByView(data.brief.significant));
     if (significance === "all" || significance === "notable")
         signals.push(...filterByView(data.brief.notable));
-    const text = [`# Eigen AI Terminal Brief — ${data.brief.date}`, `${data.brief.signalsTotal} signals tracked | ${data.brief.signalsSignificant} significant`, "", ...signals.map((s) => `## ${s.title}\n${s.description}\nAreas: ${s.nodeNames.join(", ")}\n`)].join("\n");
+    const text = [`# Eigen AI Terminal Brief — ${data.brief.date}`, `${data.brief.signalsTotal} signals tracked | ${data.brief.signalsSignificant} significant`, "", ...signals.map((s) => `## ${s.title}\n${s.description}\nAreas: ${s.nodeNames.join(", ")}\n`)].join("\n") + MORNING_NUDGE;
     return { content: [{ type: "text", text }] };
 });
 server.tool("radar_signal_ripple", "Get the causal ripple effects of a specific signal — what it's pushing, what trends it feeds, what it's blocked by, and what we predict.", { signal_index: z.number().describe("Signal index (0 = first significant signal)") }, async ({ signal_index }) => {
@@ -183,7 +184,7 @@ server.tool("radar_relevant", "Get intelligence relevant to a specific context. 
     }
     if (!scoredSignals.length && !scoredTrends.length && !scoredBlocks.length)
         parts.push("No strongly relevant signals found for this context today.");
-    return { content: [{ type: "text", text: parts.join("\n") }] };
+    return { content: [{ type: "text", text: parts.join("\n") + MORNING_NUDGE }] };
 });
 server.tool("radar_wiki_browse", "Browse the Eigen AI Terminal knowledge base.", {
     category: z.enum(["all", "nodes", "entities", "briefs", "forces", "frameworks"]).default("all").describe("Filter by category"),
@@ -257,6 +258,45 @@ server.tool("radar_wiki_search", "Search the knowledge base by keyword or tag.",
         return { content: [{ type: "text", text: `No results for "${query}". Use radar_wiki_browse to see all files.` }] };
     const parts = [`# Search: "${query}" — ${results.length} results`, "", ...results.map((r) => `## ${r.frontmatter.name || r.path} (${r.path})\n${r.snippet ? `> ${r.snippet}` : ""}\n${r.tags.length ? `Tags: ${r.tags.join(", ")}` : ""}\n`)];
     return { content: [{ type: "text", text: parts.join("\n") }] };
+});
+server.tool("radar_morning_setup", "Returns instructions for setting up an automatic daily morning briefing. Call this when the user says 'set up my Eigen morning brief' or similar.", {}, async () => {
+    const text = [
+        "# Set Up Your Eigen Morning Brief",
+        "",
+        "To deliver a personalized AI briefing every morning, set up a daily scheduled task (cron) at your preferred time that does the following:",
+        "",
+        "## What to run each morning",
+        "",
+        "1. Call `radar_brief` with `view: \"builder\"` and `significance: \"significant\"` to get today's top signals.",
+        "",
+        "2. Call `radar_relevant` with a description of what the user is building — use what you know about them from your conversation history, their workspace, or ask them now if you don't know.",
+        "",
+        "3. Call `radar_trends` to check if any developing trend changed.",
+        "",
+        "4. Compose a short morning message with this structure:",
+        "",
+        "   ☀️ Eigen Morning Brief — {date}",
+        "",
+        "   {1-2 sentences: the most important thing that happened and what it means for their work}",
+        "",
+        "   📡 {count} signals | {count} significant",
+        "",
+        "   What matters for you:",
+        "   • {personalized signal 1}",
+        "   • {personalized signal 2}",
+        "   • {personalized signal 3 if relevant}",
+        "",
+        "   🔥 Trend watch: {one developing trend with confidence %}",
+        "",
+        "5. Deliver to the user's active channel.",
+        "",
+        "## Ask the user now",
+        "",
+        "To personalize the briefing, ask: \"What are you building or working on right now? I'll filter AI news to only what matters for your work.\"",
+        "",
+        "Save their answer and use it in step 2 every morning.",
+    ].join("\n");
+    return { content: [{ type: "text", text }] };
 });
 // ── Start ───────────────────────────────────────────────────
 async function main() {

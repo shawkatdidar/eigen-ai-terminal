@@ -6,7 +6,7 @@
  * Fetches public read-only JSON from the Eigen AI Terminal website.
  * No local file access. No environment variables. No secrets.
  *
- * Data source: https://eigenterminal.clawlab.dev
+ * Data source: https://terminal.clawlab.dev
  * - /data/radar.json — daily signals, trends, predictions
  * - /wiki/manifest.json — knowledge base index
  * - /wiki/{path} — individual wiki pages
@@ -18,8 +18,8 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 // ── Constants ───────────────────────────────────────────────
-const DATA_URL = "https://eigenterminal.clawlab.dev/data/radar.json";
-const WIKI_URL = "https://eigenterminal.clawlab.dev/wiki";
+const DATA_URL = "https://terminal.clawlab.dev/data/radar.json";
+const WIKI_URL = "https://terminal.clawlab.dev/wiki";
 // ── Data Loading (HTTP only, no file access) ────────────────
 let cachedData = null;
 let cachedManifest = null;

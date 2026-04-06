@@ -14,4 +14,4 @@ git commit -m "Update radar data $(date +%Y-%m-%d)" --allow-empty
 git push
 
 echo "✅ Done! Vercel will auto-deploy in ~30 seconds."
-echo "   Live at: https://eigenterminal.clawlab.dev"
+echo "   Live at: https://terminal.clawlab.dev"

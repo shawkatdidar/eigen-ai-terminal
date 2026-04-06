@@ -88,7 +88,7 @@ function install() {
 
   if (!actualSource) {
     // Fallback: download from the website
-    console.log("  Downloading skill files from eigenterminal.clawlab.dev...");
+    console.log("  Downloading skill files from terminal.clawlab.dev...");
     downloadAndInstall(targetDir);
     return;
   }
@@ -106,7 +106,7 @@ function install() {
 }
 
 async function downloadAndInstall(targetDir: string) {
-  const baseUrl = "https://eigenterminal.clawlab.dev";
+  const baseUrl = "https://terminal.clawlab.dev";
 
   // Download SKILL.md from our repo's direct-install version
   // For now, we'll create it inline since the website doesn't host this version
