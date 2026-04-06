@@ -78,7 +78,7 @@ export default function WikiShell({
             </Link>
             <span className="text-[#54595d] text-[13px]">|</span>
             <Link href="/wiki" className="text-[18px] font-serif font-bold text-[#202122]">
-              Knowledge Base
+              Eigen AI Terminal
             </Link>
           </div>
           <div className="flex items-center gap-4 text-[12px] text-[#54595d]">
