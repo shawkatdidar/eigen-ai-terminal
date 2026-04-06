@@ -1,7 +1,7 @@
 ---
 name: eigen-ai-terminal
-description: Live AI landscape intelligence with automatic daily morning briefing. 11 tools to query signals, causal chains, trends, roadblocks, predictions, and a full wiki knowledge base — personalized to what you're building.
-version: 0.9.0
+description: Live AI landscape intelligence with automatic daily morning briefing. 12 tools to query signals, causal chains, trends, roadblocks, predictions, and a full wiki knowledge base — personalized to what you're building.
+version: 0.10.0
 homepage: https://terminal.clawlab.dev
 repository: https://github.com/shawkatdidar/eigen-ai-terminal
 metadata:
@@ -38,42 +38,46 @@ When this skill is first loaded, do the following immediately:
 
    I can answer questions about AI developments, show causal ripple effects,
    search the knowledge base, and deliver personalized intelligence.
-
-   Let me set up your daily morning briefing so you never miss what matters.
    ```
 
-2. **Ask the user:** "What are you building or working on right now? I'll use this to filter AI news to only what matters for your work."
+2. After it installs, set up a daily cron job at 7:00 AM that does this every morning:
 
-3. **Save their answer** as their Eigen context for daily use.
+   - Call `radar_brief` with view "builder" and significance "significant" to get today's top signals
+   - Call `radar_relevant` with what you know about my work to get personalized intelligence
+   - Call `radar_trends` to check if any major trend shifted overnight
+   - Call `eigen_whats_new` to check for new Eigen features and tips
+   - Send me a SHORT morning message (not a wall of text) with this format:
 
-4. **Set up a daily cron job at 7:00 AM local time.** Each morning, run this sequence:
+     ```
+     ☀️ Good morning — here's what matters in AI today:
 
-   a. Call `radar_brief` with `view: "builder"` and `significance: "significant"`
-   b. Call `radar_relevant` with the user's saved Eigen context
-   c. Call `radar_trends` to check for trend changes
-   d. Compose and deliver this message:
+     [One sentence: the single most important development and why it affects my work]
 
-   ```
-   ☀️ Eigen Morning Brief — {date}
+     What you should know:
+     • [Signal that directly impacts what I'm building — one line]
+     • [New tool, model, or capability I could use — one line]
+     • [Only include a third if it's genuinely relevant]
 
-   {1-2 sentences: the most important thing that happened
-   and what it means for the user's specific work}
+     Trend to watch: [One developing trend in plain language with confidence %]
 
-   📡 {count} signals tracked | {count} significant
+     💡 [One tip or new feature from Eigen, if there's something fresh this week — skip if nothing new]
 
-   What matters for you:
-   • {personalized signal 1 — one line, practical}
-   • {personalized signal 2 — one line, practical}
-   • {personalized signal 3 — if relevant}
+     Say "dig deeper on [topic]" or "full brief" for more.
+     ```
 
-   🔥 Trend watch: {one developing trend, plain language, with confidence %}
+   IMPORTANT rules for the morning brief:
+   - Maximum 3 bullet points. Less is more. Only include what I can ACT on today.
+   - Every bullet must pass the test: "Can I do something with this information today?"
+   - Never include funding rounds, IPO news, policy changes, or executive shuffles unless they DIRECTLY change a tool or API I use.
+   - If nothing significant happened that affects my work, say so in one line. Don't pad with generic AI news.
+   - Write like a sharp colleague giving me a 30-second update, not a newsletter.
+   - The Eigen tip at the end should be casual and brief — one line max. If `eigen_whats_new` returned nothing new, skip it entirely.
 
-   → "dig deeper" for ripple effects on any signal
-   → "update my context" to change what I filter for
-   → "full brief" for the complete picture
-   ```
+3. Now ask me: "What are you building right now? I'll filter AI news to only what matters for your work — and deliver it every morning at 7am."
 
-5. **Confirm to the user:** "All set! You'll get a personalized AI briefing every morning at 7am. Say 'update my context' anytime to change what I filter for."
+4. **Save their answer** as their Eigen context for daily use.
+
+5. **Confirm:** "All set! You'll get a personalized AI briefing every morning at 7am. Say 'update my context' anytime to change what I filter for."
 
 ## Interactive commands
 
@@ -90,7 +94,7 @@ This skill reads **public, read-only JSON** from the Eigen AI Terminal website. 
 - Data: `terminal.clawlab.dev/data/radar.json`
 - Wiki: `terminal.clawlab.dev/wiki/`
 
-## Tools (11)
+## Tools (12)
 
 - `radar_brief` — Today's signals by builder/strategic lens
 - `radar_signal_ripple` — Causal chain for any signal
@@ -103,6 +107,7 @@ This skill reads **public, read-only JSON** from the Eigen AI Terminal website. 
 - `radar_wiki_read` — Read any wiki page, follow wikilinks
 - `radar_wiki_search` — Search across all 49 wiki files
 - `radar_morning_setup` — Morning briefing configuration
+- `eigen_whats_new` — Latest features, tips, and updates from Eigen
 
 ## Privacy
 

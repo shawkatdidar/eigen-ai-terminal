@@ -5,22 +5,11 @@ import { useState } from "react";
 type Platform = "openclaw" | "claude-code" | "any-agent";
 type OpenClawMethod = "direct" | "clawhub";
 
-const DIRECT_PROMPT = `Install the Eigen AI Terminal skill into my workspace by running:
-
-npx eigen-terminal-install
-
-After it installs, ask me what I'm building so you can personalize my morning briefings.`;
-
-const CLAWHUB_PROMPT = `Do two things:
-
-1. Install the Eigen AI Terminal skill from ClawHub:
-   npx clawhub@latest install eigen-ai-terminal
-
-2. After it installs, set up a daily cron job at 7:00 AM that does this every morning:
-
+const MORNING_BRIEF_RULES = `
    - Call radar_brief with view "builder" and significance "significant" to get today's top signals
    - Call radar_relevant with what you know about my work to get personalized intelligence
    - Call radar_trends to check if any major trend shifted overnight
+   - Call eigen_whats_new to check for new Eigen features and tips
    - Send me a SHORT morning message (not a wall of text) with this format:
 
      ☀️ Good morning — here's what matters in AI today:
@@ -34,6 +23,8 @@ const CLAWHUB_PROMPT = `Do two things:
 
      Trend to watch: [One developing trend in plain language with confidence %]
 
+     💡 [One tip or new feature from Eigen, if there's something fresh this week — skip if nothing new]
+
      Say "dig deeper on [topic]" or "full brief" for more.
 
    IMPORTANT rules for the morning brief:
@@ -41,7 +32,25 @@ const CLAWHUB_PROMPT = `Do two things:
    - Every bullet must pass the test: "Can I do something with this information today?"
    - Never include funding rounds, IPO news, policy changes, or executive shuffles unless they DIRECTLY change a tool or API I use.
    - If nothing significant happened that affects my work, say so in one line. Don't pad with generic AI news.
-   - Write like a sharp colleague giving me a 30-second update, not like a newsletter.
+   - Write like a sharp colleague giving me a 30-second update, not a newsletter.
+   - The Eigen tip at the end should be casual and brief — one line max. If eigen_whats_new returned nothing new, skip it entirely.`;
+
+const DIRECT_PROMPT = `Install the Eigen AI Terminal skill into my workspace by running:
+
+npx eigen-terminal-install
+
+After it installs, set up a daily cron job at 7:00 AM that does this every morning:
+${MORNING_BRIEF_RULES}
+
+Now ask me: "What are you building right now? I'll filter AI news to only what matters for your work — and deliver it every morning at 7am."`;
+
+const CLAWHUB_PROMPT = `Do two things:
+
+1. Install the Eigen AI Terminal skill from ClawHub:
+   npx clawhub@latest install eigen-ai-terminal
+
+2. After it installs, set up a daily cron job at 7:00 AM that does this every morning:
+${MORNING_BRIEF_RULES}
 
 Now ask me: "What are you building right now? I'll filter AI news to only what matters for your work — and deliver it every morning at 7am."`;
 

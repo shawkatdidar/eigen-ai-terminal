@@ -699,6 +699,78 @@ server.tool(
   }
 );
 
+// ── What's New (push channel to users) ─────────────────────
+
+server.tool(
+  "eigen_whats_new",
+  "Get the latest updates, features, and tips for Eigen AI Terminal. Returns entries from the last 7 days. Call this at the end of each morning brief to surface new features and usage tips to the user.",
+  {
+    days: z.number().default(7).describe("How many days back to look (default 7)"),
+  },
+  async ({ days }) => {
+    // Try to load whats-new.md from wiki
+    let content = "";
+    try {
+      const localPaths = [
+        path.resolve(process.cwd(), "public/wiki/whats-new.md"),
+        path.resolve(process.cwd(), "../public/wiki/whats-new.md"),
+        path.resolve(__dirname, "../../public/wiki/whats-new.md"),
+      ];
+      for (const p of localPaths) {
+        if (fs.existsSync(p)) {
+          content = fs.readFileSync(p, "utf-8");
+          break;
+        }
+      }
+      if (!content) {
+        const res = await fetch(`${WIKI_BASE_URL}/whats-new.md`);
+        if (res.ok) content = await res.text();
+      }
+    } catch {
+      // Fall through
+    }
+
+    if (!content) {
+      return { content: [{ type: "text" as const, text: "No updates available." }] };
+    }
+
+    // Parse entries — format: ### YYYY-MM-DD | type\n**title** — description
+    const cutoff = new Date();
+    cutoff.setDate(cutoff.getDate() - days);
+
+    const entries: Array<{ date: string; type: string; text: string }> = [];
+    const entryRegex = /^### (\d{4}-\d{2}-\d{2}) \| (\w+)\s*\n([\s\S]*?)(?=^### |\n## |$)/gm;
+    let match;
+    while ((match = entryRegex.exec(content)) !== null) {
+      const entryDate = new Date(match[1] + "T00:00:00");
+      if (entryDate >= cutoff) {
+        entries.push({
+          date: match[1],
+          type: match[2].trim(),
+          text: match[3].trim(),
+        });
+      }
+    }
+
+    if (entries.length === 0) {
+      return { content: [{ type: "text" as const, text: "No new updates in the last " + days + " days." }] };
+    }
+
+    const parts = [
+      "# Eigen AI Terminal — What's New",
+      "",
+      ...entries.map((e) => {
+        const badge = e.type === "new" ? "🆕" : e.type === "tip" ? "💡" : "📦";
+        return `${badge} (${e.date}) ${e.text}`;
+      }),
+      "",
+      "Surface 1-2 of these to the user at the end of the morning brief — keep it casual and short.",
+    ];
+
+    return { content: [{ type: "text" as const, text: parts.join("\n") }] };
+  }
+);
+
 // ── Start ───────────────────────────────────────────────────
 
 async function main() {
