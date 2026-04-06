@@ -139,24 +139,24 @@ export default function LandingPage({ data }: { data: RadarData }) {
                 desc: "Every day at 7am, your agent delivers 2-3 things you can act on today — filtered to your specific work. Not a newsletter. A sharp colleague who read everything overnight.",
               },
               {
-                title: "Ripple effects mapping",
-                desc: "Every signal comes with its causal chain — what it pushes, what trends it feeds, what it's blocked by. See the consequences that news headlines never show.",
+                title: "What it means for your work",
+                desc: "Every signal comes with context — what it enables, what it changes, what you should do about it. Your agent connects the dots to YOUR stack and goals.",
               },
               {
-                title: "49-file interconnected knowledge base",
-                desc: "16 domain trackers, 10 company pages, daily briefs, developing trends, predictions — all cross-linked with wikilinks your agent can navigate.",
+                title: "Interconnected knowledge base",
+                desc: "16 domain trackers, daily briefs, developing trends, and judgment frameworks — all cross-linked. Your agent navigates the knowledge graph to find exactly what you need.",
               },
               {
-                title: "Developing trends with confidence levels",
-                desc: "When 3+ independent signals point at the same outcome, we track it. Your agent knows what's about to happen before it's obvious.",
+                title: "Developing trends",
+                desc: "When multiple independent signals point at the same outcome, we track it. Your agent knows what's building up before it's obvious.",
               },
               {
-                title: "Falsifiable predictions",
-                desc: "We make specific, dated claims and publish whether we were right or wrong. Your agent uses these to inform your planning.",
+                title: "What's blocked and what's moving fast",
+                desc: "Know which constraints are slowing AI progress and which metrics are accelerating. Plan around reality, not hype.",
               },
               {
-                title: "Builder-first filtering",
-                desc: "Toggle between practical (tools, models, tech you can use today) and strategic (funding, policy, market) — or see everything. Your agent gets only what's relevant.",
+                title: "Builder-first focus",
+                desc: "Every signal is filtered for practicality — tools, models, capabilities you can use today. No funding rounds, no IPO news, no policy debates. Just what matters for building.",
               },
             ].map((feature, i) => (
               <div

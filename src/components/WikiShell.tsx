@@ -26,7 +26,15 @@ const folderIcons: Record<string, string> = {
 };
 
 /** Folders to HIDE from sidebar (still accessible via links, just not shown) */
-const hiddenFolders = new Set(["entities"]);
+const hiddenFolders = new Set(["entities"])
+
+/** Root files to HIDE from sidebar — proprietary methodology or not for this phase */
+const hiddenRootFiles = new Set([
+  "force-dynamics.md",    // Proprietary — cause & effect methodology
+  "predictions.md",       // Confusing for general audience
+  "opportunity-pipeline.md", // Internal strategic assessment
+  "index.md",             // Redundant — dashboard is the landing page
+]);
 
 /** Human-readable names for root-level system files */
 const rootFileLabels: Record<string, string> = {
@@ -86,12 +94,14 @@ export default function WikiShell({
 
   const isActive = (filePath: string) => pathname === fileHref(filePath);
 
-  // Sort root files by defined order
-  const sortedRootFiles = [...rootFiles].sort((a, b) => {
-    const ai = rootFileOrder.indexOf(a.path);
-    const bi = rootFileOrder.indexOf(b.path);
-    return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
-  });
+  // Sort root files by defined order, filter out hidden ones
+  const sortedRootFiles = [...rootFiles]
+    .filter((f) => !hiddenRootFiles.has(f.path))
+    .sort((a, b) => {
+      const ai = rootFileOrder.indexOf(a.path);
+      const bi = rootFileOrder.indexOf(b.path);
+      return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
+    });
 
   // Split briefs: most recent vs historical
   const briefFiles = tree["briefs"] || [];

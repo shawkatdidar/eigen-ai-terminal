@@ -9,11 +9,11 @@ export default function WikiIndex() {
 
   const intro = `# Eigen AI Terminal — Knowledge Base
 
-Welcome to the Eigen knowledge base — a living, interconnected wiki tracking the entire AI landscape across 16 domains, updated daily.
+A living wiki tracking the AI landscape across 16 domains, updated daily. Built for builders — tools, models, capabilities, and what you can use right now.
 
-**How to navigate:** Use the sidebar to browse by category. Click any [[wikilink]] (blue link) to jump to that page. Every article links to related topics — follow them to explore deeper. The table of contents on the right helps you navigate long articles.
+**How to navigate:** Use the sidebar to browse by category. Click any blue link to jump to that page. Every article links to related topics — follow them to explore deeper.
 
-**What's here:** 16 domain trackers, 10 company profiles, daily intelligence briefs, developing trends, causal force chains, predictions with accountability, and judgment frameworks — all cross-referenced.
+**What's here:** 16 domain trackers covering every area of AI, daily intelligence briefs, developing trends, what's blocked and why, how fast things are moving, and judgment frameworks for evaluating new developments.
 
 ---
 
