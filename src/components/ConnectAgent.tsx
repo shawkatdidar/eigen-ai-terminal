@@ -229,33 +229,11 @@ export default function ConnectAgent() {
           </div>
         )}
 
-        {/* Tools */}
+        {/* Tools summary */}
         <div className="mt-6 pt-5 border-t border-[var(--color-border)]">
-          <p className="text-[12px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider mb-3">
-            Your agent gets 11 tools
+          <p className="text-[13px] text-[var(--color-text-muted)] leading-relaxed">
+            Your agent gets <span className="font-bold text-[var(--color-text)]">11 tools</span> — daily signals, personalized filtering, causal ripple effects, the full knowledge base, developing trends, predictions, and more.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {[
-              { name: "radar_brief", desc: "Today's signals by builder/strategic lens" },
-              { name: "radar_relevant", desc: "Intelligence filtered for YOUR work" },
-              { name: "radar_signal_ripple", desc: "Causal chain for any signal" },
-              { name: "radar_trends", desc: "Developing trends with confidence" },
-              { name: "radar_roadblocks", desc: "What's blocked and who's fixing it" },
-              { name: "radar_velocity", desc: "How fast things are changing" },
-              { name: "radar_predictions", desc: "Falsifiable predictions we track" },
-              { name: "radar_wiki_browse", desc: "Browse the full knowledge base" },
-              { name: "radar_wiki_read", desc: "Read any wiki page, follow wikilinks" },
-              { name: "radar_wiki_search", desc: "Search across all 49 wiki files" },
-              { name: "radar_morning_setup", desc: "Set up daily morning briefing" },
-            ].map((tool) => (
-              <div key={tool.name} className="flex items-start gap-2 text-[13px]">
-                <code className="text-[11px] font-mono font-bold text-[var(--color-accent)] shrink-0 mt-0.5">
-                  {tool.name}
-                </code>
-                <span className="text-[var(--color-text-secondary)]">{tool.desc}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>

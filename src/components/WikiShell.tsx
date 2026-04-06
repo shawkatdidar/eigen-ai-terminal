@@ -12,28 +12,50 @@ interface ManifestFile {
   size: number;
 }
 
+/** Human-readable labels for folders */
 const folderLabels: Record<string, string> = {
   nodes: "Domains",
-  entities: "Companies & Models",
   briefs: "Daily Briefs",
   frameworks: "Frameworks",
 };
 
 const folderIcons: Record<string, string> = {
   nodes: "📡",
-  entities: "🏢",
   briefs: "📋",
   frameworks: "🧭",
 };
 
+/** Folders to HIDE from sidebar (still accessible via links, just not shown) */
+const hiddenFolders = new Set(["entities"]);
+
+/** Human-readable names for root-level system files */
+const rootFileLabels: Record<string, string> = {
+  "radar.md": "Dashboard",
+  "index.md": "Index",
+  "watchlist.md": "Watchlist",
+  "force-dynamics.md": "Cause & Effect Chains",
+  "convergences.md": "Developing Trends",
+  "bottleneck-map.md": "What's Blocked",
+  "velocity-trackers.md": "How Fast Things Move",
+  "predictions.md": "Predictions",
+  "opportunity-pipeline.md": "Opportunities",
+};
+
+/** Order for root files */
+const rootFileOrder = [
+  "radar.md", "force-dynamics.md", "convergences.md", "bottleneck-map.md",
+  "velocity-trackers.md", "predictions.md", "opportunity-pipeline.md",
+  "watchlist.md", "index.md",
+];
+
 function fileDisplayName(file: ManifestFile): string {
+  // Check root file label first
+  if (rootFileLabels[file.path]) return rootFileLabels[file.path];
   return (file.frontmatter.name as string) || file.path.split("/").pop()?.replace(".md", "") || file.path;
 }
 
 function fileHref(filePath: string): string {
-  // Remove .md extension for the URL
-  const clean = filePath.replace(/\.md$/, "");
-  return `/wiki/${clean}`;
+  return `/wiki/${filePath.replace(/\.md$/, "")}`;
 }
 
 export default function WikiShell({
@@ -50,7 +72,7 @@ export default function WikiShell({
   children: React.ReactNode;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [expandedFolders, setExpandedFolders] = useState<Set<string>>(new Set(Object.keys(tree)));
+  const [expandedFolders, setExpandedFolders] = useState<Set<string>>(new Set(["nodes", "frameworks"]));
   const pathname = usePathname();
 
   const toggleFolder = (folder: string) => {
@@ -62,19 +84,29 @@ export default function WikiShell({
     });
   };
 
-  const isActive = (filePath: string) => {
-    const href = fileHref(filePath);
-    return pathname === href;
-  };
+  const isActive = (filePath: string) => pathname === fileHref(filePath);
+
+  // Sort root files by defined order
+  const sortedRootFiles = [...rootFiles].sort((a, b) => {
+    const ai = rootFileOrder.indexOf(a.path);
+    const bi = rootFileOrder.indexOf(b.path);
+    return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
+  });
+
+  // Split briefs: most recent vs historical
+  const briefFiles = tree["briefs"] || [];
+  const sortedBriefs = [...briefFiles].sort((a, b) => b.path.localeCompare(a.path));
+  const latestBrief = sortedBriefs[0];
+  const historicalBriefs = sortedBriefs.slice(1);
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Wikipedia-style header */}
+      {/* Header */}
       <header className="border-b border-[#a7d7f9] bg-white">
         <div className="max-w-[1400px] mx-auto px-4 py-2 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Link href="/" className="text-[14px] text-[#0645ad] hover:underline">
-              ← Eigen AI Terminal
+              ← Home
             </Link>
             <span className="text-[#54595d] text-[13px]">|</span>
             <Link href="/wiki" className="text-[18px] font-serif font-bold text-[#202122]">
@@ -88,7 +120,7 @@ export default function WikiShell({
               onClick={() => setSidebarOpen(!sidebarOpen)}
               className="text-[#0645ad] hover:underline sm:hidden"
             >
-              {sidebarOpen ? "Hide sidebar" : "Show sidebar"}
+              {sidebarOpen ? "Hide" : "Menu"}
             </button>
           </div>
         </div>
@@ -104,29 +136,18 @@ export default function WikiShell({
           `}
         >
           <div className="p-4">
-            {/* Search placeholder */}
+            {/* Root files — the main navigation */}
             <div className="mb-4">
-              <input
-                type="text"
-                placeholder="Search knowledge base..."
-                className="w-full px-3 py-1.5 text-[13px] border border-[#a2a9b1] rounded bg-white
-                  focus:outline-none focus:border-[#3366cc] focus:shadow-[inset_0_0_0_1px_#3366cc]"
-                readOnly
-              />
-            </div>
-
-            {/* Root files */}
-            <div className="mb-3">
               <p className="text-[11px] font-bold text-[#54595d] uppercase tracking-wider mb-1.5 px-1">
                 Overview
               </p>
-              {rootFiles.map((file) => (
+              {sortedRootFiles.map((file) => (
                 <Link
                   key={file.path}
-                  href={fileHref(file.path)}
+                  href={file.path === "radar.md" ? "/wiki" : fileHref(file.path)}
                   className={`
                     block px-2 py-1 text-[13px] rounded transition-colors
-                    ${isActive(file.path)
+                    ${isActive(file.path) || (file.path === "radar.md" && pathname === "/wiki")
                       ? "bg-[#eaf3ff] text-[#202122] font-semibold"
                       : "text-[#0645ad] hover:bg-[#eaf3ff]"
                     }
@@ -137,39 +158,95 @@ export default function WikiShell({
               ))}
             </div>
 
-            {/* Folder tree */}
-            {Object.entries(tree).sort().map(([folder, files]) => (
-              <div key={folder} className="mb-2">
-                <button
-                  onClick={() => toggleFolder(folder)}
-                  className="flex items-center gap-1.5 w-full px-1 py-1 text-[11px] font-bold text-[#54595d] uppercase tracking-wider hover:text-[#202122]"
+            {/* Latest brief */}
+            {latestBrief && (
+              <div className="mb-3">
+                <p className="text-[11px] font-bold text-[#54595d] uppercase tracking-wider mb-1.5 px-1">
+                  📋 Latest Brief
+                </p>
+                <Link
+                  href={fileHref(latestBrief.path)}
+                  className={`
+                    block px-2 py-1 text-[13px] rounded transition-colors
+                    ${isActive(latestBrief.path)
+                      ? "bg-[#eaf3ff] text-[#202122] font-semibold"
+                      : "text-[#0645ad] hover:bg-[#eaf3ff]"
+                    }
+                  `}
                 >
-                  <span className="text-[13px]">{expandedFolders.has(folder) ? "▾" : "▸"}</span>
-                  <span>{folderIcons[folder] || "📄"}</span>
-                  <span>{folderLabels[folder] || folder}</span>
-                  <span className="text-[10px] font-normal ml-auto text-[#72777d]">{files.length}</span>
-                </button>
-                {expandedFolders.has(folder) && (
-                  <div className="ml-2">
-                    {files.sort((a, b) => fileDisplayName(a).localeCompare(fileDisplayName(b))).map((file) => (
-                      <Link
-                        key={file.path}
-                        href={fileHref(file.path)}
-                        className={`
-                          block px-2 py-1 text-[13px] rounded transition-colors
-                          ${isActive(file.path)
-                            ? "bg-[#eaf3ff] text-[#202122] font-semibold"
-                            : "text-[#0645ad] hover:bg-[#eaf3ff]"
-                          }
-                        `}
-                      >
-                        {fileDisplayName(file)}
-                      </Link>
-                    ))}
-                  </div>
+                  {fileDisplayName(latestBrief)}
+                </Link>
+
+                {/* Historical briefs — collapsed */}
+                {historicalBriefs.length > 0 && (
+                  <>
+                    <button
+                      onClick={() => toggleFolder("briefs-history")}
+                      className="flex items-center gap-1 w-full px-2 py-1 text-[12px] text-[#72777d] hover:text-[#0645ad]"
+                    >
+                      <span>{expandedFolders.has("briefs-history") ? "▾" : "▸"}</span>
+                      <span>Past briefs ({historicalBriefs.length})</span>
+                    </button>
+                    {expandedFolders.has("briefs-history") && (
+                      <div className="ml-2">
+                        {historicalBriefs.map((file) => (
+                          <Link
+                            key={file.path}
+                            href={fileHref(file.path)}
+                            className={`
+                              block px-2 py-0.5 text-[12px] rounded transition-colors
+                              ${isActive(file.path)
+                                ? "bg-[#eaf3ff] text-[#202122] font-semibold"
+                                : "text-[#0645ad] hover:bg-[#eaf3ff]"
+                              }
+                            `}
+                          >
+                            {fileDisplayName(file)}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
-            ))}
+            )}
+
+            {/* Folder tree — excluding hidden folders and briefs (handled above) */}
+            {Object.entries(tree)
+              .filter(([folder]) => !hiddenFolders.has(folder) && folder !== "briefs")
+              .sort()
+              .map(([folder, files]) => (
+                <div key={folder} className="mb-2">
+                  <button
+                    onClick={() => toggleFolder(folder)}
+                    className="flex items-center gap-1.5 w-full px-1 py-1 text-[11px] font-bold text-[#54595d] uppercase tracking-wider hover:text-[#202122]"
+                  >
+                    <span className="text-[13px]">{expandedFolders.has(folder) ? "▾" : "▸"}</span>
+                    <span>{folderIcons[folder] || "📄"}</span>
+                    <span>{folderLabels[folder] || folder}</span>
+                    <span className="text-[10px] font-normal ml-auto text-[#72777d]">{files.length}</span>
+                  </button>
+                  {expandedFolders.has(folder) && (
+                    <div className="ml-2">
+                      {files.sort((a, b) => fileDisplayName(a).localeCompare(fileDisplayName(b))).map((file) => (
+                        <Link
+                          key={file.path}
+                          href={fileHref(file.path)}
+                          className={`
+                            block px-2 py-1 text-[13px] rounded transition-colors
+                            ${isActive(file.path)
+                              ? "bg-[#eaf3ff] text-[#202122] font-semibold"
+                              : "text-[#0645ad] hover:bg-[#eaf3ff]"
+                            }
+                          `}
+                        >
+                          {fileDisplayName(file)}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
           </div>
         </aside>
 
