@@ -1,6 +1,6 @@
 {
   "name": "eigen-terminal-install",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Direct installer for Eigen AI Terminal — installs the skill into your OpenClaw workspace with automatic daily morning briefing.",
   "type": "module",
   "bin": "./dist/install.js",
