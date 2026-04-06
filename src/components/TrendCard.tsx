@@ -23,8 +23,8 @@ function confidenceExplanation(pct: number): string {
 function confidenceLabel(raw: string): string {
   if (raw.includes("imminent")) return "Imminent";
   if (raw.includes("strengthening")) return "Strengthening";
-  if (raw.includes("detected")) return "Detected";
-  if (raw.includes("forming")) return "Forming";
+  if (raw.includes("detected")) return "Confirmed";
+  if (raw.includes("forming")) return "Early signal";
   return raw;
 }
 

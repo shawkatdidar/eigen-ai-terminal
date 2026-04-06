@@ -54,19 +54,3 @@ last_updated: 2026-04-06
 | 2026-03-19 | ai-infrastructure | steady | accelerating | OpenViking, Nexthop $500M, Oracle pivot |
 | 2026-03-19 | ai-safety-alignment | steady | accelerating | OpenClaw CVEs, Safety Report, Anthropic Institute |
 
-## Scan Log
-
-| Date | Signals Found | Notable+ | Nodes Updated | Brief |
-|------|--------------|----------|---------------|-------|
-| 2026-04-06 | ~64 raw → 30 verified | 0 breakthrough, 10 significant, 20 notable | 14/16 | [[2026-04-06]] |
-| 2026-04-04 | ~42 raw → 20 verified | 0 breakthrough, 7 significant, 13 notable | 13/16 | [[2026-04-04]] |
-| 2026-04-03 | ~65 raw → 35 verified | 0 breakthrough, 10 significant, 22 notable | 15/16 | [[2026-04-03]] |
-| 2026-04-02 | ~44 raw → 21 verified | 0 breakthrough, 9 significant, 12 notable | 14/16 | [[2026-04-02]] |
-| 2026-03-31 | ~16 verified in-window | 0 breakthrough, 6 significant, 10 notable | 11/16 | [[2026-03-31]] |
-| 2026-03-30 | ~38 verified in-window | 0 breakthrough, 10 significant, 28 notable | 13/16 | [[2026-03-30]] |
-| 2026-03-27 | ~68 raw → 21 verified | 0 breakthrough, 10 significant, 11 notable | 14/16 | [[2026-03-27]] |
-| 2026-03-26 | ~200 raw → 30 verified | 0 breakthrough, 12 significant, 18 notable | 15/16 | [[2026-03-26]] |
-| 2026-03-25 | ~180 raw → 30 verified | 0 breakthrough, 13 significant, 17 notable | 15/16 | [[2026-03-25]] |
-| 2026-03-24 | ~80 raw → 14 verified | 0 breakthrough, 4 significant, 10 notable | 10/16 | [[2026-03-24]] |
-| 2026-03-23 | ~250 raw → 18 verified | 0 breakthrough, 8 significant, 10 notable | 16/16 | [[2026-03-23]] |
-| 2026-03-19 | 124 raw → 94 final | 4 breakthrough, 32 significant, 58 notable | 15/15 | [[2026-03-19]] |

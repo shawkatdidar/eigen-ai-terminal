@@ -1,37 +1,38 @@
 ---
-name: Convergence Detector
-description: Tracks when multiple independent forces converge on the same outcome
+name: Developing Trends
+description: Tracks when multiple independent signals from different areas all point toward the same outcome
 tags:
   - system
   - force-dynamics
-  - convergence
+  - trends
   - predictions
-last_updated: 2026-04-03
+last_updated: 2026-04-06
 ---
 
-# Convergence Detector
+# Developing Trends
 
-> **What this tracks:** When 3+ independent forces (from different nodes, different signal sources) all point toward the same outcome. A single force can be wrong. Three independent forces converging is highly predictive.
+> **What this tracks:** Sometimes three or more unrelated developments — from different companies, different markets, different technologies — all start pointing toward the same outcome. Any one signal could be noise. But when independent signals from separate domains line up, something is likely about to happen. These are the trends we're watching.
 
-## How Convergence Works
+## How We Identify a Developing Trend
 
-A convergence requires:
-1. **3+ independent force chains** — not echoes of the same signal, but genuinely separate developments
-2. **From different origin nodes** — if all forces come from the same node, it's a trend in that node, not a convergence
-3. **Pointing at the same outcome** — the predicted consequence is specific enough to be falsifiable
-4. **Within a similar timeframe** — forces that would manifest in different decades are not converging
+A trend makes this list when it meets all four criteria:
 
-## Convergence Confidence Levels
+1. **3+ independent signals** — not coverage of the same event, but genuinely separate developments happening in parallel
+2. **From different areas** — if all the signals come from the same domain, it's just momentum in that area. A developing trend means different parts of the landscape are independently moving toward the same result
+3. **Pointing at a specific outcome** — vague enough to always be "right" doesn't count. The predicted outcome has to be concrete enough that we can check whether it actually happened
+4. **On a similar timeline** — signals that would play out over different decades aren't converging. The developments need to be moving at compatible speeds
 
-| Level | Criteria |
+## Confidence Levels
+
+| Level | What It Means |
 |-------|---------|
-| `forming` | 2 forces identified, watching for a third |
-| `detected` | 3+ independent forces confirmed, outcome articulated |
-| `strengthening` | New evidence reinforcing the convergence |
-| `imminent` | Multiple forces are manifesting simultaneously, outcome likely within weeks |
-| `resolved` | Outcome occurred (correct or incorrect) |
+| `forming` | 2 signals identified, watching for a third to confirm the pattern |
+| `detected` | 3+ independent signals confirmed, predicted outcome articulated |
+| `strengthening` | New evidence continues to reinforce the trend |
+| `imminent` | Multiple signals are playing out simultaneously — outcome likely within weeks |
+| `resolved` | Outcome occurred (we check whether the prediction was right or wrong) |
 
-## Active Convergences
+## Active Trends
 
 ### CONV-001: Defense AI Becomes a Standalone Public Market Category by Mid-2027
 
