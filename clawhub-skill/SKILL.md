@@ -1,7 +1,7 @@
 ---
 name: eigen-ai-terminal
 description: Live AI landscape intelligence — signals, causal chains, developing trends, roadblocks, and predictions. 10 tools to query 16 domains of the AI landscape and get only what's relevant to your work.
-version: 0.8.0
+version: 0.9.0
 homepage: https://eigenterminal.clawlab.dev
 repository: https://github.com/shawkatdidar/eigen-ai-terminal
 metadata:
