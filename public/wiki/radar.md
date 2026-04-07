@@ -2,7 +2,7 @@
 tags:
   - dashboard
   - radar
-last_updated: 2026-04-06
+last_updated: 2026-04-07
 ---
 
 # AI Radar Dashboard
@@ -13,22 +13,22 @@ last_updated: 2026-04-06
 
 | #   | Node                          | Status           | Impact   | Trend                                                                                      | Last Signal |
 | --- | ----------------------------- | ---------------- | -------- | ------------------------------------------------------------------------------------------ | ----------- |
-| 1   | [[frontier-models]]           | **accelerating** | high     | DeepSeek V4-Lite on API, OpenAI CFO-Altman IPO clash                                       | 2026-04-06  |
-| 2   | [[open-source-models]]        | **accelerating** | high     | Gemma 4 edge explosion (iOS, M3 Pro, Chrome WebGPU)                                        | 2026-04-06  |
-| 3   | [[compute-hardware]]          | **accelerating** | high     | Goldman Sachs $700B AI hardware Q4, Foxconn +29.7%                                         | 2026-04-06  |
-| 4   | [[ai-agents]]                 | **accelerating** | high     | Holos agentic web architecture, PokeClaw on-device agent, single-agent vs multi-agent paper | 2026-04-06  |
-| 5   | [[ai-coding-tools]]           | **accelerating** | high     | GrandCode beats all humans, Caveman 832pts, oh-my-codex 13.5K stars, Nanocode $200 training | 2026-04-06  |
-| 6   | [[ai-infrastructure]]         | **accelerating** | high     | AXELRAM 102.4x KV-cache reduction, Langflow CVE exploited                                  | 2026-04-06  |
-| 7   | [[ai-safety-alignment]]       | **accelerating** | high     | Gray Swan 1.8M attacks every model jailbroken, 35 AI-code CVEs, Langflow CVE, sycophancy cluster | 2026-04-06  |
-| 8   | [[ai-policy-regulation]]      | **accelerating** | high     | OpenAI Intelligence Age blueprint, UK courts Anthropic dual listing                        | 2026-04-06  |
-| 9   | [[ai-business-funding]]       | **accelerating** | high     | OpenAI CFO-Altman clash, Xoople $130M, UK Anthropic dual listing proposals                 | 2026-04-06  |
+| 1   | [[frontier-models]]           | **accelerating** | critical | Mythos Preview/Glasswing breakthrough, Anthropic $30B revenue, Meta hybrid strategy        | 2026-04-07  |
+| 2   | [[open-source-models]]        | **accelerating** | high     | GLM-5.1 754B SOTA open weights, Meta hybrid open/closed, Gemma 4 hidden MTP               | 2026-04-07  |
+| 3   | [[compute-hardware]]          | **accelerating** | high     | Anthropic 3.5GW TPU deal, Intel joins Terafab, Uber Trainium3                             | 2026-04-07  |
+| 4   | [[ai-agents]]                 | **accelerating** | high     | Google Scion orchestrator, Hippo agent memory, DeepTutor agent-native                     | 2026-04-07  |
+| 5   | [[ai-coding-tools]]           | **accelerating** | high     | Claude Code adaptive thinking flaw, Freestyle agent sandbox, Copilot CLI MCP              | 2026-04-07  |
+| 6   | [[ai-infrastructure]]         | **accelerating** | high     | Cursor warp decode 1.84x MoE, TriAttention 10.7x KV reduction                            | 2026-04-07  |
+| 7   | [[ai-safety-alignment]]       | **accelerating** | critical | Mythos withheld due to offensive cyber, alignment routing circuits brittle, OpenAI fellowship | 2026-04-07  |
+| 8   | [[ai-policy-regulation]]      | **accelerating** | high     | Anti-model-copying coalition, OpenAI vs Musk, China digital humans law                     | 2026-04-07  |
+| 9   | [[ai-business-funding]]       | **accelerating** | high     | Anthropic $30B run rate, Eclipse $1.3B, Zero Shot $100M, Meta layoffs                      | 2026-04-07  |
 | 10  | [[multimodal-ai]]             | **accelerating** | high     | (no new in-window signals)                                                                 | 2026-04-03  |
-| 11  | [[ai-for-science]]            | **accelerating** | high     | Xoople $130M geospatial AI satellite partnership                                           | 2026-04-06  |
-| 12  | [[robotics-embodied-ai]]      | **accelerating** | high     | Japan METI $6.3B physical AI, 30% global robotics market 2040                              | 2026-04-06  |
-| 13  | [[ai-research-breakthroughs]] | **accelerating** | high     | GrandCode, AXELRAM, Haiku-to-Opus 10-bit compression, single-vs-multi-agent, vocabulary bans | 2026-04-06  |
-| 14  | [[edge-on-device-ai]]         | **accelerating** | high     | Gemma 4 on iOS/M3 Pro/Chrome WebGPU, PokeClaw on-device agent                             | 2026-04-06  |
-| 15  | [[ai-in-enterprise]]          | **accelerating** | high     | Microsoft Copilot "entertainment only" ToS, AI retail VTO, Google VTO Apr 30               | 2026-04-06  |
-| 16  | [[frontier-edges]]            | **accelerating** | critical | EDGE-03 1-bit: AXELRAM hardware approach, EDGE-10 Agent Security: Gray Swan results        | 2026-04-06  |
+| 11  | [[ai-for-science]]            | **accelerating** | high     | (no new verified in-window signals)                                                        | 2026-04-06  |
+| 12  | [[robotics-embodied-ai]]      | **accelerating** | high     | NVIDIA National Robotics Week, Eclipse $1.3B for robotics                                  | 2026-04-07  |
+| 13  | [[ai-research-breakthroughs]] | **accelerating** | high     | TriAttention, QED-Nano, alignment routing, CoDE-Stop, Cog-DRIFT, hallucination basins     | 2026-04-07  |
+| 14  | [[edge-on-device-ai]]         | **accelerating** | high     | Google LiteRT-LM launch, Ghost Pepper local STT, Gemma Gem WebGPU                        | 2026-04-07  |
+| 15  | [[ai-in-enterprise]]          | **accelerating** | high     | UnitedHealth $3B AI, Tredence-Google Cloud partnership                                     | 2026-04-07  |
+| 16  | [[frontier-edges]]            | **accelerating** | critical | EDGE-02: GLM-5.1 SOTA + Scion isolation, EDGE-10: Glasswing + alignment routing           | 2026-04-07  |
 
 ## Status Legend
 
@@ -37,11 +37,11 @@ last_updated: 2026-04-06
 - **cooling** — decreasing activity or interest
 - **archived** — no longer actively tracked
 
-## Today's Top 3 Signals (2026-04-06)
+## Today's Top 3 Signals (2026-04-07)
 
-1. **OpenAI publishes "Intelligence Age" economic blueprint — robot taxes, public wealth fund, four-day work week** — First frontier lab to release a comprehensive economic redistribution framework. 13-page policy document proposes auto-triggering safety nets tied to AI displacement metrics. Altman frames it as a "New Deal for superintelligence." Signals the policy window is narrowing.
-2. **GrandCode becomes first AI to beat ALL humans in live competitive programming** — Multi-agent RL system placed 1st in three consecutive Codeforces rounds, beating every human grandmaster. Previous best AI achieved 8th in non-live conditions. This is the competitive programming equivalent of AlphaGo.
-3. **Gray Swan / UK AISI Agent Red-Teaming concludes — every model jailbroken** — 1.8M attacks, 62K breaches, 22 models tested, $171K in bounties. Attack success rate 1.47-6.49%. Largest adversarial evaluation of agentic AI to date. Universal vulnerability demonstrated at scale.
+1. **Anthropic launches Mythos Preview / Project Glasswing — first frontier model withheld from general release** — Mythos achieves SWE-bench Verified 93.9% (Opus 4.6: 80.8%), finds thousands of zero-day vulnerabilities including 27-year-old OpenBSD flaw. 40+ partner consortium (Apple, Google, Microsoft, NVIDIA, etc.). $100M in credits. Model withheld because it can write working exploits. First consortium-controlled model release in AI history.
+2. **Anthropic revenue surpasses $30B run rate, signs 3.5GW TPU deal with Google/Broadcom** — Revenue tripled from $9B in 4 months. 1,000+ enterprise customers at $1M+/year. Broadcom committed to TPU design through 2031. Largest disclosed AI compute deal.
+3. **OpenAI, Anthropic, Google form anti-model-copying coalition against Chinese distillation** — Three direct competitors sharing threat intelligence through Frontier Model Forum. Targeting DeepSeek, Moonshot, Minimax. Countermeasures include traffic detection, output format alteration. Unprecedented cooperation signals escalation of US-China AI competition.
 
 ## Recent Status Changes
 

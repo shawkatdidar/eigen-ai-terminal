@@ -6,7 +6,7 @@ tags:
   - force-dynamics
   - predictions
   - accountability
-last_updated: 2026-04-02
+last_updated: 2026-04-07
 total_predictions: 5
 correct: 0
 incorrect: 0
@@ -64,6 +64,7 @@ Never claim >95%. The world is too complex.
 | 2026-03-27 | Initial: 75% | Strong revenue + banker engagement + multiple reporting sources |
 | 2026-04-01 | 75% → 82% | Bloomberg secondary market: record Anthropic demand + Epoch AI projection Anthropic overtakes OpenAI revenue by mid-2026. Growth rate differential is accelerating, not converging. |
 | 2026-04-02 | 82% → 83% | DOJ appeal of Pentagon ruling + Rep. Gottheimer letter elevates Anthropic political profile. Increased public/regulatory visibility strengthens the IPO narrative as Anthropic becomes a recognized policy player. |
+| 2026-04-07 | 83% → 88% | Anthropic revenue surpasses $30B run rate (3x in 4 months). 1,000+ enterprise customers at $1M+/year (doubled in 2 months). Mythos/Glasswing demonstrates category leadership in cybersecurity. 3.5GW TPU deal through 2031 shows long-term infrastructure commitment. Financial case for IPO is now overwhelming. |
 
 ---
 
@@ -132,6 +133,7 @@ Never claim >95%. The world is too complex.
 |------|-------------------|--------|
 | 2026-03-27 | Initial: 70% | Multiple technical pathways to cost reduction, but demand growth could absorb gains |
 | 2026-04-02 | 70% → 75% | Gemma 4 (4B-active MoE) achieves frontier-competitive agent performance + Arcee Trinity 96% cheaper than Opus while ranking #2 on PinchBench. Model architecture efficiency is now an independent cost reduction vector compounding with hardware/compression gains. CONV-002 adds 5th force. |
+| 2026-04-07 | 75% → 82% | THREE new independent efficiency vectors in one day: TriAttention (10.7x KV reduction), CoDE-Stop (25-50% reasoning token savings), Cursor warp decode (1.84x MoE inference). CONV-002 moved to `imminent`. Cost collapse is happening simultaneously across compression, token generation efficiency, and hardware-specific optimization. |
 
 ---
 

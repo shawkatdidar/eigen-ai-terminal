@@ -1,6 +1,6 @@
 {
   "description": "Eigen AI Terminal Knowledge Base — the full wiki of AI landscape intelligence",
-  "lastUpdated": "2026-04-06T19:28:53.017Z",
+  "lastUpdated": "2026-04-07T20:04:26.262Z",
   "totalFiles": 49,
   "structure": {
     "nodes": "16 domain trackers covering the AI landscape",
@@ -1124,6 +1124,41 @@
       "size": 7111
     },
     {
+      "path": "briefs/2026-04-07.md",
+      "frontmatter": {
+        "date": "2026-04-07T00:00:00.000Z",
+        "scan_time": "13:30",
+        "signals_total": 78,
+        "signals_notable": 20,
+        "signals_significant": 11,
+        "signals_breakthrough": 1,
+        "signals_filtered_noise": 18,
+        "signals_deduped": 14,
+        "nodes_updated": "16/16",
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "frontier-models",
+        "ai-safety-alignment",
+        "ai-in-enterprise",
+        "compute-hardware",
+        "ai-business-funding",
+        "open-source-models",
+        "ai-policy-regulation",
+        "ai-coding-tools",
+        "ai-agents",
+        "ai-infrastructure",
+        "ai-research-breakthroughs"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 20813
+    },
+    {
       "path": "briefs/2026-04-06.md",
       "frontmatter": {
         "date": "2026-04-06T00:00:00.000Z",
@@ -1343,44 +1378,6 @@
       "size": 21359
     },
     {
-      "path": "briefs/2026-03-30.md",
-      "frontmatter": {
-        "date": "2026-03-30T00:00:00.000Z",
-        "scan_time": 1080,
-        "signals_total": 38,
-        "signals_notable": 28,
-        "signals_significant": 10,
-        "signals_breakthrough": 0,
-        "signals_filtered_noise": 0,
-        "signals_deduped": 0,
-        "nodes_updated": 13,
-        "node_status_changes": [],
-        "tags": [
-          "daily-brief"
-        ]
-      },
-      "wikilinks": [
-        "ai-in-enterprise",
-        "ai-for-science",
-        "robotics-embodied-ai",
-        "open-source-models",
-        "multimodal-ai",
-        "ai-infrastructure",
-        "frontier-models",
-        "ai-agents",
-        "compute-hardware",
-        "ai-safety-alignment",
-        "ai-business-funding",
-        "ai-coding-tools",
-        "ai-policy-regulation",
-        "edge-on-device-ai"
-      ],
-      "tags": [
-        "daily-brief"
-      ],
-      "size": 27810
-    },
-    {
       "path": "force-dynamics.md",
       "frontmatter": {
         "name": "Force Dynamics — Propagation Graph",
@@ -1390,7 +1387,7 @@
           "force-dynamics",
           "causal"
         ],
-        "last_updated": "2026-04-06T00:00:00.000Z"
+        "last_updated": "2026-04-07T00:00:00.000Z"
       },
       "wikilinks": [
         "ai-business-funding",
@@ -1413,7 +1410,7 @@
         "force-dynamics",
         "causal"
       ],
-      "size": 33013
+      "size": 36447
     },
     {
       "path": "convergences.md",
@@ -1426,7 +1423,7 @@
           "trends",
           "predictions"
         ],
-        "last_updated": "2026-04-06T00:00:00.000Z"
+        "last_updated": "2026-04-07T00:00:00.000Z"
       },
       "wikilinks": [
         "ai-business-funding",
@@ -1447,7 +1444,7 @@
         "trends",
         "predictions"
       ],
-      "size": 17464
+      "size": 18158
     },
     {
       "path": "bottleneck-map.md",
@@ -1513,7 +1510,7 @@
           "predictions",
           "accountability"
         ],
-        "last_updated": "2026-04-02T00:00:00.000Z",
+        "last_updated": "2026-04-07T00:00:00.000Z",
         "total_predictions": 5,
         "correct": 0,
         "incorrect": 0,
@@ -1527,7 +1524,7 @@
         "predictions",
         "accountability"
       ],
-      "size": 10028
+      "size": 10724
     },
     {
       "path": "opportunity-pipeline.md",
@@ -1784,7 +1781,7 @@
           "dashboard",
           "radar"
         ],
-        "last_updated": "2026-04-06T00:00:00.000Z"
+        "last_updated": "2026-04-07T00:00:00.000Z"
       },
       "wikilinks": [
         "frontier-models",
@@ -1808,7 +1805,7 @@
         "dashboard",
         "radar"
       ],
-      "size": 5253
+      "size": 5330
     },
     {
       "path": "index.md",

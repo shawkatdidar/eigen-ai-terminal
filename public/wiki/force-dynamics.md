@@ -5,7 +5,7 @@ tags:
   - system
   - force-dynamics
   - causal
-last_updated: 2026-04-06
+last_updated: 2026-04-07
 ---
 
 # Force Dynamics — Propagation Graph
@@ -477,6 +477,60 @@ A **force** is a signal that pushes change in a domain other than its origin. Fo
 | Date | Update | Signal Evidence |
 |------|--------|----------------|
 | 2026-04-06 | Identified | arXiv:2604.02460 — DPI argument, tested across 3 model families |
+
+---
+
+### FC-023: Mythos Consortium Release Creates New Model Distribution Precedent
+
+**Date identified:** 2026-04-07
+**Origin signal:** Anthropic withholds Mythos from general release, deploys via 40-partner consortium ([[frontier-models]])
+**Target(s):** [[ai-safety-alignment]], [[ai-policy-regulation]]
+**Mechanism:** First frontier lab explicitly restricting model distribution due to dual-use risk creates a regulatory precedent. Other labs face pressure to adopt similar controlled-release frameworks for models with dangerous capabilities. Policymakers can point to Glasswing as evidence that industry self-regulation is possible (dampening legislation) OR as evidence that models are dangerous enough to require formal access controls (accelerating legislation). Both directions advance the policy conversation. The $100M in credits incentivizes major tech companies to participate in the framework, creating institutional momentum.
+**Direction:** accelerating (policy formation)
+**Strength:** strong
+**Lag:** weeks
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-04-07 | Identified | Anthropic Glasswing launch, 40+ partners, model withheld |
+
+---
+
+### FC-024: Anti-Copying Coalition Accelerates Open-Source Demand
+
+**Date identified:** 2026-04-07
+**Origin signal:** OpenAI/Anthropic/Google form anti-distillation coalition ([[ai-policy-regulation]])
+**Target(s):** [[open-source-models]], [[ai-infrastructure]]
+**Mechanism:** API access restrictions (traffic detection, output format changes, rate limit tightening) reduce the value of API-based distillation. This pushes demand toward: (1) self-hosted open-weight models, (2) synthetic data generation pipelines, (3) independent training infrastructure. Chinese developers who relied on API distillation must invest in original training — ironically strengthening China's independent AI capability in the medium term while constraining it in the short term.
+**Direction:** enabling (open-source demand) / constraining (Chinese API distillation)
+**Strength:** moderate
+**Lag:** months
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-04-07 | Identified | Bloomberg report, Frontier Model Forum coordination |
+
+---
+
+### FC-025: Anthropic $30B Revenue + 3.5GW TPU Deal Accelerates Power Bottleneck
+
+**Date identified:** 2026-04-07
+**Origin signal:** Anthropic signs 3.5GW TPU deal with Broadcom, reveals $30B+ run rate ([[ai-business-funding]])
+**Target(s):** [[compute-hardware]], [[ai-policy-regulation]]
+**Mechanism:** 3.5GW of TPU demand from a single customer creates $21-42B/year revenue for Broadcom, incentivizing massive ASIC investment. Combined with Terafab, existing NVIDIA GPU orders, and Meta/Microsoft/Oracle megaprojects, total AI compute demand is approaching the limits of US power grid capacity in key regions. This hardens BN-003 (datacenter power bottleneck) while strengthening political arguments for AI infrastructure investment (grid modernization, permitting reform, Sanders/AOC moratorium resistance).
+**Direction:** accelerating (compute investment) / hardening (power constraint)
+**Strength:** strong
+**Lag:** months
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-04-07 | Identified | Anthropic 3.5GW deal + Intel Terafab + existing megaprojects |
 
 ---
 
