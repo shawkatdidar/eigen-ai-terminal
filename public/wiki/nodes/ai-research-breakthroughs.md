@@ -4,7 +4,7 @@ id: ai-research-breakthroughs
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-03-27
+last_updated: 2026-04-08
 related_nodes:
   - frontier-models
   - open-source-models
@@ -42,6 +42,8 @@ The publish-or-perish dynamic continues: labs publish selectively (keeping key i
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-07 | **In-Place Test-Time Training (In-Place TTT) — ICLR 2026 Oral** — Treats MLP final projection matrix as "fast weights" that update during inference. Drop-in enhancement for any existing LLM (no retraining). 4B model matches larger models on 128K+ context tasks. Chunk-wise gradient updates for efficiency. → Practical solution to a long-standing architectural challenge: making LLMs adapt at runtime without full retraining. If scalable, materially advances long-context capability at lower cost. | significant | arxiv.org (2604.06169) |
+| 2026-04-07 | **PoM (Polynomial Mixer) — linear-time attention replacement, CVPR 2026** — Aggregates tokens via learned polynomial functions achieving O(n) complexity vs O(n²) for standard attention. Validated across 5 domains: text, handwriting, image gen, 3D, Earth observation. Maintains universal approximation capability. → Another serious contender in the linear attention race alongside Mamba/SSMs. Multi-domain validation distinguishes from single-task alternatives. | notable | arxiv.org (2604.06129) |
 | 2026-03-26 | **S2D2: 4.7x speedup for diffusion LLMs** — Training-free speculative decoding. Same model as drafter and verifier. | notable | [ArXiv](https://arxiv.org/abs/2603.25702) |
 | 2026-03-26 | **R-C2: Cycle-consistent RL, 7.6 point improvement** — Cross-modal consistency as label-free reward signal. | notable | [ArXiv](https://arxiv.org/abs/2603.25720) |
 | 2026-03-25 | **LeWorldModel JEPA — world models from pixels** — Stable end-to-end world model learning, 200x token compression, 15M params, runs on single GPU. → Progress on JEPA approach, extreme parameter efficiency. | notable | arxiv.org |

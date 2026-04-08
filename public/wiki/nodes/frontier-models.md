@@ -4,7 +4,7 @@ id: frontier-models
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-03-30
+last_updated: 2026-04-08
 related_nodes:
   - open-source-models
   - ai-safety-alignment
@@ -36,12 +36,14 @@ The competitive picture has shifted from "who has the biggest model" to a three-
 | OpenAI | GPT-5 series | Broadest ecosystem, ChatGPT distribution |
 | Google DeepMind | Gemini 3.1 Pro/Flash | Benchmark leader (13/16), best multimodal |
 | xAI | Grok 4.20 Beta | Four-agent architecture, fast iteration |
-| Meta | Llama 4 | Open weights, frontier-competitive |
+| Meta | Muse Spark (closed), Llama 4 (open) | First closed model from MSL/Wang, strategic pivot |
 
 ## Recent Signals
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-08 | **Meta launches Muse Spark — first closed model from Meta Superintelligence Labs** — MSL (led by Alexandr Wang, ~100 direct reports) built "Avocado" over 9 months. Closed-source (major pivot from open-source Llama strategy). Multimodal input (voice, text, image), text output. Competitive but not SOTA — company acknowledges coding gap vs Claude/GPT. Trained using Qwen and other open-source models. First in "Muse" model family. Meta stock +6%. Considering API access and subscription fees. → Signals Meta's strategic pivot to closed models under Wang, ending the era when Meta was purely the "open-source AI company." The hybrid strategy (open Llama + closed Muse) mirrors how cloud companies offer both open-source and premium tiers. | significant | bloomberg.com |
+| 2026-04-08 | **Claude outage April 8 — second consecutive day of service disruptions** — Sonnet 4.6 exhibited elevated error rate between 23:00-01:50 PT. ~1.5 hour duration. Chat and Code affected (~80% of reports), API unaffected. 450+ user reports. → Platform stability concerns amid rapidly growing demand; second day suggests infrastructure scaling challenges rather than one-off incident. | notable | ibtimes.com.au |
 | 2026-03-30 | **Intercom Fin Apex vertical model outperforms GPT-5.4 + Claude at customer service** — A domain-specific model (fine-tuned exclusively on customer service conversations and data) surpasses frontier general-purpose models on customer service benchmarks. Deployed by Intercom as the backbone of their Fin product. → Demonstrates that vertical fine-tuning (training a specialized model on domain-specific data) can overtake the most capable general models at targeted tasks; enterprises don't always need frontier models if they're willing to invest in domain-specific training. | significant | intercom.com |
 | 2026-03-30 | **Claude subscriptions doubled in two months** — Anthropic's Claude subscription base (paid users across all tiers) doubled over the two-month period following the #QuitGPT migration. → Quantifies the revenue impact of the user migration signal and reinforces the Q4 2026 IPO thesis. | notable | bloomberg.com |
 | 2026-03-30 | **OpenAI ChatGPT App Store results lag Apple App Store** — ChatGPT's own app marketplace is showing significantly lower traction than expected compared to the iOS App Store. → Signals OpenAI's platform ambitions are running behind its model ambitions; distribution via Apple (iOS 27) matters more than building a proprietary app store. | notable | bloomberg.com |

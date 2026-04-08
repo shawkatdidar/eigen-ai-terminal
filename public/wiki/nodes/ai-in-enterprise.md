@@ -4,7 +4,7 @@ id: ai-in-enterprise
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-03-30
+last_updated: 2026-04-08
 related_nodes:
   - ai-coding-tools
   - ai-infrastructure
@@ -43,6 +43,7 @@ Key challenges: ROI measurement, data privacy/governance, change management, and
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-08 | **AI scribes increasing healthcare costs — insurers and providers agree** — Both sides of healthcare payment agree AI documentation tools (scribes that automatically generate clinical notes from doctor-patient conversations) are inflating medical billing by generating more thorough (and more expensive) documentation. → First cross-industry consensus that AI tools are driving cost increases, not just efficiency gains; complicates the AI-saves-money narrative in healthcare. | notable | statnews.com |
 | 2026-03-30 | **Eli Lilly + Insilico Medicine sign $2.75B AI drug discovery deal** — One of the world's largest pharmaceutical companies (Eli Lilly, $700B+ market cap) signed a $2.75B partnership with Insilico Medicine to use Insilico's AI-driven drug discovery pipeline. This is one of the largest AI-pharma deals ever signed. → At $2.75B, this is a validation event for the entire AI drug discovery category; it signals that big pharma is moving from pilots to multi-year strategic commitments, and that Insilico's end-to-end AI approach (hypothesis to candidate) is considered production-ready by a major buyer. | significant | businesswire.com |
 | 2026-03-30 | **Intercom Fin Apex — vertical model outperforms GPT-5.4 + Claude at customer service** — Intercom's Fin Apex model, fine-tuned specifically for customer service interactions, outperforms both GPT-5.4 and Claude on customer service benchmarks. This is a vertical model (narrowly trained on domain-specific data) beating general-purpose frontier models at a specific task. → Establishes the "vertical beats frontier at domain tasks" pattern at production scale; enterprises now have concrete evidence to invest in domain-specific fine-tuning rather than defaulting to the most capable general model. | significant | intercom.com |
 | 2026-03-30 | **BCG publishes "AI brain fry" study — cognitive load on workers using AI** — BCG research documenting measurable cognitive load increases in workers using AI tools intensively, suggesting enterprises need to manage AI tool usage like other ergonomic concerns. → Introduces enterprise HR and productivity management as a new AI deployment consideration; "AI-induced decision fatigue" could become a workforce policy issue alongside other AI governance questions. | notable | bcg.com |

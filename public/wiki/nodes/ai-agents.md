@@ -4,7 +4,7 @@ id: ai-agents
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-03-30
+last_updated: 2026-04-08
 related_nodes:
   - frontier-models
   - ai-coding-tools
@@ -43,6 +43,9 @@ The ecosystem continues to expand: LangChain shipped Open-SWE (an open-source as
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-08 | **Anthropic launches Managed Agents (public beta) — cloud-hosted agent platform** — Define agents via natural language or YAML. Managed hosting, auto-scaling, monitoring, sandboxing, authentication. Sessions persist through disconnections. Early adopters: Notion, Rakuten, Asana. 10x faster deployment vs custom builds. → Anthropic moving from model provider to agent platform; managed agents abstract away infrastructure, lowering the bar for enterprise agent deployment. Direct competitor to AWS Frontier Agents GA. | significant | nationaltoday.com |
+| 2026-04-07 | **EY deploys multi-agent AI across 130,000 auditors globally** — Embedded in EY Canvas (processes 1.4 trillion journal entry lines/year). 160,000 audit engagements in 150+ countries. Built on Microsoft Azure/Foundry/Fabric. Core assistant + 3 specialized agents (~20 modular capabilities). Target: 100% agent-supported by 2028. → Largest confirmed enterprise-scale agentic AI production deployment; professional services firms committing to full workflow agent replacement, not just assistance. | significant | ey.com |
+| 2026-04-08 | **Hermes Agent v0.8.0 "Intelligence Release" — MCP OAuth 2.1, auto-notifications, 37K stars** — Background process auto-notifications (no polling), OSV malware scanning for MCP packages, live model switching across CLI/Telegram/Discord/Slack, self-improving skill loop. 209 merged PRs, 82 resolved issues. → High-velocity open-source agent framework adding security (MCP OAuth 2.1) and autonomy (event-driven notifications) in same release. | notable | github.com |
 | 2026-03-30 | **Alibaba CoPaw v1.0 — open-source personal AI assistant framework** — Built on AgentScope (Alibaba's agent orchestration library). Integrates Discord, iMessage, DingTalk as communication channels. Supports all Qwen models. → Open-source personal assistant framework from a major lab; the multi-platform integration (Discord, iMessage, DingTalk) targets real daily-use surfaces rather than developer-only workflows; positions Qwen models as the default for personal agent deployments. | notable | github.com |
 | 2026-03-30 | **SakanaAI AI-Scientist-v2: first fully AI-generated paper accepted for peer review** — Sakana AI's AI-Scientist system autonomously generated a complete research paper (hypothesis, experiments, results, write-up) that was accepted by a peer-reviewed venue. This is the first confirmed case of a fully autonomous AI-generated paper passing peer review without human co-authorship. → Validates the agentic research loop: an AI agent can now independently push scientific knowledge forward; raises fundamental questions about what peer review means when AI systems can produce work that meets its standards. | significant | sakana.ai |
 | 2026-03-30 | **Shopify Agentic Storefronts + Universal Commerce Protocol** — Shopify announced "Agentic Storefronts" — storefront interfaces designed specifically for AI agents to browse and purchase, not humans. The Universal Commerce Protocol is an open standard for AI agent-to-merchant interaction. → Formalizes AI agents as a new class of consumer; e-commerce infrastructure is being rebuilt with the assumption that a significant portion of buyers will be AI agents acting on behalf of humans, not humans browsing directly. | notable | shopify.com |

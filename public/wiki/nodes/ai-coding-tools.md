@@ -4,7 +4,7 @@ id: ai-coding-tools
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-03-30
+last_updated: 2026-04-08
 related_nodes:
   - ai-agents
   - frontier-models
@@ -43,6 +43,8 @@ The ecosystem is broadening: it's no longer just about code generation but about
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-08 | **OpenAI Codex crosses 3M weekly users — Altman resets usage limits** — Cloud-based AI coding agent milestone. Altman announced limit resets at every additional 1M users until 10M. → Explosive growth trajectory; from 1.6M in March to 3M in April shows accelerating adoption of autonomous coding agents. | significant | businesstoday.in |
+| 2026-04-07 | **Copilot CLI v1.0.21 adds `copilot mcp` command + OpenTelemetry + Critic Agent** — v1.0.21 (Apr 7): MCP server management from CLI. v1.0.20: monitoring via OpenTelemetry. v1.0.18: Critic agent reviews plans before execution. → GitHub Copilot rapidly integrating MCP as core primitive and adding autonomous review. | notable | havoptic.com |
 | 2026-03-31 | **Claude Code source leaked via npm source map (v2.1.88)** — Bun bundler auto-generated a source map file that was included in the npm package, exposing 1,900 files and 512K+ lines of internal source code. Revealed codenames: KAIROS (always-on background agent), ULTRAPLAN (30-minute remote planning sessions), BUDDY (AI pet companion), plus coordinator mode and agent swarm architecture. → Largest unintentional source code exposure of a frontier AI coding tool; reveals Anthropic's unreleased product roadmap and architectural decisions; highlights build-pipeline security as a blind spot even at top AI labs. | significant | venturebeat.com |
 | 2026-03-30 | **Cline releases Kanban — multi-agent coding orchestration** — A visual Kanban board interface for orchestrating multiple AI coding agents working in parallel across a codebase. Each agent's task, status, progress, and output is visible in a swimlane view. → Addresses the "multi-agent chaos" problem: as developers run multiple coding agents simultaneously, managing their state and preventing conflicts requires tooling that doesn't yet exist; Cline's Kanban is a first serious attempt at multi-agent UX for developers. | notable | cline.ai |
 | 2026-03-27 | **OpenAI Codex Plugins launch — 20+ integrations** — Installable plugins bundle prompt workflows, app integrations, and MCP configurations. Slack, Figma, Notion, Gmail, Cloudflare. Developer marketplace coming. 1.6M weekly Codex users. → Platform play for AI coding tools. | significant | [The Decoder](https://the-decoder.com/openais-codex-gets-a-plugin-marketplace-for-slack-notion-figma-and-more/) |

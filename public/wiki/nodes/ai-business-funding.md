@@ -4,7 +4,7 @@ id: ai-business-funding
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-03-30
+last_updated: 2026-04-08
 related_nodes:
   - frontier-models
   - ai-in-enterprise
@@ -42,6 +42,10 @@ Enterprise AI spend is growing rapidly with buyers becoming more sophisticated. 
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-08 | **Zhipu hikes GLM-5.1 prices 8-17% — China AI monetization wave accelerates** — Second price hike in 2026. Joins Alibaba, Tencent in raising prices. Stock surged 18%. GLM-5.1 can run autonomously 8 hours, coding nears Opus 4.6. Wider loss of 4.7B yuan ($688M) for 2025 but investors upbeat on monetization. → Chinese AI companies transitioning from growth-at-all-costs to monetization; price hikes signal confident demand for agentic AI services. | significant | bloomberg.com |
+| 2026-04-08 | **SpaceX IPO targeting ~$2T valuation, racing AI companies to public markets** — Musk pivoting SpaceX into AI-adjacent vehicle for investor speculation. Attempting to beat Anthropic and OpenAI to IPO as early as summer 2026. Up from $400B private valuation 9 months ago. Revenue approaching $20B. → SpaceX joining the AI IPO race pressures Anthropic/OpenAI timing and creates potential IPO market crowding. | notable | bloomberg.com |
+| 2026-04-08 | **Iran-US ceasefire drives major funds into AI/tech stocks** — Schroders, Jupiter, Franklin Templeton, Amundi, Allspring buying AI/tech stocks on ceasefire hopes. "We had gradually increased equity holdings during the selloff." → Macro relief rally directly benefits AI sector valuations and IPO window. | notable | bloomberg.com |
+| 2026-04-08 | **Perforce Software debt swap on AI disruption fears** — $297M new notes issued. $1.7B debt load trading at 67 cents on dollar. Revenue only declined $10M to $644M but AI fears drove the distress. → Early concrete example of AI disruption fear pricing into corporate debt markets; coding dev tools sector specifically affected. | notable | bloomberg.com |
 | 2026-03-31 | **CoreWeave $8.5B GPU-backed loan — largest chip-backed debt deal ever** — Investment-grade A3 rating from Moody's, backed by Meta's $19B contract. MUFG + Morgan Stanley lead. → AI infrastructure financing enters investment-grade territory; GPU fleets are now a recognized collateral class, enabling cloud GPU providers to raise capital at corporate-bond rates rather than expensive venture equity; signals Wall Street fully underwriting the AI infrastructure buildout. | significant | bloomberg.com |
 | 2026-03-31 | **Tenex.ai $250M at $1B+ valuation for AI cybersecurity managed detection** — Crosspoint Capital led. Partners with Google, Microsoft, AWS for AI-powered managed detection and response (MDR — outsourced security monitoring where AI analyzes threats across a customer's infrastructure). → AI cybersecurity reaching unicorn scale; validates the market for AI-native security services as enterprises struggle to staff traditional SOCs (Security Operations Centers). | notable | bloomberg.com |
 | 2026-03-30 | **Midjourney hits $200M+ revenue, sustained profitability without VC** — Midjourney has crossed $200M in annual revenue while remaining profitable, with no venture capital funding. The company is entirely self-funded from user subscriptions. → Demonstrates that a product-led AI company can reach significant scale without the mega-funding rounds dominating headlines; stands in contrast to the OpenAI/Anthropic capital-intensive model and suggests a viable alternative path for AI product companies. | notable | techcrunch.com |

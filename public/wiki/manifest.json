@@ -1,7 +1,7 @@
 {
   "description": "Eigen AI Terminal Knowledge Base — the full wiki of AI landscape intelligence",
-  "lastUpdated": "2026-04-07T20:04:26.262Z",
-  "totalFiles": 49,
+  "lastUpdated": "2026-04-08T21:46:06.596Z",
+  "totalFiles": 50,
   "structure": {
     "nodes": "16 domain trackers covering the AI landscape",
     "entities": "Company and model pages with timelines and connections",
@@ -23,7 +23,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-03-30T00:00:00.000Z",
+        "last_updated": "2026-04-08T00:00:00.000Z",
         "related_nodes": [
           "frontier-models",
           "ai-coding-tools",
@@ -49,7 +49,7 @@
         "autonomy",
         "tools"
       ],
-      "size": 12743
+      "size": 14328
     },
     {
       "path": "nodes/ai-business-funding.md",
@@ -59,7 +59,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-03-30T00:00:00.000Z",
+        "last_updated": "2026-04-08T00:00:00.000Z",
         "related_nodes": [
           "frontier-models",
           "ai-in-enterprise",
@@ -85,7 +85,7 @@
         "startups",
         "acquisitions"
       ],
-      "size": 13997
+      "size": 15659
     },
     {
       "path": "nodes/ai-coding-tools.md",
@@ -95,7 +95,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-03-30T00:00:00.000Z",
+        "last_updated": "2026-04-08T00:00:00.000Z",
         "related_nodes": [
           "ai-agents",
           "frontier-models",
@@ -119,7 +119,7 @@
         "developer-tools",
         "productivity"
       ],
-      "size": 8715
+      "size": 9425
     },
     {
       "path": "nodes/ai-for-science.md",
@@ -165,7 +165,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-03-30T00:00:00.000Z",
+        "last_updated": "2026-04-08T00:00:00.000Z",
         "related_nodes": [
           "ai-coding-tools",
           "ai-infrastructure",
@@ -193,7 +193,7 @@
         "vertical",
         "workflow"
       ],
-      "size": 8936
+      "size": 9455
     },
     {
       "path": "nodes/ai-infrastructure.md",
@@ -275,7 +275,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-03-27T00:00:00.000Z",
+        "last_updated": "2026-04-08T00:00:00.000Z",
         "related_nodes": [
           "frontier-models",
           "open-source-models",
@@ -301,7 +301,7 @@
         "architecture",
         "training"
       ],
-      "size": 7834
+      "size": 8900
     },
     {
       "path": "nodes/ai-safety-alignment.md",
@@ -465,7 +465,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-03-30T00:00:00.000Z",
+        "last_updated": "2026-04-08T00:00:00.000Z",
         "related_nodes": [
           "open-source-models",
           "ai-safety-alignment",
@@ -489,7 +489,7 @@
         "models",
         "frontier"
       ],
-      "size": 10266
+      "size": 11518
     },
     {
       "path": "nodes/multimodal-ai.md",
@@ -1124,6 +1124,40 @@
       "size": 7111
     },
     {
+      "path": "briefs/2026-04-08.md",
+      "frontmatter": {
+        "date": "2026-04-08T00:00:00.000Z",
+        "scan_time": 930,
+        "signals_total": 28,
+        "signals_notable": 9,
+        "signals_significant": 7,
+        "signals_breakthrough": 0,
+        "signals_filtered_noise": 8,
+        "signals_deduped": 4,
+        "nodes_updated": 8,
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "frontier-models",
+        "open-source-models",
+        "ai-agents",
+        "ai-in-enterprise",
+        "ai-coding-tools",
+        "ai-business-funding",
+        "ai-research-breakthroughs",
+        "frontier-edges",
+        "ai-infrastructure",
+        "ai-safety-alignment"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 16130
+    },
+    {
       "path": "briefs/2026-04-07.md",
       "frontmatter": {
         "date": "2026-04-07T00:00:00.000Z",
@@ -1340,42 +1374,6 @@
         "daily-brief"
       ],
       "size": 19367
-    },
-    {
-      "path": "briefs/2026-03-31.md",
-      "frontmatter": {
-        "date": "2026-03-31T00:00:00.000Z",
-        "scan_time": 660,
-        "signals_total": 16,
-        "signals_notable": 10,
-        "signals_significant": 6,
-        "signals_breakthrough": 0,
-        "signals_filtered_noise": 12,
-        "signals_deduped": 5,
-        "nodes_updated": 9,
-        "node_status_changes": [],
-        "tags": [
-          "daily-brief"
-        ]
-      },
-      "wikilinks": [
-        "compute-hardware",
-        "ai-business-funding",
-        "frontier-edges",
-        "ai-coding-tools",
-        "ai-safety-alignment",
-        "ai-in-enterprise",
-        "ai-policy-regulation",
-        "ai-infrastructure",
-        "frontier-models",
-        "open-source-models",
-        "ai-agents",
-        "robotics-embodied-ai"
-      ],
-      "tags": [
-        "daily-brief"
-      ],
-      "size": 21359
     },
     {
       "path": "force-dynamics.md",
@@ -1660,6 +1658,47 @@
       "size": 6018
     },
     {
+      "path": "frameworks/model-platform-inversion.md",
+      "frontmatter": {
+        "name": "Model-Platform Inversion",
+        "description": "Framework for evaluating AI company strategies — as models commoditize, value migrates from the model layer to the platform layer",
+        "tags": [
+          "strategy",
+          "business-models",
+          "evaluation",
+          "mental-model"
+        ],
+        "discovered": "2026-04-08T00:00:00.000Z",
+        "session": 11,
+        "related": [
+          "[[densing-law]]",
+          "[[ai-business-funding]]",
+          "[[frontier-models]]",
+          "[[ai-agents]]",
+          "[[ai-in-enterprise]]"
+        ],
+        "nodes": [
+          "ai-business-funding",
+          "frontier-models",
+          "ai-in-enterprise"
+        ]
+      },
+      "wikilinks": [
+        "densing-law",
+        "ai-business-funding",
+        "frontier-models",
+        "ai-agents",
+        "ai-in-enterprise"
+      ],
+      "tags": [
+        "strategy",
+        "business-models",
+        "evaluation",
+        "mental-model"
+      ],
+      "size": 4339
+    },
+    {
       "path": "frameworks/revenue-per-compute.md",
       "frontmatter": {
         "name": "Revenue-Per-Compute Strategic Framework",
@@ -1781,7 +1820,7 @@
           "dashboard",
           "radar"
         ],
-        "last_updated": "2026-04-07T00:00:00.000Z"
+        "last_updated": "2026-04-08T00:00:00.000Z"
       },
       "wikilinks": [
         "frontier-models",
@@ -1805,7 +1844,7 @@
         "dashboard",
         "radar"
       ],
-      "size": 5330
+      "size": 5171
     },
     {
       "path": "index.md",

@@ -2,7 +2,7 @@
 tags:
   - dashboard
   - radar
-last_updated: 2026-04-07
+last_updated: 2026-04-08
 ---
 
 # AI Radar Dashboard
@@ -13,21 +13,21 @@ last_updated: 2026-04-07
 
 | #   | Node                          | Status           | Impact   | Trend                                                                                      | Last Signal |
 | --- | ----------------------------- | ---------------- | -------- | ------------------------------------------------------------------------------------------ | ----------- |
-| 1   | [[frontier-models]]           | **accelerating** | critical | Mythos Preview/Glasswing breakthrough, Anthropic $30B revenue, Meta hybrid strategy        | 2026-04-07  |
+| 1   | [[frontier-models]]           | **accelerating** | critical | Meta Muse Spark closed model launch, Claude outage 2nd day, Mythos/Glasswing              | 2026-04-08  |
 | 2   | [[open-source-models]]        | **accelerating** | high     | GLM-5.1 754B SOTA open weights, Meta hybrid open/closed, Gemma 4 hidden MTP               | 2026-04-07  |
 | 3   | [[compute-hardware]]          | **accelerating** | high     | Anthropic 3.5GW TPU deal, Intel joins Terafab, Uber Trainium3                             | 2026-04-07  |
-| 4   | [[ai-agents]]                 | **accelerating** | high     | Google Scion orchestrator, Hippo agent memory, DeepTutor agent-native                     | 2026-04-07  |
-| 5   | [[ai-coding-tools]]           | **accelerating** | high     | Claude Code adaptive thinking flaw, Freestyle agent sandbox, Copilot CLI MCP              | 2026-04-07  |
+| 4   | [[ai-agents]]                 | **accelerating** | high     | Anthropic Managed Agents beta, EY 130K auditor deployment, Hermes v0.8.0                  | 2026-04-08  |
+| 5   | [[ai-coding-tools]]           | **accelerating** | high     | Codex 3M users, Copilot CLI MCP command, Copilot Critic agent                             | 2026-04-08  |
 | 6   | [[ai-infrastructure]]         | **accelerating** | high     | Cursor warp decode 1.84x MoE, TriAttention 10.7x KV reduction                            | 2026-04-07  |
 | 7   | [[ai-safety-alignment]]       | **accelerating** | critical | Mythos withheld due to offensive cyber, alignment routing circuits brittle, OpenAI fellowship | 2026-04-07  |
 | 8   | [[ai-policy-regulation]]      | **accelerating** | high     | Anti-model-copying coalition, OpenAI vs Musk, China digital humans law                     | 2026-04-07  |
-| 9   | [[ai-business-funding]]       | **accelerating** | high     | Anthropic $30B run rate, Eclipse $1.3B, Zero Shot $100M, Meta layoffs                      | 2026-04-07  |
+| 9   | [[ai-business-funding]]       | **accelerating** | high     | Zhipu price hike 8-17%, SpaceX IPO race, Iran ceasefire AI stock rally                    | 2026-04-08  |
 | 10  | [[multimodal-ai]]             | **accelerating** | high     | (no new in-window signals)                                                                 | 2026-04-03  |
 | 11  | [[ai-for-science]]            | **accelerating** | high     | (no new verified in-window signals)                                                        | 2026-04-06  |
 | 12  | [[robotics-embodied-ai]]      | **accelerating** | high     | NVIDIA National Robotics Week, Eclipse $1.3B for robotics                                  | 2026-04-07  |
-| 13  | [[ai-research-breakthroughs]] | **accelerating** | high     | TriAttention, QED-Nano, alignment routing, CoDE-Stop, Cog-DRIFT, hallucination basins     | 2026-04-07  |
+| 13  | [[ai-research-breakthroughs]] | **accelerating** | high     | In-Place TTT (ICLR Oral), PoM linear attention (CVPR), TriAttention                      | 2026-04-08  |
 | 14  | [[edge-on-device-ai]]         | **accelerating** | high     | Google LiteRT-LM launch, Ghost Pepper local STT, Gemma Gem WebGPU                        | 2026-04-07  |
-| 15  | [[ai-in-enterprise]]          | **accelerating** | high     | UnitedHealth $3B AI, Tredence-Google Cloud partnership                                     | 2026-04-07  |
+| 15  | [[ai-in-enterprise]]          | **accelerating** | high     | EY 130K auditor deployment, AI scribes cost inflation, Perforce AI distress                | 2026-04-08  |
 | 16  | [[frontier-edges]]            | **accelerating** | critical | EDGE-02: GLM-5.1 SOTA + Scion isolation, EDGE-10: Glasswing + alignment routing           | 2026-04-07  |
 
 ## Status Legend
@@ -37,11 +37,11 @@ last_updated: 2026-04-07
 - **cooling** — decreasing activity or interest
 - **archived** — no longer actively tracked
 
-## Today's Top 3 Signals (2026-04-07)
+## Today's Top 3 Signals (2026-04-08)
 
-1. **Anthropic launches Mythos Preview / Project Glasswing — first frontier model withheld from general release** — Mythos achieves SWE-bench Verified 93.9% (Opus 4.6: 80.8%), finds thousands of zero-day vulnerabilities including 27-year-old OpenBSD flaw. 40+ partner consortium (Apple, Google, Microsoft, NVIDIA, etc.). $100M in credits. Model withheld because it can write working exploits. First consortium-controlled model release in AI history.
-2. **Anthropic revenue surpasses $30B run rate, signs 3.5GW TPU deal with Google/Broadcom** — Revenue tripled from $9B in 4 months. 1,000+ enterprise customers at $1M+/year. Broadcom committed to TPU design through 2031. Largest disclosed AI compute deal.
-3. **OpenAI, Anthropic, Google form anti-model-copying coalition against Chinese distillation** — Three direct competitors sharing threat intelligence through Frontier Model Forum. Targeting DeepSeek, Moonshot, Minimax. Countermeasures include traffic detection, output format alteration. Unprecedented cooperation signals escalation of US-China AI competition.
+1. **Meta launches Muse Spark — first closed model from Meta Superintelligence Labs** — MSL (led by Alexandr Wang) built "Avocado" over 9 months. Closed-source, major pivot from Llama open-source strategy. Trained using Qwen and other open-source models. Meta stock +6%. First in "Muse" model family. Competitive but not SOTA. Considering API access and subscriptions.
+2. **Anthropic launches Managed Agents (public beta)** — Cloud-hosted agent platform. Define agents via natural language or YAML. Auto-scaling, monitoring, sandboxing. Notion, Rakuten, Asana as early adopters. 10x faster deployment. Anthropic shifting from model provider to agent platform.
+3. **EY deploys multi-agent AI across 130,000 auditors globally** — Largest confirmed enterprise agent deployment. Embedded in EY Canvas (1.4 trillion journal entries/year). 160K engagements, 150+ countries. Target: 100% agent-supported audit by 2028.
 
 ## Recent Status Changes
 
