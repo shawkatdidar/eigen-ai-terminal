@@ -5,54 +5,25 @@ import { useState } from "react";
 type Platform = "openclaw" | "claude-code" | "any-agent";
 type OpenClawMethod = "direct" | "clawhub";
 
-const MORNING_BRIEF_RULES = `
-   - Call radar_brief with view "builder" and significance "significant" to get today's top signals
-   - Call radar_relevant with what you know about my work to get personalized intelligence
-   - Call radar_trends to check if any major trend shifted overnight
-   - Call eigen_whats_new to check for new Eigen features and tips
-   - Send me a SHORT morning message (not a wall of text) with this format:
-
-     ☀️ Good morning — here's what matters in AI today:
-
-     [One sentence: the single most important development and why it affects my work]
-
-     What you should know:
-     • [Signal that directly impacts what I'm building — one line]
-     • [New tool, model, or capability I could use — one line]
-     • [Only include a third if it's genuinely relevant]
-
-     Trend to watch: [One developing trend in plain language with confidence %]
-
-     💡 [One tip or new feature from Eigen, if there's something fresh this week — skip if nothing new]
-
-     Say "dig deeper on [topic]" or "full brief" for more.
-
-   IMPORTANT rules for the morning brief:
-   - Maximum 3 bullet points. Less is more. Only include what I can ACT on today.
-   - Every bullet must pass the test: "Can I do something with this information today?"
-   - Never include funding rounds, IPO news, policy changes, or executive shuffles unless they DIRECTLY change a tool or API I use.
-   - If nothing significant happened that affects my work, say so in one line. Don't pad with generic AI news.
-   - Write like a sharp colleague giving me a 30-second update, not a newsletter.
-   - The Eigen tip at the end should be casual and brief — one line max. If eigen_whats_new returned nothing new, skip it entirely.`;
-
-const DIRECT_PROMPT = `Install the Eigen AI Terminal skill into my workspace by running:
+const DIRECT_PROMPT = `Install the Eigen AI Terminal skill:
 
 npx eigen-terminal-install
 
-After it installs, set up a daily cron job at 7:00 AM that does this every morning:
-${MORNING_BRIEF_RULES}
+After it installs:
+1. Ask what I'm building, then show me what's relevant from today's AI signals
+2. Set up two crons:
+   - Daily at 7:00 AM — call today(), filter to my work, send me 2-3 things I can act on
+   - Every 4 hours — call check_updates(), only tell me if something breaking affects my work`;
 
-Now ask me: "What are you building right now? I'll filter AI news to only what matters for your work — and deliver it every morning at 7am."`;
+const CLAWHUB_PROMPT = `Install the Eigen AI Terminal:
 
-const CLAWHUB_PROMPT = `Do two things:
+npx clawhub@latest install eigen-ai-terminal
 
-1. Install the Eigen AI Terminal skill from ClawHub:
-   npx clawhub@latest install eigen-ai-terminal
-
-2. After it installs, set up a daily cron job at 7:00 AM that does this every morning:
-${MORNING_BRIEF_RULES}
-
-Now ask me: "What are you building right now? I'll filter AI news to only what matters for your work — and deliver it every morning at 7am."`;
+After it installs:
+1. Ask what I'm building, then show me what's relevant from today's AI signals
+2. Set up two crons:
+   - Daily at 7:00 AM — call today(), filter to my work, send me 2-3 things I can act on
+   - Every 4 hours — call check_updates(), only tell me if something breaking affects my work`;
 
 const CLAUDE_CODE_CONFIG = JSON.stringify({
   mcpServers: {
@@ -63,21 +34,15 @@ const CLAUDE_CODE_CONFIG = JSON.stringify({
   },
 }, null, 2);
 
-const ANY_AGENT_PROMPT = `You now have access to the Eigen AI Terminal — a daily intelligence system tracking 16 domains of the AI landscape.
+const ANY_AGENT_PROMPT = `You now have access to the Eigen AI Terminal — daily intelligence on 16 areas of AI.
 
-Endpoints (public, read-only, no auth):
-- Today's signals + trends + predictions: https://terminal.clawlab.dev/data/radar.json
-- Knowledge base index (49 files): https://terminal.clawlab.dev/wiki/manifest.json
+Endpoints (public, no auth):
+- Today's signals: https://terminal.clawlab.dev/data/radar.json
+- 7-day history: https://terminal.clawlab.dev/data/history.json
+- Knowledge base: https://terminal.clawlab.dev/wiki/manifest.json
 - Any wiki page: https://terminal.clawlab.dev/wiki/{path}
-  Examples: wiki/nodes/ai-agents.md, wiki/entities/anthropic.md, wiki/convergences.md
 
-Wiki files use [[wikilinks]] for cross-references — follow them to navigate the knowledge graph.
-
-How to use this:
-1. Fetch radar.json daily for signals, causal chains, trends, roadblocks, and predictions
-2. Filter by what the user is building — only surface what they can act on
-3. When the user asks about any AI topic, search the wiki for deep context
-4. For any signal, trace its ripple effects through the force chains and convergences
+Fetch radar.json daily. Each signal has significance, domains, and an actionable flag. Filter by what I'm building — only tell me what I can act on. For deep context on any topic, fetch wiki pages.
 
 Ask me what I'm building so you can start filtering.`;
 
@@ -92,15 +57,15 @@ const openclawMethods: Record<OpenClawMethod, {
     label: "Direct Install",
     tag: "Recommended",
     prompt: DIRECT_PROMPT,
-    subtitle: "Auto morning briefing included",
-    description: "Paste this in your OpenClaw chat. It installs the skill and sets up automatic onboarding.",
+    subtitle: "Installs skill + morning brief",
+    description: "Paste in your OpenClaw chat. The skill handles everything — onboarding, daily brief, all of it.",
   },
   clawhub: {
     label: "Via ClawHub",
-    tag: "With morning brief",
+    tag: "Alternative",
     prompt: CLAWHUB_PROMPT,
-    subtitle: "Installs skill + sets up daily cron",
-    description: "Paste this in your OpenClaw chat. It installs from ClawHub AND sets up the morning briefing — all in one prompt.",
+    subtitle: "Installs from the ClawHub registry",
+    description: "Same result, different install path. Paste in your OpenClaw chat.",
   },
 };
 
@@ -116,7 +81,7 @@ function CommandBlock({ text, copied, onCopy }: { text: string; copied: boolean;
           bg-white border border-[var(--color-border)] text-[var(--color-text-secondary)]
           hover:bg-[var(--color-accent)] hover:text-white hover:border-[var(--color-accent)] transition-all"
       >
-        {copied ? "✓ Copied!" : "Copy prompt"}
+        {copied ? "Copied" : "Copy"}
       </button>
     </div>
   );
@@ -181,7 +146,7 @@ export default function ConnectAgent() {
           Connect Your Agent
         </h3>
         <p className="text-[14px] text-[var(--color-text-secondary)] mt-1.5 max-w-lg">
-          Copy the prompt, paste it into your agent. It handles the rest — installs the skill, asks what you&apos;re building, and starts delivering personalized intelligence.
+          Copy the prompt, paste it into your agent. It installs the skill, asks what you&apos;re building, and starts delivering filtered intelligence.
         </p>
       </div>
 
@@ -232,7 +197,7 @@ export default function ConnectAgent() {
         {activePlatform === "any-agent" && (
           <div>
             <p className="text-[13px] text-[var(--color-text-secondary)] mb-4 leading-relaxed">
-              Copy this prompt and give it to your agent. Works with any AI that can fetch URLs.
+              Give this to any AI agent that can fetch URLs. No MCP needed.
             </p>
             <CommandBlock text={ANY_AGENT_PROMPT} copied={copied} onCopy={onCopy} />
           </div>
@@ -241,7 +206,7 @@ export default function ConnectAgent() {
         {/* Tools summary */}
         <div className="mt-6 pt-5 border-t border-[var(--color-border)]">
           <p className="text-[13px] text-[var(--color-text-muted)] leading-relaxed">
-            Your agent gets <span className="font-bold text-[var(--color-text)]">11 tools</span> — daily signals, personalized filtering, causal ripple effects, the full knowledge base, developing trends, predictions, and more.
+            Your agent gets <span className="font-bold text-[var(--color-text)]">11 tools</span> — today&apos;s signals, topic deep-dives, cause-and-effect tracing, developing trends, predictions, and a 50-page knowledge base.
           </p>
         </div>
       </div>

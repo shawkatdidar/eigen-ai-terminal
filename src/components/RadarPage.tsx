@@ -6,7 +6,6 @@ import SignalCard from "./SignalCard";
 import TrendCard from "./TrendCard";
 import BottleneckCard from "./BottleneckCard";
 import VelocityGrid from "./VelocityGrid";
-import PredictionRow from "./PredictionRow";
 import ConnectAgent from "./ConnectAgent";
 
 /** Filter signals but keep track of original index for ripple lookup */
@@ -67,7 +66,7 @@ const viewConfig: Record<ViewFilter, {
   },
 };
 
-export default function RadarPage({ data }: { data: RadarData }) {
+export default function RadarPage({ data, embedded = false }: { data: RadarData; embedded?: boolean }) {
   const [view, setView] = useState<ViewFilter>("builder");
   const [showAllNotable, setShowAllNotable] = useState(false);
 
@@ -79,64 +78,88 @@ export default function RadarPage({ data }: { data: RadarData }) {
   const notRipples = data.ripples?.notable || {};
 
   return (
-    <div className="min-h-screen bg-[var(--color-bg-page)]">
-      {/* ── Minimal header ── */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-[var(--color-border)]">
-        <div className="max-w-4xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-[15px] font-bold text-[var(--color-text)] tracking-tight">
-              Eigen
-            </span>
+    <div className={embedded ? "" : "min-h-screen bg-[var(--color-bg-page)]"}>
+      {/* ── Standalone header (hidden in wiki) ── */}
+      {!embedded && (
+        <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-[var(--color-border)]">
+          <div className="max-w-4xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between">
+            <div className="flex items-center gap-2.5">
+              <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="text-[15px] font-bold text-[var(--color-text)] tracking-tight">
+                Eigen
+              </span>
+            </div>
+            <a
+              href="#connect"
+              className="inline-flex items-center px-5 py-2 rounded-full
+                bg-[var(--color-primary)] text-white text-[13px] font-bold
+                hover:opacity-90 transition-opacity"
+            >
+              Connect Agent
+            </a>
           </div>
-          <a
-            href="#connect"
-            className="inline-flex items-center px-5 py-2 rounded-full
-              bg-[var(--color-primary)] text-white text-[13px] font-bold
-              hover:opacity-90 transition-opacity"
-          >
-            Connect Agent
-          </a>
-        </div>
-      </header>
+        </header>
+      )}
 
-      <main className="max-w-4xl mx-auto px-5 sm:px-8">
-        {/* ── Hero ── */}
-        <div className={`pt-14 pb-8 -mx-5 sm:-mx-8 px-5 sm:px-8 bg-gradient-to-b ${theme.headerGradient} transition-all duration-500`}>
-          <p className="text-[13px] font-semibold text-[var(--color-text-muted)] mb-4 uppercase tracking-wider">
+      <main className={embedded ? "px-6 py-6" : "max-w-4xl mx-auto px-5 sm:px-8"}>
+        {/* ── Dashboard header ── */}
+        <div className={`${embedded ? "pb-6" : "pt-14 pb-8 -mx-5 sm:-mx-8 px-5 sm:px-8"} bg-gradient-to-b ${theme.headerGradient} transition-all duration-500`}>
+          <p className="text-[13px] font-semibold text-[var(--color-text-muted)] mb-3 uppercase tracking-wider">
             {formatDate(data.brief.date as string)}
           </p>
 
-          <h1 className="text-[36px] sm:text-[46px] font-extrabold text-[var(--color-text)] leading-[1.05] tracking-tight mb-5 max-w-2xl">
-            You can&apos;t keep up with AI.
-            <br />
-            <span className="text-[var(--color-text-muted)]">Nobody can.</span>
-          </h1>
+          {embedded ? (
+            /* Wiki mode: clean dashboard header */
+            <>
+              <h1 className="text-[24px] font-bold text-[var(--color-text)] tracking-tight mb-4">
+                AI Radar — Live Dashboard
+              </h1>
+              <div className="flex items-center gap-2 text-[14px] mb-6">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 font-semibold text-[13px]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                  Live
+                </span>
+                <span className="text-[var(--color-text-secondary)]">
+                  <span className="font-bold text-[var(--color-text)] tabular-nums">{data.brief.signalsTotal}</span> signals scanned
+                  <span className="mx-1.5 text-[var(--color-border)]">&middot;</span>
+                  <span className="font-bold tabular-nums" style={{ color: theme.accent }}>{data.brief.signalsSignificant}</span> significant
+                  <span className="mx-1.5 text-[var(--color-border)]">&middot;</span>
+                  {data.brief.nodesUpdated} areas updated
+                </span>
+              </div>
+            </>
+          ) : (
+            /* Standalone mode: marketing hero */
+            <>
+              <h1 className="text-[36px] sm:text-[46px] font-extrabold text-[var(--color-text)] leading-[1.05] tracking-tight mb-5 max-w-2xl">
+                You can&apos;t keep up with AI.
+                <br />
+                <span className="text-[var(--color-text-muted)]">Nobody can.</span>
+              </h1>
+              <p className="text-[17px] text-[var(--color-text-secondary)] leading-[1.7] mb-6 max-w-xl">
+                {data.brief.signalsTotal}+ developments tracked today alone. New models, tools, and breakthroughs ship faster than anyone can follow.
+                The builders who stay ahead don&apos;t read more — they let their agents read for them.
+              </p>
+              <div className="flex items-center gap-2 text-[14px] mb-10">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 font-semibold text-[13px]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                  Live
+                </span>
+                <span className="text-[var(--color-text-secondary)]">
+                  <span className="font-bold text-[var(--color-text)] tabular-nums">{data.brief.signalsTotal}</span> signals
+                  <span className="mx-1.5 text-[var(--color-border)]">&middot;</span>
+                  <span className="font-bold tabular-nums" style={{ color: theme.accent }}>{data.brief.signalsSignificant}</span> significant
+                  <span className="mx-1.5 text-[var(--color-border)]">&middot;</span>
+                  {data.brief.nodesUpdated} areas
+                </span>
+              </div>
+            </>
+          )}
 
-          <p className="text-[17px] text-[var(--color-text-secondary)] leading-[1.7] mb-6 max-w-xl">
-            {data.brief.signalsTotal}+ developments tracked today alone. New models, tools, and breakthroughs ship faster than anyone can follow.
-            The builders who stay ahead don&apos;t read more — they let their agents read for them.
-          </p>
-
-          {/* Stats */}
-          <div className="flex items-center gap-2 text-[14px] mb-10">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 font-semibold text-[13px]">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-              Live
-            </span>
-            <span className="text-[var(--color-text-secondary)]">
-              <span className="font-bold text-[var(--color-text)] tabular-nums">{data.brief.signalsTotal}</span> signals
-              <span className="mx-1.5 text-[var(--color-border)]">·</span>
-              <span className="font-bold tabular-nums" style={{ color: theme.accent }}>{data.brief.signalsSignificant}</span> significant
-              <span className="mx-1.5 text-[var(--color-border)]">·</span>
-              {data.brief.nodesUpdated} areas
-            </span>
-          </div>
-
-          {/* ── Lens selector ── positioned right after the hero, before signals */}
+          {/* ── Lens selector ── */}
           <div>
-            <p className="text-[13px] font-semibold text-[var(--color-text-muted)] mb-3 uppercase tracking-wider">
-              Choose your lens
+            <p className="text-[12px] font-semibold text-[var(--color-text-muted)] mb-2 uppercase tracking-wider">
+              Filter
             </p>
             <div className="flex items-stretch gap-2">
               {(["builder", "strategic", "all"] as ViewFilter[]).map((v) => {
@@ -284,47 +307,25 @@ export default function RadarPage({ data }: { data: RadarData }) {
           </section>
         )}
 
-        {/* ── Divider ── */}
-        <div className="border-t border-[var(--color-border)] my-12" />
+        {/* Predictions intentionally excluded from public UI — internal calibration tool */}
 
-        {/* ── Predictions ── */}
-        {data.predictions.length > 0 && (
-          <section className="mb-12">
-            <div className="mb-6">
-              <h3 className="text-[24px] font-bold text-[var(--color-text)] tracking-tight">
-                Predictions We&apos;re Tracking
-              </h3>
-              <p className="text-[14px] text-[var(--color-text-secondary)] mt-1.5 max-w-lg">
-                Specific, dated claims. We check each one and publish whether we were right or wrong.
-              </p>
-            </div>
-            <div
-              className="bg-white rounded-[var(--radius-lg)] px-6"
-              style={{ boxShadow: "var(--shadow-card)" }}
-            >
-              {data.predictions.map((pred) => (
-                <PredictionRow key={pred.id} prediction={pred} />
-              ))}
-            </div>
-            <p className="mt-3 text-[12px] text-[var(--color-text-muted)] italic">
-              Analytical predictions based on signal tracking — not investment or financial advice. Do your own research.
-            </p>
+        {/* ── Connect Agent (standalone only) ── */}
+        {!embedded && (
+          <section id="connect" className="mb-12 scroll-mt-20">
+            <ConnectAgent />
           </section>
         )}
 
-        {/* ── Connect Agent ── */}
-        <section id="connect" className="mb-12 scroll-mt-20">
-          <ConnectAgent />
-        </section>
-
-        {/* ── Footer ── */}
-        <footer className="text-center py-10 border-t border-[var(--color-border)]">
-          <p className="text-[13px] text-[var(--color-text-muted)] leading-relaxed">
-            Eigen AI Terminal tracks 16 domains daily. Signals verified against primary sources.
-            <br />
-            Your context stays local. We only serve the intelligence.
-          </p>
-        </footer>
+        {/* ── Footer (standalone only) ── */}
+        {!embedded && (
+          <footer className="text-center py-10 border-t border-[var(--color-border)]">
+            <p className="text-[13px] text-[var(--color-text-muted)] leading-relaxed">
+              Eigen AI Terminal tracks 16 domains daily. Signals verified against primary sources.
+              <br />
+              Your context stays local. We only serve the intelligence.
+            </p>
+          </footer>
+        )}
       </main>
     </div>
   );

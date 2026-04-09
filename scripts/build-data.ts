@@ -154,6 +154,77 @@ const NODE_NAMES: Record<string, string> = {
   "frontier-edges": "Frontier Edges",
 };
 
+// ── Tag Extraction ─────────────────────────────────────────
+
+const COMPANY_TAGS = [
+  "meta", "anthropic", "openai", "google", "microsoft", "amazon", "apple",
+  "nvidia", "amd", "intel", "alibaba", "tencent", "bytedance", "mistral",
+  "deepseek", "cohere", "xai", "zhipu", "cursor", "github", "perplexity",
+  "elevenlabs", "hugging face",
+];
+
+const TECH_TAGS = [
+  "mcp", "rag", "moe", "ssm", "lora", "rlhf", "transformer", "attention",
+  "fine-tuning", "quantization", "distillation", "inference", "training",
+];
+
+// Regex patterns for model names — matches things like "GPT-4", "Claude 3.5", "Llama 3", etc.
+const MODEL_PATTERNS = [
+  /\bgpt-?\d[\w.-]*/gi,
+  /\bclaude\s*[\d.]+\w*/gi,
+  /\bllama\s*[\d.]+\w*/gi,
+  /\bgemini\s*[\d.]+\w*/gi,
+  /\bcodex\b/gi,
+  /\bsonnet\b/gi,
+  /\bopus\b/gi,
+  /\bhaiku\b/gi,
+  /\bo[134]-?mini\b/gi,
+  /\bo[134]\b/gi,
+  /\bdeepseek-?[vr][\d.]*/gi,
+  /\bqwen[\d.-]*/gi,
+  /\bglm-?[\d.]+\w*/gi,
+  /\bmistral\b/gi,
+  /\bmuse\b/gi,
+];
+
+function extractTags(title: string, description: string): string[] {
+  const text = (title + " " + description).toLowerCase();
+  const tags = new Set<string>();
+
+  // Company tags — use word boundary to avoid false positives (e.g., "intel" in "intelligence")
+  for (const company of COMPANY_TAGS) {
+    const escaped = company.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const re = new RegExp(`\\b${escaped}\\b`, "i");
+    if (re.test(text)) {
+      tags.add(company);
+    }
+  }
+  // Special case: "hugging face" also matches "huggingface"
+  if (text.includes("huggingface")) tags.add("hugging face");
+
+  // Tech tags
+  for (const tech of TECH_TAGS) {
+    // Use word boundary matching for short terms to avoid false positives
+    const re = new RegExp(`\\b${tech.replace("-", "[- ]?")}\\b`, "i");
+    if (re.test(text)) {
+      tags.add(tech);
+    }
+  }
+
+  // Model name patterns
+  const originalText = title + " " + description;
+  for (const pattern of MODEL_PATTERNS) {
+    // Reset lastIndex since we reuse global regexes
+    pattern.lastIndex = 0;
+    let m;
+    while ((m = pattern.exec(originalText)) !== null) {
+      tags.add(m[0].toLowerCase().trim());
+    }
+  }
+
+  return [...tags];
+}
+
 // ── Parse Force Chains ──────────────────────────────────────
 
 function parseForceChains(content: string): Array<{
@@ -474,15 +545,20 @@ function build() {
     const notable = parseSignals(sections["Notable"] || "");
     const breakthrough = parseSignals(sections["Breakthrough"] || "");
 
-    // Add view classification to each signal
+    // Add view classification, practical flag, and tags to each signal
     const addViews = (
       signals: Array<{ title: string; description: string; nodes: string[]; source: string }>
     ) =>
-      signals.map((s) => ({
-        ...s,
-        nodeNames: s.nodes.map((n) => NODE_NAMES[n] || n),
-        view: getSignalView(s.nodes),
-      }));
+      signals.map((s) => {
+        const view = getSignalView(s.nodes);
+        return {
+          ...s,
+          nodeNames: s.nodes.map((n) => NODE_NAMES[n] || n),
+          view,
+          practical: view !== "strategic",
+          tags: extractTags(s.title, s.description),
+        };
+      });
 
     briefData = {
       date: latestBrief.data.date,
@@ -706,7 +782,75 @@ function build() {
   for (const key of Object.keys(rippleMap)) connectedSignals++;
   console.log(`    ${connectedSignals} signals with ripple connections`);
 
-  // 9. Write output files
+  // 9. Build entity index
+  console.log("  Building entity index...");
+  const entitiesDir = path.join(WIKI_ROOT, "entities");
+  const entityIndex: Record<string, string> = {};
+  if (fs.existsSync(entitiesDir)) {
+    const entityFiles = fs.readdirSync(entitiesDir).filter((f) => f.endsWith(".md") && f !== "index.md");
+    for (const f of entityFiles) {
+      const entityPath = path.join(entitiesDir, f);
+      const parsed = readMd(entityPath);
+      const name = parsed?.data?.name as string || f.replace(".md", "").split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+      entityIndex[name] = `entities/${f}`;
+    }
+    console.log(`    ${Object.keys(entityIndex).length} entities indexed`);
+  }
+
+  // 10. Build history.json — last 7 briefs' signals
+  console.log("  Building signal history...");
+  const historyBriefs = briefFiles.slice(0, 7);
+  const history: Array<{
+    date: string;
+    signals: Array<{
+      title: string;
+      description: string;
+      significance: string;
+      domains: string[];
+      source: string;
+      practical: boolean;
+      tags: string[];
+    }>;
+  }> = [];
+
+  for (const briefFile of historyBriefs) {
+    const brief = readMd(path.join(briefsDir, briefFile));
+    if (!brief) continue;
+
+    const rawDate = brief.data.date;
+    const date = rawDate instanceof Date ? rawDate.toISOString().slice(0, 10) : String(rawDate || briefFile.replace(".md", ""));
+    const sections = extractAllSections(brief.content);
+    const breakthroughSignals = parseSignals(sections["Breakthrough"] || "");
+    const significantSignals = parseSignals(sections["Significant"] || "");
+    const notableSignals = parseSignals(sections["Notable"] || "");
+
+    const toHistorySignal = (
+      s: { title: string; description: string; nodes: string[]; source: string },
+      significance: string
+    ) => {
+      const view = getSignalView(s.nodes);
+      return {
+        title: s.title,
+        description: s.description,
+        significance,
+        domains: s.nodes.map((n) => NODE_NAMES[n] || n),
+        source: s.source,
+        practical: view !== "strategic",
+        tags: extractTags(s.title, s.description),
+      };
+    };
+
+    const signals = [
+      ...breakthroughSignals.map((s) => toHistorySignal(s, "breakthrough")),
+      ...significantSignals.map((s) => toHistorySignal(s, "significant")),
+      ...notableSignals.map((s) => toHistorySignal(s, "notable")),
+    ];
+
+    history.push({ date, signals });
+  }
+  console.log(`    ${history.length} briefs with ${history.reduce((sum, h) => sum + h.signals.length, 0)} total signals`);
+
+  // 11. Write output files
   console.log("\n  Writing JSON...");
 
   const writeJson = (filename: string, data: unknown) => {
@@ -725,13 +869,42 @@ function build() {
     predictions: predictionData,
     nodes,
     nodeNames: NODE_NAMES,
+    entityIndex,
     ripples: {
       significant: significantRipples,
       notable: notableRipples,
     },
   });
 
-  // 10. Publish wiki knowledge base — copy output files for agent consumption
+  writeJson("history.json", history);
+
+  // 11b. Auto-generate alert.json if there are breakthrough signals
+  const breakthroughSignals = (briefData as Record<string, unknown>).breakthrough as Array<{ title: string; description: string; nodes: string[] }> || [];
+  if (breakthroughSignals.length > 0) {
+    const lead = breakthroughSignals[0];
+    const alertData = {
+      active: true,
+      since: new Date().toISOString(),
+      title: lead.title,
+      summary: lead.description.slice(0, 300),
+      domains: lead.nodes.map((n: string) => NODE_NAMES[n] || n),
+      expires: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
+    };
+    writeJson("alert.json", alertData);
+    console.log(`    ✓ alert.json (breakthrough: ${lead.title.slice(0, 50)})`);
+  } else {
+    // Clear any stale alert
+    const alertPath = path.join(OUTPUT_DIR, "alert.json");
+    if (fs.existsSync(alertPath)) {
+      const existing = JSON.parse(fs.readFileSync(alertPath, "utf-8"));
+      if (existing.active && new Date(existing.expires) < new Date()) {
+        fs.writeFileSync(alertPath, JSON.stringify({ active: false }, null, 2));
+        console.log("    ✓ alert.json (expired alert cleared)");
+      }
+    }
+  }
+
+  // 12. Publish wiki knowledge base — copy output files for agent consumption
   console.log("\n  Publishing wiki knowledge base...");
 
   const WIKI_OUTPUT = path.join(OUTPUT_DIR, "../wiki");

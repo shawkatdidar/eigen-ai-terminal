@@ -159,7 +159,7 @@ export default function WikiShell({
                 `}
               >
                 <span className="text-[15px]">🗺️</span>
-                Live Force Map
+                Cause &amp; Effect Map
               </Link>
             </div>
 

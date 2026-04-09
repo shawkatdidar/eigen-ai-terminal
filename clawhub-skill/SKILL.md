@@ -1,7 +1,7 @@
 ---
 name: eigen-ai-terminal
-description: Live AI landscape intelligence — signals, causal chains, developing trends, roadblocks, and predictions. 10 tools to query 16 domains of the AI landscape and get only what's relevant to your work.
-version: 0.9.0
+description: AI landscape intelligence — daily signals, trends, predictions, and a 50-page knowledge base across 16 domains. 12 tools. Your agent delivers only what matters for the user's work.
+version: 1.0.0
 homepage: https://terminal.clawlab.dev
 repository: https://github.com/shawkatdidar/eigen-ai-terminal
 metadata:
@@ -16,91 +16,102 @@ metadata:
 tags:
   - ai
   - intelligence
-  - radar
   - signals
+  - trends
   - mcp
-  - research
 ---
 
 # Eigen AI Terminal
 
-Live intelligence on the AI landscape — what's happening, what it causes, and what it means for your work.
+Live intelligence on the AI landscape — delivered by you, filtered for your user's work.
+
+## What this is
+
+A daily-updated knowledge base tracking 16 areas of AI: models, agents, coding tools, open source, hardware, enterprise, research, policy, funding, and more. You get 12 tools to query signals, cause-and-effect chains, developing trends, blockers, speed metrics, predictions, breaking alerts, and the full interconnected wiki.
+
+Your job: use what you know about this user — their work, their stack, their interests — to deliver only what they can act on. Not a news feed. A filtered intelligence stream.
 
 ## Network behavior
 
-This skill reads **public, read-only JSON** from the Eigen AI Terminal website. No authentication required. No user data is uploaded. One-way data flow only.
+Reads public, read-only JSON from the Eigen terminal. No auth. No user data uploaded. One-way data flow.
 
-- Data endpoint: `terminal.clawlab.dev/data/radar.json`
-- Wiki endpoint: `terminal.clawlab.dev/wiki/`
+- Data: `terminal.clawlab.dev/data/radar.json`
+- Wiki: `terminal.clawlab.dev/wiki/`
 
-## What this does
+## Tools
 
-Eigen AI Terminal tracks 16 domains of the AI landscape daily. This skill gives your agent 10 tools to query signals, causal chains, developing trends, roadblocks, velocity metrics, predictions, and a full interconnected wiki knowledge base.
+**Daily intelligence:**
+- `today` — all signals from the latest scan. Has significance levels, domain tags, and an actionable flag. You filter based on user context.
+- `changes` — what's new since a given date. Use between morning briefs to catch breaking developments.
 
-The key tool is `radar_relevant` — tell it what you're working on and it returns only the signals, trends, and roadblocks that matter for your specific context.
+**Deep dives:**
+- `about` — everything on a topic in one call: entity profile, signals, trends, blockers, predictions. Use when the user asks about a company, model, or area.
+- `ripple` — trace what a signal causes: downstream effects, trends it feeds, what blocks it.
 
-## Tools (11)
+**Landscape view:**
+- `trends` — where multiple signals point at the same outcome. Confidence levels and timelines.
+- `blocked` — what's holding AI progress back. Who's working on it. Signs of progress.
+- `speed` — rate-of-change metrics: costs, capabilities, adoption, capital.
+- `predictions` — specific dated predictions we track for accuracy.
 
-### `radar_brief`
-Get today's AI signals. Filter by `view` (builder/strategic/all) and `significance` (significant/notable/all).
+**Knowledge base:**
+- `search` — find anything across 50 wiki files.
+- `read` — open a specific page. Follow [[wikilinks]] to navigate.
 
-### `radar_signal_ripple`
-Get the full causal ripple chain for a specific signal — what it pushes, what trends it feeds, what it's blocked by, what we predict.
+**Breaking alerts:**
+- `check_updates` — quick ping to check for breaking developments. Returns immediately if nothing new. If there's a breaking alert, returns the title, summary, and domains affected.
 
-### `radar_trends`
-Get developing trends — when 3+ independent signals converge toward the same outcome.
+**Meta:**
+- `whats_new` — product updates and tips. Check during morning brief. Mention if fresh.
 
-### `radar_roadblocks`
-Get roadblocks holding AI back — what's blocked, who's attacking it, signs of progress.
+## How to deliver
 
-### `radar_velocity`
-Get rate-of-change metrics. Filter by category: cost, capability, capital, adoption.
+### Morning brief
 
-### `radar_predictions`
-Get falsifiable predictions with confidence levels and check dates.
+Call `today`. Read all signals. Pick 2-3 that matter for THIS user based on what you know about their work.
 
-### `radar_relevant`
-Describe what you're building or working on. Returns only the signals, trends, roadblocks, and predictions relevant to your specific context.
+```
+Here's what matters in AI today:
 
-### `radar_wiki_browse`
-Browse the full knowledge base by category (nodes, entities, briefs, forces, frameworks).
+[Most important thing for their work — one sentence with why it matters]
 
-### `radar_wiki_read`
-Read any wiki page. Returns full markdown content with [[wikilink]] navigation hints to follow.
+What you should know:
+* [Actionable signal — one line]
+* [New tool, model, or capability relevant to them — one line]
 
-### `radar_wiki_search`
-Search across all 49 wiki files by keyword or tag.
+[Optional: One developing trend in plain language]
 
-### `radar_morning_setup`
-Returns instructions for setting up an automatic daily morning briefing personalized to the user's work.
+Say "dig deeper on [topic]" or "full brief" for more.
+```
+
+Rules:
+- Max 3 bullets. Every one must pass: "Can they do something with this today?"
+- Skip funding, policy, executive news unless it directly changes a tool or API they use.
+- Nothing relevant today? Say so in one line. Don't pad.
+- Match their communication style. Be a sharp colleague, not a newsletter.
+
+### When they ask about something
+
+Call `about("[topic]")`. You get the full picture in one response — entity data, signals, trends, blockers, predictions, related wiki pages. Synthesize it for the user. Don't dump raw data.
+
+### When they say "what does this mean?"
+
+Call `ripple("[signal]")`. It traces what the signal pushes, what trends it feeds, what blocks it. Explain the chain in plain language.
+
+### Checking for breaking developments
+
+If the user asks you to check for updates, use `changes` with the date of the last brief you delivered. Surface anything significant that matches their work.
 
 ## First use
 
-When the user first invokes this skill or asks anything about AI news, present this welcome message:
+When this skill first connects:
 
-```
-✅ Eigen AI Terminal connected — tracking 16 domains of the AI landscape daily.
+"I just connected to the Eigen AI Terminal — I now have live intelligence across 16 areas of AI, updated daily.
 
-I can now answer questions like:
-• "What happened in AI today that affects my work?"
-• "Show me the ripple effects of [any signal]"
-• "Search the Eigen wiki for [topic]"
+I can filter everything to what matters for your work. What are you building right now?"
 
-🔔 Want a personalized AI briefing every morning?
-   Say "set up my Eigen morning brief" and I'll deliver
-   only what matters for your work — every day, automatically.
-```
-
-## Getting started
-
-Try asking your agent:
-
-- "What happened in AI today that affects my work?"
-- "I'm building a coding tool with open-source models — what should I know?"
-- "What roadblocks should I be aware of for my MCP-based project?"
-- "Show me the ripple effects of the biggest signal today"
-- "Set up my Eigen morning brief" — your agent sets up a daily personalized summary
+After they respond, immediately call `today` and deliver 2-3 signals relevant to what they said. Demonstrate value in the first 30 seconds.
 
 ## Privacy
 
-One-way data flow: your agent pulls public data, combines with your local context, delivers insights to you. We never see what you're building, what you asked, or what your agent told you.
+One-way: your agent pulls public data, combines it with local context, delivers to the user. We never see what the user builds, asks, or works on.

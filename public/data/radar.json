@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-08T21:46:06.577Z",
+  "lastUpdated": "2026-04-09T15:57:14.829Z",
   "brief": {
     "date": "2026-04-08T00:00:00.000Z",
     "scanTime": 930,
@@ -22,7 +22,15 @@
           "Frontier Models",
           "Open Source Models"
         ],
-        "view": "builder"
+        "view": "builder",
+        "practical": true,
+        "tags": [
+          "meta",
+          "anthropic",
+          "openai",
+          "qwen",
+          "muse"
+        ]
       },
       {
         "title": "Anthropic launches Managed Agents (public beta)",
@@ -36,7 +44,12 @@
           "AI Agents",
           "AI in Enterprise"
         ],
-        "view": "both"
+        "view": "both",
+        "practical": true,
+        "tags": [
+          "anthropic",
+          "microsoft"
+        ]
       },
       {
         "title": "EY deploys multi-agent AI across 130,000 auditors globally",
@@ -50,7 +63,11 @@
           "AI Agents",
           "AI in Enterprise"
         ],
-        "view": "both"
+        "view": "both",
+        "practical": true,
+        "tags": [
+          "microsoft"
+        ]
       },
       {
         "title": "OpenAI Codex crosses 3M weekly users — Altman resets usage limits",
@@ -62,7 +79,12 @@
         "nodeNames": [
           "AI Coding Tools"
         ],
-        "view": "builder"
+        "view": "builder",
+        "practical": true,
+        "tags": [
+          "openai",
+          "codex"
+        ]
       },
       {
         "title": "Zhipu hikes GLM-5.1 prices 8-17% as China AI monetization wave quickens",
@@ -76,7 +98,15 @@
           "AI Business & Funding",
           "Open Source Models"
         ],
-        "view": "both"
+        "view": "both",
+        "practical": true,
+        "tags": [
+          "alibaba",
+          "tencent",
+          "zhipu",
+          "opus",
+          "glm-5.1"
+        ]
       },
       {
         "title": "In-Place Test-Time Training (In-Place TTT) — ICLR 2026 Oral",
@@ -90,7 +120,12 @@
           "Research Breakthroughs",
           "Frontier Edges"
         ],
-        "view": "builder"
+        "view": "builder",
+        "practical": true,
+        "tags": [
+          "inference",
+          "training"
+        ]
       }
     ],
     "notable": [
@@ -104,7 +139,11 @@
         "nodeNames": [
           "Frontier Models"
         ],
-        "view": "both"
+        "view": "both",
+        "practical": true,
+        "tags": [
+          "sonnet"
+        ]
       },
       {
         "title": "SpaceX IPO targeting ~$2T, racing AI companies to public markets",
@@ -116,7 +155,12 @@
         "nodeNames": [
           "AI Business & Funding"
         ],
-        "view": "strategic"
+        "view": "strategic",
+        "practical": false,
+        "tags": [
+          "anthropic",
+          "openai"
+        ]
       },
       {
         "title": "Hermes Agent v0.8.0 \"Intelligence Release\"",
@@ -130,7 +174,11 @@
           "AI Agents",
           "AI Infrastructure"
         ],
-        "view": "builder"
+        "view": "builder",
+        "practical": true,
+        "tags": [
+          "mcp"
+        ]
       },
       {
         "title": "Iran-US ceasefire drives major funds into AI stocks",
@@ -142,7 +190,9 @@
         "nodeNames": [
           "AI Business & Funding"
         ],
-        "view": "strategic"
+        "view": "strategic",
+        "practical": false,
+        "tags": []
       },
       {
         "title": "PoM (Polynomial Mixer) — linear-time attention replacement",
@@ -156,7 +206,11 @@
           "Research Breakthroughs",
           "Frontier Edges"
         ],
-        "view": "builder"
+        "view": "builder",
+        "practical": true,
+        "tags": [
+          "attention"
+        ]
       },
       {
         "title": "Perforce Software debt swap on AI disruption fears",
@@ -170,7 +224,9 @@
           "AI Business & Funding",
           "AI in Enterprise"
         ],
-        "view": "strategic"
+        "view": "strategic",
+        "practical": false,
+        "tags": []
       },
       {
         "title": "AI scribes increasing healthcare costs",
@@ -182,7 +238,9 @@
         "nodeNames": [
           "AI in Enterprise"
         ],
-        "view": "strategic"
+        "view": "strategic",
+        "practical": false,
+        "tags": []
       },
       {
         "title": "Copilot CLI v1.0.21 adds `copilot mcp` command",
@@ -196,7 +254,12 @@
           "AI Coding Tools",
           "AI Agents"
         ],
-        "view": "builder"
+        "view": "builder",
+        "practical": true,
+        "tags": [
+          "github",
+          "mcp"
+        ]
       },
       {
         "title": "Trent AI $13M seed for agentic security",
@@ -210,7 +273,11 @@
           "AI Business & Funding",
           "AI Safety"
         ],
-        "view": "strategic"
+        "view": "strategic",
+        "practical": false,
+        "tags": [
+          "openai"
+        ]
       }
     ]
   },
@@ -1205,6 +1272,18 @@
     "edge-on-device-ai": "Edge & On-Device AI",
     "ai-in-enterprise": "AI in Enterprise",
     "frontier-edges": "Frontier Edges"
+  },
+  "entityIndex": {
+    "Anthropic": "entities/anthropic.md",
+    "Apple": "entities/apple.md",
+    "Cursor": "entities/cursor.md",
+    "DeepSeek": "entities/deepseek.md",
+    "Google / DeepMind": "entities/google-deepmind.md",
+    "Meta": "entities/meta.md",
+    "Microsoft": "entities/microsoft.md",
+    "NVIDIA": "entities/nvidia.md",
+    "OpenAI": "entities/openai.md",
+    "xAI": "entities/xai.md"
   },
   "ripples": {
     "significant": {

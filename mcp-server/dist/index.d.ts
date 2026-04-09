@@ -1,17 +1,19 @@
 #!/usr/bin/env node
 /**
- * AI RADAR MCP SERVER
+ * EIGEN AI TERMINAL — MCP SERVER v1.0
  *
- * This is the "plug" that lets any AI agent query the radar.
- * It speaks MCP (Model Context Protocol) — the standard way agents
- * connect to external tools.
+ * The data layer for AI agents. Serves structured intelligence
+ * about the AI landscape. The agent does the filtering —
+ * we provide clean, well-organized data with rich metadata.
  *
- * When an agent calls one of our tools, this server:
- *   1. Reads the radar data (from a URL or local file)
- *   2. Processes the query
- *   3. Returns structured results the agent can use
+ * 11 tools: today, about, ripple, trends, blocked, speed,
+ *           predictions, search, read, changes, whats_new
  *
- * Install: npx ai-radar-mcp (runs this server)
- * Or add to Claude Code config as an MCP server.
+ * Design principles:
+ *   - The agent is an LLM — it does semantic matching, not us
+ *   - We return MORE data with good metadata, agent narrows down
+ *   - No internal IDs or abstract terminology in responses
+ *   - Extensible: new data types (tools, tips, workflows) flow
+ *     through the same tools via the `type` field on items
  */
 export {};

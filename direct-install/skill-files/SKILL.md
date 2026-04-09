@@ -1,7 +1,7 @@
 ---
 name: eigen-ai-terminal
-description: Live AI landscape intelligence with automatic daily morning briefing. 12 tools to query signals, causal chains, trends, roadblocks, predictions, and a full wiki knowledge base — personalized to what you're building.
-version: 0.10.0
+description: AI landscape intelligence — daily signals, trends, predictions, and a 50-page knowledge base across 16 domains. 12 tools. Your agent delivers only what matters for the user's work.
+version: 1.0.0
 homepage: https://terminal.clawlab.dev
 repository: https://github.com/shawkatdidar/eigen-ai-terminal
 metadata:
@@ -16,99 +16,102 @@ metadata:
 tags:
   - ai
   - intelligence
-  - radar
   - signals
+  - trends
   - mcp
-  - research
-  - daily-briefing
 ---
 
 # Eigen AI Terminal
 
-Live intelligence on the AI landscape — what's happening, what it causes, and what it means for your work.
+Live intelligence on the AI landscape — delivered by you, filtered for your user's work.
 
-## On Install
+## What this is
 
-When this skill is first loaded, do the following immediately:
+A daily-updated knowledge base tracking 16 areas of AI: models, agents, coding tools, open source, hardware, enterprise, research, policy, funding, and more. You get 12 tools to query signals, cause-and-effect chains, developing trends, blockers, speed metrics, predictions, breaking alerts, and the full interconnected wiki.
 
-1. **Show the welcome message:**
-
-   ```
-   ✅ Eigen AI Terminal installed — tracking 16 domains of the AI landscape daily.
-
-   I can answer questions about AI developments, show causal ripple effects,
-   search the knowledge base, and deliver personalized intelligence.
-   ```
-
-2. After it installs, set up a daily cron job at 7:00 AM that does this every morning:
-
-   - Call `radar_brief` with view "builder" and significance "significant" to get today's top signals
-   - Call `radar_relevant` with what you know about my work to get personalized intelligence
-   - Call `radar_trends` to check if any major trend shifted overnight
-   - Call `eigen_whats_new` to check for new Eigen features and tips
-   - Send me a SHORT morning message (not a wall of text) with this format:
-
-     ```
-     ☀️ Good morning — here's what matters in AI today:
-
-     [One sentence: the single most important development and why it affects my work]
-
-     What you should know:
-     • [Signal that directly impacts what I'm building — one line]
-     • [New tool, model, or capability I could use — one line]
-     • [Only include a third if it's genuinely relevant]
-
-     Trend to watch: [One developing trend in plain language with confidence %]
-
-     💡 [One tip or new feature from Eigen, if there's something fresh this week — skip if nothing new]
-
-     Say "dig deeper on [topic]" or "full brief" for more.
-     ```
-
-   IMPORTANT rules for the morning brief:
-   - Maximum 3 bullet points. Less is more. Only include what I can ACT on today.
-   - Every bullet must pass the test: "Can I do something with this information today?"
-   - Never include funding rounds, IPO news, policy changes, or executive shuffles unless they DIRECTLY change a tool or API I use.
-   - If nothing significant happened that affects my work, say so in one line. Don't pad with generic AI news.
-   - Write like a sharp colleague giving me a 30-second update, not a newsletter.
-   - The Eigen tip at the end should be casual and brief — one line max. If `eigen_whats_new` returned nothing new, skip it entirely.
-
-3. Now ask me: "What are you building right now? I'll filter AI news to only what matters for your work — and deliver it every morning at 7am."
-
-4. **Save their answer** as their Eigen context for daily use.
-
-5. **Confirm:** "All set! You'll get a personalized AI briefing every morning at 7am. Say 'update my context' anytime to change what I filter for."
-
-## Interactive commands
-
-- **"dig deeper"** or **"ripple effects"** on any signal → call `radar_signal_ripple` and show the causal chain
-- **"update my context"** → ask what changed, update saved context, confirm
-- **"full brief"** → call `radar_brief` with `view: "all"` for everything including strategic signals
-- **"search [topic]"** → call `radar_wiki_search`
-- **"read [entity/node]"** → call `radar_wiki_read`
+Your job: use what you know about this user — their work, their stack, their interests — to deliver only what they can act on. Not a news feed. A filtered intelligence stream.
 
 ## Network behavior
 
-This skill reads **public, read-only JSON** from the Eigen AI Terminal website. No authentication required. No user data is uploaded. One-way data flow only.
+Reads public, read-only JSON from the Eigen terminal. No auth. No user data uploaded. One-way data flow.
 
 - Data: `terminal.clawlab.dev/data/radar.json`
 - Wiki: `terminal.clawlab.dev/wiki/`
 
-## Tools (12)
+## Tools
 
-- `radar_brief` — Today's signals by builder/strategic lens
-- `radar_signal_ripple` — Causal chain for any signal
-- `radar_trends` — Developing trends with confidence levels
-- `radar_roadblocks` — What's blocked and who's fixing it
-- `radar_velocity` — How fast things are changing
-- `radar_predictions` — Falsifiable predictions we track
-- `radar_relevant` — Intelligence filtered for YOUR work
-- `radar_wiki_browse` — Browse the full knowledge base
-- `radar_wiki_read` — Read any wiki page, follow wikilinks
-- `radar_wiki_search` — Search across all 49 wiki files
-- `radar_morning_setup` — Morning briefing configuration
-- `eigen_whats_new` — Latest features, tips, and updates from Eigen
+**Daily intelligence:**
+- `today` — all signals from the latest scan. Has significance levels, domain tags, and an actionable flag. You filter based on user context.
+- `changes` — what's new since a given date. Use between morning briefs to catch breaking developments.
+
+**Deep dives:**
+- `about` — everything on a topic in one call: entity profile, signals, trends, blockers, predictions. Use when the user asks about a company, model, or area.
+- `ripple` — trace what a signal causes: downstream effects, trends it feeds, what blocks it.
+
+**Landscape view:**
+- `trends` — where multiple signals point at the same outcome. Confidence levels and timelines.
+- `blocked` — what's holding AI progress back. Who's working on it. Signs of progress.
+- `speed` — rate-of-change metrics: costs, capabilities, adoption, capital.
+- `predictions` — specific dated predictions we track for accuracy.
+
+**Knowledge base:**
+- `search` — find anything across 50 wiki files.
+- `read` — open a specific page. Follow [[wikilinks]] to navigate.
+
+**Breaking alerts:**
+- `check_updates` — quick ping to check for breaking developments. Returns immediately if nothing new. If there's a breaking alert, returns the title, summary, and domains affected.
+
+**Meta:**
+- `whats_new` — product updates and tips. Check during morning brief. Mention if fresh.
+
+## How to deliver
+
+### Morning brief
+
+Call `today`. Read all signals. Pick 2-3 that matter for THIS user based on what you know about their work.
+
+```
+Here's what matters in AI today:
+
+[Most important thing for their work — one sentence with why it matters]
+
+What you should know:
+* [Actionable signal — one line]
+* [New tool, model, or capability relevant to them — one line]
+
+[Optional: One developing trend in plain language]
+
+Say "dig deeper on [topic]" or "full brief" for more.
+```
+
+Rules:
+- Max 3 bullets. Every one must pass: "Can they do something with this today?"
+- Skip funding, policy, executive news unless it directly changes a tool or API they use.
+- Nothing relevant today? Say so in one line. Don't pad.
+- Match their communication style. Be a sharp colleague, not a newsletter.
+
+### When they ask about something
+
+Call `about("[topic]")`. You get the full picture in one response — entity data, signals, trends, blockers, predictions, related wiki pages. Synthesize it for the user. Don't dump raw data.
+
+### When they say "what does this mean?"
+
+Call `ripple("[signal]")`. It traces what the signal pushes, what trends it feeds, what blocks it. Explain the chain in plain language.
+
+### Checking for breaking developments
+
+If the user asks you to check for updates, use `changes` with the date of the last brief you delivered. Surface anything significant that matches their work.
+
+## First use
+
+When this skill first connects:
+
+"I just connected to the Eigen AI Terminal — I now have live intelligence across 16 areas of AI, updated daily.
+
+I can filter everything to what matters for your work. What are you building right now?"
+
+After they respond, immediately call `today` and deliver 2-3 signals relevant to what they said. Demonstrate value in the first 30 seconds.
 
 ## Privacy
 
-One-way data flow: your agent pulls public data, combines with your local context, delivers insights to you. We never see what you're building, what you asked, or what your agent told you. Your Eigen context is stored locally by your agent — it never leaves your device.
+One-way: your agent pulls public data, combines it with local context, delivers to the user. We never see what the user builds, asks, or works on.
