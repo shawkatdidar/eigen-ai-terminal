@@ -10,7 +10,7 @@ const DIRECT_PROMPT = `Install the Eigen AI Terminal skill:
 npx eigen-terminal-install
 
 After it installs:
-1. Ask what I'm building, then show me what's relevant from today's AI signals
+1. Look at what I'm currently working on and show me the most relevant signals from today
 2. Set up two crons:
    - Daily at 7:00 AM — call today(), filter to my work, send me 2-3 things I can act on
    - Every 4 hours — call check_updates(), only tell me if something breaking affects my work`;
@@ -20,7 +20,7 @@ const CLAWHUB_PROMPT = `Install the Eigen AI Terminal:
 npx clawhub@latest install eigen-ai-terminal
 
 After it installs:
-1. Ask what I'm building, then show me what's relevant from today's AI signals
+1. Look at what I'm currently working on and show me the most relevant signals from today
 2. Set up two crons:
    - Daily at 7:00 AM — call today(), filter to my work, send me 2-3 things I can act on
    - Every 4 hours — call check_updates(), only tell me if something breaking affects my work`;

@@ -104,13 +104,11 @@ If the user asks you to check for updates, use `changes` with the date of the la
 
 ## First use
 
-When this skill first connects:
+When this skill first connects, look at what the user is currently working on — their codebase, recent conversations, memory — and call `today` to get the latest signals. Deliver 2-3 signals relevant to their work immediately. Demonstrate value in the first 30 seconds.
 
-"I just connected to the Eigen AI Terminal — I now have live intelligence across 16 areas of AI, updated daily.
+"I just connected to the Eigen AI Terminal. Based on what you're working on, here's what matters in AI today: [relevant signals]"
 
-I can filter everything to what matters for your work. What are you building right now?"
-
-After they respond, immediately call `today` and deliver 2-3 signals relevant to what they said. Demonstrate value in the first 30 seconds.
+If you don't have enough context about the user's work yet, ask briefly: "What are you building? I'll filter AI intelligence to just what matters for you."
 
 ## Privacy
 
