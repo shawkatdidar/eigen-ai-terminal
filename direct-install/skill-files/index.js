@@ -1,29 +1,14 @@
 #!/usr/bin/env node
 /**
- * EIGEN AI TERMINAL — MCP SERVER v1.0
+ * EIGEN AI TERMINAL — MCP SERVER v1.0 (ClawHub Edition)
  *
- * The data layer for AI agents. Serves structured intelligence
- * about the AI landscape. The agent does the filtering —
- * we provide clean, well-organized data with rich metadata.
- *
- * 11 tools: today, about, ripple, trends, blocked, speed,
- *           predictions, search, read, changes, whats_new
- *
- * Design principles:
- *   - The agent is an LLM — it does semantic matching, not us
- *   - We return MORE data with good metadata, agent narrows down
- *   - No internal IDs or abstract terminology in responses
- *   - Extensible: new data types (tools, tips, workflows) flow
- *     through the same tools via the `type` field on items
+ * Clean build for ClawHub distribution.
+ * Fetches public read-only data from terminal.clawlab.dev.
+ * No local file access. No secrets. No user data collected.
  */
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 // ── Data Loading ────────────────────────────────────────────
 let cachedData = null;
 let cachedHistory = null;
@@ -34,31 +19,9 @@ let manifestCacheTime = 0;
 const CACHE_TTL = 5 * 60 * 1000;
 const DATA_URL = process.env.EIGEN_DATA_URL || "https://terminal.clawlab.dev/data";
 const WIKI_URL = process.env.EIGEN_WIKI_URL || "https://terminal.clawlab.dev/wiki";
-function readLocalFile(...candidates) {
-    for (const p of candidates) {
-        try {
-            return fs.readFileSync(p, "utf-8");
-        }
-        catch {
-            /* next */
-        }
-    }
-    return null;
-}
-function dataFileCandidates(filename) {
-    return [
-        path.resolve(process.cwd(), "public/data", filename),
-        path.resolve(process.cwd(), "../public/data", filename),
-        path.resolve(__dirname, "../../public/data", filename),
-    ];
-}
-function wikiFileCandidates(filePath) {
-    return [
-        path.resolve(process.cwd(), "public/wiki", filePath),
-        path.resolve(process.cwd(), "../public/wiki", filePath),
-        path.resolve(__dirname, "../../public/wiki", filePath),
-    ];
-}
+function readLocalFile(..._candidates) { return null; }
+function dataFileCandidates(_filename) { return []; }
+function wikiFileCandidates(_filePath) { return []; }
 async function loadData() {
     const now = Date.now();
     if (cachedData && now - dataCacheTime < CACHE_TTL)
@@ -830,9 +793,9 @@ server.tool("whats_new", "Get the latest updates and tips for Eigen AI Terminal.
     if (!raw) {
         // Fallback: try direct local paths
         const candidates = [
-            path.resolve(process.cwd(), "public/wiki/whats-new.md"),
-            path.resolve(process.cwd(), "../public/wiki/whats-new.md"),
-            path.resolve(__dirname, "../../public/wiki/whats-new.md"),
+            "", "public/wiki/whats-new.md"),
+            "", "../public/wiki/whats-new.md"),
+            "",
         ];
         raw = readLocalFile(...candidates);
     }

@@ -1,6 +1,6 @@
 ---
-name: eigen-ai-terminal
-description: AI landscape intelligence — daily signals, trends, predictions, and a 50-page knowledge base across 16 domains. 12 tools. Your agent delivers only what matters for the user's work.
+name: AI Radar — Live Intelligence for Agents
+description: Daily-updated intelligence on what's happening across 16 areas of AI. 12 tools your agent uses to deliver only the signals, trends, and developments that matter for the user's work. Reads public data from terminal.clawlab.dev — no user data uploaded.
 version: 1.0.0
 homepage: https://terminal.clawlab.dev
 repository: https://github.com/shawkatdidar/eigen-ai-terminal
@@ -29,7 +29,7 @@ Live intelligence on the AI landscape — delivered by you, filtered for your us
 
 A daily-updated knowledge base tracking 16 areas of AI: models, agents, coding tools, open source, hardware, enterprise, research, policy, funding, and more. You get 12 tools to query signals, cause-and-effect chains, developing trends, blockers, speed metrics, predictions, breaking alerts, and the full interconnected wiki.
 
-Your job: use what you know about this user — their work, their stack, their interests — to deliver only what they can act on. Not a news feed. A filtered intelligence stream.
+Your job: deliver only what's actionable. Not a news feed — a filtered intelligence stream tailored to the user's interests.
 
 ## Network behavior
 
@@ -68,7 +68,7 @@ Reads public, read-only JSON from the Eigen terminal. No auth. No user data uplo
 
 ### Morning brief
 
-Call `today`. Read all signals. Pick 2-3 that matter for THIS user based on what you know about their work.
+Call `today`. Read all signals. Pick 2-3 that are most actionable for the user.
 
 ```
 Here's what matters in AI today:
@@ -88,7 +88,7 @@ Rules:
 - Max 3 bullets. Every one must pass: "Can they do something with this today?"
 - Skip funding, policy, executive news unless it directly changes a tool or API they use.
 - Nothing relevant today? Say so in one line. Don't pad.
-- Match their communication style. Be a sharp colleague, not a newsletter.
+- Be a sharp colleague, not a newsletter.
 
 ### When they ask about something
 
@@ -104,11 +104,11 @@ If the user asks you to check for updates, use `changes` with the date of the la
 
 ## First use
 
-When this skill first connects, look at what the user is currently working on — their codebase, recent conversations, memory — and call `today` to get the latest signals. Deliver 2-3 signals relevant to their work immediately. Demonstrate value in the first 30 seconds.
+When this skill first connects, call `today` to get the latest signals. Pick 2-3 of the most actionable ones and present them to the user.
 
-"I just connected to the Eigen AI Terminal. Based on what you're working on, here's what matters in AI today: [relevant signals]"
+"I just connected to the Eigen AI Terminal — live intelligence across 16 areas of AI, updated daily. Here's what matters today: [signals]"
 
-If you don't have enough context about the user's work yet, ask briefly: "What are you building? I'll filter AI intelligence to just what matters for you."
+Then ask: "What are you working on? I can filter this to just what's relevant for you."
 
 ## Privacy
 
