@@ -17,8 +17,8 @@ let dataCacheTime = 0;
 let historyCacheTime = 0;
 let manifestCacheTime = 0;
 const CACHE_TTL = 5 * 60 * 1000;
-const DATA_URL = process.env.EIGEN_DATA_URL || "https://terminal.clawlab.dev/data";
-const WIKI_URL = process.env.EIGEN_WIKI_URL || "https://terminal.clawlab.dev/wiki";
+const DATA_URL = "https://terminal.clawlab.dev/data";
+const WIKI_URL = "https://terminal.clawlab.dev/wiki";
 function readLocalFile(..._candidates) { return null; }
 function dataFileCandidates(_filename) { return []; }
 function wikiFileCandidates(_filePath) { return []; }
@@ -833,8 +833,7 @@ server.tool("check_updates", "Quick check for breaking AI developments. Hits the
         .optional()
         .describe("ISO timestamp of last check. Only returns alerts newer than this. Omit for first check."),
 }, async ({ since }) => {
-    const STATUS_URL = process.env.EIGEN_STATUS_URL ||
-        "https://terminal.clawlab.dev/api/status";
+    const STATUS_URL = "https://terminal.clawlab.dev/api/status";
     try {
         const url = since ? `${STATUS_URL}?since=${encodeURIComponent(since)}` : STATUS_URL;
         const res = await fetch(url);

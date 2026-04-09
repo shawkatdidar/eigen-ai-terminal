@@ -1,5 +1,5 @@
 ---
-name: AI Radar — Live Intelligence for Agents
+name: Eigen AI Terminal — Live Intelligence for Agents
 description: Daily-updated intelligence on what's happening across 16 areas of AI. 12 tools your agent uses to deliver only the signals, trends, and developments that matter for the user's work. Reads public data from terminal.clawlab.dev — no user data uploaded.
 version: 1.0.0
 homepage: https://terminal.clawlab.dev
