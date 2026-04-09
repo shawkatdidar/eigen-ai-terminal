@@ -105,7 +105,7 @@ export default function RadarPage({ data, embedded = false }: { data: RadarData;
         {/* ── Dashboard header ── */}
         <div className={`${embedded ? "pb-6" : "pt-14 pb-8 -mx-5 sm:-mx-8 px-5 sm:px-8"} bg-gradient-to-b ${theme.headerGradient} transition-all duration-500`}>
           <p className="text-[13px] font-semibold text-[var(--color-text-muted)] mb-3 uppercase tracking-wider">
-            {formatDate(data.brief.date as string)}
+            {formatDate(new Date().toISOString())}
           </p>
 
           {embedded ? (
