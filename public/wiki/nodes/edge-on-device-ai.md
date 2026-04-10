@@ -4,7 +4,7 @@ id: edge-on-device-ai
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-03-27
+last_updated: 2026-04-10
 related_nodes:
   - open-source-models
   - compute-hardware
@@ -44,6 +44,7 @@ Privacy is a primary driver: enterprises and individuals want AI without sending
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-08 | **LM Studio acquires Locally AI for cross-device local inference** — LM Studio (a popular desktop app for running LLMs locally) acquired Locally AI, a platform focused on cross-device local inference (running models across multiple local devices in concert). → Consolidation in the local AI tooling space; cross-device inference could enable users to pool compute from multiple personal devices (laptop + desktop + phone) for running larger models locally. | notable | lmstudio.ai |
 | 2026-03-26 | **Apple opens Siri to rival AI in iOS 27** — Extensions will let users pick Claude, Gemini as AI handler. Multi-model orchestrator strategy. | significant | [Bloomberg](https://www.bloomberg.com/news/articles/2026-03-26/apple-plans-to-open-up-siri-to-rival-ai-assistants-beyond-chatgpt-in-ios-27) |
 | 2026-03-24 | **Apple testing standalone Siri app for iOS 27** — Bloomberg reports chatbot app with text/voice, chat history, Dynamic Island, "Ask Siri" button. WWDC June 8 target. → Apple's competitive response to Claude and ChatGPT. | notable | bloomberg.com |
 | 2026-03-23 | NVIDIA NVFP4/NVFP8 quantization formats ship — new floating-point formats (FP4 uses 4 bits per weight, FP8 uses 8 bits, compared to the standard 16 or 32 bits) that reduce model memory footprint by ~60% and deliver 3x inference speed. Lower bit-width means less data to move through memory bandwidth, which is the primary bottleneck for on-device inference. → Makes running larger models on consumer GPUs and edge devices practical without the quality loss of aggressive integer quantization | notable | edge-ai-vision.com |

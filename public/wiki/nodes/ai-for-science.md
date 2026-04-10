@@ -4,7 +4,7 @@ id: ai-for-science
 status: accelerating
 impact: medium
 created: 2026-03-19
-last_updated: 2026-03-30
+last_updated: 2026-04-10
 related_nodes:
   - ai-research-breakthroughs
   - frontier-models
@@ -41,6 +41,7 @@ AI-assisted research workflows — where scientists use LLMs for literature revi
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-10 | **Rhizome OS-1: semi-autonomous drug discovery, 2800 molecules per target** — Rhizome launched OS-1, a semi-autonomous drug discovery system that generates and evaluates 2,800 candidate molecules per target protein using AI-driven molecular generation and virtual screening. → Scale of candidate generation (2,800 per target) represents a significant throughput improvement over traditional computational chemistry workflows; "semi-autonomous" positioning acknowledges the human-in-the-loop requirement that remains critical in drug discovery. | notable | rhizome.bio |
 | 2026-03-30 | **Eli Lilly + Insilico Medicine sign $2.75B AI drug discovery deal** — Eli Lilly committed $2.75B to use Insilico Medicine's end-to-end AI drug discovery pipeline, which generates novel drug candidates using generative AI, then runs them through virtual screening (AI-predicted binding affinity) before selecting candidates for wet-lab synthesis. → One of the largest AI-pharma partnerships in history; signals that end-to-end AI drug discovery (not just AI-assisted) is considered production-ready by a major pharmaceutical buyer. | significant | businesswire.com |
 | 2026-03-30 | **CERN deploys FPGA-based AI for real-time LHC data** — CERN deployed FPGA-based AI (FPGAs — Field-Programmable Gate Arrays — are reconfigurable chips that can be programmed after manufacture to implement specific algorithms; unlike GPUs which run software, FPGAs implement the algorithm directly in hardware, achieving nanosecond latency) for real-time filtering of data from the Large Hadron Collider. The LHC generates petabytes of particle collision data per second; AI running on FPGAs filters it in real-time to identify collisions worth recording. → First production deployment of AI in the critical path of a major physics experiment; demonstrates that AI can operate at physics-scale data rates (nanoseconds, petabytes/second) in production environments. | notable | home.cern |
 | 2026-03-30 | **SakanaAI AI-Scientist-v2: first fully AI-generated paper accepted for peer review** — Sakana AI's autonomous research agent independently formulated hypotheses, designed and ran experiments, analyzed results, and wrote a paper that passed peer review at a research venue — without a human co-author. → The peer review acceptance is the critical threshold: not "AI produced a paper" (already possible) but "an independent evaluation process judged AI-generated work as scientifically valid." | significant | sakana.ai |

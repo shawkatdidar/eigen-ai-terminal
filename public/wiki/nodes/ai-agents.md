@@ -4,7 +4,7 @@ id: ai-agents
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-04-08
+last_updated: 2026-04-10
 related_nodes:
   - frontier-models
   - ai-coding-tools
@@ -43,6 +43,9 @@ The ecosystem continues to expand: LangChain shipped Open-SWE (an open-source as
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-10 | **multica-ai open-source managed agents, +1544 stars/day** — An open-source managed agent framework gaining rapid traction (1,544 GitHub stars in a single day). → Open-source alternative to Anthropic's Managed Agents and AWS Frontier Agents; rapid star velocity suggests strong community demand for self-hosted agent management infrastructure. | notable | github.com |
+| 2026-04-09 | **Shopify AI Toolkit: MCP-based, coding agents operate stores directly** — Shopify released an AI Toolkit built on MCP (Model Context Protocol) that enables coding agents to directly operate Shopify stores — managing products, orders, and configurations programmatically. → Extends Shopify's earlier Agentic Storefronts from consumer-facing to developer-facing; MCP adoption by a major e-commerce platform further cements the protocol as the standard for agent-tool integration. | significant | shopify.com |
+| 2026-04-09 | **OpenClaw v2026.4.9 "Dreaming" feature: REM backfill, agent memory** — OpenClaw introduced a "Dreaming" feature in v2026.4.9 that implements REM-style memory backfill (Retrospective Experience Memory — agents replay and consolidate past experiences during idle periods, similar to how biological memory consolidation works during sleep). → Novel approach to persistent agent memory; if effective, agents improve over time from their own experience without explicit retraining. | notable | github.com |
 | 2026-04-08 | **Anthropic launches Managed Agents (public beta) — cloud-hosted agent platform** — Define agents via natural language or YAML. Managed hosting, auto-scaling, monitoring, sandboxing, authentication. Sessions persist through disconnections. Early adopters: Notion, Rakuten, Asana. 10x faster deployment vs custom builds. → Anthropic moving from model provider to agent platform; managed agents abstract away infrastructure, lowering the bar for enterprise agent deployment. Direct competitor to AWS Frontier Agents GA. | significant | nationaltoday.com |
 | 2026-04-07 | **EY deploys multi-agent AI across 130,000 auditors globally** — Embedded in EY Canvas (processes 1.4 trillion journal entry lines/year). 160,000 audit engagements in 150+ countries. Built on Microsoft Azure/Foundry/Fabric. Core assistant + 3 specialized agents (~20 modular capabilities). Target: 100% agent-supported by 2028. → Largest confirmed enterprise-scale agentic AI production deployment; professional services firms committing to full workflow agent replacement, not just assistance. | significant | ey.com |
 | 2026-04-08 | **Hermes Agent v0.8.0 "Intelligence Release" — MCP OAuth 2.1, auto-notifications, 37K stars** — Background process auto-notifications (no polling), OSV malware scanning for MCP packages, live model switching across CLI/Telegram/Discord/Slack, self-improving skill loop. 209 merged PRs, 82 resolved issues. → High-velocity open-source agent framework adding security (MCP OAuth 2.1) and autonomy (event-driven notifications) in same release. | notable | github.com |

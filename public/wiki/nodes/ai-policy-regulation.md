@@ -4,7 +4,7 @@ id: ai-policy-regulation
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-03-30
+last_updated: 2026-04-10
 related_nodes:
   - ai-safety-alignment
   - ai-business-funding
@@ -41,6 +41,8 @@ Key tensions: AI safety commitments vs. national security demands, federal vs. s
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-10 | **State therapy bot bans advancing: Maine, Missouri — 78 chatbot bills in 27 states** — Maine and Missouri are advancing legislation to ban AI therapy bots (chatbots providing mental health counseling). Across the US, 78 separate chatbot-related bills are active in 27 states. → State-level AI regulation is proliferating rapidly in the absence of comprehensive federal legislation; therapy/mental health is emerging as the first domain where states are drawing hard regulatory lines against AI deployment. | notable | statnews.com |
+| 2026-04-09 | **OpenAI backs Illinois SB 3444 liability shield ($100M compute threshold)** — OpenAI is publicly supporting Illinois Senate Bill 3444, which would create a liability shield for AI companies whose models required more than $100M in compute to train, effectively exempting frontier labs from certain state-level liability claims. → A frontier lab actively lobbying for a compute-cost-based liability threshold; if adopted, creates a two-tier regulatory system where well-funded labs get legal protections that smaller companies do not. The $100M threshold is specifically calibrated to benefit the largest labs. | significant | openai.com |
 | 2026-03-30 | **EU AI Act compliance deadline delayed to 2027; nudify apps explicitly banned** — The EU extended the compliance deadline for certain provisions of the EU AI Act by approximately one year (to 2027), while simultaneously issuing explicit guidance that nudify apps (applications that use AI to generate non-consensual intimate images) are banned under the existing framework. → The delay signals the EU is managing implementation complexity while enforcement is still ramping up; the nudify ban is notable as the first specific application category explicitly called out under EU AI Act enforcement. | notable | euractiv.com |
 | 2026-03-30 | **Dutch court bans Grok from generating nonconsensual imagery** — A Dutch court issued an injunction against xAI's Grok model, prohibiting it from generating non-consensual intimate imagery of real people. First national court order targeting a specific AI model for this class of harm. → Creates a precedent that national courts will issue model-specific injunctions; other European jurisdictions may follow the Dutch court's reasoning. | notable | nrc.nl |
 | 2026-03-26 | **Federal judge blocks Pentagon Anthropic supply chain risk designation** — U.S. District Judge Rita Lin issued preliminary injunction, calling it "likely both contrary to law and arbitrary and capricious." Used the word "Orwellian." Cited First Amendment retaliation. Pentagon records showed designation was triggered by Anthropic's "hostile manner through the press." Implementation delayed one week for appeal. → Landmark precedent: AI companies cannot be punished for maintaining safety red lines. | significant | [CNN](https://www.cnn.com/2026/03/26/business/anthropic-pentagon-injunction-supply-chain-risk) |

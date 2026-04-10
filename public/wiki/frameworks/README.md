@@ -15,6 +15,7 @@ tags:
 
 | Framework | Session | Core Question It Answers | Tags |
 |-----------|---------|-------------------------|------|
+| [[ai-company-moat-evaluation]] | 12 (2026-04-09) | "Does this AI company have a durable moat, or will it get commoditized?" | #investment #moats #saas #strategy #evaluation |
 | [[ai-self-improvement-hierarchy]] | 9 (2026-04-04) | "Where does the new information come from, and what's the ceiling on self-improvement?" | #self-improvement #training #evaluation #reasoning |
 | [[who-controls-the-dial]] | 8 (2026-04-03) | "Is this safety capability also a misalignment tool? Who controls it, and is there an audit trail?" | #safety #governance #evaluation #alignment |
 | [[compound-reliability-agent-workflows]] | 7 (2026-04-02) | "Is this agent tool actually reliable in production multi-step workflows?" | #agents #reliability #evaluation #pricing |
@@ -27,6 +28,7 @@ tags:
 - When evaluating a **safety capability or interpretability breakthrough**: start with [[who-controls-the-dial]]
 - When evaluating a **training announcement or safety claim**: start with [[reward-signal-evaluation]]
 - When evaluating a **company strategic move**: start with [[revenue-per-compute]]
+- When evaluating an **AI/SaaS company for investment**: start with [[ai-company-moat-evaluation]]
 - When evaluating a **chip or hardware announcement**: see [[ai-compute-evaluation-framework]] (in parent directory)
 - When evaluating an **agent architecture**: see [[agent-architecture-skeleton]] (in parent directory)
 

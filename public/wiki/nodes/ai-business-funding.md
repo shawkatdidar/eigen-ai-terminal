@@ -4,7 +4,7 @@ id: ai-business-funding
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-04-08
+last_updated: 2026-04-10
 related_nodes:
   - frontier-models
   - ai-in-enterprise
@@ -42,6 +42,9 @@ Enterprise AI spend is growing rapidly with buyers becoming more sophisticated. 
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-10 | **Haast $12M Series A AI compliance** — Haast raised $12M Series A for AI-powered compliance automation. → Growing investment in AI compliance tooling as regulatory frameworks (EU AI Act, US AI Accountability Act, Treasury 230 controls) create demand for automated compliance solutions. | notable | techcrunch.com |
+| 2026-04-09 | **Perplexity Billion Dollar Build competition** — Perplexity launched a "Billion Dollar Build" competition, inviting developers to build products using Perplexity's AI search API for a chance at significant prizes. → Developer ecosystem play from an AI search company; signals Perplexity is trying to build a platform/developer moat beyond its consumer search product. | notable | perplexity.ai |
+| 2026-04-08 | **Perplexity ARR $450M, 50% single-month jump** — Perplexity's annual recurring revenue hit $450M with a 50% increase in a single month. → Extraordinary revenue acceleration for an AI search company; at this trajectory, Perplexity is approaching the revenue scale needed for a major IPO. | notable | bloomberg.com |
 | 2026-04-08 | **Zhipu hikes GLM-5.1 prices 8-17% — China AI monetization wave accelerates** — Second price hike in 2026. Joins Alibaba, Tencent in raising prices. Stock surged 18%. GLM-5.1 can run autonomously 8 hours, coding nears Opus 4.6. Wider loss of 4.7B yuan ($688M) for 2025 but investors upbeat on monetization. → Chinese AI companies transitioning from growth-at-all-costs to monetization; price hikes signal confident demand for agentic AI services. | significant | bloomberg.com |
 | 2026-04-08 | **SpaceX IPO targeting ~$2T valuation, racing AI companies to public markets** — Musk pivoting SpaceX into AI-adjacent vehicle for investor speculation. Attempting to beat Anthropic and OpenAI to IPO as early as summer 2026. Up from $400B private valuation 9 months ago. Revenue approaching $20B. → SpaceX joining the AI IPO race pressures Anthropic/OpenAI timing and creates potential IPO market crowding. | notable | bloomberg.com |
 | 2026-04-08 | **Iran-US ceasefire drives major funds into AI/tech stocks** — Schroders, Jupiter, Franklin Templeton, Amundi, Allspring buying AI/tech stocks on ceasefire hopes. "We had gradually increased equity holdings during the selloff." → Macro relief rally directly benefits AI sector valuations and IPO window. | notable | bloomberg.com |

@@ -4,7 +4,7 @@ id: open-source-models
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-03-30
+last_updated: 2026-04-10
 related_nodes:
   - frontier-models
   - edge-on-device-ai
@@ -39,6 +39,8 @@ The tooling layer is surging: Microsoft BitNet gained 6,457 stars/week as 1-bit 
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-10 | **GLM 5.1 tops code arena for open models, beats GPT-5.4** — Zhipu AI's GLM 5.1 (744B MoE, trained on Huawei chips) reached #1 on the code arena leaderboard among open-source models, and outperforms OpenAI's GPT-5.4 on coding benchmarks. → An open model trained entirely on Chinese domestic hardware beating a frontier closed model on coding tasks is a landmark signal for both open-source competitiveness and China's compute independence. | notable | zhipuai.cn |
+| 2026-04-10 | **Qwen 3.6 community voting: dense model wins, release imminent** — Alibaba ran a community vote on Qwen 3.6 architecture direction, and the community chose a dense model (all parameters active per query) over MoE. Release imminent. → Community-driven architecture decisions are a new dynamic in open-source model development; the preference for dense models suggests users value simplicity and deployment ease over theoretical efficiency gains from MoE. | notable | qwen.ai |
 | 2026-03-31 | **Qwen 3.6 Plus Preview — 1M context window, 65K output tokens, built-in tool use + chain-of-thought** — Alibaba's latest Qwen model extends to 1M token context (the maximum amount of text the model can process in a single input) with 65K output tokens, and natively supports tool calling (invoking external functions/APIs during generation) and chain-of-thought reasoning (showing intermediate reasoning steps before the final answer). Free during preview period. → Alibaba maintaining aggressive release cadence; 1M context + native tool use positions this as a strong open alternative for agentic workflows that require processing large codebases or document collections. | notable | openrouter.ai |
 | 2026-03-31 | **llama.cpp reaches 100K GitHub stars** — The most widely-used open-source inference engine for running LLMs locally crossed 100K stars on GitHub, a community milestone. → Signals the health and scale of the local/open-source inference ecosystem; llama.cpp is the critical infrastructure layer that makes open-weight models practically usable on consumer hardware. | notable | github.com |
 | 2026-03-30 | **Mistral releases Voxtral — open-weight TTS beats ElevenLabs 63% of time** — Voxtral is an open-weight (publicly downloadable weights, deployable on your own infrastructure) TTS (Text-to-Speech — converting text to spoken audio) model at 3 billion parameters, achieving 90ms latency (the delay between receiving text and beginning audio output) across 9 languages. In human preference evaluations, it outperforms ElevenLabs' commercial TTS product 63% of the time. → Breaks ElevenLabs' voice quality moat by making a comparable open-weight model freely available; any developer can now build production-grade multilingual voice features without per-character API fees. | significant | mistral.ai |

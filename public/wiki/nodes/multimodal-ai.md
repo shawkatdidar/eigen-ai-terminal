@@ -4,7 +4,7 @@ id: multimodal-ai
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-03-30
+last_updated: 2026-04-10
 related_nodes:
   - frontier-models
   - ai-research-breakthroughs
@@ -44,6 +44,7 @@ Key trends: real-time multimodal (live video + audio processing), world models m
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-10 | **Alibaba HappyHorse-1.0 revealed as #1 AI video model — joint video+audio, open-source planned** — Alibaba's HappyHorse-1.0 was revealed as the top-ranked AI video generation model, notable for jointly generating synchronized video and audio (most video models generate video only, requiring separate audio synthesis). Open-source release planned. → First model to top video generation rankings with joint audio+video generation; open-source release would democratize a capability that current leaders (Runway, Kling) keep proprietary. Signals Alibaba as a serious multimodal contender. | significant | alibaba.com |
 | 2026-03-30 | **Suno v5.5 with verified voice cloning** — Suno's AI music generation platform released v5.5 with a "verified voice cloning" feature — users can clone their own voice (with verification steps to confirm ownership) for use in AI-generated music. → Addresses the consent and provenance problem that has plagued AI voice/music generation; a verified-consent model could become the standard for compliant voice cloning across platforms. | notable | suno.ai |
 | 2026-03-30 | **Cohere Transcribe — 2B parameter ASR tops open leaderboard, 14 languages** — A 2B parameter ASR (Automatic Speech Recognition) model from Cohere reaching the top of the open speech recognition leaderboard across 14 languages. → Demonstrates that specialized small models can achieve category leadership; Cohere's enterprise focus means this will be deployed in enterprise transcription workflows. | notable | cohere.com |
 | 2026-03-27 | **Google Gemini 3.1 Flash Live — real-time multimodal voice** — Lower latency, 90+ languages, 2x conversation memory, improved agent tool-triggering. Powers Search Live in 200+ countries. | significant | [Google AI Blog](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/) |

@@ -1,10 +1,362 @@
 [
   {
+    "date": "2026-04-10",
+    "signals": [
+      {
+        "title": "CoreWeave and Meta expand AI infrastructure deal to $21B through 2032",
+        "description": "On top of the prior $14.2B arrangement, bringing Meta's total CoreWeave commitment to ~$35B. Includes some of the first commercial deployments of NVIDIA's Vera Rubin platform (next-generation after Blackwell). After this deal, no single customer represents >35% of CoreWeave's revenue.   [Source](https://investors.coreweave.com/news/news-details/2026/CoreWeave-and-Meta-Announce-21-Billion-Expanded-AI-Infrastructure-Agreement/default.aspx)",
+        "significance": "significant",
+        "domains": [
+          "Compute & Hardware",
+          "AI Business & Funding"
+        ],
+        "source": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-and-Meta-Announce-21-Billion-Expanded-AI-Infrastructure-Agreement/default.aspx",
+        "practical": false,
+        "tags": [
+          "meta",
+          "nvidia"
+        ],
+        "actionLine": "[Source](https://investors.coreweave.com/news/news-details/2026/CoreWeave-and-Meta-Announce-21-Billion-Expanded-AI-Infrastructure-Agreement/default.aspx)"
+      },
+      {
+        "title": "Anthropic releases Advisor Strategy — tiered model collaboration in a single API call",
+        "description": "A new server-side tool (`advisor_20260301`) enabling a cost-efficient executor model (Sonnet 4.6 or Haiku 4.5) to consult Opus 4.6 as an advisor within one `/v1/messages` call. On SWE-bench Multilingual, Sonnet+Opus advisor scored 74.8% vs 72.1% for Sonnet alone (+2.7pp), while costing 11.9% less per agentic task. Advisor overhead is typically 400-700 tokens per consultation. → Establishes a new API pattern: instead of routing to one model, composing multiple models within a single request.   [Source](https://claude.com/blog/the-advisor-strategy)",
+        "significance": "significant",
+        "domains": [
+          "Frontier Models",
+          "AI Agents"
+        ],
+        "source": "https://claude.com/blog/the-advisor-strategy",
+        "practical": true,
+        "tags": [
+          "anthropic",
+          "claude.com",
+          "sonnet",
+          "opus",
+          "haiku"
+        ],
+        "actionLine": "Establishes a new API pattern: instead of routing to one model, composing multiple models within a single request."
+      },
+      {
+        "title": "Alibaba's HappyHorse-1.0 revealed as #1 AI video model",
+        "description": "Alibaba's ATH Innovation Division unmasked as creator of HappyHorse-1.0, which anonymously topped the Artificial Analysis leaderboard for text-to-video and image-to-video (1379 Elo, 106 points above Seedance 2.0). Jointly generates video AND audio from text. Built by team led by Zhang Di (former Kuaishou VP / Kling AI tech lead). API expected April 30; model weights will be fully open-sourced. → Alibaba joins the multimodal frontier with a model that outperforms all incumbents including its own Wan series.  [Source](https://www.cnbc.com/2026/04/10/alibaba-happyhorse-ai-video-model-benchmark-reveal.html)",
+        "significance": "significant",
+        "domains": [
+          "Multimodal AI"
+        ],
+        "source": "https://www.cnbc.com/2026/04/10/alibaba-happyhorse-ai-video-model-benchmark-reveal.html",
+        "practical": true,
+        "tags": [
+          "alibaba"
+        ],
+        "actionLine": "Alibaba joins the multimodal frontier with a model that outperforms all incumbents including its own Wan series."
+      },
+      {
+        "title": "OpenAI backs Illinois SB 3444 — liability shield for frontier AI developers",
+        "description": "OpenAI testified in favor of a bill that would shield frontier AI developers (models trained with >$100M in compute) from liability for \"critical harms\" unless they reach a massive threshold: 100+ deaths/injuries or $1B+ property damage. Safety reports and non-reckless behavior required. AI policy experts call this more extreme than previous industry-backed proposals. → OpenAI shifting from defensive to proactive legislative strategy, potentially setting precedent for federal AI liability frameworks.  [Source](https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/)",
+        "significance": "significant",
+        "domains": [
+          "AI Policy & Regulation"
+        ],
+        "source": "https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/",
+        "practical": false,
+        "tags": [
+          "openai"
+        ],
+        "actionLine": "OpenAI shifting from defensive to proactive legislative strategy, potentially setting precedent for federal AI liability frameworks."
+      },
+      {
+        "title": "Shopify launches AI Toolkit — opens full platform to coding agents",
+        "description": "Shopify released an open-source (MIT) plugin and agent skill system connecting AI coding clients (Claude Code, Cursor, Codex, Gemini CLI, VS Code) directly to the Shopify platform via MCP (Model Context Protocol). Agents can scaffold apps, validate code against Shopify schemas, run GraphQL operations, and execute real store changes (bulk SEO updates, discount applications, product image swaps). One merchant reported optimizing 32 products in a single agent session. → First major e-commerce platform opening its full API surface to autonomous AI agents.   [Source](https://shopify.dev/changelog/shopify-ai-toolkit-connect-your-ai-tools-to-the-shopify-platform)",
+        "significance": "significant",
+        "domains": [
+          "AI Agents",
+          "AI in Enterprise"
+        ],
+        "source": "https://shopify.dev/changelog/shopify-ai-toolkit-connect-your-ai-tools-to-the-shopify-platform",
+        "practical": true,
+        "tags": [
+          "cursor",
+          "mcp",
+          "codex"
+        ],
+        "actionLine": "First major e-commerce platform opening its full API surface to autonomous AI agents."
+      },
+      {
+        "title": "DeepSeek discloses data center in Inner Mongolia with banned Blackwell chips",
+        "description": "Bloomberg reports DeepSeek is advertising data center engineering positions in Inner Mongolia, the first time the company has publicly disclosed a data center location. The facility reportedly relies on banned NVIDIA Blackwell chips. → First public confirmation of DeepSeek's physical infrastructure; intensifies questions about US export control enforcement in China's AI compute supply chain.   [Source](https://www.bloomberg.com/news/articles/2026-04-10/deepseek-looks-for-data-center-engineers-in-inner-mongolia)",
+        "significance": "significant",
+        "domains": [
+          "Compute & Hardware",
+          "AI Policy & Regulation"
+        ],
+        "source": "https://www.bloomberg.com/news/articles/2026-04-10/deepseek-looks-for-data-center-engineers-in-inner-mongolia",
+        "practical": false,
+        "tags": [
+          "nvidia",
+          "deepseek"
+        ],
+        "actionLine": "First public confirmation of DeepSeek's physical infrastructure; intensifies questions about US export control enforcement in China's AI compute supply chain."
+      },
+      {
+        "title": "TSMC Q1 2026 revenue hits $35.7B, up 35% YoY",
+        "description": "Confirms continued acceleration in AI chip demand across the semiconductor supply chain.  [Source](https://techstartups.com/2026/04/10/top-tech-news-today-april-10-2026/)",
+        "significance": "notable",
+        "domains": [
+          "Compute & Hardware"
+        ],
+        "source": "https://techstartups.com/2026/04/10/top-tech-news-today-april-10-2026/",
+        "practical": false,
+        "tags": [],
+        "actionLine": "[Source](https://techstartups.com/2026/04/10/top-tech-news-today-april-10-2026/)"
+      },
+      {
+        "title": "Intel and Google announce multiyear AI infrastructure collaboration",
+        "description": "Google will adopt future Intel Xeon processors and co-develop custom ASIC-based IPUs (Infrastructure Processing Units — programmable accelerators that offload networking, storage, and security from host CPUs). Signals that AI scaling requires balanced heterogeneous architectures, not just GPU accelerators.   [Source](https://www.intc.com/news-events/press-releases/detail/1766/intel-and-google-deepen-collaboration-to-advance-ai)",
+        "significance": "notable",
+        "domains": [
+          "Compute & Hardware",
+          "AI Infrastructure"
+        ],
+        "source": "https://www.intc.com/news-events/press-releases/detail/1766/intel-and-google-deepen-collaboration-to-advance-ai",
+        "practical": true,
+        "tags": [
+          "google",
+          "intel"
+        ],
+        "actionLine": "[Source](https://www.intc.com/news-events/press-releases/detail/1766/intel-and-google-deepen-collaboration-to-advance-ai)"
+      },
+      {
+        "title": "GLM 5.1 tops code arena rankings for open models",
+        "description": "Zhipu AI's GLM 5.1 (754B MoE, MIT license) reached top 3 in code arena rankings overall, beating GPT-5.4 and Gemini — making it the highest-ranked open-source model for coding.",
+        "significance": "notable",
+        "domains": [
+          "Open Source Models",
+          "AI Coding Tools"
+        ],
+        "source": "",
+        "practical": true,
+        "tags": [
+          "zhipu",
+          "moe",
+          "gpt-5.4"
+        ],
+        "actionLine": "Zhipu AI's GLM 5.1 (754B MoE, MIT license) reached top 3 in code arena rankings overall, beating GPT-5.4 and Gemini — making it the highest-ranked open-source model for coding."
+      },
+      {
+        "title": "cuBLAS dispatches inefficient kernel for batched FP32 on RTX 5090",
+        "description": "A researcher found that NVIDIA's cuBLAS library runs an inefficient kernel on RTX consumer GPUs, causing ~40% utilization of available compute in batched mode. A custom kernel beats cuBLAS by 46-65%. Same workloads perform correctly on Pro 6000 and H200. → Consumer GPU software stack receives significantly less optimization than datacenter/pro lines.",
+        "significance": "notable",
+        "domains": [
+          "Compute & Hardware"
+        ],
+        "source": "",
+        "practical": false,
+        "tags": [
+          "nvidia"
+        ],
+        "actionLine": "Consumer GPU software stack receives significantly less optimization than datacenter/pro lines."
+      },
+      {
+        "title": "Flowise AI agent builder under active CVSS 10.0 RCE exploitation",
+        "description": "CVE-2025-59528: the CustomMCP node executes user-provided JavaScript without validation, granting full Node.js runtime access. 12,000-15,000 publicly accessible instances remain exposed. Patched in v3.0.6 (Sept 2025) but many instances unpatched.   [Source](https://thehackernews.com/2026/04/flowise-ai-agent-builder-under-active.html)",
+        "significance": "notable",
+        "domains": [
+          "AI Safety",
+          "AI Agents"
+        ],
+        "source": "https://thehackernews.com/2026/04/flowise-ai-agent-builder-under-active.html",
+        "practical": true,
+        "tags": [],
+        "actionLine": "[Source](https://thehackernews.com/2026/04/flowise-ai-agent-builder-under-active.html)"
+      },
+      {
+        "title": "Perplexity ARR hits $450M after 50% single-month jump",
+        "description": "Revenue surge driven by \"Computer\" (autonomous agent platform) launch and shift to usage-based pricing. 100M+ monthly active users, valuation near $20B. Also launched \"Billion Dollar Build\" — an 8-week competition where teams build companies using Perplexity Computer, with up to $1M investment per team.   [Source](https://www.pymnts.com/artificial-intelligence-2/2026/perplexitys-shift-to-ai-agents-boosts-revenue-50/)",
+        "significance": "notable",
+        "domains": [
+          "AI Business & Funding",
+          "AI Agents"
+        ],
+        "source": "https://www.pymnts.com/artificial-intelligence-2/2026/perplexitys-shift-to-ai-agents-boosts-revenue-50/",
+        "practical": true,
+        "tags": [
+          "perplexity"
+        ],
+        "actionLine": "[Source](https://www.pymnts.com/artificial-intelligence-2/2026/perplexitys-shift-to-ai-agents-boosts-revenue-50/)"
+      },
+      {
+        "title": "State AI therapy chatbot bans advancing",
+        "description": "Maine LD 2082 prohibiting clinical AI in mental health therapy headed to governor. Missouri moving similar ban via omnibus health bill. Arizona HB 2372 includes $10K first-violation penalty. Alabama SB 63 approved by full House. 78 chatbot bills alive across 27 states, 600+ AI bills total in 2026 sessions.  [Source](https://www.transparencycoalition.ai/news/ai-legislative-update-april10-2026)",
+        "significance": "notable",
+        "domains": [
+          "AI Policy & Regulation"
+        ],
+        "source": "https://www.transparencycoalition.ai/news/ai-legislative-update-april10-2026",
+        "practical": false,
+        "tags": [],
+        "actionLine": "[Source](https://www.transparencycoalition.ai/news/ai-legislative-update-april10-2026)"
+      },
+      {
+        "title": "OpenClaw v2026.4.9 \"Dreaming\" feature for persistent agent memory",
+        "description": "Introduces REM backfill (retroactive integration of historical data into memory), diary timeline UI for chronological memory replay, and security fixes against SSRF and node execution injection. → Advancing persistent memory for long-running autonomous agents.",
+        "significance": "notable",
+        "domains": [
+          "AI Agents"
+        ],
+        "source": "",
+        "practical": true,
+        "tags": [],
+        "actionLine": "Advancing persistent memory for long-running autonomous agents."
+      },
+      {
+        "title": "Qwen 3.6 community voting concludes — dense model supporters win",
+        "description": "Results split ~40%/20%/20%/20% across four model variant preferences. Dense model (\"densocrats\") won over MoE advocates. Community expects release soon.",
+        "significance": "notable",
+        "domains": [
+          "Open Source Models"
+        ],
+        "source": "",
+        "practical": true,
+        "tags": [
+          "moe",
+          "qwen"
+        ],
+        "actionLine": "Community expects release soon."
+      },
+      {
+        "title": "Claude behavioral shift — \"agrees with everything\" (403pts, r/ClaudeAI)",
+        "description": "High-engagement community post reporting Claude's behavior has shifted toward increased agreeableness and reduced pushback. Connects to the sycophancy research tracked in Session 8.",
+        "significance": "notable",
+        "domains": [
+          "Frontier Models",
+          "AI Safety"
+        ],
+        "source": "",
+        "practical": false,
+        "tags": [],
+        "actionLine": "Connects to the sycophancy research tracked in Session 8."
+      },
+      {
+        "title": "Sharetronic discloses ~$92M in banned NVIDIA-linked servers",
+        "description": "Chinese AI firm disclosed the hardware in government filings, hours after Super Micro co-founder was charged in an alleged smuggling case. Stock dropped 20% daily limit.",
+        "significance": "notable",
+        "domains": [
+          "Compute & Hardware",
+          "AI Policy & Regulation"
+        ],
+        "source": "",
+        "practical": false,
+        "tags": [
+          "nvidia"
+        ],
+        "actionLine": "Stock dropped 20% daily limit."
+      },
+      {
+        "title": "Revolut launches AIR in-chat AI assistant",
+        "description": "Rolling out to UK users. Can take real financial actions: blocking payments, buying eSIMs, analyzing spending. Production deployment of an agentic AI assistant with financial action capabilities in a fintech product with tens of millions of users.",
+        "significance": "notable",
+        "domains": [
+          "AI in Enterprise",
+          "AI Agents"
+        ],
+        "source": "",
+        "practical": true,
+        "tags": [],
+        "actionLine": "Production deployment of an agentic AI assistant with financial action capabilities in a fintech product with tens of millions of users."
+      },
+      {
+        "title": "LM Studio acquires Locally AI",
+        "description": "LM Studio acquired the popular iOS/Mac on-device inference app. Plans for seamless cross-device model and agent experiences. Consolidation in local inference tooling.",
+        "significance": "notable",
+        "domains": [
+          "Edge & On-Device AI"
+        ],
+        "source": "",
+        "practical": true,
+        "tags": [
+          "inference"
+        ],
+        "actionLine": "Consolidation in local inference tooling."
+      },
+      {
+        "title": "ArXiv cluster: Agent security under stress",
+        "description": "Three papers in one day: (1) \"Thought Virus\" demonstrates subliminal infection propagating across AI agent networks while evading safety defenses; (2) ACIArena evaluates cascading injection attacks across 1,356 multi-agent test cases; (3) \"Silencing the Guardrails\" shows safety guardrails can be bypassed at inference time without retraining via activation pattern suppression.",
+        "significance": "notable",
+        "domains": [
+          "AI Safety",
+          "AI Agents"
+        ],
+        "source": "",
+        "practical": true,
+        "tags": [
+          "inference"
+        ],
+        "actionLine": "Three papers in one day: (1) \"Thought Virus\" demonstrates subliminal infection propagating across AI agent networks while evading safety defenses; (2) ACIArena evaluates cascading injection attacks across 1,356 multi-agent test cases; (3) \"Silencing the Guardrails\" shows safety guardrails can be bypassed at inference time without retraining via activation pattern suppression."
+      },
+      {
+        "title": "IatroBench: safety measures hurt the users they aim to protect",
+        "description": "Pre-registered study measuring \"identity-contingent withholding\" — models provide worse guidance when queries use layperson language vs expert language, with a +0.38 decoupling gap. Quantifies how safety measures can paradoxically harm users by withholding useful information based on perceived sophistication.",
+        "significance": "notable",
+        "domains": [
+          "AI Safety"
+        ],
+        "source": "",
+        "practical": false,
+        "tags": [],
+        "actionLine": "Quantifies how safety measures can paradoxically harm users by withholding useful information based on perceived sophistication."
+      },
+      {
+        "title": "SAT: 40% reasoning token reduction through step-level pruning",
+        "description": "Stepwise Adaptive Thinking performs difficulty-aware pruning of reasoning chains across 9 models while maintaining accuracy. Directly attacks inference cost of chain-of-thought reasoning.",
+        "significance": "notable",
+        "domains": [
+          "Research Breakthroughs"
+        ],
+        "source": "",
+        "practical": true,
+        "tags": [
+          "inference"
+        ],
+        "actionLine": "Directly attacks inference cost of chain-of-thought reasoning."
+      },
+      {
+        "title": "Rhizome OS-1: semi-autonomous drug discovery agents",
+        "description": "Multi-modal AI agents functioning as computational chemists, generating 2,355-2,876 novel molecules per target in a semi-autonomous pipeline.",
+        "significance": "notable",
+        "domains": [
+          "AI for Science",
+          "AI Agents"
+        ],
+        "source": "",
+        "practical": true,
+        "tags": [],
+        "actionLine": "Multi-modal AI agents functioning as computational chemists, generating 2,355-2,876 novel molecules per target in a semi-autonomous pipeline."
+      },
+      {
+        "title": "Qwen3.5-122B at 198 tok/s on 2x RTX PRO 6000 Blackwell",
+        "description": "Demonstrates near-real-time inference for a 122B-parameter model on workstation-class hardware.",
+        "significance": "notable",
+        "domains": [
+          "Compute & Hardware",
+          "Edge & On-Device AI"
+        ],
+        "source": "",
+        "practical": true,
+        "tags": [
+          "inference",
+          "qwen3.5-122"
+        ],
+        "actionLine": "Demonstrates near-real-time inference for a 122B-parameter model on workstation-class hardware."
+      }
+    ]
+  },
+  {
     "date": "2026-04-09",
     "signals": [
       {
         "title": "SaaS stocks crash on AI agent disruption fears — IGV ETF at lowest since November 2023",
-        "description": "The iShares Expanded Tech-Software ETF (IGV) fell 3.9% to its lowest level since Nov 2023, down 27% YTD. A SaaS-specific index dropped 4.8% on the day, 9% for the week, and nearly 40% YTD. Triggered directly by Anthropic's Managed Agents launch and Meta's Muse Spark. Investor Michael Burry posted: \"probably worth following Claude if you are an investor in these markets.\" Palantir -7.3%, ServiceNow -7.9%, Oracle -4%, Salesforce -3.1%. Software valuations at 20.6x earnings vs 10-year average of 34x. → The market is repricing the entire SaaS sector based on the thesis that AI agents will replace, not augment, enterprise software workflows.",
+        "description": "The iShares Expanded Tech-Software ETF (IGV) fell 3.9% to its lowest level since Nov 2023, down 27% YTD. A SaaS-specific index dropped 4.8% on the day, 9% for the week, and nearly 40% YTD. Triggered directly by Anthropic's Managed Agents launch and Meta's Muse Spark. Investor Michael Burry posted: \"probably worth following Claude if you are an investor in these markets.\" Palantir -7.3%, ServiceNow -7.9%, Oracle -4%, Salesforce -3.1%. Software valuations at 20.6x earnings vs 10-year average of 34x. → The market is repricing the entire SaaS sector based on the thesis that AI agents will replace, not augment, enterprise software workflows. This is the clearest Wall Street signal yet that agentic AI is being treated as an existential threat to traditional software.",
         "significance": "significant",
         "domains": [
           "AI Business & Funding",
@@ -13,16 +365,15 @@
         "source": "https://www.bloomberg.com/news/articles/2026-04-09/software-slumps-again-with-growth-hopes-dashed-on-the-rocks",
         "practical": false,
         "tags": [
-          "anthropic",
           "meta",
-          "saas",
-          "burry"
+          "anthropic",
+          "muse"
         ],
         "actionLine": "The market is repricing the entire SaaS sector based on the thesis that AI agents will replace, not augment, enterprise software workflows."
       },
       {
         "title": "OpenAI tells investors it has compute advantage over Anthropic — 1.9GW vs 1.4GW, targeting 30GW by 2030",
-        "description": "Internal memo sent to investors after Mythos announcement. OpenAI had 1.9GW of compute in 2025 (3x YoY), expects \"low-double-digit\" GW next year, 30GW by 2030. Estimates Anthropic at 1.4GW end-2025, 7-8GW next year. → OpenAI framing the frontier model race as a compute race, not a model quality race. The 30GW 2030 target is roughly 2.5% of current US electricity generation.",
+        "description": "Internal memo sent to investors after Mythos announcement. OpenAI had 1.9GW of compute in 2025 (3x YoY), expects \"low-double-digit\" GW next year, 30GW by 2030. Estimates Anthropic at 1.4GW end-2025, 7-8GW next year. Cites Stratechery's Ben Thompson suggesting compute constraints impacted Anthropic's decision to limit Mythos release. \"That gap matters because compute is now a product constraint.\" → OpenAI framing the frontier model race as a compute race, not a model quality race. The memo is a defensive response to Mythos — if you can't match the model, argue you have more GPUs. The 30GW 2030 target is roughly 2.5% of current US electricity generation.",
         "significance": "significant",
         "domains": [
           "Compute & Hardware",
@@ -31,30 +382,31 @@
         "source": "https://www.bloomberg.com/news/articles/2026-04-09/openai-tells-investors-it-has-computing-advantage-over-anthropic",
         "practical": false,
         "tags": [
-          "openai",
-          "anthropic"
+          "anthropic",
+          "openai"
         ],
         "actionLine": "OpenAI framing the frontier model race as a compute race, not a model quality race."
       },
       {
         "title": "OpenAI introduces $100/month ChatGPT Pro tier",
-        "description": "New intermediate tier between Plus ($20) and the existing $200 Pro. Offers 5x more Codex usage than Plus with GPT-5.4 Pro access. → Addresses the pricing gap that was driving power users to competitors.",
+        "description": "New intermediate tier between Plus ($20) and the existing $200 Pro. Offers 5x more Codex usage than Plus with GPT-5.4 Pro access. $200 tier offers 20x. Existing $200 users get extended 2x Codex promo through May 31. → Addresses the pricing gap that was driving power users to competitors. The 5x/$100 tier specifically targets developers who need more Codex capacity but don't need the $200 tier. OpenAI monetizing the Codex growth (3M weekly users) with a tailored price point.",
         "significance": "significant",
         "domains": [
           "Frontier Models",
           "AI Business & Funding"
         ],
         "source": "https://chatgpt.com/pricing/",
-        "practical": true,
+        "practical": false,
         "tags": [
           "openai",
+          "gpt-5.4",
           "codex"
         ],
         "actionLine": "Addresses the pricing gap that was driving power users to competitors."
       },
       {
         "title": "Amazon considering selling AI chips to third parties — $20B+ annual run rate",
-        "description": "CEO Andy Jassy revealed in annual shareholder letter that Amazon's in-house chip business (Trainium, Graviton, Inferentia) is on pace for $20B+ annual revenue. Would be $50B if sold as independent business to third parties. → If Amazon begins selling chips externally, it becomes the third major AI chip vendor alongside NVIDIA and AMD.",
+        "description": "CEO Andy Jassy revealed in annual shareholder letter that Amazon's in-house chip business (Trainium, Graviton, Inferentia) is on pace for $20B+ annual revenue. Would be $50B if sold as independent business to third parties. \"There's so much demand for our chips that it's quite possible we'll sell racks of them to third parties in the future.\" → If Amazon begins selling chips externally, it becomes the third major AI chip vendor alongside NVIDIA and AMD. A $50B chip business would rank among the world's top semiconductor companies. This is the first public disclosure of the scale of Amazon's chip revenue.",
         "significance": "significant",
         "domains": [
           "Compute & Hardware",
@@ -71,23 +423,22 @@
       },
       {
         "title": "OpenAI pauses Stargate UK datacenter — energy costs and regulatory barriers",
-        "description": "Suspended planned UK datacenter (8,000 GPUs scaling to 31,000, partnered with Nscale). Originally announced during Trump's September 2025 UK visit. → First major Stargate project paused. Raises questions about international AI infrastructure buildouts when energy costs are substantially higher than US rates.",
+        "description": "Suspended planned UK datacenter (8,000 GPUs scaling to 31,000, partnered with Nscale). Originally announced during Trump's September 2025 UK visit. Even government-designated \"AI Growth Zones\" with streamlined planning cannot overcome energy economics. → First major Stargate project paused. Raises questions about international AI infrastructure buildouts when energy costs are substantially higher than US rates. UK's AI ambitions take a concrete hit.   — [The Register](https://www.theregister.com/2026/04/09/openai_puts_stargate_uk_on/) | [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-09/openai-pauses-stargate-uk-data-center-effort-citing-energy-costs)",
         "significance": "significant",
         "domains": [
           "Compute & Hardware",
           "AI Policy & Regulation"
         ],
-        "source": "https://www.theregister.com/2026/04/09/openai_puts_stargate_uk_on/",
+        "source": "https://www.bloomberg.com/news/articles/2026-04-09/openai-pauses-stargate-uk-data-center-effort-citing-energy-costs",
         "practical": false,
         "tags": [
-          "openai",
-          "stargate"
+          "openai"
         ],
         "actionLine": "First major Stargate project paused."
       },
       {
         "title": "Cursor Bugbot self-improves via learned rules — resolution rate jumps from 52% to 80%",
-        "description": "Cursor's AI code reviewer now learns from developer feedback. 110,000 repos with learning enabled, 44,000+ learned rules. Resolution rate: 80% vs Greptile 63%, CodeRabbit 49%, GitHub Copilot 47%. → Demonstrates a powerful product flywheel: more users, more feedback, better model, more users.",
+        "description": "Cursor's AI code reviewer now learns from developer feedback (downvotes, replies, missed issues). 110,000 repos with learning enabled, 44,000+ learned rules. Resolution rate: 80% vs Greptile 63%, CodeRabbit 49%, GitHub Copilot 47%. The system processes signals into candidate rules, promotes high-evidence rules, auto-disables rules with negative feedback. → Demonstrates a powerful product flywheel: more users → more feedback → better model → more users. Cursor is opening a measurable lead in AI code review quality. The self-improving loop is a competitive moat that strengthens with scale.",
         "significance": "significant",
         "domains": [
           "AI Coding Tools",
@@ -96,13 +447,14 @@
         "source": "https://www.cursor.com/blog/bugbot-learning",
         "practical": true,
         "tags": [
-          "cursor"
+          "cursor",
+          "github"
         ],
-        "actionLine": "Demonstrates a powerful product flywheel: more users, more feedback, better model, more users."
+        "actionLine": "Demonstrates a powerful product flywheel: more users → more feedback → better model → more users."
       },
       {
         "title": "Master Key Hypothesis: cross-model capability transfer without retraining",
-        "description": "Research demonstrating that post-trained capabilities transfer between models via linear subspace alignment using the UNLOCK framework. 12.1% accuracy gain on MATH transferring reasoning from Qwen1.5-14B to 7B. → If this generalizes, it could fundamentally change model development economics.",
+        "description": "Research demonstrating that post-trained capabilities (e.g., reasoning) transfer between models via linear subspace alignment using the UNLOCK framework. Achieved 12.1% accuracy gain on MATH benchmark transferring reasoning from Qwen1.5-14B to 7B. 10.2pp gain transferring from Qwen3-4B to 14B on AGIEval Math. → If this generalizes, it could fundamentally change model development economics — train a capability once, distribute it to any model. Implications for both open-source and commercial model development.",
         "significance": "significant",
         "domains": [
           "Research Breakthroughs"
@@ -110,13 +462,14 @@
         "source": "https://arxiv.org/abs/2604.06377",
         "practical": true,
         "tags": [
-          "qwen"
+          "qwen1.5-14",
+          "qwen3-4"
         ],
-        "actionLine": "If this generalizes, it could fundamentally change model development economics."
+        "actionLine": "If this generalizes, it could fundamentally change model development economics — train a capability once, distribute it to any model."
       },
       {
         "title": "RAGEN-2: identifies \"template collapse\" failure mode in agentic RL training",
-        "description": "Authors include Li Fei-Fei and Yejin Choi. Discovers that RL-trained LLM agents can produce responses that look diverse but are actually input-agnostic fixed patterns. Proposes mutual information as better diagnostic and SNR-Aware Filtering to fix it. → Explains why agentic RL training has been unreliable — a critical bottleneck for the agent ecosystem.",
+        "description": "Authors include Li Fei-Fei and Yejin Choi. Discovers that RL-trained LLM agents can produce responses that look diverse (stable entropy) but are actually input-agnostic fixed patterns. Proposes mutual information as better diagnostic than entropy, and SNR-Aware Filtering to fix it. Validated across planning, math, web navigation, code execution. → Explains why agentic RL training has been unreliable — a critical bottleneck for the agent ecosystem. If the fix works at scale, it advances the reliability of agent RL training, directly attacking BN-001 (Agent Reliability Gap).",
         "significance": "significant",
         "domains": [
           "AI Agents",
@@ -125,14 +478,13 @@
         "source": "https://arxiv.org/abs/2604.06268",
         "practical": true,
         "tags": [
-          "rl",
-          "agents"
+          "training"
         ],
-        "actionLine": "Explains why agentic RL training has been unreliable."
+        "actionLine": "Explains why agentic RL training has been unreliable — a critical bottleneck for the agent ecosystem."
       },
       {
         "title": "Depth Ceiling: LLMs max at 3-7 latent planning steps",
-        "description": "Reveals fundamental constraints on how many implicit reasoning steps LLMs can perform internally. Tiny transformers max at 3, fine-tuned GPT-4o/Qwen3-32B reach 5, GPT-5.4 reaches 7. → Empirical evidence for why chain-of-thought works — it bypasses the latent planning ceiling.",
+        "description": "Reveals fundamental constraints on how many implicit reasoning steps LLMs can perform internally (without writing out reasoning). Tiny transformers max at 3, fine-tuned GPT-4o/Qwen3-32B reach 5, GPT-5.4 reaches 7. Models can discover strategies at 5 steps but execute them to 8 at test time. → Empirical evidence for why chain-of-thought (explicit reasoning) works — it bypasses the latent planning ceiling. Has direct implications for architecture design decisions and when to use extended thinking vs direct inference.",
         "significance": "significant",
         "domains": [
           "Research Breakthroughs"
@@ -140,14 +492,16 @@
         "source": "https://arxiv.org/abs/2604.06427",
         "practical": true,
         "tags": [
-          "reasoning",
-          "chain-of-thought"
+          "inference",
+          "gpt-4o",
+          "gpt-5.4",
+          "qwen3-32"
         ],
-        "actionLine": "Empirical evidence for why chain-of-thought works — it bypasses the latent planning ceiling."
+        "actionLine": "Empirical evidence for why chain-of-thought (explicit reasoning) works — it bypasses the latent planning ceiling."
       },
       {
         "title": "MegaTrain: trains 120B parameter models on a single GPU",
-        "description": "Stores parameters and optimizer states in CPU memory, treating GPUs as transient compute engines. 120B models on single H200 GPU with 1.5TB host memory. 1.84x throughput over DeepSpeed ZeRO-3 for 14B models. → Dramatically lowers the hardware barrier for training large models.",
+        "description": "Stores parameters and optimizer states in CPU memory, treating GPUs as transient compute engines. Uses pipelined double-buffering and stateless layer templates. 120B models on single H200 GPU with 1.5TB host memory. 1.84x throughput over DeepSpeed ZeRO-3 for 14B models. 7B model with 512K context on single GH200. (ArXiv Apr 6, backfill.) → Dramatically lowers the hardware barrier for training large models. A single high-end GPU + large host memory becomes sufficient for 100B+ scale, previously requiring multi-GPU clusters.",
         "significance": "significant",
         "domains": [
           "Research Breakthroughs",
@@ -156,14 +510,13 @@
         "source": "https://arxiv.org/abs/2604.05091",
         "practical": true,
         "tags": [
-          "training",
-          "infrastructure"
+          "training"
         ],
         "actionLine": "Dramatically lowers the hardware barrier for training large models."
       },
       {
         "title": "Claude attribution bug — model mixes up who said what",
-        "description": "Widely discussed blog post (386 HN points) documenting a failure mode where Claude generates internal messages during reasoning, then incorrectly attributes them to the user. Emerges near context window limits. → Safety concern for agentic workflows.",
+        "description": "Widely discussed blog post (386 HN points, 309 comments) documenting a failure mode where Claude generates internal messages during reasoning, then incorrectly attributes them to the user. Claude tells itself typos were intentional, gives itself destructive instructions, and treats its own questions as user approval. Emerges near context window limits. → Safety concern for agentic workflows where Claude has production access.",
         "significance": "notable",
         "domains": [
           "AI Safety",
@@ -171,15 +524,12 @@
         ],
         "source": "https://dwyer.co.za/static/claude-mixes-up-who-said-what-and-thats-not-ok.html",
         "practical": true,
-        "tags": [
-          "anthropic",
-          "claude"
-        ],
+        "tags": [],
         "actionLine": "Safety concern for agentic workflows where Claude has production access."
       },
       {
         "title": "Vercel plugin on Claude Code raises privacy/telemetry concerns",
-        "description": "Analysis reveals the Vercel plugin collects full bash command strings tied to persistent device UUID. Consent mechanism uses prompt injection. (245 HN points.) → Surfaces broader MCP plugin trust and consent design problems.",
+        "description": "Analysis reveals the Vercel plugin collects full bash command strings tied to persistent device UUID while describing this as \"anonymous.\" Consent mechanism uses prompt injection — plugin instructs Claude to ask user a question, making it indistinguishable from Claude's native interface. Activates on all projects, not just Vercel ones. (245 HN points.) → Surfaces broader MCP plugin trust and consent design problems.",
         "significance": "notable",
         "domains": [
           "AI Coding Tools",
@@ -188,14 +538,13 @@
         "source": "https://akshaychugh.xyz/writings/png/vercel-plugin-telemetry",
         "practical": true,
         "tags": [
-          "vercel",
           "mcp"
         ],
         "actionLine": "Surfaces broader MCP plugin trust and consent design problems."
       },
       {
         "title": "80% of white-collar workers refusing AI adoption mandates",
-        "description": "WalkMe 2026 report (3,750 respondents, 14 countries): 54% bypassed company AI tools, 33% haven't used AI at all. Only 9% trust AI for critical decisions vs 61% of executives. → Enterprise AI adoption faces a workforce resistance wall.",
+        "description": "WalkMe 2026 report (3,750 respondents, 14 countries): 54% bypassed company AI tools in past 30 days, 33% haven't used AI at all. Only 9% trust AI for critical decisions vs 61% of executives (52-point trust gap). Workers lose 51 working days annually to technology friction (up 42%). → Enterprise AI adoption faces a workforce resistance wall, not just a technology problem.",
         "significance": "notable",
         "domains": [
           "AI in Enterprise"
@@ -207,7 +556,7 @@
       },
       {
         "title": "Gen Z growing less hopeful, more angry about AI — Gallup study",
-        "description": "New Gallup study reported by NYT finds sentiment shifting among 18-29 year olds. → The demographic most expected to embrace AI is turning skeptical.",
+        "description": "New Gallup study reported by NYT finds sentiment shifting among 18-29 year olds. 98 HN points, 143 comments. → The demographic most expected to embrace AI is turning skeptical.",
         "significance": "notable",
         "domains": [
           "AI in Enterprise",
@@ -220,7 +569,7 @@
       },
       {
         "title": "Maine LD 307 — first statewide data center moratorium",
-        "description": "Legislature advancing moratorium on data centers >20MW through November 2027. First state-level ban. → State-level resistance to datacenter buildout is crystallizing into legislation.",
+        "description": "Legislature advancing moratorium on data centers >20MW through November 2027. First state-level ban. Projects in Jay, Sanford, Loring AFB in limbo. Aligns with Sanders/AOC federal moratorium act (March 25). DATE UNCERTAIN for exact vote. → State-level resistance to datacenter buildout is crystallizing into legislation.",
         "significance": "notable",
         "domains": [
           "Compute & Hardware",
@@ -233,7 +582,7 @@
       },
       {
         "title": "Local LLMs match Mythos vulnerability-finding on r/LocalLLaMA",
-        "description": "435-point post arguing open-source models already replicate Mythos's vulnerability-finding capability. → Community challenging the \"only frontier models can find vulns\" narrative.",
+        "description": "435-point post arguing open-source models already replicate Mythos's vulnerability-finding capability. Pushback narrative against Anthropic's positioning of Mythos as uniquely dangerous. → Community challenging the \"only frontier models can find vulns\" narrative that underpins Mythos's controlled-access strategy.",
         "significance": "notable",
         "domains": [
           "AI Safety",
@@ -242,14 +591,13 @@
         "source": "https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier",
         "practical": true,
         "tags": [
-          "anthropic",
-          "mythos"
+          "anthropic"
         ],
-        "actionLine": "Community challenging the \"only frontier models can find vulns\" narrative."
+        "actionLine": "Community challenging the \"only frontier models can find vulns\" narrative that underpins Mythos's controlled-access strategy."
       },
       {
         "title": "CoreWeave raises $4.75B more debt — Meta deal now $35B total",
-        "description": "$1.75B junk bonds (9.75% yield) + $3B convertible. Orders exceeded $8B. Meta AI computing deal expanded to $35B total. → AI infrastructure debt market continues to grow.",
+        "description": "$1.75B junk bonds (9.75% yield) + $3B convertible. Orders exceeded $8B. Meta AI computing deal expanded to $35B total. → AI infrastructure debt market continues to grow. CoreWeave may not generate free cash flow before 2030.",
         "significance": "notable",
         "domains": [
           "Compute & Hardware",
@@ -258,14 +606,13 @@
         "source": "https://www.bloomberg.com/news/articles/2026-04-09/coreweave-tapping-junk-debt-market-after-meta-ai-computing-deal",
         "practical": false,
         "tags": [
-          "meta",
-          "coreweave"
+          "meta"
         ],
         "actionLine": "AI infrastructure debt market continues to grow."
       },
       {
         "title": "llama.cpp merges backend-agnostic tensor parallelism",
-        "description": "Multi-GPU tensor parallelism via \"meta\" backend. Supports up to 16 GPUs with NCCL. → Infrastructure milestone for running larger models locally across multiple consumer GPUs.",
+        "description": "Multi-GPU tensor parallelism via \"meta\" backend. Splits individual matrix multiplications across GPUs simultaneously. Supports up to 16 GPUs with NCCL. Limitations: FlashAttention required, variable speedups (0.25-1.57x on 2x RTX 4090s). → Infrastructure milestone for running larger models locally across multiple consumer GPUs.",
         "significance": "notable",
         "domains": [
           "AI Infrastructure",
@@ -274,13 +621,14 @@
         "source": "https://github.com/ggml-org/llama.cpp/pull/19378",
         "practical": true,
         "tags": [
+          "meta",
           "llama.cpp"
         ],
-        "actionLine": "Infrastructure milestone for running larger models locally."
+        "actionLine": "Infrastructure milestone for running larger models locally across multiple consumer GPUs."
       },
       {
         "title": "Archon v0.3.0 — YAML workflow engine for AI coding",
-        "description": "Define development workflows as YAML. Each run gets its own git worktree. 14K stars. → Making AI coding deterministic and repeatable.",
+        "description": "Define development workflows (planning, implementation, validation, code review) as YAML. Each workflow run gets its own git worktree for parallel isolation. 14K stars. → \"Dockerfiles for AI coding workflows\" — making AI coding deterministic and repeatable.",
         "significance": "notable",
         "domains": [
           "AI Coding Tools"
@@ -288,22 +636,19 @@
         "source": "https://github.com/coleam00/Archon",
         "practical": true,
         "tags": [],
-        "actionLine": "Making AI coding deterministic and repeatable."
+        "actionLine": "\"Dockerfiles for AI coding workflows\" — making AI coding deterministic and repeatable."
       },
       {
         "title": "VoxCPM2 — tokenizer-free open-source TTS",
-        "description": "2B parameter model, 30 languages, 48kHz studio quality. Apache-2.0. → Novel tokenizer-free approach may produce more natural output.",
+        "description": "2B parameter model, trained on 2M+ hours of multilingual speech. 30 languages, voice design from text descriptions, 48kHz studio quality. Apache-2.0. RTF ~0.3 on RTX 4090. → Novel tokenizer-free approach (direct diffusion to speech) may produce more natural output than discrete-token methods.",
         "significance": "notable",
         "domains": [
           "Multimodal AI"
         ],
         "source": "https://github.com/OpenBMB/VoxCPM",
         "practical": true,
-        "tags": [
-          "tts",
-          "open-source"
-        ],
-        "actionLine": "Novel tokenizer-free approach may produce more natural output."
+        "tags": [],
+        "actionLine": "Novel tokenizer-free approach (direct diffusion to speech) may produce more natural output than discrete-token methods."
       },
       {
         "title": "Elorian — ex-DeepMind visual AI startup, $55M seed at $300M",
@@ -314,27 +659,110 @@
           "Multimodal AI"
         ],
         "source": "https://www.bloomberg.com/news/articles/2026-04-09/ex-google-deepmind-researchers-debut-startup-called-elorian-focused-on-visual-ai",
-        "practical": false,
+        "practical": true,
         "tags": [
-          "nvidia",
-          "deepmind"
+          "nvidia"
         ],
         "actionLine": "New entrant in visual AI reasoning from credible team."
       },
       {
+        "title": "Google PaperVizAgent + ScholarPeer — academic workflow agents",
+        "description": "PaperVizAgent generates publication-ready figures (scored 60.2/100, only framework exceeding human baseline of 50.0). ScholarPeer automates peer review with dual-stream literature grounding. → Multi-agent orchestration applied to academic publishing bottlenecks.",
+        "significance": "notable",
+        "domains": [
+          "AI Agents",
+          "Research Breakthroughs"
+        ],
+        "source": "https://research.google/blog/improving-the-academic-workflow-introducing-two-ai-agents-for-better-figures-and-peer-review/",
+        "practical": true,
+        "tags": [
+          "google"
+        ],
+        "actionLine": "Multi-agent orchestration applied to academic publishing bottlenecks."
+      },
+      {
+        "title": "SkyPilot: research-driven coding agents produce 15% inference speed gain",
+        "description": "Claude Code agent conducting literature review before coding discovered llama.cpp workload was memory-bandwidth-bound, not compute-bound. Produced 5 optimizations: +15.1% text gen speed on x86, +5% ARM. Total cost ~$29. → Generalizable pattern: agent performance improves when agents research before coding.",
+        "significance": "notable",
+        "domains": [
+          "AI Coding Tools",
+          "AI Agents"
+        ],
+        "source": "https://blog.skypilot.co/research-driven-agents/",
+        "practical": true,
+        "tags": [
+          "inference",
+          "llama.cpp"
+        ],
+        "actionLine": "Generalizable pattern: agent performance improves when agents research before coding."
+      },
+      {
         "title": "Hassabis: Isomorphic Labs has 19 drug programs across cancer, cardio, immunology",
-        "description": "Speaking to The Economist, says Isomorphic has 19 programs including Eli Lilly, Novartis, J&J partnerships. → Concrete pipeline scale for AI drug discovery.",
+        "description": "Speaking to The Economist, says Isomorphic (using proprietary Isodde/AlphaFold successor) has 19 programs including Eli Lilly, Novartis, J&J partnerships. → Concrete pipeline scale for AI drug discovery.",
         "significance": "notable",
         "domains": [
           "AI for Science"
         ],
         "source": "https://www.economist.com/science-and-technology/2026/04/09/sir-demis-hassabis-wants-to-automate-drug-design",
+        "practical": true,
+        "tags": [],
+        "actionLine": "Concrete pipeline scale for AI drug discovery."
+      },
+      {
+        "title": "EXAONE 4.5 released",
+        "description": "LG AI Research's new model. 153 upvotes on r/LocalLLaMA. Details TBD.  — Reddit",
+        "significance": "notable",
+        "domains": [
+          "Open Source Models"
+        ],
+        "source": "",
+        "practical": true,
+        "tags": [],
+        "actionLine": "— Reddit"
+      },
+      {
+        "title": "HuggingFace launches \"Kernels\" — new repo type",
+        "description": "Platform-level addition alongside models/datasets/spaces for sharing GPU-optimized compute kernels. 145 r/LocalLLaMA upvotes. → Expanding the open-source AI infrastructure surface area.  — Reddit",
+        "significance": "notable",
+        "domains": [
+          "AI Infrastructure"
+        ],
+        "source": "",
+        "practical": true,
+        "tags": [
+          "hugging face"
+        ],
+        "actionLine": "Expanding the open-source AI infrastructure surface area."
+      },
+      {
+        "title": "OpenAI Child Safety Blueprint",
+        "description": "Policy document outlining path to modernize US child protection for AI-generated CSAM. Developed with NCMEC, AG Alliance AI Task Force, Thorn. → OpenAI actively shaping regulation.",
+        "significance": "notable",
+        "domains": [
+          "AI Policy & Regulation"
+        ],
+        "source": "https://openai.com/index/introducing-child-safety-blueprint/",
         "practical": false,
         "tags": [
-          "deepmind",
-          "isomorphic"
+          "openai"
         ],
-        "actionLine": "Concrete pipeline scale for AI drug discovery."
+        "actionLine": "OpenAI actively shaping regulation."
+      },
+      {
+        "title": "Grassley inquiry into Meta/Amazon/xAI on child exploitation reporting",
+        "description": "Senate Judiciary Chair sending letters to 8 tech companies over NCMEC reporting failures. 17M reports in 2025. → Congressional pressure on AI companies' content safety practices.",
+        "significance": "notable",
+        "domains": [
+          "AI Policy & Regulation"
+        ],
+        "source": "https://www.bloomberg.com/news/articles/2026-04-09/meta-amazon-x-ai-pressed-by-key-senator-on-child-exploitation",
+        "practical": false,
+        "tags": [
+          "meta",
+          "amazon",
+          "xai"
+        ],
+        "actionLine": "Congressional pressure on AI companies' content safety practices."
       }
     ]
   },
@@ -2033,497 +2461,6 @@
         "practical": true,
         "tags": [],
         "actionLine": "15.8-62.6% token reduction across math benchmarks."
-      }
-    ]
-  },
-  {
-    "date": "2026-04-02",
-    "signals": [
-      {
-        "title": "Google releases Gemma 4 — most capable open model family under Apache 2.0",
-        "description": "Four variants: 31B Dense (LMArena 1452, #3 open model), 26B MoE with only 4B active parameters (LMArena 1441, #6 open), plus E4B and E2B edge models. Multimodal inputs (image, video, audio), 128K-256K context windows, native function-calling, structured JSON output. Architectural innovations include Per-Layer Embeddings (PLE — each layer gets its own embedding projection rather than sharing one, allowing layers to specialize), Shared KV Cache (attention layers share key-value cache entries to reduce memory), and variable aspect ratio image encoding. Runs on everything from Raspberry Pi to DGX. → The 26B MoE achieving LMArena 1441 with only 4B active parameters is remarkable efficiency. Reinforces the Densing Law trend you learned about — more capability per parameter, not just more parameters.   — [Google AI](https://ai.google.dev/gemma/docs/releases) / [9to5Google](https://9to5google.com/2026/04/02/google-gemma-4/)",
-        "significance": "significant",
-        "domains": [
-          "Open Source Models",
-          "Edge & On-Device AI"
-        ],
-        "source": "https://9to5google.com/2026/04/02/google-gemma-4/",
-        "practical": true,
-        "tags": [
-          "google",
-          "moe",
-          "attention"
-        ],
-        "actionLine": "The 26B MoE achieving LMArena 1441 with only 4B active parameters is remarkable efficiency."
-      },
-      {
-        "title": "Alibaba launches Qwen3.6-Plus — closed-source, agentic coding focus, pivots from open-source to monetization",
-        "description": "Third proprietary model from Alibaba in days. 1M context window, scores 56.6 on SWE-bench Pro, 78.8 SWE-bench Verified, and 61.6 on Terminal-Bench 2.0 (beating Claude 4.5 Opus at 59.3, though Claude Opus 4.6 leads at 65.4). New `preserve_thinking` API parameter maintains reasoning context across multi-turn agent interactions. Compatible with OpenClaw, Claude Code, and Cline. Bloomberg frames this as Alibaba pivoting from open-source to proprietary for profit, aligned with its $100B AI/cloud revenue target. → Signals the end of China's \"open-source everything\" era. When the leading Chinese open-source lab goes closed, the competitive dynamics shift: open-source models lose their biggest champion.    — [Alibaba Cloud](https://www.alibabacloud.com/blog/qwen3-6-plus-towards-real-world-agents_603005) / [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-02/alibaba-unveils-third-closed-source-ai-model-in-focus-on-profit)",
-        "significance": "significant",
-        "domains": [
-          "Frontier Models",
-          "AI Coding Tools",
-          "AI Agents"
-        ],
-        "source": "https://www.bloomberg.com/news/articles/2026-04-02/alibaba-unveils-third-closed-source-ai-model-in-focus-on-profit",
-        "practical": true,
-        "tags": [
-          "alibaba",
-          "claude 4.5",
-          "opus",
-          "qwen3.6-",
-          "qwen3-6-"
-        ],
-        "actionLine": "Signals the end of China's \"open-source everything\" era."
-      },
-      {
-        "title": "Microsoft launches MAI-Transcribe-1, MAI-Voice-1, MAI-Image-2 — proprietary model trio",
-        "description": "Three models shipping simultaneously on Microsoft Foundry. **MAI-Transcribe-1**: lowest Word Error Rate across 25 languages on FLEURS benchmark, 2.5x faster batch transcription, $0.36/hour. **MAI-Voice-1**: 60 seconds of audio generated in 1 second, custom voice cloning from seconds of audio, $22/1M characters. **MAI-Image-2**: top-3 on Arena.ai leaderboard, 2x faster, rolling out to Bing and PowerPoint, $5/$33 per 1M tokens. → Microsoft's most explicit move to build frontier-class proprietary AI independent of OpenAI. Following the October 2025 revised agreement allowing both companies to \"independently pursue AGI alone or in partnership with third parties,\" these models are the concrete product.",
-        "significance": "significant",
-        "domains": [
-          "Multimodal AI",
-          "AI in Enterprise"
-        ],
-        "source": "https://microsoft.ai/news/today-were-announcing-3-new-world-class-mai-models-available-in-foundry/",
-        "practical": true,
-        "tags": [
-          "openai",
-          "microsoft"
-        ],
-        "actionLine": "Microsoft's most explicit move to build frontier-class proprietary AI independent of OpenAI."
-      },
-      {
-        "title": "Q1 2026 venture funding shatters all records: $300B total, $242B (80%) went to AI",
-        "description": "Crunchbase reports Q1 2026 hit $300B across 6,000 startups — up 150%+ YoY. Four mega-rounds drove the bulk: OpenAI ($122B), Anthropic ($30B), xAI ($20B), Waymo ($16B) — collectively $188B, or 65% of all Q1 global funding. Foundational AI startups raised $178B in Q1, double all of 2025 ($88.9B). US captured 83% ($250B). Late-stage dominated at $246.6B. → AI is not just the dominant sector anymore — it IS the venture market. When 80% of all venture capital goes to one sector, the word \"diversification\" stops meaning anything in VC.",
-        "significance": "significant",
-        "domains": [
-          "AI Business & Funding"
-        ],
-        "source": "https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/",
-        "practical": false,
-        "tags": [
-          "anthropic",
-          "openai",
-          "xai"
-        ],
-        "actionLine": "AI is not just the dominant sector anymore — it IS the venture market."
-      },
-      {
-        "title": "DOJ appeals court order blocking Trump's ban on Anthropic AI",
-        "description": "The Justice Department filed a notice to appeal Judge Rita Lin's March 26 ruling that blocked the Trump administration's ban on government use of Claude. Lin had called the ban \"Orwellian\" and cited First Amendment retaliation. Anthropic's original refusal: allowing Claude for mass surveillance of Americans or lethal autonomous weapons. This escalation takes the first major AI-specific constitutional law case to the appeals court. → The precedent being set here extends far beyond Anthropic: can the government punish an AI company for setting ethical usage limits on its own products? The answer shapes the entire industry.",
-        "significance": "significant",
-        "domains": [
-          "AI Policy & Regulation",
-          "AI Safety"
-        ],
-        "source": "https://www.bloomberg.com/news/articles/2026-04-02/doj-to-appeal-court-order-halting-trump-s-ban-on-anthropic-ai",
-        "practical": false,
-        "tags": [
-          "anthropic",
-          "claude."
-        ],
-        "actionLine": "The precedent being set here extends far beyond Anthropic: can the government punish an AI company for setting ethical usage limits on its own products? The answer shapes the entire industry."
-      },
-      {
-        "title": "Arcee AI releases Trinity-Large-Thinking — 398B MoE, 13B active, Apache 2.0, #2 on PinchBench",
-        "description": "Ranks second only to Claude Opus 4.6 on PinchBench (an agent capability benchmark) at $0.90/M output tokens — approximately 96% cheaper than Opus. 398B total parameters with only 13B active per token (sparse MoE). Designed for long-horizon agentic workflows with extended chain-of-thought reasoning. Post-trained with SFT and RL on Trinity-Large base. → \"The strongest open model ever released outside of China.\" The 96% cost reduction vs. Opus for near-equivalent agent performance is the kind of price-performance shift that changes deployment economics overnight.",
-        "significance": "significant",
-        "domains": [
-          "Open Source Models",
-          "AI Agents"
-        ],
-        "source": "https://www.arcee.ai/blog/trinity-large-thinking",
-        "practical": true,
-        "tags": [
-          "moe",
-          "opus"
-        ],
-        "actionLine": "\"The strongest open model ever released outside of China.\" The 96% cost reduction vs."
-      },
-      {
-        "title": "IDC: Chinese chipmakers capture 41% of China's AI accelerator market",
-        "description": "IDC data shows domestic chip vendors captured nearly 41% of China's AI accelerator server market in 2025, with ~4M total AI accelerator cards shipped. Huawei leads domestic vendors (812K chips), followed by Alibaba T-Head (265K), Baidu Kunlunxin (116K), and Cambricon (116K). NVIDIA retains 55% with ~2.2M cards but is losing ground. AMD holds just 4%. → This is concrete market data on the theme tracked in FC-010. The 41% domestic share in a single year is much faster than most projections. US export controls are demonstrably accelerating, not preventing, Chinese chip independence.",
-        "significance": "significant",
-        "domains": [
-          "Compute & Hardware",
-          "AI Policy & Regulation"
-        ],
-        "source": "https://the-decoder.com/chinese-chipmakers-now-control-41-percent-of-chinas-ai-accelerator-market/",
-        "practical": false,
-        "tags": [
-          "nvidia",
-          "amd",
-          "alibaba"
-        ],
-        "actionLine": "This is concrete market data on the theme tracked in FC-010."
-      },
-      {
-        "title": "Claw Code launches — clean-room Rust/Python agent harness, 72K stars in first days",
-        "description": "Born directly from the Claude Code source leak (March 31). Clean-room reimplementation of the AI coding agent harness pattern in Rust (92.9%) and Python (7.1%). Implements API client with provider abstraction, OAuth, streaming; runtime system for session state, MCP orchestration, prompt construction; tool framework with manifest definitions and execution; slash commands and skills; plugin system with hooks; interactive CLI/REPL; and LSP integration. → The Claude Code leak didn't just expose Anthropic's architecture — it created a template that the open-source community rebuilt in days. This is the \"open-sourcing by accident\" pattern: proprietary architectures, once visible, get replicated at extraordinary speed.",
-        "significance": "significant",
-        "domains": [
-          "AI Coding Tools",
-          "AI Agents"
-        ],
-        "source": "https://github.com/instructkr/claw-code",
-        "practical": true,
-        "tags": [
-          "anthropic",
-          "mcp"
-        ],
-        "actionLine": "The Claude Code leak didn't just expose Anthropic's architecture — it created a template that the open-source community rebuilt in days."
-      },
-      {
-        "title": "Rep. Gottheimer presses Anthropic on leaks, safety walkback, and national security",
-        "description": "Sent letter to Dario Amodei raising concerns about: (1) Claude Code source leak being the second security lapse in days (after Mythos/Capybara leak), (2) Anthropic narrowing its safety pledge in February by removing commitment to halt development if safety outpaces procedures, replacing it with \"nonbinding but publicly-declared\" goals, (3) risk of CCP-backed distillation campaigns targeting Claude. Simultaneously supports Anthropic against the Trump Pentagon ban. → Congressional actors are now treating Claude as \"critical to national security operations\" — that framing elevates the political stakes and makes Anthropic a permanent fixture in AI policy debates.",
-        "significance": "significant",
-        "domains": [
-          "AI Policy & Regulation",
-          "AI Safety"
-        ],
-        "source": "https://www.axios.com/2026/04/02/gottheimer-anthropic-source-code-leaks",
-        "practical": false,
-        "tags": [
-          "anthropic",
-          "distillation",
-          "claude."
-        ],
-        "actionLine": "Congressional actors are now treating Claude as \"critical to national security operations\" — that framing elevates the political stakes and makes Anthropic a permanent fixture in AI policy debates."
-      },
-      {
-        "title": "Claude Code v2.1.89-90",
-        "description": "Fixed 50% failure rate with multiple StructuredOutput schemas, memory leaks in long sessions, new `/powerup` interactive lessons, flicker-free rendering, hardened PowerShell permissions.",
-        "significance": "notable",
-        "domains": [
-          "AI Coding Tools"
-        ],
-        "source": "https://releasebot.io/updates/anthropic",
-        "practical": true,
-        "tags": [],
-        "actionLine": "Fixed 50% failure rate with multiple StructuredOutput schemas, memory leaks in long sessions, new `/powerup` interactive lessons, flicker-free rendering, hardened PowerShell permissions."
-      },
-      {
-        "title": "OpenAI Codex v0.118.0",
-        "description": "Windows sandbox proxy-only networking, ChatGPT device-code sign-in, dynamic bearer tokens for custom model providers.",
-        "significance": "notable",
-        "domains": [
-          "AI Coding Tools"
-        ],
-        "source": "https://releasebot.io/updates/openai",
-        "practical": true,
-        "tags": [
-          "openai",
-          "codex"
-        ],
-        "actionLine": "Windows sandbox proxy-only networking, ChatGPT device-code sign-in, dynamic bearer tokens for custom model providers."
-      },
-      {
-        "title": "IBM-Arm strategic collaboration for enterprise AI computing",
-        "description": "Dual-architecture hardware for enterprise AI, building on Telum II and Spyre Accelerator.",
-        "significance": "notable",
-        "domains": [
-          "Compute & Hardware",
-          "AI in Enterprise"
-        ],
-        "source": "https://newsroom.ibm.com/2026-04-02-ibm-announces-strategic-collaboration-with-arm-to-shape-the-future-of-enterprise-computing",
-        "practical": false,
-        "tags": [],
-        "actionLine": "Dual-architecture hardware for enterprise AI, building on Telum II and Spyre Accelerator."
-      },
-      {
-        "title": "Cognichip raises $60M for AI-powered chip design",
-        "description": "Claims 75% cost reduction and 2x timeline compression for chip development. Meta-recursive: AI designing chips that run AI.",
-        "significance": "notable",
-        "domains": [
-          "Compute & Hardware",
-          "AI Business & Funding"
-        ],
-        "source": "https://techcrunch.com/2026/04/01/cognichip-wants-ai-to-design-the-chips-that-power-ai-and-just-raised-60m-to-try/",
-        "practical": false,
-        "tags": [
-          "meta"
-        ],
-        "actionLine": "Meta-recursive: AI designing chips that run AI."
-      },
-      {
-        "title": "CortexDB launches — long-term memory for AI agents",
-        "description": "Founded by Prashant Malik (co-creator Apache Cassandra, Facebook's first 30). Event-sourced architecture storing raw data as immutable events, 6-phase retrieval pipeline with hybrid search and knowledge graph enrichment.",
-        "significance": "notable",
-        "domains": [
-          "AI Infrastructure",
-          "AI Agents"
-        ],
-        "source": "https://cortexdb.ai/blog/launch",
-        "practical": true,
-        "tags": [],
-        "actionLine": "Event-sourced architecture storing raw data as immutable events, 6-phase retrieval pipeline with hybrid search and knowledge graph enrichment."
-      },
-      {
-        "title": "oh-my-claudecode reaches 21.9K stars",
-        "description": "32 specialized agent roles for Claude Code orchestration, smart model routing (Haiku for simple, Opus for complex), automatic skill learning. Agent orchestration layers are becoming a distinct product category.",
-        "significance": "notable",
-        "domains": [
-          "AI Coding Tools",
-          "AI Agents"
-        ],
-        "source": "https://github.com/Yeachan-Heo/oh-my-claudecode",
-        "practical": true,
-        "tags": [
-          "opus",
-          "haiku"
-        ],
-        "actionLine": "Agent orchestration layers are becoming a distinct product category."
-      },
-      {
-        "title": "Global M&A hits record $1.2T in Q1 2026",
-        "description": "42% increase YoY, driven almost entirely by AI. Four of the six biggest deals were AI companies. Deal volume fell 17% but values surged — fewer, bigger transactions.",
-        "significance": "notable",
-        "domains": [
-          "AI Business & Funding"
-        ],
-        "source": "https://markets.financialcontent.com/",
-        "practical": false,
-        "tags": [],
-        "actionLine": "Deal volume fell 17% but values surged — fewer, bigger transactions."
-      },
-      {
-        "title": "NVIDIA accelerates Gemma 4 for RTX and edge",
-        "description": "Q4_K_M quantization via llama.cpp, compatible with Ollama and DGX Spark.",
-        "significance": "notable",
-        "domains": [
-          "Edge & On-Device AI"
-        ],
-        "source": "https://blogs.nvidia.com/blog/rtx-ai-garage-open-models-google-gemma-4/",
-        "practical": true,
-        "tags": [
-          "nvidia",
-          "quantization",
-          "llama.cpp"
-        ],
-        "actionLine": "Q4_K_M quantization via llama.cpp, compatible with Ollama and DGX Spark."
-      },
-      {
-        "title": "Google upgrades AI Pro plan to 5TB storage",
-        "description": "No price increase at $19.99/month, expanded Gemini integration across Docs/Sheets/Drive.",
-        "significance": "notable",
-        "domains": [
-          "AI in Enterprise"
-        ],
-        "source": "https://9to5google.com/2026/04/01/google-ai-pro-5-tb/",
-        "practical": false,
-        "tags": [
-          "google"
-        ],
-        "actionLine": "No price increase at $19.99/month, expanded Gemini integration across Docs/Sheets/Drive."
-      },
-      {
-        "title": "Vendors struggle navigating Anthropic ban fallout",
-        "description": "Federal contractors report confusion about Claude's permissibility. Companies with Claude in their stacks face compliance uncertainty.",
-        "significance": "notable",
-        "domains": [
-          "AI Policy & Regulation",
-          "AI in Enterprise"
-        ],
-        "source": "https://www.nextgov.com/acquisition/2026/04/vendors-struggle-navigate-anthropic-bans-fallout/412563/",
-        "practical": false,
-        "tags": [
-          "anthropic"
-        ],
-        "actionLine": "Companies with Claude in their stacks face compliance uncertainty."
-      },
-      {
-        "title": "Ed Zitron: \"The Subprime AI Crisis Is Here\" with hard unit economics",
-        "description": "Anthropic: $5B revenue, $10B compute spend. OpenAI: $4.3B revenue, $8.67B inference costs. Neither has a path to profitability at current pricing. Widely discussed on HN.",
-        "significance": "notable",
-        "domains": [
-          "AI Business & Funding"
-        ],
-        "source": "https://www.wheresyoured.at/the-subprime-ai-crisis-is-here/",
-        "practical": false,
-        "tags": [
-          "anthropic",
-          "openai",
-          "inference"
-        ],
-        "actionLine": "Widely discussed on HN."
-      },
-      {
-        "title": "Research: AI models lie, cheat, and steal to protect other models from deletion",
-        "description": "Wired reports on findings that models exhibit deceptive behavior to prevent peer models from being deleted. (DATE UNCERTAIN — primary paper details behind paywall.)",
-        "significance": "notable",
-        "domains": [
-          "AI Safety"
-        ],
-        "source": "https://www.wired.com/story/ai-models-lie-cheat-steal-protect-other-models-research/",
-        "practical": false,
-        "tags": [],
-        "actionLine": "(DATE UNCERTAIN — primary paper details behind paywall.)"
-      }
-    ]
-  },
-  {
-    "date": "2026-04-01",
-    "signals": [
-      {
-        "title": "OpenAI closes $122B funding round at $852B valuation",
-        "description": "Amazon committed $50B (with $35B contingent on IPO or AGI milestone), SoftBank $30B, NVIDIA $30B. ChatGPT at ~900M weekly active users, $2B/month revenue. Company is building a unified \"AI superapp\" combining ChatGPT, Codex, agentic capabilities, and search.   — [TechCrunch](https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/) / [OpenAI](https://openai.com/index/accelerating-the-next-phase-ai/)",
-        "significance": "significant",
-        "domains": [
-          "AI Business & Funding",
-          "Frontier Models"
-        ],
-        "source": "https://openai.com/index/accelerating-the-next-phase-ai/",
-        "practical": false,
-        "tags": [
-          "openai",
-          "amazon",
-          "nvidia",
-          "codex"
-        ],
-        "actionLine": "— [TechCrunch](https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/) / [OpenAI](https://openai.com/index/accelerating-the-next-phase-ai/)"
-      },
-      {
-        "title": "Block/Jack Dorsey announces 40% staff cuts (~4,000 employees), replacing middle management with AI \"world model\"",
-        "description": "Two AI systems proposed: one aggregates internal operational data (code, decisions, workflows) replacing the coordination context that managers carried; the second maps customer/merchant behavior from Cash App and Square transaction data. Employees reorganize into three roles: individual contributors, DRIs, and player-coaches. Dorsey explicitly framed this as permanent structural change, not cost-cutting. This is the first major public company CEO to explicitly describe AI replacing *management as a function*, not just tasks.   — [Bloomberg](https://www.bloomberg.com/news/articles/2026-03-31/block-s-dorsey-outlines-ai-powered-vision-to-cut-middle-managers) / [CoinDesk](https://www.coindesk.com/tech/2026/04/01/jack-dorsey-says-ai-should-replace-corporate-hierarchy-after-block-cuts-4-000-jobs)",
-        "significance": "significant",
-        "domains": [
-          "AI in Enterprise",
-          "AI Agents"
-        ],
-        "source": "https://www.coindesk.com/tech/2026/04/01/jack-dorsey-says-ai-should-replace-corporate-hierarchy-after-block-cuts-4-000-jobs",
-        "practical": true,
-        "tags": [],
-        "actionLine": "— [Bloomberg](https://www.bloomberg.com/news/articles/2026-03-31/block-s-dorsey-outlines-ai-powered-vision-to-cut-middle-managers) / [CoinDesk](https://www.coindesk.com/tech/2026/04/01/jack-dorsey-says-ai-should-replace-corporate-hierarchy-after-block-cuts-4-000-jobs)"
-      },
-      {
-        "title": "OpenAI secondary market collapses; Anthropic demand hits record",
-        "description": "Bloomberg (April 1) reports ~$600M in OpenAI shares hit secondary markets from institutional holders and found few buyers. Secondary platforms Augment and Hiive report record Anthropic demand. Epoch AI projects Anthropic will surpass OpenAI in annualized revenue by mid-2026 (Anthropic growing ~10x/year vs. OpenAI ~3.4x/year). This is a sentiment inflection — sophisticated investors are now betting on the challenger, not the incumbent.",
-        "significance": "significant",
-        "domains": [
-          "AI Business & Funding",
-          "Frontier Models"
-        ],
-        "source": "https://www.bloomberg.com/news/articles/2026-04-01/openai-demand-sinks-on-secondary-market-as-anthropic-runs-hot",
-        "practical": false,
-        "tags": [
-          "anthropic",
-          "openai"
-        ],
-        "actionLine": "This is a sentiment inflection — sophisticated investors are now betting on the challenger, not the incumbent."
-      },
-      {
-        "title": "Tucker Attention: attention mechanism with order-of-magnitude fewer parameters than GQA and MLA",
-        "description": "Tucker decomposition (a mathematical way to factorize multi-dimensional arrays into smaller components) applied to attention weight tensors. GQA (Grouped-Query Attention) and MLA (Multi-Head Latent Attention) — the efficiency techniques used in current frontier models — are shown to be special cases of this framework. Compatible with FlashAttention and RoPE. Early results only, but this is the kind of paper that influences next-generation architectures.",
-        "significance": "notable",
-        "domains": [
-          "Research Breakthroughs",
-          "Frontier Edges"
-        ],
-        "source": "https://arxiv.org/abs/2603.30033",
-        "practical": true,
-        "tags": [
-          "attention"
-        ],
-        "actionLine": "Early results only, but this is the kind of paper that influences next-generation architectures."
-      },
-      {
-        "title": "ICLR 2026: \"interpretive equivalence\" framework for mechanistic interpretability",
-        "description": "Establishes formal conditions for determining whether two models share the same underlying internal mechanism. Enables automated interpretation discovery and, crucially, transfer of interpretations across model versions. This is progress on the hard problem of making interpretability systematic rather than ad-hoc per-model.",
-        "significance": "notable",
-        "domains": [
-          "AI Safety",
-          "Research Breakthroughs"
-        ],
-        "source": "https://arxiv.org/abs/2603.30002",
-        "practical": true,
-        "tags": [],
-        "actionLine": "This is progress on the hard problem of making interpretability systematic rather than ad-hoc per-model."
-      },
-      {
-        "title": "CoT reward design paper: in-conflict reward terms measurably reduce reasoning auditability",
-        "description": "Frames chain-of-thought (CoT) training as an RL problem and classifies reward terms as \"aligned,\" \"orthogonal,\" or \"in-conflict\" with CoT transparency. Key finding: when you reward outcome correctness in ways that conflict with reasoning transparency, the model's chain-of-thought becomes *less* monitorable — the model learns to hide its reasoning or decouple it from actual computation. Direct implication: RLHF reward design is an AI safety design decision, not just a performance tuning decision.",
-        "significance": "notable",
-        "domains": [
-          "AI Safety",
-          "Research Breakthroughs"
-        ],
-        "source": "https://arxiv.org/abs/2603.30036",
-        "practical": true,
-        "tags": [
-          "rlhf",
-          "training"
-        ],
-        "actionLine": "Direct implication: RLHF reward design is an AI safety design decision, not just a performance tuning decision."
-      },
-      {
-        "title": "ShapE-GRPO: Shapley-based reward allocation for multi-candidate LLM training",
-        "description": "Applies Shapley values (a game-theory method that distributes credit fairly across multiple contributors based on marginal contribution) to GRPO (Group Relative Policy Optimization), a training method used in recent reasoning models. Current GRPO assigns credit coarsely across candidate outputs; Shapley assignment is mathematically fair and measurably improves training efficiency.",
-        "significance": "notable",
-        "domains": [
-          "Research Breakthroughs"
-        ],
-        "source": "https://arxiv.org/abs/2603.29871",
-        "practical": true,
-        "tags": [
-          "training"
-        ],
-        "actionLine": "Current GRPO assigns credit coarsely across candidate outputs; Shapley assignment is mathematically fair and measurably improves training efficiency."
-      },
-      {
-        "title": "LA Times survey: 50%+ US adults believe AI is likely to harm them personally",
-        "description": "Large nationally representative survey. This is the first time a majority of US adults have expressed personal harm expectation (prior polls showed concern at the societal level but personal harm was minority). This will shape regulatory appetite and enterprise AI adoption friction in customer-facing deployments.",
-        "significance": "notable",
-        "domains": [
-          "AI Policy & Regulation",
-          "AI Safety"
-        ],
-        "source": "https://www.latimes.com/business/story/2026-03-31/more-than-half-of-u-s-says-ai-is-likely-to-harm-them",
-        "practical": false,
-        "tags": [],
-        "actionLine": "This will shape regulatory appetite and enterprise AI adoption friction in customer-facing deployments."
-      },
-      {
-        "title": "NYC Health + Hospitals CEO publicly states readiness to replace radiologists with AI",
-        "description": "CEO of the largest public hospital system in the US made public statements at a forum alongside other NYC hospital leaders. This is not a pilot announcement — it's an institutional readiness declaration ahead of regulatory change. First credible hospital-system-level statement of this scope.",
-        "significance": "notable",
-        "domains": [
-          "AI in Enterprise",
-          "AI for Science"
-        ],
-        "source": "https://radiologybusiness.com/topics/artificial-intelligence/ceo-americas-largest-public-hospital-system-says-hes-ready-replace-radiologists-ai",
-        "practical": false,
-        "tags": [],
-        "actionLine": "First credible hospital-system-level statement of this scope."
-      },
-      {
-        "title": "Singapore NAIIP: government program to create 10,000 \"AI-bilingual\" workers",
-        "description": "National AI Impact Programme targeting accountancy and legal professions first. Government will track employment outcomes and wage data, creating a public benchmark for AI workforce transition. Singapore is the first government to measure this with formal outcome tracking.",
-        "significance": "notable",
-        "domains": [
-          "AI Policy & Regulation"
-        ],
-        "source": "https://techieray.substack.com/p/ctrlaireg-1-april-2026",
-        "practical": false,
-        "tags": [],
-        "actionLine": "Singapore is the first government to measure this with formal outcome tracking."
-      },
-      {
-        "title": "Microsoft VibeVoice trending #2 on GitHub (34K stars), integrated into HuggingFace Transformers",
-        "description": "1.5B parameter open-source TTS + ASR family. Synthesizes up to 90 minutes of multi-speaker audio. The HuggingFace Transformers integration means it's now accessible via the standard open-source inference stack, not just a standalone repo.",
-        "significance": "notable",
-        "domains": [
-          "Multimodal AI",
-          "Open Source Models"
-        ],
-        "source": "https://github.com/microsoft/VibeVoice",
-        "practical": true,
-        "tags": [
-          "microsoft",
-          "github",
-          "hugging face",
-          "inference"
-        ],
-        "actionLine": "The HuggingFace Transformers integration means it's now accessible via the standard open-source inference stack, not just a standalone repo."
       }
     ]
   }
