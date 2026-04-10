@@ -1,6 +1,6 @@
 {
   "name": "eigen-ai-radar-mcp",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MCP server for Eigen AI Terminal — AI landscape intelligence for agents. 11 tools: today's signals, topic deep-dives, trends, blockers, speed metrics, predictions, wiki search, and delta tracking. Public read-only data, no auth, no user data uploaded.",
   "type": "module",
   "bin": "./dist/index.js",

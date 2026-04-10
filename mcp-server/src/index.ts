@@ -33,6 +33,7 @@ const __dirname = path.dirname(__filename);
 interface Signal {
   title: string;
   description: string;
+  actionLine?: string;
   nodes: string[];
   nodeNames: string[];
   source: string;
@@ -327,10 +328,11 @@ function fmtSignal(s: Signal, significance: string): string {
       : s.nodes.map(dn).join(", ");
   const actionable = s.practical !== false ? "Yes" : "No";
   const tags = s.tags?.length ? `\nTags: ${s.tags.join(", ")}` : "";
+  const action = s.actionLine ? `\n**Why it matters:** ${s.actionLine}` : "";
   return [
     `### ${s.title}`,
     `Domains: ${domains} | Significance: ${significance} | Actionable: ${actionable}${tags}`,
-    "",
+    action,
     s.description,
     s.source ? `\nSource: ${s.source}` : "",
   ]

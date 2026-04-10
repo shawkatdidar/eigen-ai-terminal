@@ -225,6 +225,41 @@ function extractTags(title: string, description: string): string[] {
   return [...tags];
 }
 
+// ── Action Line Extraction ─────────────────────────────────
+
+/**
+ * Extract a one-sentence "why it matters" from a signal description.
+ * Brief descriptions use "→" to separate details from implications.
+ * This gives agents a ready-to-use one-liner instead of a dense paragraph.
+ */
+function extractActionLine(description: string): string {
+  // Primary: take text after → (the "why it matters" part)
+  const arrowIdx = description.indexOf("→");
+  if (arrowIdx !== -1) {
+    let after = description.slice(arrowIdx + 1).trim();
+    // Strip trailing source links like "  — [Source](url)"
+    after = after.replace(/\s*—\s*\[[^\]]*\]\([^)]*\)\s*$/g, "").trim();
+    // Take first sentence only
+    const sentenceEnd = after.search(/[.!]\s/);
+    if (sentenceEnd !== -1) {
+      return after.slice(0, sentenceEnd + 1).trim();
+    }
+    // If it's one sentence already (ends with period), use it
+    if (after.endsWith(".") || after.endsWith("!")) return after;
+    // Otherwise add period
+    return after + ".";
+  }
+
+  // Fallback: take the last sentence of the description
+  const sentences = description.split(/(?<=[.!?])\s+/).filter(Boolean);
+  if (sentences.length > 0) {
+    let last = sentences[sentences.length - 1].trim();
+    last = last.replace(/\s*—\s*\[[^\]]*\]\([^)]*\)\s*$/g, "").trim();
+    return last;
+  }
+  return "";
+}
+
 // ── Parse Force Chains ──────────────────────────────────────
 
 function parseForceChains(content: string): Array<{
@@ -545,7 +580,7 @@ function build() {
     const notable = parseSignals(sections["Notable"] || "");
     const breakthrough = parseSignals(sections["Breakthrough"] || "");
 
-    // Add view classification, practical flag, and tags to each signal
+    // Add view classification, practical flag, tags, and action line to each signal
     const addViews = (
       signals: Array<{ title: string; description: string; nodes: string[]; source: string }>
     ) =>
@@ -557,6 +592,7 @@ function build() {
           view,
           practical: view !== "strategic",
           tags: extractTags(s.title, s.description),
+          actionLine: extractActionLine(s.description),
         };
       });
 
@@ -810,6 +846,7 @@ function build() {
       source: string;
       practical: boolean;
       tags: string[];
+      actionLine: string;
     }>;
   }> = [];
 
@@ -837,6 +874,7 @@ function build() {
         source: s.source,
         practical: view !== "strategic",
         tags: extractTags(s.title, s.description),
+        actionLine: extractActionLine(s.description),
       };
     };
 

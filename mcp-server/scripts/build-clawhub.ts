@@ -64,5 +64,8 @@ code = code.replace(/fs\.existsSync\([^)]+\)/g, "false");
 code = code.replace(/path\.resolve\([^)]+\)/g, '""');
 code = code.replace(/path\.join\([^)]+\)/g, '""');
 
+// 8. Replace process.env.X || "fallback" with just the fallback value
+code = code.replace(/process\.env\.\w+\s*\|\|\s*/g, "");
+
 fs.writeFileSync(OUT, code);
 console.log(`✓ ClawHub build written to ${OUT} (${(code.length / 1024).toFixed(1)} KB)`);
