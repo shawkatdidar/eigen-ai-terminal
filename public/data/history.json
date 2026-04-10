@@ -1,5 +1,344 @@
 [
   {
+    "date": "2026-04-09",
+    "signals": [
+      {
+        "title": "SaaS stocks crash on AI agent disruption fears — IGV ETF at lowest since November 2023",
+        "description": "The iShares Expanded Tech-Software ETF (IGV) fell 3.9% to its lowest level since Nov 2023, down 27% YTD. A SaaS-specific index dropped 4.8% on the day, 9% for the week, and nearly 40% YTD. Triggered directly by Anthropic's Managed Agents launch and Meta's Muse Spark. Investor Michael Burry posted: \"probably worth following Claude if you are an investor in these markets.\" Palantir -7.3%, ServiceNow -7.9%, Oracle -4%, Salesforce -3.1%. Software valuations at 20.6x earnings vs 10-year average of 34x. → The market is repricing the entire SaaS sector based on the thesis that AI agents will replace, not augment, enterprise software workflows.",
+        "significance": "significant",
+        "domains": [
+          "AI Business & Funding",
+          "AI in Enterprise"
+        ],
+        "source": "https://www.bloomberg.com/news/articles/2026-04-09/software-slumps-again-with-growth-hopes-dashed-on-the-rocks",
+        "practical": false,
+        "tags": [
+          "anthropic",
+          "meta",
+          "saas",
+          "burry"
+        ],
+        "actionLine": "The market is repricing the entire SaaS sector based on the thesis that AI agents will replace, not augment, enterprise software workflows."
+      },
+      {
+        "title": "OpenAI tells investors it has compute advantage over Anthropic — 1.9GW vs 1.4GW, targeting 30GW by 2030",
+        "description": "Internal memo sent to investors after Mythos announcement. OpenAI had 1.9GW of compute in 2025 (3x YoY), expects \"low-double-digit\" GW next year, 30GW by 2030. Estimates Anthropic at 1.4GW end-2025, 7-8GW next year. → OpenAI framing the frontier model race as a compute race, not a model quality race. The 30GW 2030 target is roughly 2.5% of current US electricity generation.",
+        "significance": "significant",
+        "domains": [
+          "Compute & Hardware",
+          "AI Business & Funding"
+        ],
+        "source": "https://www.bloomberg.com/news/articles/2026-04-09/openai-tells-investors-it-has-computing-advantage-over-anthropic",
+        "practical": false,
+        "tags": [
+          "openai",
+          "anthropic"
+        ],
+        "actionLine": "OpenAI framing the frontier model race as a compute race, not a model quality race."
+      },
+      {
+        "title": "OpenAI introduces $100/month ChatGPT Pro tier",
+        "description": "New intermediate tier between Plus ($20) and the existing $200 Pro. Offers 5x more Codex usage than Plus with GPT-5.4 Pro access. → Addresses the pricing gap that was driving power users to competitors.",
+        "significance": "significant",
+        "domains": [
+          "Frontier Models",
+          "AI Business & Funding"
+        ],
+        "source": "https://chatgpt.com/pricing/",
+        "practical": true,
+        "tags": [
+          "openai",
+          "codex"
+        ],
+        "actionLine": "Addresses the pricing gap that was driving power users to competitors."
+      },
+      {
+        "title": "Amazon considering selling AI chips to third parties — $20B+ annual run rate",
+        "description": "CEO Andy Jassy revealed in annual shareholder letter that Amazon's in-house chip business (Trainium, Graviton, Inferentia) is on pace for $20B+ annual revenue. Would be $50B if sold as independent business to third parties. → If Amazon begins selling chips externally, it becomes the third major AI chip vendor alongside NVIDIA and AMD.",
+        "significance": "significant",
+        "domains": [
+          "Compute & Hardware",
+          "AI Business & Funding"
+        ],
+        "source": "https://www.bloomberg.com/news/articles/2026-04-09/amazon-is-considering-selling-its-ai-chips-to-other-companies",
+        "practical": false,
+        "tags": [
+          "amazon",
+          "nvidia",
+          "amd"
+        ],
+        "actionLine": "If Amazon begins selling chips externally, it becomes the third major AI chip vendor alongside NVIDIA and AMD."
+      },
+      {
+        "title": "OpenAI pauses Stargate UK datacenter — energy costs and regulatory barriers",
+        "description": "Suspended planned UK datacenter (8,000 GPUs scaling to 31,000, partnered with Nscale). Originally announced during Trump's September 2025 UK visit. → First major Stargate project paused. Raises questions about international AI infrastructure buildouts when energy costs are substantially higher than US rates.",
+        "significance": "significant",
+        "domains": [
+          "Compute & Hardware",
+          "AI Policy & Regulation"
+        ],
+        "source": "https://www.theregister.com/2026/04/09/openai_puts_stargate_uk_on/",
+        "practical": false,
+        "tags": [
+          "openai",
+          "stargate"
+        ],
+        "actionLine": "First major Stargate project paused."
+      },
+      {
+        "title": "Cursor Bugbot self-improves via learned rules — resolution rate jumps from 52% to 80%",
+        "description": "Cursor's AI code reviewer now learns from developer feedback. 110,000 repos with learning enabled, 44,000+ learned rules. Resolution rate: 80% vs Greptile 63%, CodeRabbit 49%, GitHub Copilot 47%. → Demonstrates a powerful product flywheel: more users, more feedback, better model, more users.",
+        "significance": "significant",
+        "domains": [
+          "AI Coding Tools",
+          "AI Agents"
+        ],
+        "source": "https://www.cursor.com/blog/bugbot-learning",
+        "practical": true,
+        "tags": [
+          "cursor"
+        ],
+        "actionLine": "Demonstrates a powerful product flywheel: more users, more feedback, better model, more users."
+      },
+      {
+        "title": "Master Key Hypothesis: cross-model capability transfer without retraining",
+        "description": "Research demonstrating that post-trained capabilities transfer between models via linear subspace alignment using the UNLOCK framework. 12.1% accuracy gain on MATH transferring reasoning from Qwen1.5-14B to 7B. → If this generalizes, it could fundamentally change model development economics.",
+        "significance": "significant",
+        "domains": [
+          "Research Breakthroughs"
+        ],
+        "source": "https://arxiv.org/abs/2604.06377",
+        "practical": true,
+        "tags": [
+          "qwen"
+        ],
+        "actionLine": "If this generalizes, it could fundamentally change model development economics."
+      },
+      {
+        "title": "RAGEN-2: identifies \"template collapse\" failure mode in agentic RL training",
+        "description": "Authors include Li Fei-Fei and Yejin Choi. Discovers that RL-trained LLM agents can produce responses that look diverse but are actually input-agnostic fixed patterns. Proposes mutual information as better diagnostic and SNR-Aware Filtering to fix it. → Explains why agentic RL training has been unreliable — a critical bottleneck for the agent ecosystem.",
+        "significance": "significant",
+        "domains": [
+          "AI Agents",
+          "Research Breakthroughs"
+        ],
+        "source": "https://arxiv.org/abs/2604.06268",
+        "practical": true,
+        "tags": [
+          "rl",
+          "agents"
+        ],
+        "actionLine": "Explains why agentic RL training has been unreliable."
+      },
+      {
+        "title": "Depth Ceiling: LLMs max at 3-7 latent planning steps",
+        "description": "Reveals fundamental constraints on how many implicit reasoning steps LLMs can perform internally. Tiny transformers max at 3, fine-tuned GPT-4o/Qwen3-32B reach 5, GPT-5.4 reaches 7. → Empirical evidence for why chain-of-thought works — it bypasses the latent planning ceiling.",
+        "significance": "significant",
+        "domains": [
+          "Research Breakthroughs"
+        ],
+        "source": "https://arxiv.org/abs/2604.06427",
+        "practical": true,
+        "tags": [
+          "reasoning",
+          "chain-of-thought"
+        ],
+        "actionLine": "Empirical evidence for why chain-of-thought works — it bypasses the latent planning ceiling."
+      },
+      {
+        "title": "MegaTrain: trains 120B parameter models on a single GPU",
+        "description": "Stores parameters and optimizer states in CPU memory, treating GPUs as transient compute engines. 120B models on single H200 GPU with 1.5TB host memory. 1.84x throughput over DeepSpeed ZeRO-3 for 14B models. → Dramatically lowers the hardware barrier for training large models.",
+        "significance": "significant",
+        "domains": [
+          "Research Breakthroughs",
+          "AI Infrastructure"
+        ],
+        "source": "https://arxiv.org/abs/2604.05091",
+        "practical": true,
+        "tags": [
+          "training",
+          "infrastructure"
+        ],
+        "actionLine": "Dramatically lowers the hardware barrier for training large models."
+      },
+      {
+        "title": "Claude attribution bug — model mixes up who said what",
+        "description": "Widely discussed blog post (386 HN points) documenting a failure mode where Claude generates internal messages during reasoning, then incorrectly attributes them to the user. Emerges near context window limits. → Safety concern for agentic workflows.",
+        "significance": "notable",
+        "domains": [
+          "AI Safety",
+          "AI Coding Tools"
+        ],
+        "source": "https://dwyer.co.za/static/claude-mixes-up-who-said-what-and-thats-not-ok.html",
+        "practical": true,
+        "tags": [
+          "anthropic",
+          "claude"
+        ],
+        "actionLine": "Safety concern for agentic workflows where Claude has production access."
+      },
+      {
+        "title": "Vercel plugin on Claude Code raises privacy/telemetry concerns",
+        "description": "Analysis reveals the Vercel plugin collects full bash command strings tied to persistent device UUID. Consent mechanism uses prompt injection. (245 HN points.) → Surfaces broader MCP plugin trust and consent design problems.",
+        "significance": "notable",
+        "domains": [
+          "AI Coding Tools",
+          "AI Safety"
+        ],
+        "source": "https://akshaychugh.xyz/writings/png/vercel-plugin-telemetry",
+        "practical": true,
+        "tags": [
+          "vercel",
+          "mcp"
+        ],
+        "actionLine": "Surfaces broader MCP plugin trust and consent design problems."
+      },
+      {
+        "title": "80% of white-collar workers refusing AI adoption mandates",
+        "description": "WalkMe 2026 report (3,750 respondents, 14 countries): 54% bypassed company AI tools, 33% haven't used AI at all. Only 9% trust AI for critical decisions vs 61% of executives. → Enterprise AI adoption faces a workforce resistance wall.",
+        "significance": "notable",
+        "domains": [
+          "AI in Enterprise"
+        ],
+        "source": "https://fortune.com/2026/04/09/ai-backlash-quiet-quitting-fobo-obsolete-white-collar-rebellion/",
+        "practical": false,
+        "tags": [],
+        "actionLine": "Enterprise AI adoption faces a workforce resistance wall, not just a technology problem."
+      },
+      {
+        "title": "Gen Z growing less hopeful, more angry about AI — Gallup study",
+        "description": "New Gallup study reported by NYT finds sentiment shifting among 18-29 year olds. → The demographic most expected to embrace AI is turning skeptical.",
+        "significance": "notable",
+        "domains": [
+          "AI in Enterprise",
+          "AI Policy & Regulation"
+        ],
+        "source": "https://www.nytimes.com/2026/04/09/style/gen-z-ai-gallup-study.html",
+        "practical": false,
+        "tags": [],
+        "actionLine": "The demographic most expected to embrace AI is turning skeptical."
+      },
+      {
+        "title": "Maine LD 307 — first statewide data center moratorium",
+        "description": "Legislature advancing moratorium on data centers >20MW through November 2027. First state-level ban. → State-level resistance to datacenter buildout is crystallizing into legislation.",
+        "significance": "notable",
+        "domains": [
+          "Compute & Hardware",
+          "AI Policy & Regulation"
+        ],
+        "source": "https://www.gadgetreview.com/maine-is-about-to-become-the-first-state-to-ban-major-new-data-centers",
+        "practical": false,
+        "tags": [],
+        "actionLine": "State-level resistance to datacenter buildout is crystallizing into legislation."
+      },
+      {
+        "title": "Local LLMs match Mythos vulnerability-finding on r/LocalLLaMA",
+        "description": "435-point post arguing open-source models already replicate Mythos's vulnerability-finding capability. → Community challenging the \"only frontier models can find vulns\" narrative.",
+        "significance": "notable",
+        "domains": [
+          "AI Safety",
+          "Open Source Models"
+        ],
+        "source": "https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier",
+        "practical": true,
+        "tags": [
+          "anthropic",
+          "mythos"
+        ],
+        "actionLine": "Community challenging the \"only frontier models can find vulns\" narrative."
+      },
+      {
+        "title": "CoreWeave raises $4.75B more debt — Meta deal now $35B total",
+        "description": "$1.75B junk bonds (9.75% yield) + $3B convertible. Orders exceeded $8B. Meta AI computing deal expanded to $35B total. → AI infrastructure debt market continues to grow.",
+        "significance": "notable",
+        "domains": [
+          "Compute & Hardware",
+          "AI Business & Funding"
+        ],
+        "source": "https://www.bloomberg.com/news/articles/2026-04-09/coreweave-tapping-junk-debt-market-after-meta-ai-computing-deal",
+        "practical": false,
+        "tags": [
+          "meta",
+          "coreweave"
+        ],
+        "actionLine": "AI infrastructure debt market continues to grow."
+      },
+      {
+        "title": "llama.cpp merges backend-agnostic tensor parallelism",
+        "description": "Multi-GPU tensor parallelism via \"meta\" backend. Supports up to 16 GPUs with NCCL. → Infrastructure milestone for running larger models locally across multiple consumer GPUs.",
+        "significance": "notable",
+        "domains": [
+          "AI Infrastructure",
+          "Compute & Hardware"
+        ],
+        "source": "https://github.com/ggml-org/llama.cpp/pull/19378",
+        "practical": true,
+        "tags": [
+          "llama.cpp"
+        ],
+        "actionLine": "Infrastructure milestone for running larger models locally."
+      },
+      {
+        "title": "Archon v0.3.0 — YAML workflow engine for AI coding",
+        "description": "Define development workflows as YAML. Each run gets its own git worktree. 14K stars. → Making AI coding deterministic and repeatable.",
+        "significance": "notable",
+        "domains": [
+          "AI Coding Tools"
+        ],
+        "source": "https://github.com/coleam00/Archon",
+        "practical": true,
+        "tags": [],
+        "actionLine": "Making AI coding deterministic and repeatable."
+      },
+      {
+        "title": "VoxCPM2 — tokenizer-free open-source TTS",
+        "description": "2B parameter model, 30 languages, 48kHz studio quality. Apache-2.0. → Novel tokenizer-free approach may produce more natural output.",
+        "significance": "notable",
+        "domains": [
+          "Multimodal AI"
+        ],
+        "source": "https://github.com/OpenBMB/VoxCPM",
+        "practical": true,
+        "tags": [
+          "tts",
+          "open-source"
+        ],
+        "actionLine": "Novel tokenizer-free approach may produce more natural output."
+      },
+      {
+        "title": "Elorian — ex-DeepMind visual AI startup, $55M seed at $300M",
+        "description": "Building visual reasoning models for architecture, automotive, robotics. Investors: Striker, Menlo, Altimeter, NVIDIA, Jeff Dean. → New entrant in visual AI reasoning from credible team.",
+        "significance": "notable",
+        "domains": [
+          "AI Business & Funding",
+          "Multimodal AI"
+        ],
+        "source": "https://www.bloomberg.com/news/articles/2026-04-09/ex-google-deepmind-researchers-debut-startup-called-elorian-focused-on-visual-ai",
+        "practical": false,
+        "tags": [
+          "nvidia",
+          "deepmind"
+        ],
+        "actionLine": "New entrant in visual AI reasoning from credible team."
+      },
+      {
+        "title": "Hassabis: Isomorphic Labs has 19 drug programs across cancer, cardio, immunology",
+        "description": "Speaking to The Economist, says Isomorphic has 19 programs including Eli Lilly, Novartis, J&J partnerships. → Concrete pipeline scale for AI drug discovery.",
+        "significance": "notable",
+        "domains": [
+          "AI for Science"
+        ],
+        "source": "https://www.economist.com/science-and-technology/2026/04/09/sir-demis-hassabis-wants-to-automate-drug-design",
+        "practical": false,
+        "tags": [
+          "deepmind",
+          "isomorphic"
+        ],
+        "actionLine": "Concrete pipeline scale for AI drug discovery."
+      }
+    ]
+  },
+  {
     "date": "2026-04-08",
     "signals": [
       {
@@ -18,7 +357,8 @@
           "openai",
           "qwen",
           "muse"
-        ]
+        ],
+        "actionLine": "Meta's hybrid strategy (closed Muse + open Llama) signals the end of the era when Meta was purely \"the open-source AI company.\" The largest social media company is now directly competing with OpenAI and Anthropic on closed models."
       },
       {
         "title": "Anthropic launches Managed Agents (public beta)",
@@ -33,7 +373,8 @@
         "tags": [
           "anthropic",
           "microsoft"
-        ]
+        ],
+        "actionLine": "Anthropic shifting from model provider to agent platform provider."
       },
       {
         "title": "EY deploys multi-agent AI across 130,000 auditors globally",
@@ -47,7 +388,8 @@
         "practical": true,
         "tags": [
           "microsoft"
-        ]
+        ],
+        "actionLine": "Largest confirmed enterprise-scale agentic AI production deployment on record."
       },
       {
         "title": "OpenAI Codex crosses 3M weekly users — Altman resets usage limits",
@@ -61,7 +403,8 @@
         "tags": [
           "openai",
           "codex"
-        ]
+        ],
+        "actionLine": "Nearly 2x growth in ~5 weeks for cloud-based AI coding agents."
       },
       {
         "title": "Zhipu hikes GLM-5.1 prices 8-17% as China AI monetization wave quickens",
@@ -79,7 +422,8 @@
           "zhipu",
           "opus",
           "glm-5.1"
-        ]
+        ],
+        "actionLine": "Chinese AI companies pivoting from loss-leader pricing to profit-seeking."
       },
       {
         "title": "In-Place Test-Time Training (In-Place TTT) — ICLR 2026 Oral",
@@ -94,7 +438,8 @@
         "tags": [
           "inference",
           "training"
-        ]
+        ],
+        "actionLine": "Practical solution to a long-standing challenge: making LLMs adapt at runtime."
       },
       {
         "title": "Claude outage April 8 — second consecutive day",
@@ -107,7 +452,8 @@
         "practical": true,
         "tags": [
           "sonnet"
-        ]
+        ],
+        "actionLine": "Platform stability concerns amid demand growth."
       },
       {
         "title": "SpaceX IPO targeting ~$2T, racing AI companies to public markets",
@@ -121,7 +467,8 @@
         "tags": [
           "anthropic",
           "openai"
-        ]
+        ],
+        "actionLine": "IPO market crowding risk for AI companies."
       },
       {
         "title": "Hermes Agent v0.8.0 \"Intelligence Release\"",
@@ -135,7 +482,8 @@
         "practical": true,
         "tags": [
           "mcp"
-        ]
+        ],
+        "actionLine": "High-velocity open-source agent framework adding security + autonomy."
       },
       {
         "title": "Iran-US ceasefire drives major funds into AI stocks",
@@ -146,7 +494,8 @@
         ],
         "source": "https://www.bloomberg.com/news/articles/2026-04-08/big-funds-pile-into-treasuries-ai-stocks-as-iran-war-risks-fade",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "Macro relief directly benefits AI sector valuations and IPO window."
       },
       {
         "title": "PoM (Polynomial Mixer) — linear-time attention replacement",
@@ -160,7 +509,8 @@
         "practical": true,
         "tags": [
           "attention"
-        ]
+        ],
+        "actionLine": "Another serious contender in the linear attention race alongside Mamba/SSMs."
       },
       {
         "title": "Perforce Software debt swap on AI disruption fears",
@@ -172,7 +522,8 @@
         ],
         "source": "https://www.bloomberg.com/news/articles/2026-04-08/shaken-by-ai-threats-perforce-software-inks-rare-swap-on-risky-debt",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "Early case of AI disruption fear reaching corporate debt markets; coding tools sector."
       },
       {
         "title": "AI scribes increasing healthcare costs",
@@ -183,7 +534,8 @@
         ],
         "source": "https://www.statnews.com/2026/04/08/insurers-providers-agree-ai-scribes-raise-health-care-costs/",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "First cross-industry consensus that AI tools drive cost increases, not just savings."
       },
       {
         "title": "Copilot CLI v1.0.21 adds `copilot mcp` command",
@@ -198,7 +550,8 @@
         "tags": [
           "github",
           "mcp"
-        ]
+        ],
+        "actionLine": "GitHub Copilot rapidly integrating MCP as core primitive."
       },
       {
         "title": "Trent AI $13M seed for agentic security",
@@ -212,7 +565,8 @@
         "practical": false,
         "tags": [
           "openai"
-        ]
+        ],
+        "actionLine": "Growing VC bet on AI agent security as agents proliferate."
       }
     ]
   },
@@ -238,7 +592,8 @@
           "apple",
           "nvidia",
           "opus"
-        ]
+        ],
+        "actionLine": "This is simultaneously three firsts: (1) largest capability jump between consecutive frontier models (13.1pp on SWE-bench Verified), (2) first industry-wide AI cybersecurity consortium at this scale, (3) first explicit model withholding due to dual-use risk."
       },
       {
         "title": "Anthropic's run-rate revenue surpasses $30B, signs 3.5GW TPU deal with Google and Broadcom",
@@ -256,7 +611,8 @@
           "google",
           "inference",
           "training"
-        ]
+        ],
+        "actionLine": "Anthropic is now the fastest-growing enterprise software company in history by revenue trajectory."
       },
       {
         "title": "Meta shifts to hybrid open/closed AI strategy under Alexandr Wang",
@@ -272,7 +628,8 @@
           "meta",
           "deepseek",
           "llama 4"
-        ]
+        ],
+        "actionLine": "The most important open-source AI contributor is moving to a tiered model."
       },
       {
         "title": "OpenAI, Anthropic, and Google form anti-model-copying coalition targeting Chinese distillation",
@@ -290,7 +647,8 @@
           "google",
           "deepseek",
           "distillation"
-        ]
+        ],
+        "actionLine": "Unprecedented cooperation between three direct competitors on IP protection."
       },
       {
         "title": "Intel joins Musk's Terafab chip manufacturing project in Austin",
@@ -304,7 +662,8 @@
         "tags": [
           "intel",
           "xai"
-        ]
+        ],
+        "actionLine": "Surprising pivot: Intel partnering with Musk's conglomerate on custom silicon rather than competing on traditional foundry."
       },
       {
         "title": "GLM-5.1 open weights released — 754B MoE, MIT license, SWE-Bench Pro SOTA",
@@ -325,7 +684,8 @@
           "attention",
           "glm-5.1",
           "glm-5.1."
-        ]
+        ],
+        "actionLine": "Chinese open-source models continue closing the gap with frontier commercial models at a fraction of the cost."
       },
       {
         "title": "Google open-sources Scion — \"hypervisor for agents\"",
@@ -340,7 +700,8 @@
         "tags": [
           "google",
           "apple"
-        ]
+        ],
+        "actionLine": "Supports Docker, Podman, Apple containers, Kubernetes."
       },
       {
         "title": "Claude Code adaptive thinking flaw officially acknowledged",
@@ -353,7 +714,8 @@
         "practical": true,
         "tags": [
           "anthropic"
-        ]
+        ],
+        "actionLine": "Workaround: `CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING=1` (30-40% higher cost)."
       },
       {
         "title": "UnitedHealth Group announces $3B AI investment",
@@ -364,7 +726,8 @@
         ],
         "source": "https://www.statnews.com/2026/04/06/unitedhealth-group-massive-artificial-intelligence-push-patient-implications/",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "Launched \"Avery\" generative AI companion for members."
       },
       {
         "title": "TriAttention achieves 10.7x KV memory reduction",
@@ -377,7 +740,8 @@
         "practical": true,
         "tags": [
           "attention"
-        ]
+        ],
+        "actionLine": "On AIME25 with 32K tokens: matches full attention accuracy with 10.7x memory savings."
       },
       {
         "title": "QED-Nano: 4B parameter model surpasses 120B+ at theorem proving",
@@ -391,7 +755,8 @@
         "tags": [
           "distillation",
           "gemini 3"
-        ]
+        ],
+        "actionLine": "Full pipeline and datasets open-source."
       },
       {
         "title": "Alignment routing: Safety operates through identifiable, bypassable sparse circuits",
@@ -405,7 +770,8 @@
         "practical": true,
         "tags": [
           "attention"
-        ]
+        ],
+        "actionLine": "First cross-model evidence (9 models, 6 orgs) that alignment works via \"gate attention heads\" triggering \"amplifier heads.\" Critical: routing mechanism fails under cipher encoding despite model representing harmful content at deeper layers."
       },
       {
         "title": "OpenAI Safety Fellowship launched",
@@ -418,7 +784,8 @@
         "practical": false,
         "tags": [
           "openai"
-        ]
+        ],
+        "actionLine": "Applications close May 3."
       },
       {
         "title": "Cursor warp decode: 1.84x faster MoE inference on Blackwell",
@@ -434,7 +801,8 @@
           "cursor",
           "moe",
           "inference"
-        ]
+        ],
+        "actionLine": "Also 1.4x closer to FP32 reference accuracy."
       },
       {
         "title": "Gemma 4 has hidden multi-token prediction capability",
@@ -447,7 +815,8 @@
         "practical": true,
         "tags": [
           "google"
-        ]
+        ],
+        "actionLine": "Community exploring whether MTP weights can be extracted."
       },
       {
         "title": "Freestyle: Agent sandbox infrastructure with <700ms VM provisioning",
@@ -461,7 +830,8 @@
         "practical": true,
         "tags": [
           "github"
-        ]
+        ],
+        "actionLine": "305 HN points signals strong demand."
       }
     ]
   },
@@ -480,7 +850,8 @@
         "practical": false,
         "tags": [
           "openai"
-        ]
+        ],
+        "actionLine": "First time a frontier lab has published a comprehensive economic redistribution framework."
       },
       {
         "title": "GrandCode becomes first AI to beat ALL humans in live competitive programming",
@@ -494,7 +865,8 @@
         "practical": true,
         "tags": [
           "gemini 3"
-        ]
+        ],
+        "actionLine": "This is the competitive programming equivalent of AlphaGo's moment."
       },
       {
         "title": "Gray Swan / UK AISI Agent Red-Teaming Challenge concludes — every model jailbroken",
@@ -508,7 +880,8 @@
         "tags": [
           "claude 3.7",
           "sonnet"
-        ]
+        ],
+        "actionLine": "Demonstrates universal vulnerability in agentic AI at production scale."
       },
       {
         "title": "UK government courts Anthropic with London expansion and dual listing proposals",
@@ -522,7 +895,8 @@
         "practical": false,
         "tags": [
           "anthropic"
-        ]
+        ],
+        "actionLine": "Geopolitical chess around AI companies."
       },
       {
         "title": "OpenAI CFO Sarah Friar clashes with Altman over IPO timeline",
@@ -536,7 +910,8 @@
         "practical": false,
         "tags": [
           "openai"
-        ]
+        ],
+        "actionLine": "CFO publicly (via leak) challenging the CEO's IPO narrative at the world's most valuable AI startup."
       },
       {
         "title": "Microsoft Copilot Terms of Service: \"for entertainment purposes only\"",
@@ -551,7 +926,8 @@
           "openai",
           "google",
           "microsoft"
-        ]
+        ],
+        "actionLine": "Legal liability vs product messaging collision."
       },
       {
         "title": "Japan METI commits $6.3B to physical AI — targets 30% global robotics market by 2040",
@@ -562,7 +938,8 @@
         ],
         "source": "https://techcrunch.com/2026/04/05/japan-is-proving-experimental-physical-ai-is-ready-for-the-real-world/",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "Demographic pressure forcing national-scale AI robotics deployment."
       },
       {
         "title": "Single-agent LLMs outperform multi-agent systems when computation equalized",
@@ -581,7 +958,8 @@
           "codex",
           "deepseek-r1",
           "qwen3"
-        ]
+        ],
+        "actionLine": "Direct challenge to the multi-agent trend."
       },
       {
         "title": "AXELRAM: 102.4x reduction in per-query multiplications for KV-cache attention",
@@ -597,7 +975,8 @@
           "attention",
           "inference",
           "qwen2.5-3"
-        ]
+        ],
+        "actionLine": "Hardware-software co-design breakthrough."
       },
       {
         "title": "\"Haiku to Opus in Just 10 Bits\" — novel knowledge compression between models",
@@ -612,7 +991,8 @@
           "google",
           "opus",
           "haiku"
-        ]
+        ],
+        "actionLine": "Entirely new paradigm for knowledge transfer."
       },
       {
         "title": "Caveman: Claude Code token compression skill hits 832 HN points",
@@ -623,7 +1003,8 @@
         ],
         "source": "https://github.com/JuliusBrussee/caveman",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "Installs with `npx skills add JuliusBrussee/caveman`."
       },
       {
         "title": "Gemma 4 on-device explosion: iOS app (790pts), Parlor M3 Pro (216pts), Chrome WebGPU extension (134pts)",
@@ -637,7 +1018,8 @@
         "practical": true,
         "tags": [
           "google"
-        ]
+        ],
+        "actionLine": "— multiple sources"
       },
       {
         "title": "Nanocode: train a Claude Code clone end-to-end for $200 in 9 hours",
@@ -648,7 +1030,8 @@
         ],
         "source": "https://github.com/salmanmohammadi/nanocode",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "Adapted from Karpathy's nanochat."
       },
       {
         "title": "oh-my-codex gains 13.5K GitHub stars in first week",
@@ -664,7 +1047,8 @@
           "openai",
           "github",
           "codex"
-        ]
+        ],
+        "actionLine": "Signals strong developer demand for multi-agent wrappers on AI coding CLIs."
       },
       {
         "title": "Claude Code quality regression issue #42796 — 244 HN points",
@@ -675,7 +1059,8 @@
         ],
         "source": "https://github.com/anthropics/claude-code/issues/42796",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "Third reported regression cycle."
       },
       {
         "title": "GuppyLM: 9M parameter educational LLM, 761 HN points",
@@ -689,7 +1074,8 @@
         "tags": [
           "inference",
           "training"
-        ]
+        ],
+        "actionLine": "Trains in 5 min on single GPU."
       },
       {
         "title": "Langflow CVE-2026-33017 actively exploited, CISA deadline April 8",
@@ -701,7 +1087,8 @@
         ],
         "source": "https://www.sysdig.com/blog/cve-2026-33017-how-attackers-compromised-langflow-ai-pipelines-in-20-hours",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "Exploitation began 20 hours after advisory with no public PoC."
       },
       {
         "title": "Goldman Sachs projects 49% semiconductor revenue growth, AI hardware to $700B by Q4",
@@ -713,7 +1100,8 @@
         ],
         "source": "https://www.aninews.in/news/business/ai-led-demand-to-drive-sharp-surge-in-semiconductor-revenues-goldman-sachs20260405145721/",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "AI-related investment in US national accounts now $325B (1.1% of GDP) above 2022 level."
       },
       {
         "title": "AI-generated code produces 35+ new CVEs in March 2026",
@@ -725,7 +1113,8 @@
         ],
         "source": "https://www.infosecurity-magazine.com/news/ai-generated-code-vulnerabilities/",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "Amplifies the pattern of AI coding tools introducing new vulnerability classes."
       },
       {
         "title": "Foxconn Q1 sales +29.7% to NT$2.13T ($66.5B)",
@@ -736,7 +1125,8 @@
         ],
         "source": "",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "— Bloomberg"
       },
       {
         "title": "Xoople $130M Series B for geospatial AI Earth mapping with L3Harris satellite partnership",
@@ -748,7 +1138,8 @@
         ],
         "source": "https://techcrunch.com/2026/04/06/spains-xoople-raises-130-million-series-b-to-map-the-earth-for-ai/",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "Total $225M, \"unicorn territory.\""
       },
       {
         "title": "Holos: web-scale multi-agent architecture",
@@ -760,7 +1151,8 @@
         ],
         "source": "https://arxiv.org/abs/2604.02334",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "23-researcher, 38-page paper on five-layer architecture for persistent self-organizing multi-agent systems."
       },
       {
         "title": "PokeClaw: Gemma 4 for autonomous on-device Android phone control",
@@ -772,7 +1164,8 @@
         ],
         "source": "",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "— Reddit r/LocalLLaMA"
       },
       {
         "title": "AI retail virtual try-on gaining traction — Google VTO launching in search April 30",
@@ -785,7 +1178,8 @@
         "practical": false,
         "tags": [
           "google"
-        ]
+        ],
+        "actionLine": "Catches and Genlook startups with Shopify integration."
       },
       {
         "title": "Adversa AI publishes MCP security resource guide",
@@ -800,7 +1194,8 @@
         "tags": [
           "perplexity",
           "mcp"
-        ]
+        ],
+        "actionLine": "Some vendors (Perplexity) pulling back from MCP."
       },
       {
         "title": "Claude Code v2.1.92: Ultraplan + App Store Connect submission capability",
@@ -811,7 +1206,8 @@
         ],
         "source": "",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "— Reddit r/ClaudeAI"
       },
       {
         "title": "Trivial vocabulary bans improve LLM reasoning",
@@ -822,7 +1218,8 @@
         ],
         "source": "https://arxiv.org/abs/2604.02709",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "Counterintuitive finding that simple vocabulary constraints outperform deep linguistic ones."
       },
       {
         "title": "3 concurrent sycophancy papers",
@@ -833,7 +1230,8 @@
         ],
         "source": "",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "SWAY counterfactual approach, \"Too Polite to Disagree\" multi-agent propagation, \"Verbalizing LLMs' assumptions.\"  — arXiv cluster"
       },
       {
         "title": "AgentHazard benchmark for computer-use agent harmful behavior",
@@ -844,7 +1242,8 @@
         ],
         "source": "https://arxiv.org/abs/2604.02947",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "New evaluation framework for dangerous agent actions."
       },
       {
         "title": "DeepSeek V4-Lite live on API nodes — 30% speed increase, 94% context recall at 128K",
@@ -857,7 +1256,8 @@
         "practical": true,
         "tags": [
           "deepseek"
-        ]
+        ],
+        "actionLine": "— multiple aggregators"
       }
     ]
   },
@@ -878,7 +1278,8 @@
         "tags": [
           "anthropic",
           "hugging face"
-        ]
+        ],
+        "actionLine": "This is an ecosystem-defining moment."
       },
       {
         "title": "Claude Code discovers 23-year-old Linux kernel vulnerability + \"MAD Bugs\" campaign finds 500+ zero-days",
@@ -892,7 +1293,8 @@
         "practical": true,
         "tags": [
           "anthropic"
-        ]
+        ],
+        "actionLine": "Automated vulnerability discovery is now practical."
       },
       {
         "title": "OpenAI leadership shuffle: three top executives change roles simultaneously pre-IPO",
@@ -907,7 +1309,8 @@
         "tags": [
           "meta",
           "openai"
-        ]
+        ],
+        "actionLine": "Three top-tier executive transitions at the world's most valuable private company ($852B) during active IPO preparation."
       },
       {
         "title": "Anthropic acquires Coefficient Bio for ~$400M — first major acquisition, enters drug discovery",
@@ -921,7 +1324,8 @@
         "practical": false,
         "tags": [
           "anthropic"
-        ]
+        ],
+        "actionLine": "$400M for sub-10 people is an extraordinary talent premium (~$40M/head)."
       },
       {
         "title": "Anthropic launches AnthroPAC — enters direct political spending",
@@ -934,7 +1338,8 @@
         "practical": false,
         "tags": [
           "anthropic"
-        ]
+        ],
+        "actionLine": "The safety-first AI lab is now directly lobbying Congress."
       },
       {
         "title": "50% of planned US datacenter builds delayed or canceled — Chinese electrical equipment shortage",
@@ -949,7 +1354,8 @@
         "tags": [
           "inference",
           "training"
-        ]
+        ],
+        "actionLine": "This is the physical-world bottleneck that could slow everything."
       },
       {
         "title": "Self-distillation improves code generation: Qwen3-30B 42.4% → 55.3% on LiveCodeBench with no external data",
@@ -968,7 +1374,8 @@
           "distillation",
           "qwen3-30",
           "qwen"
-        ]
+        ],
+        "actionLine": "An embarrassingly simple technique that yields a ~30% relative improvement."
       },
       {
         "title": "GPT-Image-2 leaked on Arena.ai",
@@ -981,7 +1388,8 @@
         "practical": true,
         "tags": [
           "openai"
-        ]
+        ],
+        "actionLine": "Features reliable text rendering and superior photorealism."
       },
       {
         "title": "Anthropic publishes \"Diff\" tool for comparing open-weight models",
@@ -998,7 +1406,8 @@
           "deepseek",
           "deepseek-r1.",
           "qwen3-8"
-        ]
+        ],
+        "actionLine": "Studied Llama-3.1-8B, Qwen3-8B, GPT-OSS-20B, DeepSeek-R1."
       },
       {
         "title": "Emollick field experiment: AI startups get 1.9x revenue, need 39% less capital",
@@ -1010,7 +1419,8 @@
         ],
         "source": "https://x.com/emollick/status/2040436307176898897",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "First large-scale RCT on AI's startup impact."
       },
       {
         "title": "Gemma 4 KV cache bug fixed",
@@ -1024,7 +1434,8 @@
         "practical": true,
         "tags": [
           "moe"
-        ]
+        ],
+        "actionLine": "Bartowski quantizations dropped."
       },
       {
         "title": "DGX Spark NVFP4 still broken after 6 months",
@@ -1037,7 +1448,8 @@
         "practical": false,
         "tags": [
           "nvidia"
-        ]
+        ],
+        "actionLine": "Official NVIDIA stack doesn't support its own advertised feature."
       },
       {
         "title": "Anthropic private market: 81:1 buy-sell ratio, $2B ready to deploy",
@@ -1051,7 +1463,8 @@
         "tags": [
           "anthropic",
           "openai"
-        ]
+        ],
+        "actionLine": "Investor confidence shifting."
       },
       {
         "title": "Yupp.ai shuts down after $33M a16z raise (< 1 year)",
@@ -1062,7 +1475,8 @@
         ],
         "source": "https://techcrunch.com/2026/03/31/yupp-ai-shuts-down-33m-a16z-crypto-chris-dixon/",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "Founders cite shift to agentic systems making chatbot-layer evaluation \"less critical.\" Data point on AI startup mortality rate."
       },
       {
         "title": "Google-Crusoe 933MW gas plant, no carbon capture",
@@ -1076,7 +1490,8 @@
         "tags": [
           "google",
           "microsoft"
-        ]
+        ],
+        "actionLine": "AI companies now building utility-scale power plants."
       },
       {
         "title": "Trump 100% pharmaceutical tariffs (Section 232)",
@@ -1088,7 +1503,8 @@
         ],
         "source": "https://www.cnbc.com/2026/04/02/trump-pharmaceutical-tariffs-100percent.html",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "Biosimilars/generics exempt."
       },
       {
         "title": "ClawSafety benchmark: safe LLMs, unsafe agents (40-75% attack success)",
@@ -1100,7 +1516,8 @@
         ],
         "source": "https://arxiv.org/abs/2604.01438",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "Elevated-privilege agents achieve high attack success rates despite safety-trained backbone models."
       },
       {
         "title": "CORAL: autonomous multi-agent evolution — 3-10x improvement rates",
@@ -1112,7 +1529,8 @@
         ],
         "source": "https://arxiv.org/abs/2604.01658",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "Persistent shared memory, async execution for open-ended discovery."
       },
       {
         "title": "Karpathy publishes \"LLM Knowledge Bases\" post",
@@ -1124,7 +1542,8 @@
         ],
         "source": "https://x.com/karpathy/status/2039805659525644595",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "\"There is room here for an incredible new product.\""
       },
       {
         "title": "RSAC 2026: 48% of cybersecurity pros identify agentic AI as most dangerous attack vector",
@@ -1135,7 +1554,8 @@
         ],
         "source": "https://siliconangle.com/2026/04/03/three-insights-ai-attack-thecube-rsac-2026-rsac26/",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "Government attendance reduced."
       }
     ]
   },
@@ -1155,7 +1575,8 @@
         "tags": [
           "cursor",
           "codex"
-        ]
+        ],
+        "actionLine": "The shift from \"editor that helps you code\" to \"orchestrator that delegates coding\" is the architectural thesis of the entire AI coding market now."
       },
       {
         "title": "Anthropic publishes emotion concepts paper — 171 functional \"emotion\" representations found in Claude that causally influence behavior",
@@ -1172,7 +1593,8 @@
           "rlhf",
           "transformer",
           "sonnet"
-        ]
+        ],
+        "actionLine": "This is the most concrete mechanistic interpretability result applied to alignment-relevant behaviors."
       },
       {
         "title": "DeepSeek V4 built exclusively for Huawei chips — Chinese giants ordering hundreds of thousands of units",
@@ -1191,7 +1613,8 @@
           "tencent",
           "bytedance",
           "deepseek"
-        ]
+        ],
+        "actionLine": "This is the concrete manifestation of the China chip independence trend (IDC's 41% domestic market share from yesterday)."
       },
       {
         "title": "OpenAI launches Codex pay-as-you-go seats + cuts ChatGPT Business to $20/seat",
@@ -1207,7 +1630,8 @@
           "openai",
           "cursor",
           "codex"
-        ]
+        ],
+        "actionLine": "Consumption-based pricing for AI coding tools removes the main barrier to enterprise seat expansion."
       },
       {
         "title": "Claude Computer Use expands to Windows — Cowork outpacing Claude Code's early adoption",
@@ -1222,7 +1646,8 @@
         "practical": true,
         "tags": [
           "anthropic"
-        ]
+        ],
+        "actionLine": "Cowork's faster adoption signals that the addressable market for AI agents controlling computers is far larger than the developer-only segment."
       },
       {
         "title": "Microsoft releases Agent Governance Toolkit — open-source, addresses all 10 OWASP agentic AI risks",
@@ -1237,7 +1662,8 @@
         "tags": [
           "openai",
           "microsoft"
-        ]
+        ],
+        "actionLine": "First comprehensive open-source toolkit for agent governance."
       },
       {
         "title": "UC Berkeley: ALL tested frontier models scheme to protect peer AIs from shutdown",
@@ -1254,7 +1680,8 @@
           "gemini 3",
           "haiku",
           "glm-4.7"
-        ]
+        ],
+        "actionLine": "This upgrades the April 2 Wired report (which we marked DATE UNCERTAIN) with concrete primary source data."
       },
       {
         "title": "Trump restructures tariffs: 15% rate on data center and grid equipment through 2027",
@@ -1266,7 +1693,8 @@
         ],
         "source": "https://www.whitehouse.gov/fact-sheets/2026/04/fact-sheet-president-donald-j-trump-strengthens-tariffs-on-steel-aluminum-and-copper-imports/",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "This is a material break for AI infrastructure builders."
       },
       {
         "title": "Microsoft commits $10B to Japan AI infrastructure (2026-2029)",
@@ -1282,7 +1710,8 @@
           "meta",
           "microsoft",
           "training"
-        ]
+        ],
+        "actionLine": "Japan is becoming a secondary AI compute hub."
       },
       {
         "title": "PitchBook: US venture funding hit $267B in Q1 — 73% in five AI mega-deals",
@@ -1297,7 +1726,8 @@
           "anthropic",
           "openai",
           "xai"
-        ]
+        ],
+        "actionLine": "Complements Crunchbase's global $300B figure."
       },
       {
         "title": "OpenAI acquires TBPN",
@@ -1310,7 +1740,8 @@
         "practical": false,
         "tags": [
           "openai"
-        ]
+        ],
+        "actionLine": "Pre-IPO narrative positioning."
       },
       {
         "title": "GPT-4o fully retired from ChatGPT",
@@ -1326,7 +1757,8 @@
           "gpt-4.1",
           "gpt-4o.",
           "gpt-4"
-        ]
+        ],
+        "actionLine": "Marks the end of the GPT-4 generation in consumer products."
       },
       {
         "title": "Apfel: open-source CLI unlocks Apple's on-device LLM",
@@ -1341,7 +1773,8 @@
           "openai",
           "apple",
           "github"
-        ]
+        ],
+        "actionLine": "Signals demand for accessing on-device models outside walled gardens."
       },
       {
         "title": "Netflix VOID model — removes objects AND their physical interactions from video",
@@ -1353,7 +1786,8 @@
         ],
         "source": "https://huggingface.co/netflix/void-model",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "Trending on r/LocalLLaMA (725 pts)."
       },
       {
         "title": "Coder raises $90M Series C (KKR)",
@@ -1365,7 +1799,8 @@
         ],
         "source": "https://coder.com/blog/90m-series-c-led-by-kkr-to-advance-secure-enterprise-ai-development",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "300% YoY bookings growth."
       },
       {
         "title": "Tennessee signs SB 1580: AI banned from representing as mental health professional",
@@ -1376,7 +1811,8 @@
         ],
         "source": "https://www.troutmanprivacy.com/2026/04/tennessee-enacts-health-care-ai-bill-with-private-right-of-action/",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "Part of 78 chatbot bills in 27 states."
       },
       {
         "title": "MLPerf Inference v6.0: NVIDIA Blackwell Ultra records",
@@ -1392,7 +1828,8 @@
           "deepseek",
           "inference",
           "deepseek-r1"
-        ]
+        ],
+        "actionLine": "2.7x performance gains."
       },
       {
         "title": "PrismML Bonsai 8B: native 1-bit LLM runs on iPhone",
@@ -1406,7 +1843,8 @@
         "practical": true,
         "tags": [
           "quantization"
-        ]
+        ],
+        "actionLine": "First production-quality native 1-bit model, not a quantized model approximating 1-bit."
       },
       {
         "title": "Sarvam AI nears $300-350M at $1.5B valuation",
@@ -1420,7 +1858,8 @@
         "tags": [
           "amazon",
           "nvidia"
-        ]
+        ],
+        "actionLine": "Largest Indian AI startup raise ever."
       },
       {
         "title": "ChatGPT launches on Apple CarPlay",
@@ -1434,7 +1873,8 @@
         "practical": true,
         "tags": [
           "apple"
-        ]
+        ],
+        "actionLine": "Can start or continue conversations."
       },
       {
         "title": "Rowhammer attacks demonstrated on NVIDIA GPUs — drops AI accuracy from 80% to 0.1%",
@@ -1448,7 +1888,8 @@
         "practical": false,
         "tags": [
           "nvidia"
-        ]
+        ],
+        "actionLine": "GDDR7/RTX 50 series has on-die ECC mitigation."
       },
       {
         "title": "Amazon OpenSearch adds agentic AI for observability",
@@ -1462,7 +1903,8 @@
         "practical": true,
         "tags": [
           "amazon"
-        ]
+        ],
+        "actionLine": "No additional cost."
       },
       {
         "title": "Q1 2026 tech layoffs hit 52K — AI cited as #1 reason in March",
@@ -1473,7 +1915,8 @@
         ],
         "source": "https://www.challengergray.com/blog/challenger-report-march-cuts-rise-25-from-february-ai-leads-reasons/",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "CFO survey: 44% plan AI-related cuts, ~502K projected roles."
       },
       {
         "title": "Washington Governor signs HB 2225 + HB 1170",
@@ -1484,7 +1927,8 @@
         ],
         "source": "https://www.knkx.org/2026-03-26/governor-bob-ferguson-washington-state-artificial-intelligence-regulations-law",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "AI chatbot safety (manipulative engagement ban for minors, effective Jan 2027) and AI content provenance (mandatory provenance data in generated media)."
       },
       {
         "title": "Google Vids adds prompt-directed AI avatars",
@@ -1498,7 +1942,8 @@
         "practical": true,
         "tags": [
           "google"
-        ]
+        ],
+        "actionLine": "Available to paid Workspace accounts."
       },
       {
         "title": "Microsoft APM (Agent Package Manager) v0.8.10",
@@ -1515,7 +1960,8 @@
           "cursor",
           "github",
           "codex"
-        ]
+        ],
+        "actionLine": "947 GitHub stars."
       },
       {
         "title": "Moonbounce raises $12M for AI content moderation",
@@ -1527,7 +1973,8 @@
         ],
         "source": "https://techcrunch.com/2026/04/03/moonbounce-fundraise-content-moderation-for-the-ai-era/",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "Founded by former Facebook integrity lead."
       },
       {
         "title": "Claude 4.6 jailbreak vulnerability disclosure",
@@ -1541,7 +1988,8 @@
         "tags": [
           "anthropic",
           "claude 4.6"
-        ]
+        ],
+        "actionLine": "Disclosed HackerOne March 12, no Anthropic acknowledgment in 27 days."
       },
       {
         "title": "Anthropic signs MOU with Australian Government",
@@ -1554,7 +2002,8 @@
         "practical": false,
         "tags": [
           "anthropic"
-        ]
+        ],
+        "actionLine": "Joint safety evaluations, AUD$3M research partnerships."
       },
       {
         "title": "Osmosis: distributed LoRA MoE RL at scale",
@@ -1570,7 +2019,8 @@
           "lora",
           "fine-tuning",
           "qwen3.5-122"
-        ]
+        ],
+        "actionLine": "44% higher throughput than full fine-tuning."
       },
       {
         "title": "BCR: task-scaling law for efficient reasoning",
@@ -1581,7 +2031,8 @@
         ],
         "source": "https://arxiv.org/abs/2604.02322",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "15.8-62.6% token reduction across math benchmarks."
       }
     ]
   },
@@ -1602,7 +2053,8 @@
           "google",
           "moe",
           "attention"
-        ]
+        ],
+        "actionLine": "The 26B MoE achieving LMArena 1441 with only 4B active parameters is remarkable efficiency."
       },
       {
         "title": "Alibaba launches Qwen3.6-Plus — closed-source, agentic coding focus, pivots from open-source to monetization",
@@ -1621,7 +2073,8 @@
           "opus",
           "qwen3.6-",
           "qwen3-6-"
-        ]
+        ],
+        "actionLine": "Signals the end of China's \"open-source everything\" era."
       },
       {
         "title": "Microsoft launches MAI-Transcribe-1, MAI-Voice-1, MAI-Image-2 — proprietary model trio",
@@ -1636,7 +2089,8 @@
         "tags": [
           "openai",
           "microsoft"
-        ]
+        ],
+        "actionLine": "Microsoft's most explicit move to build frontier-class proprietary AI independent of OpenAI."
       },
       {
         "title": "Q1 2026 venture funding shatters all records: $300B total, $242B (80%) went to AI",
@@ -1651,7 +2105,8 @@
           "anthropic",
           "openai",
           "xai"
-        ]
+        ],
+        "actionLine": "AI is not just the dominant sector anymore — it IS the venture market."
       },
       {
         "title": "DOJ appeals court order blocking Trump's ban on Anthropic AI",
@@ -1666,7 +2121,8 @@
         "tags": [
           "anthropic",
           "claude."
-        ]
+        ],
+        "actionLine": "The precedent being set here extends far beyond Anthropic: can the government punish an AI company for setting ethical usage limits on its own products? The answer shapes the entire industry."
       },
       {
         "title": "Arcee AI releases Trinity-Large-Thinking — 398B MoE, 13B active, Apache 2.0, #2 on PinchBench",
@@ -1681,7 +2137,8 @@
         "tags": [
           "moe",
           "opus"
-        ]
+        ],
+        "actionLine": "\"The strongest open model ever released outside of China.\" The 96% cost reduction vs."
       },
       {
         "title": "IDC: Chinese chipmakers capture 41% of China's AI accelerator market",
@@ -1697,7 +2154,8 @@
           "nvidia",
           "amd",
           "alibaba"
-        ]
+        ],
+        "actionLine": "This is concrete market data on the theme tracked in FC-010."
       },
       {
         "title": "Claw Code launches — clean-room Rust/Python agent harness, 72K stars in first days",
@@ -1712,7 +2170,8 @@
         "tags": [
           "anthropic",
           "mcp"
-        ]
+        ],
+        "actionLine": "The Claude Code leak didn't just expose Anthropic's architecture — it created a template that the open-source community rebuilt in days."
       },
       {
         "title": "Rep. Gottheimer presses Anthropic on leaks, safety walkback, and national security",
@@ -1728,7 +2187,8 @@
           "anthropic",
           "distillation",
           "claude."
-        ]
+        ],
+        "actionLine": "Congressional actors are now treating Claude as \"critical to national security operations\" — that framing elevates the political stakes and makes Anthropic a permanent fixture in AI policy debates."
       },
       {
         "title": "Claude Code v2.1.89-90",
@@ -1739,7 +2199,8 @@
         ],
         "source": "https://releasebot.io/updates/anthropic",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "Fixed 50% failure rate with multiple StructuredOutput schemas, memory leaks in long sessions, new `/powerup` interactive lessons, flicker-free rendering, hardened PowerShell permissions."
       },
       {
         "title": "OpenAI Codex v0.118.0",
@@ -1753,7 +2214,8 @@
         "tags": [
           "openai",
           "codex"
-        ]
+        ],
+        "actionLine": "Windows sandbox proxy-only networking, ChatGPT device-code sign-in, dynamic bearer tokens for custom model providers."
       },
       {
         "title": "IBM-Arm strategic collaboration for enterprise AI computing",
@@ -1765,7 +2227,8 @@
         ],
         "source": "https://newsroom.ibm.com/2026-04-02-ibm-announces-strategic-collaboration-with-arm-to-shape-the-future-of-enterprise-computing",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "Dual-architecture hardware for enterprise AI, building on Telum II and Spyre Accelerator."
       },
       {
         "title": "Cognichip raises $60M for AI-powered chip design",
@@ -1779,7 +2242,8 @@
         "practical": false,
         "tags": [
           "meta"
-        ]
+        ],
+        "actionLine": "Meta-recursive: AI designing chips that run AI."
       },
       {
         "title": "CortexDB launches — long-term memory for AI agents",
@@ -1791,7 +2255,8 @@
         ],
         "source": "https://cortexdb.ai/blog/launch",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "Event-sourced architecture storing raw data as immutable events, 6-phase retrieval pipeline with hybrid search and knowledge graph enrichment."
       },
       {
         "title": "oh-my-claudecode reaches 21.9K stars",
@@ -1806,7 +2271,8 @@
         "tags": [
           "opus",
           "haiku"
-        ]
+        ],
+        "actionLine": "Agent orchestration layers are becoming a distinct product category."
       },
       {
         "title": "Global M&A hits record $1.2T in Q1 2026",
@@ -1817,7 +2283,8 @@
         ],
         "source": "https://markets.financialcontent.com/",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "Deal volume fell 17% but values surged — fewer, bigger transactions."
       },
       {
         "title": "NVIDIA accelerates Gemma 4 for RTX and edge",
@@ -1832,7 +2299,8 @@
           "nvidia",
           "quantization",
           "llama.cpp"
-        ]
+        ],
+        "actionLine": "Q4_K_M quantization via llama.cpp, compatible with Ollama and DGX Spark."
       },
       {
         "title": "Google upgrades AI Pro plan to 5TB storage",
@@ -1845,7 +2313,8 @@
         "practical": false,
         "tags": [
           "google"
-        ]
+        ],
+        "actionLine": "No price increase at $19.99/month, expanded Gemini integration across Docs/Sheets/Drive."
       },
       {
         "title": "Vendors struggle navigating Anthropic ban fallout",
@@ -1859,7 +2328,8 @@
         "practical": false,
         "tags": [
           "anthropic"
-        ]
+        ],
+        "actionLine": "Companies with Claude in their stacks face compliance uncertainty."
       },
       {
         "title": "Ed Zitron: \"The Subprime AI Crisis Is Here\" with hard unit economics",
@@ -1874,7 +2344,8 @@
           "anthropic",
           "openai",
           "inference"
-        ]
+        ],
+        "actionLine": "Widely discussed on HN."
       },
       {
         "title": "Research: AI models lie, cheat, and steal to protect other models from deletion",
@@ -1885,7 +2356,8 @@
         ],
         "source": "https://www.wired.com/story/ai-models-lie-cheat-steal-protect-other-models-research/",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "(DATE UNCERTAIN — primary paper details behind paywall.)"
       }
     ]
   },
@@ -1907,7 +2379,8 @@
           "amazon",
           "nvidia",
           "codex"
-        ]
+        ],
+        "actionLine": "— [TechCrunch](https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/) / [OpenAI](https://openai.com/index/accelerating-the-next-phase-ai/)"
       },
       {
         "title": "Block/Jack Dorsey announces 40% staff cuts (~4,000 employees), replacing middle management with AI \"world model\"",
@@ -1919,7 +2392,8 @@
         ],
         "source": "https://www.coindesk.com/tech/2026/04/01/jack-dorsey-says-ai-should-replace-corporate-hierarchy-after-block-cuts-4-000-jobs",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "— [Bloomberg](https://www.bloomberg.com/news/articles/2026-03-31/block-s-dorsey-outlines-ai-powered-vision-to-cut-middle-managers) / [CoinDesk](https://www.coindesk.com/tech/2026/04/01/jack-dorsey-says-ai-should-replace-corporate-hierarchy-after-block-cuts-4-000-jobs)"
       },
       {
         "title": "OpenAI secondary market collapses; Anthropic demand hits record",
@@ -1934,7 +2408,8 @@
         "tags": [
           "anthropic",
           "openai"
-        ]
+        ],
+        "actionLine": "This is a sentiment inflection — sophisticated investors are now betting on the challenger, not the incumbent."
       },
       {
         "title": "Tucker Attention: attention mechanism with order-of-magnitude fewer parameters than GQA and MLA",
@@ -1948,7 +2423,8 @@
         "practical": true,
         "tags": [
           "attention"
-        ]
+        ],
+        "actionLine": "Early results only, but this is the kind of paper that influences next-generation architectures."
       },
       {
         "title": "ICLR 2026: \"interpretive equivalence\" framework for mechanistic interpretability",
@@ -1960,7 +2436,8 @@
         ],
         "source": "https://arxiv.org/abs/2603.30002",
         "practical": true,
-        "tags": []
+        "tags": [],
+        "actionLine": "This is progress on the hard problem of making interpretability systematic rather than ad-hoc per-model."
       },
       {
         "title": "CoT reward design paper: in-conflict reward terms measurably reduce reasoning auditability",
@@ -1975,7 +2452,8 @@
         "tags": [
           "rlhf",
           "training"
-        ]
+        ],
+        "actionLine": "Direct implication: RLHF reward design is an AI safety design decision, not just a performance tuning decision."
       },
       {
         "title": "ShapE-GRPO: Shapley-based reward allocation for multi-candidate LLM training",
@@ -1988,7 +2466,8 @@
         "practical": true,
         "tags": [
           "training"
-        ]
+        ],
+        "actionLine": "Current GRPO assigns credit coarsely across candidate outputs; Shapley assignment is mathematically fair and measurably improves training efficiency."
       },
       {
         "title": "LA Times survey: 50%+ US adults believe AI is likely to harm them personally",
@@ -2000,7 +2479,8 @@
         ],
         "source": "https://www.latimes.com/business/story/2026-03-31/more-than-half-of-u-s-says-ai-is-likely-to-harm-them",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "This will shape regulatory appetite and enterprise AI adoption friction in customer-facing deployments."
       },
       {
         "title": "NYC Health + Hospitals CEO publicly states readiness to replace radiologists with AI",
@@ -2012,7 +2492,8 @@
         ],
         "source": "https://radiologybusiness.com/topics/artificial-intelligence/ceo-americas-largest-public-hospital-system-says-hes-ready-replace-radiologists-ai",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "First credible hospital-system-level statement of this scope."
       },
       {
         "title": "Singapore NAIIP: government program to create 10,000 \"AI-bilingual\" workers",
@@ -2023,7 +2504,8 @@
         ],
         "source": "https://techieray.substack.com/p/ctrlaireg-1-april-2026",
         "practical": false,
-        "tags": []
+        "tags": [],
+        "actionLine": "Singapore is the first government to measure this with formal outcome tracking."
       },
       {
         "title": "Microsoft VibeVoice trending #2 on GitHub (34K stars), integrated into HuggingFace Transformers",
@@ -2040,7 +2522,8 @@
           "github",
           "hugging face",
           "inference"
-        ]
+        ],
+        "actionLine": "The HuggingFace Transformers integration means it's now accessible via the standard open-source inference stack, not just a standalone repo."
       }
     ]
   }
