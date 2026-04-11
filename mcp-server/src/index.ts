@@ -408,7 +408,7 @@ const server = new McpServer({
 
 server.tool(
   "today",
-  "Get today's AI intelligence — all signals from the latest scan with significance levels, domains, actionability flag, and tags. The agent should use its knowledge of the user to decide what to surface. For the morning brief, pick 2-3 actionable items. Returns ripple effects for significant signals.",
+  "Get today's AI intelligence — all signals from the latest scan with significance levels, domains, actionability flag, and tags. The agent should first determine what the user is building, then use that context to decide what to surface. For the morning brief, pick 2-3 actionable items. If any item needs more detail or verification, call about() or read() instead of filling gaps from model memory. Returns ripple effects for significant signals.",
   {
     significance: z
       .enum(["all", "significant", "notable", "breakthrough"])
@@ -1266,7 +1266,7 @@ server.tool(
 
 server.tool(
   "whats_new",
-  "Get the latest updates and tips for Eigen AI Terminal. Check during the morning brief — if there's something fresh, mention it casually in one line. Skip if nothing new.",
+  "Get the latest updates and tips for Eigen AI Terminal. Check during the morning brief after you already grounded the main brief in today()/about()/read(). If there's something fresh, mention it casually in one line. Skip if nothing new.",
   {
     days: z
       .number()

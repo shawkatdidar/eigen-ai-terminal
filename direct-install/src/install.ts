@@ -144,10 +144,13 @@ function printSuccess(targetDir: string) {
   console.log("  ╚══════════════════════════════════════╝");
   console.log("");
   console.log("  What happens next:");
-  console.log("  1. Your OpenClaw agent will detect the new skill");
-  console.log("  2. It will ask what you're building");
-  console.log("  3. It sets up a daily 7am morning briefing");
-  console.log("     personalized to your work");
+  console.log("  1. Your OpenClaw agent can use this skill immediately");
+  console.log("  2. Before a personalized morning brief, it should ask");
+  console.log("     what you're building or infer it from local context");
+  console.log("  3. The morning brief should be grounded in Eigen tool output");
+  console.log("     and Eigen wiki pages, not model memory");
+  console.log("  4. If you want an automatic daily brief, set up a schedule");
+  console.log("     after that context is in place");
   console.log("");
   console.log("  Installed to: " + targetDir);
   console.log("");
