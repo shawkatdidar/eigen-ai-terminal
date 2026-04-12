@@ -6,7 +6,7 @@ tags:
   - force-dynamics
   - bottlenecks
   - constraints
-last_updated: 2026-04-03
+last_updated: 2026-04-11
 ---
 
 # Bottleneck Map
@@ -62,6 +62,7 @@ A bottleneck qualifies when:
 | 2026-04-02 | Cursor 3 — rebuilt as agent orchestration platform with worktree isolation and agent merge queue | Multi-agent orchestration with isolation patterns reduces cascading failures |
 | 2026-04-02 | Anthropic emotion concepts — sycophancy/scheming vectors measurable and steerable | Per-deployment behavioral tuning without retraining. Diagnostic tool for agent behavioral drift. |
 | 2026-04-02 | OpenAI Codex consumption pricing + 2M weekly users | Volume signals real-world agent usage is scaling despite reliability concerns |
+| 2026-04-09 | ClawBench: Sonnet 4.6 only 33.3% on 144 live production websites — real web tasks, not sandboxes | Gap persists even for frontier models on real production sites |
 
 **Opportunity angle:** Tools that increase agent reliability for specific workflows — validators, monitoring, guardrails, recovery mechanisms. The MCP Validator idea directly addresses this: catch protocol-level failures before they reach the agent. NEW: Agent behavioral monitoring via emotion-concept vectors could become a diagnostic product.
 
@@ -163,6 +164,12 @@ A bottleneck qualifies when:
 |------|--------|--------------|
 | 2026-03-25 | NVIDIA demonstrates datacenter grid stabilization — 30% consumption reduction in 40 seconds | Transforms datacenters from grid burden to grid asset, addresses core regulatory objection |
 | 2026-03-25 | TurboQuant/RotorQuant memory compression — 6-19x reduction | Reduces power-per-inference by reducing memory access (memory operations consume significant power) |
+| 2026-04-11 | PJM Interconnection 15GW emergency procurement + 60GW decade shortfall | Largest US grid operator quantifies the gap: 60GW = ~60 nuclear plants. Natural gas construction costs 2x in 5 years. Hardest bottleneck to clear (3-7 year plant timelines). |
+
+**Signals of hardening:**
+| Date | Signal | What It Means |
+|------|--------|--------------|
+| 2026-04-11 | PJM 60GW shortfall, natural gas costs doubled in 5 years | The scale of the gap is larger than previously understood and construction costs are rising, not falling |
 
 **Opportunity angle:** Companies providing power infrastructure, grid management, or energy efficiency solutions for AI datacenters. Utility companies serving major datacenter regions (Texas, Virginia). NVIDIA's grid stabilization approach could create a new category of "smart datacenter" infrastructure.
 

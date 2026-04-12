@@ -5,7 +5,7 @@ tags:
   - system
   - force-dynamics
   - causal
-last_updated: 2026-04-07
+last_updated: 2026-04-11
 ---
 
 # Force Dynamics — Propagation Graph
@@ -208,6 +208,12 @@ A **force** is a signal that pushes change in a domain other than its origin. Fo
 | [[ai-research-breakthroughs]] | [[ai-safety-alignment]] | FC-018 | accelerating |
 | [[ai-coding-tools]] | [[ai-business-funding]] | FC-019 | constraining (margins) |
 | [[ai-coding-tools]] | [[ai-in-enterprise]] | FC-019 | accelerating (adoption) |
+| [[open-source-models]] | [[ai-in-enterprise]] | FC-026 | constraining |
+| [[open-source-models]] | [[edge-on-device-ai]] | FC-026 | constraining |
+| [[ai-policy-regulation]] | [[ai-business-funding]] | FC-027 | accelerating (security) |
+| [[ai-policy-regulation]] | [[ai-in-enterprise]] | FC-027 | constraining (regulated deployment) |
+| [[compute-hardware]] | [[ai-business-funding]] | FC-028 | constraining |
+| [[compute-hardware]] | [[ai-infrastructure]] | FC-028 | constraining |
 
 ### FC-008: Waymo Scale Validates Robotaxi Economics → Accelerates Competitor Capital
 
@@ -531,6 +537,60 @@ A **force** is a signal that pushes change in a domain other than its origin. Fo
 | Date | Update | Signal Evidence |
 |------|--------|----------------|
 | 2026-04-07 | Identified | Anthropic 3.5GW deal + Intel Terafab + existing megaprojects |
+
+---
+
+### FC-026: Alibaba Revenue Pivot Threatens Open-Source Model Ecosystem
+
+**Date identified:** 2026-04-11
+**Origin signal:** Alibaba shifting AI strategy from open-source to revenue ([[open-source-models]])
+**Target(s):** [[ai-in-enterprise]], [[edge-on-device-ai]]
+**Mechanism:** Qwen models (3.5, 3.6 series) are among the most-used open-weight models globally. If Alibaba restricts future releases, thousands of companies and developers who built on free Qwen weights face dependency risk. Enterprise deployments using Qwen fine-tunes would need to migrate. Local LLM community loses a major free model family. Remaining open providers (Google Gemma, Meta Llama) gain strategic leverage and lose competitive pressure to keep models open.
+**Direction:** constraining (open-source), enabling (Google/Meta leverage)
+**Strength:** moderate
+**Lag:** months
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-04-11 | Identified | FT reports Alibaba revenue strategy shift |
+
+---
+
+### FC-027: Central Bank Mythos Response Creates Regulated AI Market Segment
+
+**Date identified:** 2026-04-11
+**Origin signal:** BOE, BOC, Fed/Treasury mobilizing financial institutions over Mythos ([[ai-policy-regulation]])
+**Target(s):** [[ai-business-funding]], [[ai-in-enterprise]]
+**Mechanism:** Central banks treating Mythos as systemic risk creates a new compliance requirement for AI deployment in regulated industries. Banks testing Mythos become a customer segment for Anthropic. New regulatory frameworks for AI model deployment in financial infrastructure will slow adoption in finance but create premium pricing for compliant AI security tools. Validates FC-002 (Mythos escalating security demand) and extends it from enterprise to sovereign regulatory level.
+**Direction:** accelerating (security spending), constraining (regulated AI deployment speed)
+**Strength:** strong
+**Lag:** weeks
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-04-11 | Identified | Bloomberg: BOE, BOC scheduling meetings; Bessent/Powell summoned bank CEOs; JPMorgan, Goldman, Citi, BofA, MS testing |
+
+---
+
+### FC-028: PJM 60GW Power Shortfall Constrains Data Center Geography
+
+**Date identified:** 2026-04-11
+**Origin signal:** PJM Interconnection 15GW emergency procurement, 60GW decade shortfall ([[compute-hardware]])
+**Target(s):** [[ai-business-funding]], [[ai-infrastructure]]
+**Mechanism:** Physical power is the hardest bottleneck to clear (3-7 year plant construction). 60GW shortfall = 60 nuclear plants. Data center expansion constrained by geography — only power-rich locations viable. Companies with existing power access (utility partnerships, owned generation) have structural moat. Concentrates AI infrastructure investment in power-rich regions. Iran conflict and energy price spikes compound the problem.
+**Direction:** constraining
+**Strength:** strong
+**Lag:** quarters
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-04-11 | Identified | Bloomberg: PJM emergency proposal, 60GW shortfall, natural gas construction costs 2x in 5 years |
 
 ---
 

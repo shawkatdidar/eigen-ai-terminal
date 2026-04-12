@@ -42,6 +42,7 @@ Enterprise AI spend is growing rapidly with buyers becoming more sophisticated. 
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-10 | **Engramme (Harvard spinout) raising ~$100M** — "large memory models", AI-neuroscience, ~$1B valuation | notable | bloomberg.com |
 | 2026-04-10 | **Haast $12M Series A AI compliance** — Haast raised $12M Series A for AI-powered compliance automation. → Growing investment in AI compliance tooling as regulatory frameworks (EU AI Act, US AI Accountability Act, Treasury 230 controls) create demand for automated compliance solutions. | notable | techcrunch.com |
 | 2026-04-09 | **Perplexity Billion Dollar Build competition** — Perplexity launched a "Billion Dollar Build" competition, inviting developers to build products using Perplexity's AI search API for a chance at significant prizes. → Developer ecosystem play from an AI search company; signals Perplexity is trying to build a platform/developer moat beyond its consumer search product. | notable | perplexity.ai |
 | 2026-04-08 | **Perplexity ARR $450M, 50% single-month jump** — Perplexity's annual recurring revenue hit $450M with a 50% increase in a single month. → Extraordinary revenue acceleration for an AI search company; at this trajectory, Perplexity is approaching the revenue scale needed for a major IPO. | notable | bloomberg.com |

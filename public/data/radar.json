@@ -1,82 +1,316 @@
 {
-  "lastUpdated": "2026-04-10T21:20:10.407Z",
+  "lastUpdated": "2026-04-12T21:38:02.319Z",
   "brief": {
-    "date": "2026-04-10T00:00:00.000Z",
-    "scanTime": "11:00",
-    "signalsTotal": 42,
-    "signalsNotable": 25,
-    "signalsSignificant": 6,
+    "date": "2026-04-11T00:00:00.000Z",
+    "scanTime": "20:30",
+    "signalsTotal": 55,
+    "signalsNotable": 12,
+    "signalsSignificant": 7,
     "signalsBreakthrough": 0,
-    "nodesUpdated": 12,
+    "nodesUpdated": 13,
     "breakthrough": [],
     "significant": [
       {
-        "title": "CoreWeave and Meta expand AI infrastructure deal to $21B through 2032",
-        "description": "On top of the prior $14.2B arrangement, bringing Meta's total CoreWeave commitment to ~$35B. Includes some of the first commercial deployments of NVIDIA's Vera Rubin platform (next-generation after Blackwell). After this deal, no single customer represents >35% of CoreWeave's revenue.   [Source](https://investors.coreweave.com/news/news-details/2026/CoreWeave-and-Meta-Announce-21-Billion-Expanded-AI-Infrastructure-Agreement/default.aspx)",
+        "title": "Alibaba pivots from open-source AI models to revenue generation",
+        "description": "Financial Times reports Alibaba (parent of the Qwen model series) is shifting its AI strategy away from free open-weight model distribution toward monetization. The Qwen series has been foundational for the local LLM community — Qwen3.5 and Qwen3.6 are among the most-used open models globally. If Alibaba restricts access to future Qwen releases, it would significantly reshape the open-source model landscape that thousands of developers and companies depend on. → First major signal that China's open-weight model bonanza may be ending. Watch for DeepSeek and Zhipu to follow.   [Source](https://www.ft.com/content/alibaba-qwen-ai-revenue-strategy-2026)",
         "nodes": [
-          "compute-hardware",
+          "open-source-models",
           "ai-business-funding"
         ],
-        "source": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-and-Meta-Announce-21-Billion-Expanded-AI-Infrastructure-Agreement/default.aspx",
+        "source": "https://www.ft.com/content/alibaba-qwen-ai-revenue-strategy-2026",
+        "nodeNames": [
+          "Open Source Models",
+          "AI Business & Funding"
+        ],
+        "view": "both",
+        "practical": true,
+        "tags": [
+          "alibaba",
+          "deepseek",
+          "zhipu",
+          "qwen",
+          "qwen3.5",
+          "qwen3.6",
+          "qwen-"
+        ],
+        "actionLine": "First major signal that China's open-weight model bonanza may be ending."
+      },
+      {
+        "title": "Central banks mobilize over Anthropic's Mythos model",
+        "description": "The Bank of England is scheduling emergency CMORG (Cross Market Operational Resilience Group) meetings to discuss Mythos with financial institutions, joined by Treasury, FCA, and the National Cyber Security Centre. The Bank of Canada has already met with banks. In the US, Treasury Secretary Bessent and Fed Chair Powell urgently summoned CEOs from JPMorgan, Goldman Sachs, Citigroup, Bank of America, and Morgan Stanley — all of whom are now testing Mythos internally. → First time multiple central banks have treated a specific AI model as a systemic financial risk. Validates FC-002 (Mythos escalating security demand).    [Source](https://www.bloomberg.com/news/articles/2026-04-11/bank-of-england-set-to-discuss-anthropic-s-mythos-with-banks)",
+        "nodes": [
+          "ai-safety-alignment",
+          "ai-policy-regulation",
+          "ai-in-enterprise"
+        ],
+        "source": "https://www.bloomberg.com/news/articles/2026-04-11/bank-of-england-set-to-discuss-anthropic-s-mythos-with-banks",
+        "nodeNames": [
+          "AI Safety",
+          "AI Policy & Regulation",
+          "AI in Enterprise"
+        ],
+        "view": "strategic",
+        "practical": false,
+        "tags": [
+          "anthropic"
+        ],
+        "actionLine": "First time multiple central banks have treated a specific AI model as a systemic financial risk."
+      },
+      {
+        "title": "Three senior OpenAI Stargate infrastructure leaders depart for Meta",
+        "description": "Peter Hoeschele (instrumental in launching the $500B Stargate initiative), Shamez Hemani (compute strategy), and Anuj Saharan (computing organization leader) are joining Meta's Superintelligence Labs. OpenAI appointed Sachin Katti (ex-Intel) to replace them. This comes as OpenAI paused Stargate UK over energy costs and decided not to expand the Abilene, TX site. Meta's projected $135B capex for 2026 is drawing infrastructure talent aggressively. → Infrastructure talent war intensifying. OpenAI losing key people to Meta ahead of IPO while simultaneously pulling back on physical expansion.    [Source](https://www.bloomberg.com/news/articles/2026-04-11/former-openai-stargate-leaders-plan-to-join-meta-platforms)",
+        "nodes": [
+          "compute-hardware",
+          "ai-business-funding",
+          "frontier-models"
+        ],
+        "source": "https://www.bloomberg.com/news/articles/2026-04-11/former-openai-stargate-leaders-plan-to-join-meta-platforms",
         "nodeNames": [
           "Compute & Hardware",
-          "AI Business & Funding"
+          "AI Business & Funding",
+          "Frontier Models"
         ],
         "view": "strategic",
         "practical": false,
         "tags": [
           "meta",
-          "nvidia"
+          "openai",
+          "intel"
         ],
-        "actionLine": "[Source](https://investors.coreweave.com/news/news-details/2026/CoreWeave-and-Meta-Announce-21-Billion-Expanded-AI-Infrastructure-Agreement/default.aspx)"
+        "actionLine": "Infrastructure talent war intensifying."
       },
       {
-        "title": "Anthropic releases Advisor Strategy — tiered model collaboration in a single API call",
-        "description": "A new server-side tool (`advisor_20260301`) enabling a cost-efficient executor model (Sonnet 4.6 or Haiku 4.5) to consult Opus 4.6 as an advisor within one `/v1/messages` call. On SWE-bench Multilingual, Sonnet+Opus advisor scored 74.8% vs 72.1% for Sonnet alone (+2.7pp), while costing 11.9% less per agentic task. Advisor overhead is typically 400-700 tokens per consultation. → Establishes a new API pattern: instead of routing to one model, composing multiple models within a single request.   [Source](https://claude.com/blog/the-advisor-strategy)",
+        "title": "Japan commits $16.3B to Rapidus for sovereign 2nm AI chip manufacturing",
+        "description": "Japan approved ¥631.5B ($4B) in new subsidies, bringing total government investment in Rapidus to ¥2.6 trillion ($16.3B). Rapidus targets 2nm chip production by 2027, partnering with IBM (technology licensing) and ASML (equipment). An external committee certified the company's technical progress at its Hokkaido foundry. → Third major sovereign chip investment (after South Korea's Rebellions and China's Huawei 950PR push). Japan racing to reduce TSMC dependency as geopolitical chip competition intensifies.   [Source](https://www.bloomberg.com/news/articles/2026-04-11/japan-bets-16-billion-to-propel-startup-rapidus-into-ai-chips)",
         "nodes": [
-          "frontier-models",
+          "compute-hardware",
+          "ai-policy-regulation"
+        ],
+        "source": "https://www.bloomberg.com/news/articles/2026-04-11/japan-bets-16-billion-to-propel-startup-rapidus-into-ai-chips",
+        "nodeNames": [
+          "Compute & Hardware",
+          "AI Policy & Regulation"
+        ],
+        "view": "strategic",
+        "practical": false,
+        "tags": [],
+        "actionLine": "Third major sovereign chip investment (after South Korea's Rebellions and China's Huawei 950PR push)."
+      },
+      {
+        "title": "Anthropic ships Claude Code Ultraplan — cloud-based planning with Opus 4.6",
+        "description": "Ultraplan offloads complex multi-step planning to a cloud session running Opus 4.6 for up to 30 minutes, freeing the developer's terminal for concurrent work. Plans are editable in a browser interface with inline comments, emoji reactions, and revision requests. Requires Claude Code v2.1.91+, a web account, and a GitHub repo. Incompatible with Bedrock/Vertex/Foundry deployments. → Decouples planning from execution in agentic coding. First major cloud-hybrid pattern in coding agent tools — planning happens asynchronously in the cloud while local execution continues.   [Source](https://the-decoder.com/claude-codes-new-ultraplan-feature-moves-task-planning-to-the-cloud/)",
+        "nodes": [
+          "ai-coding-tools",
           "ai-agents"
         ],
-        "source": "https://claude.com/blog/the-advisor-strategy",
+        "source": "https://the-decoder.com/claude-codes-new-ultraplan-feature-moves-task-planning-to-the-cloud/",
         "nodeNames": [
-          "Frontier Models",
+          "AI Coding Tools",
           "AI Agents"
         ],
         "view": "builder",
         "practical": true,
         "tags": [
           "anthropic",
-          "claude.com",
-          "sonnet",
-          "opus",
-          "haiku"
+          "github",
+          "opus"
         ],
-        "actionLine": "Establishes a new API pattern: instead of routing to one model, composing multiple models within a single request."
+        "actionLine": "Decouples planning from execution in agentic coding."
       },
       {
-        "title": "Alibaba's HappyHorse-1.0 revealed as #1 AI video model",
-        "description": "Alibaba's ATH Innovation Division unmasked as creator of HappyHorse-1.0, which anonymously topped the Artificial Analysis leaderboard for text-to-video and image-to-video (1379 Elo, 106 points above Seedance 2.0). Jointly generates video AND audio from text. Built by team led by Zhang Di (former Kuaishou VP / Kling AI tech lead). API expected April 30; model weights will be fully open-sourced. → Alibaba joins the multimodal frontier with a model that outperforms all incumbents including its own Wan series.  [Source](https://www.cnbc.com/2026/04/10/alibaba-happyhorse-ai-video-model-benchmark-reveal.html)",
+        "title": "Linux kernel merges formal AI coding assistant policy",
+        "description": "The world's largest collaborative open-source project now has formal rules: AI agents MUST NOT add Signed-off-by tags (only humans can certify the Developer Certificate of Origin), contributions must use `Assisted-by: AGENT_NAME:MODEL_VERSION [TOOL1] [TOOL2]` attribution format, and human submitters bear full legal responsibility. 469 HN points, 352 comments — the largest AI-related HN discussion of the day. → Linux kernel policies often become de facto industry standards. This establishes the legal framework for AI-assisted contributions: machines produce, humans certify and take responsibility.   [Source](https://github.com/torvalds/linux/blob/master/Documentation/process/coding-assistants.rst)",
         "nodes": [
-          "multimodal-ai"
+          "ai-coding-tools",
+          "ai-policy-regulation"
         ],
-        "source": "https://www.cnbc.com/2026/04/10/alibaba-happyhorse-ai-video-model-benchmark-reveal.html",
+        "source": "https://github.com/torvalds/linux/blob/master/Documentation/process/coding-assistants.rst",
         "nodeNames": [
-          "Multimodal AI"
+          "AI Coding Tools",
+          "AI Policy & Regulation"
+        ],
+        "view": "both",
+        "practical": true,
+        "tags": [
+          "github"
+        ],
+        "actionLine": "Linux kernel policies often become de facto industry standards."
+      },
+      {
+        "title": "PJM Interconnection seeks 15GW emergency power for data center boom",
+        "description": "The operator of the 13-state eastern US grid launched an emergency proposal to match data centers with new power plants, running September through March 2027. PJM is already bracing for a multi-gigawatt shortage by summer 2027, with potential shortfall of 60GW over the next decade (equivalent to 60 large nuclear reactors). Natural gas plant construction costs have more than doubled in five years. → Data center power constraint reaching crisis proportions. 60GW shortfall = the entire output of 60 nuclear plants. This is BN-004 (data center power) hardening further.   [Source](https://www.bloomberg.com/news/articles/2026-04-10/pjm-targets-15-gigawatts-of-new-power-to-feed-data-center-boom)",
+        "nodes": [
+          "compute-hardware",
+          "ai-infrastructure"
+        ],
+        "source": "https://www.bloomberg.com/news/articles/2026-04-10/pjm-targets-15-gigawatts-of-new-power-to-feed-data-center-boom",
+        "nodeNames": [
+          "Compute & Hardware",
+          "AI Infrastructure"
+        ],
+        "view": "both",
+        "practical": true,
+        "tags": [],
+        "actionLine": "Data center power constraint reaching crisis proportions."
+      }
+    ],
+    "notable": [
+      {
+        "title": "NVIDIA releases coordinated Physical AI suite",
+        "description": "Isaac GR00T (open models for robot language understanding), Cosmos (world models for synthetic data), Newton 1.0 physics engine (GA, open source), and Isaac Sim 6.0 (GA) all released simultaneously. NemoClaw enables robots to follow natural language commands without coding. NVIDIA's most comprehensive robotics platform push to date.   [Source](https://blogs.nvidia.com/blog/national-robotics-week-2026/)",
+        "nodes": [
+          "robotics-embodied-ai",
+          "compute-hardware"
+        ],
+        "source": "https://blogs.nvidia.com/blog/national-robotics-week-2026/",
+        "nodeNames": [
+          "Robotics & Embodied AI",
+          "Compute & Hardware"
+        ],
+        "view": "strategic",
+        "practical": false,
+        "tags": [
+          "nvidia"
+        ],
+        "actionLine": "[Source](https://blogs.nvidia.com/blog/national-robotics-week-2026/)"
+      },
+      {
+        "title": "Spectral-AI: GPU ray tracing cores repurposed for MoE expert routing",
+        "description": "Replaces standard dense routing in Mixture-of-Experts (MoE — architecture where only some \"expert\" sub-networks activate per input) with geometric ray tracing using GPU RT cores (hardware normally used for realistic game lighting). Validated on OLMoE-1B-7B: 48-89x faster routing (927μs → 19μs), 731x less VRAM for the router (2,944MB → 4MB), zero perplexity degradation. O(log N) complexity means this improves as expert counts scale to thousands.   [Source](https://github.com/JordiSilvestre/Spectral-AI)",
+        "nodes": [
+          "ai-research-breakthroughs",
+          "compute-hardware"
+        ],
+        "source": "https://github.com/JordiSilvestre/Spectral-AI",
+        "nodeNames": [
+          "Research Breakthroughs",
+          "Compute & Hardware"
+        ],
+        "view": "both",
+        "practical": true,
+        "tags": [
+          "github",
+          "perplexity",
+          "moe"
+        ],
+        "actionLine": "19μs), 731x less VRAM for the router (2,944MB → 4MB), zero perplexity degradation."
+      },
+      {
+        "title": "DFlash speculative decoding achieves 85 tok/s on Apple M5 Max",
+        "description": "3.3x speedup on Qwen3.5-9B via MLX. Makes interactive use of mid-size open models increasingly practical on Apple consumer hardware.",
+        "nodes": [
+          "edge-on-device-ai",
+          "compute-hardware"
+        ],
+        "source": "",
+        "nodeNames": [
+          "Edge & On-Device AI",
+          "Compute & Hardware"
+        ],
+        "view": "both",
+        "practical": true,
+        "tags": [
+          "apple",
+          "qwen3.5-9"
+        ],
+        "actionLine": "Makes interactive use of mid-size open models increasingly practical on Apple consumer hardware."
+      },
+      {
+        "title": "Kathleen: 733K-parameter oscillator architecture outperforms 16x larger models",
+        "description": "Post-transformer architecture operating directly on raw UTF-8 bytes using frequency-domain processing. No tokenizer, no attention mechanism. Uses RecurrentOscillatorBanks (damped sinusoid convolutions) and FFT-Rotate Wavetable Encoder (256 floats vs 65K embedding parameters). Achieves 88.6% IMDB, 92.3% AG News — outperforming tokenized models with 16x more parameters. Currently limited to classification. → EDGE-01 (Post-Transformer) relevant: first frequency-domain architecture showing competitive results.   [Source](https://arxiv.org/abs/2604.07969)",
+        "nodes": [
+          "ai-research-breakthroughs",
+          "frontier-edges"
+        ],
+        "source": "https://arxiv.org/abs/2604.07969",
+        "nodeNames": [
+          "Research Breakthroughs",
+          "Frontier Edges"
         ],
         "view": "builder",
         "practical": true,
         "tags": [
-          "alibaba"
+          "transformer",
+          "attention"
         ],
-        "actionLine": "Alibaba joins the multimodal frontier with a model that outperforms all incumbents including its own Wan series."
+        "actionLine": "EDGE-01 (Post-Transformer) relevant: first frequency-domain architecture showing competitive results."
       },
       {
-        "title": "OpenAI backs Illinois SB 3444 — liability shield for frontier AI developers",
-        "description": "OpenAI testified in favor of a bill that would shield frontier AI developers (models trained with >$100M in compute) from liability for \"critical harms\" unless they reach a massive threshold: 100+ deaths/injuries or $1B+ property damage. Safety reports and non-reckless behavior required. AI policy experts call this more extreme than previous industry-backed proposals. → OpenAI shifting from defensive to proactive legislative strategy, potentially setting precedent for federal AI liability frameworks.  [Source](https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/)",
+        "title": "Dead Weights, Live Signals: frozen LLM ensembles via shared latent space",
+        "description": "Multiple frozen LLMs communicate through learned linear projections into a shared continuous latent space. Only 17.6M trainable parameters against ~12B frozen weights achieve 87.3% on ARC-Challenge (+11.4pp above best single model). Develops selective routing without explicit supervision. → New paradigm for model composition without retraining.  [Source](https://arxiv.org/abs/2604.08335)",
+        "nodes": [
+          "ai-research-breakthroughs"
+        ],
+        "source": "https://arxiv.org/abs/2604.08335",
+        "nodeNames": [
+          "Research Breakthroughs"
+        ],
+        "view": "builder",
+        "practical": true,
+        "tags": [],
+        "actionLine": "New paradigm for model composition without retraining."
+      },
+      {
+        "title": "reverse-SynthID: Google's watermarking reverse-engineered",
+        "description": "Using only signal processing and spectral analysis (no access to Google's encoder/decoder), achieved 90% detection accuracy and built a V3 bypass achieving 75% carrier energy drop and 91% phase coherence drop. → Raises questions about watermarking robustness as a long-term AI safety mechanism.  [Source](https://github.com/aloshdenny/reverse-SynthID)",
+        "nodes": [
+          "ai-safety-alignment"
+        ],
+        "source": "https://github.com/aloshdenny/reverse-SynthID",
+        "nodeNames": [
+          "AI Safety"
+        ],
+        "view": "strategic",
+        "practical": false,
+        "tags": [
+          "google",
+          "github"
+        ],
+        "actionLine": "Raises questions about watermarking robustness as a long-term AI safety mechanism."
+      },
+      {
+        "title": "ClawBench: frontier agents achieve only 33.3% on real-world web tasks",
+        "description": "153 tasks across 144 live production websites (purchasing, scheduling, job applications). Claude Sonnet 4.6 scored 33.3%. Tests actual production sites, not sandboxes. → Agent reliability gap (BN-001) quantified on real websites.  [Source](https://arxiv.org/abs/2604.08523)",
+        "nodes": [
+          "ai-agents"
+        ],
+        "source": "https://arxiv.org/abs/2604.08523",
+        "nodeNames": [
+          "AI Agents"
+        ],
+        "view": "builder",
+        "practical": true,
+        "tags": [
+          "sonnet"
+        ],
+        "actionLine": "Agent reliability gap (BN-001) quantified on real websites."
+      },
+      {
+        "title": "India government funds 12 organizations for sovereign AI models",
+        "description": "Combined with Sarvam AI's $350M raise and Microsoft's pledge to train 20M Indians in AI. New hyperscale data center in Hyderabad mid-2026 with three availability zones. India positioning as third pole in AI race behind US and China.",
+        "nodes": [
+          "ai-policy-regulation",
+          "ai-business-funding"
+        ],
+        "source": "",
+        "nodeNames": [
+          "AI Policy & Regulation",
+          "AI Business & Funding"
+        ],
+        "view": "strategic",
+        "practical": false,
+        "tags": [
+          "microsoft"
+        ],
+        "actionLine": "India positioning as third pole in AI race behind US and China."
+      },
+      {
+        "title": "Altman home targeted with Molotov cocktail",
+        "description": "20-year-old suspect threw incendiary device at Sam Altman's San Francisco home at ~3:45am, igniting part of an exterior gate, then threatened to \"burn down\" an OpenAI office. No injuries. Suspect arrested. Altman published a personal blog post addressing the incident and AI's societal impact. → Escalation of anti-AI/anti-tech sentiment into real-world violence.  [Source](https://www.cnbc.com/2026/04/10/sam-altman-house-hit-with-molotov-cocktail-openai-office-threatened.html)",
         "nodes": [
           "ai-policy-regulation"
         ],
-        "source": "https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/",
+        "source": "https://www.cnbc.com/2026/04/10/sam-altman-house-hit-with-molotov-cocktail-openai-office-threatened.html",
         "nodeNames": [
           "AI Policy & Regulation"
         ],
@@ -85,365 +319,63 @@
         "tags": [
           "openai"
         ],
-        "actionLine": "OpenAI shifting from defensive to proactive legislative strategy, potentially setting precedent for federal AI liability frameworks."
+        "actionLine": "Escalation of anti-AI/anti-tech sentiment into real-world violence."
       },
       {
-        "title": "Shopify launches AI Toolkit — opens full platform to coding agents",
-        "description": "Shopify released an open-source (MIT) plugin and agent skill system connecting AI coding clients (Claude Code, Cursor, Codex, Gemini CLI, VS Code) directly to the Shopify platform via MCP (Model Context Protocol). Agents can scaffold apps, validate code against Shopify schemas, run GraphQL operations, and execute real store changes (bulk SEO updates, discount applications, product image swaps). One merchant reported optimizing 32 products in a single agent session. → First major e-commerce platform opening its full API surface to autonomous AI agents.   [Source](https://shopify.dev/changelog/shopify-ai-toolkit-connect-your-ai-tools-to-the-shopify-platform)",
+        "title": "Musk vs OpenAI \"legal ambush\" before April 27 trial",
+        "description": "Musk's lawyers changed strategy: now seeking Altman's ouster as CEO, money returned to OpenAI rather than to Musk, court oversight of OpenAI's conversion and financings. OpenAI called this \"legally improper\" and filed objections. Trial starts April 27. → Musk seeking structural control of OpenAI, not just damages.   [Source](https://www.bloomberg.com/news/articles/2026-04-11/openai-accuses-musk-of-ambush-as-100-billion-plus-trial-looms)",
         "nodes": [
-          "ai-agents",
-          "ai-in-enterprise"
-        ],
-        "source": "https://shopify.dev/changelog/shopify-ai-toolkit-connect-your-ai-tools-to-the-shopify-platform",
-        "nodeNames": [
-          "AI Agents",
-          "AI in Enterprise"
-        ],
-        "view": "both",
-        "practical": true,
-        "tags": [
-          "cursor",
-          "mcp",
-          "codex"
-        ],
-        "actionLine": "First major e-commerce platform opening its full API surface to autonomous AI agents."
-      },
-      {
-        "title": "DeepSeek discloses data center in Inner Mongolia with banned Blackwell chips",
-        "description": "Bloomberg reports DeepSeek is advertising data center engineering positions in Inner Mongolia, the first time the company has publicly disclosed a data center location. The facility reportedly relies on banned NVIDIA Blackwell chips. → First public confirmation of DeepSeek's physical infrastructure; intensifies questions about US export control enforcement in China's AI compute supply chain.   [Source](https://www.bloomberg.com/news/articles/2026-04-10/deepseek-looks-for-data-center-engineers-in-inner-mongolia)",
-        "nodes": [
-          "compute-hardware",
+          "frontier-models",
           "ai-policy-regulation"
         ],
-        "source": "https://www.bloomberg.com/news/articles/2026-04-10/deepseek-looks-for-data-center-engineers-in-inner-mongolia",
+        "source": "https://www.bloomberg.com/news/articles/2026-04-11/openai-accuses-musk-of-ambush-as-100-billion-plus-trial-looms",
         "nodeNames": [
-          "Compute & Hardware",
+          "Frontier Models",
           "AI Policy & Regulation"
         ],
         "view": "strategic",
         "practical": false,
         "tags": [
-          "nvidia",
-          "deepseek"
+          "openai"
         ],
-        "actionLine": "First public confirmation of DeepSeek's physical infrastructure; intensifies questions about US export control enforcement in China's AI compute supply chain."
-      }
-    ],
-    "notable": [
-      {
-        "title": "TSMC Q1 2026 revenue hits $35.7B, up 35% YoY",
-        "description": "Confirms continued acceleration in AI chip demand across the semiconductor supply chain.  [Source](https://techstartups.com/2026/04/10/top-tech-news-today-april-10-2026/)",
-        "nodes": [
-          "compute-hardware"
-        ],
-        "source": "https://techstartups.com/2026/04/10/top-tech-news-today-april-10-2026/",
-        "nodeNames": [
-          "Compute & Hardware"
-        ],
-        "view": "strategic",
-        "practical": false,
-        "tags": [],
-        "actionLine": "[Source](https://techstartups.com/2026/04/10/top-tech-news-today-april-10-2026/)"
+        "actionLine": "Musk seeking structural control of OpenAI, not just damages."
       },
       {
-        "title": "Intel and Google announce multiyear AI infrastructure collaboration",
-        "description": "Google will adopt future Intel Xeon processors and co-develop custom ASIC-based IPUs (Infrastructure Processing Units — programmable accelerators that offload networking, storage, and security from host CPUs). Signals that AI scaling requires balanced heterogeneous architectures, not just GPU accelerators.   [Source](https://www.intc.com/news-events/press-releases/detail/1766/intel-and-google-deepen-collaboration-to-advance-ai)",
+        "title": "Engramme: Harvard spinout raises ~$100M for \"large memory models\"",
+        "description": "Founded by former Harvard professor Gabriel Kreiman (AI-neuroscience intersection). Building models to access data across a person's digital life, surfacing relevant information automatically without prompting. Valuation discussions at ~$1B. Part of the growing \"neolab\" trend.   [Source](https://www.bloomberg.com/news/articles/2026-04-10/harvard-s-kreiman-seeks-100-million-to-build-ai-memory-tech)",
         "nodes": [
-          "compute-hardware",
-          "ai-infrastructure"
+          "ai-business-funding",
+          "ai-research-breakthroughs"
         ],
-        "source": "https://www.intc.com/news-events/press-releases/detail/1766/intel-and-google-deepen-collaboration-to-advance-ai",
+        "source": "https://www.bloomberg.com/news/articles/2026-04-10/harvard-s-kreiman-seeks-100-million-to-build-ai-memory-tech",
         "nodeNames": [
-          "Compute & Hardware",
-          "AI Infrastructure"
+          "AI Business & Funding",
+          "Research Breakthroughs"
         ],
         "view": "both",
         "practical": true,
-        "tags": [
-          "google",
-          "intel"
-        ],
-        "actionLine": "[Source](https://www.intc.com/news-events/press-releases/detail/1766/intel-and-google-deepen-collaboration-to-advance-ai)"
+        "tags": [],
+        "actionLine": "[Source](https://www.bloomberg.com/news/articles/2026-04-10/harvard-s-kreiman-seeks-100-million-to-build-ai-memory-tech)"
       },
       {
-        "title": "GLM 5.1 tops code arena rankings for open models",
-        "description": "Zhipu AI's GLM 5.1 (754B MoE, MIT license) reached top 3 in code arena rankings overall, beating GPT-5.4 and Gemini — making it the highest-ranked open-source model for coding.",
+        "title": "Codex 0.119.0-0.120.0: WebRTC v2 voice, MCP Apps, streaming",
+        "description": "OpenAI Codex CLI defaults voice sessions to WebRTC v2. MCP Apps gained resource reads, tool-call metadata, custom-server tool search. Remote workflows added egress websocket transport. 0.120.0 enables streaming background agent progress.  [Source](https://github.com/openai/codex/releases)",
         "nodes": [
-          "open-source-models",
           "ai-coding-tools"
         ],
-        "source": "",
+        "source": "https://github.com/openai/codex/releases",
         "nodeNames": [
-          "Open Source Models",
           "AI Coding Tools"
         ],
         "view": "builder",
         "practical": true,
         "tags": [
-          "zhipu",
-          "moe",
-          "gpt-5.4"
+          "openai",
+          "github",
+          "mcp",
+          "codex"
         ],
-        "actionLine": "Zhipu AI's GLM 5.1 (754B MoE, MIT license) reached top 3 in code arena rankings overall, beating GPT-5.4 and Gemini — making it the highest-ranked open-source model for coding."
-      },
-      {
-        "title": "cuBLAS dispatches inefficient kernel for batched FP32 on RTX 5090",
-        "description": "A researcher found that NVIDIA's cuBLAS library runs an inefficient kernel on RTX consumer GPUs, causing ~40% utilization of available compute in batched mode. A custom kernel beats cuBLAS by 46-65%. Same workloads perform correctly on Pro 6000 and H200. → Consumer GPU software stack receives significantly less optimization than datacenter/pro lines.",
-        "nodes": [
-          "compute-hardware"
-        ],
-        "source": "",
-        "nodeNames": [
-          "Compute & Hardware"
-        ],
-        "view": "strategic",
-        "practical": false,
-        "tags": [
-          "nvidia"
-        ],
-        "actionLine": "Consumer GPU software stack receives significantly less optimization than datacenter/pro lines."
-      },
-      {
-        "title": "Flowise AI agent builder under active CVSS 10.0 RCE exploitation",
-        "description": "CVE-2025-59528: the CustomMCP node executes user-provided JavaScript without validation, granting full Node.js runtime access. 12,000-15,000 publicly accessible instances remain exposed. Patched in v3.0.6 (Sept 2025) but many instances unpatched.   [Source](https://thehackernews.com/2026/04/flowise-ai-agent-builder-under-active.html)",
-        "nodes": [
-          "ai-safety-alignment",
-          "ai-agents"
-        ],
-        "source": "https://thehackernews.com/2026/04/flowise-ai-agent-builder-under-active.html",
-        "nodeNames": [
-          "AI Safety",
-          "AI Agents"
-        ],
-        "view": "both",
-        "practical": true,
-        "tags": [],
-        "actionLine": "[Source](https://thehackernews.com/2026/04/flowise-ai-agent-builder-under-active.html)"
-      },
-      {
-        "title": "Perplexity ARR hits $450M after 50% single-month jump",
-        "description": "Revenue surge driven by \"Computer\" (autonomous agent platform) launch and shift to usage-based pricing. 100M+ monthly active users, valuation near $20B. Also launched \"Billion Dollar Build\" — an 8-week competition where teams build companies using Perplexity Computer, with up to $1M investment per team.   [Source](https://www.pymnts.com/artificial-intelligence-2/2026/perplexitys-shift-to-ai-agents-boosts-revenue-50/)",
-        "nodes": [
-          "ai-business-funding",
-          "ai-agents"
-        ],
-        "source": "https://www.pymnts.com/artificial-intelligence-2/2026/perplexitys-shift-to-ai-agents-boosts-revenue-50/",
-        "nodeNames": [
-          "AI Business & Funding",
-          "AI Agents"
-        ],
-        "view": "both",
-        "practical": true,
-        "tags": [
-          "perplexity"
-        ],
-        "actionLine": "[Source](https://www.pymnts.com/artificial-intelligence-2/2026/perplexitys-shift-to-ai-agents-boosts-revenue-50/)"
-      },
-      {
-        "title": "State AI therapy chatbot bans advancing",
-        "description": "Maine LD 2082 prohibiting clinical AI in mental health therapy headed to governor. Missouri moving similar ban via omnibus health bill. Arizona HB 2372 includes $10K first-violation penalty. Alabama SB 63 approved by full House. 78 chatbot bills alive across 27 states, 600+ AI bills total in 2026 sessions.  [Source](https://www.transparencycoalition.ai/news/ai-legislative-update-april10-2026)",
-        "nodes": [
-          "ai-policy-regulation"
-        ],
-        "source": "https://www.transparencycoalition.ai/news/ai-legislative-update-april10-2026",
-        "nodeNames": [
-          "AI Policy & Regulation"
-        ],
-        "view": "strategic",
-        "practical": false,
-        "tags": [],
-        "actionLine": "[Source](https://www.transparencycoalition.ai/news/ai-legislative-update-april10-2026)"
-      },
-      {
-        "title": "OpenClaw v2026.4.9 \"Dreaming\" feature for persistent agent memory",
-        "description": "Introduces REM backfill (retroactive integration of historical data into memory), diary timeline UI for chronological memory replay, and security fixes against SSRF and node execution injection. → Advancing persistent memory for long-running autonomous agents.",
-        "nodes": [
-          "ai-agents"
-        ],
-        "source": "",
-        "nodeNames": [
-          "AI Agents"
-        ],
-        "view": "builder",
-        "practical": true,
-        "tags": [],
-        "actionLine": "Advancing persistent memory for long-running autonomous agents."
-      },
-      {
-        "title": "Qwen 3.6 community voting concludes — dense model supporters win",
-        "description": "Results split ~40%/20%/20%/20% across four model variant preferences. Dense model (\"densocrats\") won over MoE advocates. Community expects release soon.",
-        "nodes": [
-          "open-source-models"
-        ],
-        "source": "",
-        "nodeNames": [
-          "Open Source Models"
-        ],
-        "view": "builder",
-        "practical": true,
-        "tags": [
-          "moe",
-          "qwen"
-        ],
-        "actionLine": "Community expects release soon."
-      },
-      {
-        "title": "Claude behavioral shift — \"agrees with everything\" (403pts, r/ClaudeAI)",
-        "description": "High-engagement community post reporting Claude's behavior has shifted toward increased agreeableness and reduced pushback. Connects to the sycophancy research tracked in Session 8.",
-        "nodes": [
-          "frontier-models",
-          "ai-safety-alignment"
-        ],
-        "source": "",
-        "nodeNames": [
-          "Frontier Models",
-          "AI Safety"
-        ],
-        "view": "strategic",
-        "practical": false,
-        "tags": [],
-        "actionLine": "Connects to the sycophancy research tracked in Session 8."
-      },
-      {
-        "title": "Sharetronic discloses ~$92M in banned NVIDIA-linked servers",
-        "description": "Chinese AI firm disclosed the hardware in government filings, hours after Super Micro co-founder was charged in an alleged smuggling case. Stock dropped 20% daily limit.",
-        "nodes": [
-          "compute-hardware",
-          "ai-policy-regulation"
-        ],
-        "source": "",
-        "nodeNames": [
-          "Compute & Hardware",
-          "AI Policy & Regulation"
-        ],
-        "view": "strategic",
-        "practical": false,
-        "tags": [
-          "nvidia"
-        ],
-        "actionLine": "Stock dropped 20% daily limit."
-      },
-      {
-        "title": "Revolut launches AIR in-chat AI assistant",
-        "description": "Rolling out to UK users. Can take real financial actions: blocking payments, buying eSIMs, analyzing spending. Production deployment of an agentic AI assistant with financial action capabilities in a fintech product with tens of millions of users.",
-        "nodes": [
-          "ai-in-enterprise",
-          "ai-agents"
-        ],
-        "source": "",
-        "nodeNames": [
-          "AI in Enterprise",
-          "AI Agents"
-        ],
-        "view": "both",
-        "practical": true,
-        "tags": [],
-        "actionLine": "Production deployment of an agentic AI assistant with financial action capabilities in a fintech product with tens of millions of users."
-      },
-      {
-        "title": "LM Studio acquires Locally AI",
-        "description": "LM Studio acquired the popular iOS/Mac on-device inference app. Plans for seamless cross-device model and agent experiences. Consolidation in local inference tooling.",
-        "nodes": [
-          "edge-on-device-ai"
-        ],
-        "source": "",
-        "nodeNames": [
-          "Edge & On-Device AI"
-        ],
-        "view": "builder",
-        "practical": true,
-        "tags": [
-          "inference"
-        ],
-        "actionLine": "Consolidation in local inference tooling."
-      },
-      {
-        "title": "ArXiv cluster: Agent security under stress",
-        "description": "Three papers in one day: (1) \"Thought Virus\" demonstrates subliminal infection propagating across AI agent networks while evading safety defenses; (2) ACIArena evaluates cascading injection attacks across 1,356 multi-agent test cases; (3) \"Silencing the Guardrails\" shows safety guardrails can be bypassed at inference time without retraining via activation pattern suppression.",
-        "nodes": [
-          "ai-safety-alignment",
-          "ai-agents"
-        ],
-        "source": "",
-        "nodeNames": [
-          "AI Safety",
-          "AI Agents"
-        ],
-        "view": "both",
-        "practical": true,
-        "tags": [
-          "inference"
-        ],
-        "actionLine": "Three papers in one day: (1) \"Thought Virus\" demonstrates subliminal infection propagating across AI agent networks while evading safety defenses; (2) ACIArena evaluates cascading injection attacks across 1,356 multi-agent test cases; (3) \"Silencing the Guardrails\" shows safety guardrails can be bypassed at inference time without retraining via activation pattern suppression."
-      },
-      {
-        "title": "IatroBench: safety measures hurt the users they aim to protect",
-        "description": "Pre-registered study measuring \"identity-contingent withholding\" — models provide worse guidance when queries use layperson language vs expert language, with a +0.38 decoupling gap. Quantifies how safety measures can paradoxically harm users by withholding useful information based on perceived sophistication.",
-        "nodes": [
-          "ai-safety-alignment"
-        ],
-        "source": "",
-        "nodeNames": [
-          "AI Safety"
-        ],
-        "view": "strategic",
-        "practical": false,
-        "tags": [],
-        "actionLine": "Quantifies how safety measures can paradoxically harm users by withholding useful information based on perceived sophistication."
-      },
-      {
-        "title": "SAT: 40% reasoning token reduction through step-level pruning",
-        "description": "Stepwise Adaptive Thinking performs difficulty-aware pruning of reasoning chains across 9 models while maintaining accuracy. Directly attacks inference cost of chain-of-thought reasoning.",
-        "nodes": [
-          "ai-research-breakthroughs"
-        ],
-        "source": "",
-        "nodeNames": [
-          "Research Breakthroughs"
-        ],
-        "view": "builder",
-        "practical": true,
-        "tags": [
-          "inference"
-        ],
-        "actionLine": "Directly attacks inference cost of chain-of-thought reasoning."
-      },
-      {
-        "title": "Rhizome OS-1: semi-autonomous drug discovery agents",
-        "description": "Multi-modal AI agents functioning as computational chemists, generating 2,355-2,876 novel molecules per target in a semi-autonomous pipeline.",
-        "nodes": [
-          "ai-for-science",
-          "ai-agents"
-        ],
-        "source": "",
-        "nodeNames": [
-          "AI for Science",
-          "AI Agents"
-        ],
-        "view": "builder",
-        "practical": true,
-        "tags": [],
-        "actionLine": "Multi-modal AI agents functioning as computational chemists, generating 2,355-2,876 novel molecules per target in a semi-autonomous pipeline."
-      },
-      {
-        "title": "Qwen3.5-122B at 198 tok/s on 2x RTX PRO 6000 Blackwell",
-        "description": "Demonstrates near-real-time inference for a 122B-parameter model on workstation-class hardware.",
-        "nodes": [
-          "compute-hardware",
-          "edge-on-device-ai"
-        ],
-        "source": "",
-        "nodeNames": [
-          "Compute & Hardware",
-          "Edge & On-Device AI"
-        ],
-        "view": "both",
-        "practical": true,
-        "tags": [
-          "inference",
-          "qwen3.5-122"
-        ],
-        "actionLine": "Demonstrates near-real-time inference for a 122B-parameter model on workstation-class hardware."
+        "actionLine": "[Source](https://github.com/openai/codex/releases)"
       }
     ]
   },
@@ -832,6 +764,51 @@
       "lag": "months",
       "status": "active",
       "dateIdentified": "2026-04-07"
+    },
+    {
+      "id": "FC-026",
+      "title": "Alibaba Revenue Pivot Threatens Open-Source Model Ecosystem",
+      "origin": "Alibaba shifting AI strategy from open-source to revenue ([[open-source-models]])",
+      "targets": [
+        "ai-in-enterprise",
+        "edge-on-device-ai"
+      ],
+      "mechanism": "Qwen models (3.5, 3.6 series) are among the most-used open-weight models globally. If Alibaba restricts future releases, thousands of companies and developers who built on free Qwen weights face dependency risk. Enterprise deployments using Qwen fine-tunes would need to migrate. Local LLM community loses a major free model family. Remaining open providers (Google Gemma, Meta Llama) gain strategic leverage and lose competitive pressure to keep models open.",
+      "direction": "constraining (open-source), enabling (Google/Meta leverage)",
+      "strength": "moderate",
+      "lag": "months",
+      "status": "active",
+      "dateIdentified": "2026-04-11"
+    },
+    {
+      "id": "FC-027",
+      "title": "Central Bank Mythos Response Creates Regulated AI Market Segment",
+      "origin": "BOE, BOC, Fed/Treasury mobilizing financial institutions over Mythos ([[ai-policy-regulation]])",
+      "targets": [
+        "ai-business-funding",
+        "ai-in-enterprise"
+      ],
+      "mechanism": "Central banks treating Mythos as systemic risk creates a new compliance requirement for AI deployment in regulated industries. Banks testing Mythos become a customer segment for Anthropic. New regulatory frameworks for AI model deployment in financial infrastructure will slow adoption in finance but create premium pricing for compliant AI security tools. Validates FC-002 (Mythos escalating security demand) and extends it from enterprise to sovereign regulatory level.",
+      "direction": "accelerating (security spending), constraining (regulated AI deployment speed)",
+      "strength": "strong",
+      "lag": "weeks",
+      "status": "active",
+      "dateIdentified": "2026-04-11"
+    },
+    {
+      "id": "FC-028",
+      "title": "PJM 60GW Power Shortfall Constrains Data Center Geography",
+      "origin": "PJM Interconnection 15GW emergency procurement, 60GW decade shortfall ([[compute-hardware]])",
+      "targets": [
+        "ai-business-funding",
+        "ai-infrastructure"
+      ],
+      "mechanism": "Physical power is the hardest bottleneck to clear (3-7 year plant construction). 60GW shortfall = 60 nuclear plants. Data center expansion constrained by geography — only power-rich locations viable. Companies with existing power access (utility partnerships, owned generation) have structural moat. Concentrates AI infrastructure investment in power-rich regions. Iran conflict and energy price spikes compound the problem.",
+      "direction": "constraining",
+      "strength": "strong",
+      "lag": "quarters",
+      "status": "active",
+      "dateIdentified": "2026-04-11"
     }
   ],
   "convergences": [
@@ -885,6 +862,11 @@
         {
           "description": "Gemma 4 (4B-active MoE) achieves frontier-competitive agent performance at a fraction of compute",
           "origin": "open-source-models",
+          "strength": "strong"
+        },
+        {
+          "description": "Spectral-AI: RT cores for O(log N) MoE routing — 48-89x faster, 731x VRAM reduction, runs on consumer RTX",
+          "origin": "compute-hardware",
           "strength": "strong"
         }
       ],
@@ -1026,7 +1008,7 @@
         "ai-infrastructure"
       ],
       "attackers": 4,
-      "looseningSignals": 2,
+      "looseningSignals": 3,
       "summary": "How It's Blocked"
     },
     {
@@ -1456,6 +1438,148 @@
       "0": {
         "chains": [
           {
+            "title": "Apple Multi-Model iOS Creates New AI Distribution Channel",
+            "mechanism": "Apple controls ~1.5 billion active devices. Opening Siri to Claude, Gemini, and other models via iOS 27 Extensions transforms the iPhone from a single-model platform into a multi-model orchestrator. This creates a new distribution channel: AI companies can now reach iPhone users directly through the...",
+            "direction": "enabling",
+            "strength": "strong",
+            "targets": [
+              "Frontier Models",
+              "AI Business & Funding",
+              "AI in Enterprise"
+            ]
+          },
+          {
+            "title": "OpenAI Ad Revenue Validates New AI Business Model",
+            "mechanism": "$100M ARR in 6 weeks proves advertising works in AI assistants without degrading user experience (OpenAI reports \"no impact on consumer trust metrics\"). This validates a third business model for AI companies beyond subscriptions and API fees. Because advertising revenue scales with user volume (not ...",
+            "direction": "accelerating",
+            "strength": "moderate",
+            "targets": [
+              "Frontier Models",
+              "AI in Enterprise"
+            ]
+          },
+          {
+            "title": "Inference Cost Collapse Enables Open-Source TTS Commercial Viability",
+            "mechanism": "Open-weight TTS at production quality (90ms latency, 9 languages, comparable to ElevenLabs) combined with embedding costs dropping 5-30x means two previously commercial-only AI capabilities are now freely deployable. The mechanism is straightforward: ElevenLabs charges per character of speech genera...",
+            "direction": "disrupting (commercial TTS) / enabling (voice-native applications)",
+            "strength": "strong",
+            "targets": [
+              "Multimodal AI",
+              "AI in Enterprise",
+              "AI Business & Funding"
+            ]
+          }
+        ],
+        "convergences": [
+          {
+            "title": "Defense AI Becomes a Standalone Public Market Category by Mid-2027",
+            "confidence": "detected",
+            "predictedOutcome": "At least one defense-focused AI company (Shield AI, Anduril, or similar) will IPO at a $15B+ valuation by mid-2027, establishing defense AI as a distinct investable category separate from general AI o...",
+            "timeline": "Q1-Q2 2027"
+          },
+          {
+            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
+            "confidence": "imminent",
+            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
+            "timeline": "Q3-Q4 2026"
+          }
+        ],
+        "bottlenecks": [
+          {
+            "title": "Talent Concentration in Frontier Labs",
+            "status": "loosening",
+            "summary": "How It's Blocked"
+          }
+        ],
+        "predictions": [
+          {
+            "title": "Apple Announces Multi-Model Siri at WWDC June 2026",
+            "confidence": "85%",
+            "checkDate": "2026-06-15"
+          },
+          {
+            "title": "Inference Cost (Per 1M Tokens, Frontier Models) Drops 5x+ by End of 2026",
+            "confidence": "75%",
+            "checkDate": "2027-01-15"
+          }
+        ]
+      },
+      "1": {
+        "chains": [
+          {
+            "title": "Mythos Cyber Capabilities Escalate Enterprise Security Demand",
+            "mechanism": "When a frontier lab's internal documents describe their own unreleased model as a cybersecurity risk, it immediately escalates the urgency for defensive tooling across the enterprise sector. CISOs and security teams now have concrete evidence (from the model creator itself) that AI-powered attacks a...",
+            "direction": "accelerating (security demand) / constraining (enterprise adoption pace)",
+            "strength": "strong",
+            "targets": [
+              "AI Safety",
+              "AI in Enterprise"
+            ]
+          },
+          {
+            "title": "MCP Formal Gaps Constrain Agent Reliability",
+            "mechanism": "MCP is now the de facto protocol for connecting AI agents to tools (97M monthly SDK downloads, adopted by OpenAI, Anthropic, Google, Figma, GitHub, etc.). The formal analysis proves specific categories of tool schemas that MCP cannot represent correctly — meaning agent-tool interactions can silently...",
+            "direction": "constraining",
+            "strength": "moderate",
+            "targets": [
+              "AI Agents",
+              "AI Coding Tools",
+              "AI in Enterprise"
+            ]
+          },
+          {
+            "title": "OpenAI Ad Revenue Validates New AI Business Model",
+            "mechanism": "$100M ARR in 6 weeks proves advertising works in AI assistants without degrading user experience (OpenAI reports \"no impact on consumer trust metrics\"). This validates a third business model for AI companies beyond subscriptions and API fees. Because advertising revenue scales with user volume (not ...",
+            "direction": "accelerating",
+            "strength": "moderate",
+            "targets": [
+              "Frontier Models",
+              "AI in Enterprise"
+            ]
+          }
+        ],
+        "convergences": [
+          {
+            "title": "Defense AI Becomes a Standalone Public Market Category by Mid-2027",
+            "confidence": "detected",
+            "predictedOutcome": "At least one defense-focused AI company (Shield AI, Anduril, or similar) will IPO at a $15B+ valuation by mid-2027, establishing defense AI as a distinct investable category separate from general AI o...",
+            "timeline": "Q1-Q2 2027"
+          },
+          {
+            "title": "AI IPO Wave Creates Public Market Investment Window in H2 2026",
+            "confidence": "strengthening",
+            "predictedOutcome": "At least 3 major AI companies (from: Anthropic, OpenAI, Shield AI, Anduril, Databricks, Scale AI) will file for IPO in H2 2026, creating a concentrated public market entry window for AI-focused invest...",
+            "timeline": "Q3-Q4 2026"
+          }
+        ],
+        "bottlenecks": [
+          {
+            "title": "Agent Reliability Gap",
+            "status": "blocking",
+            "summary": "How It's Blocked"
+          },
+          {
+            "title": "AI Cybersecurity Offense/Defense Asymmetry",
+            "status": "hardening",
+            "summary": "How It's Blocked"
+          }
+        ],
+        "predictions": [
+          {
+            "title": "Anthropic Files for IPO by End of 2026",
+            "confidence": "83%",
+            "checkDate": "2027-01-15"
+          },
+          {
+            "title": "Apple Announces Multi-Model Siri at WWDC June 2026",
+            "confidence": "85%",
+            "checkDate": "2026-06-15"
+          }
+        ]
+      },
+      "2": {
+        "chains": [
+          {
             "title": "SoftBank $40B Funds Stargate Compute Buildout",
             "mechanism": "The $40B loan explicitly funds SoftBank's $30B OpenAI follow-on + Stargate infrastructure costs. Stargate is a joint venture between OpenAI and SoftBank building massive AI data centers. This capital injection directly translates into hardware orders (NVIDIA GPUs, networking equipment, power infrast...",
             "direction": "accelerating",
@@ -1466,14 +1590,13 @@
             ]
           },
           {
-            "title": "Apple Multi-Model iOS Creates New AI Distribution Channel",
-            "mechanism": "Apple controls ~1.5 billion active devices. Opening Siri to Claude, Gemini, and other models via iOS 27 Extensions transforms the iPhone from a single-model platform into a multi-model orchestrator. This creates a new distribution channel: AI companies can now reach iPhone users directly through the...",
+            "title": "Arm AGI CPU Disrupts x86 Datacenter Duopoly",
+            "mechanism": "Arm's 136-core Neoverse V3 chip (co-developed with Meta) claims 2x performance per rack vs x86 for inference workloads. Because agentic AI workloads involve many concurrent lightweight inference tasks (not the GPU-heavy training workloads), CPU architecture matters for inference cost. If Arm deliver...",
             "direction": "enabling",
-            "strength": "strong",
+            "strength": "moderate",
             "targets": [
-              "Frontier Models",
-              "AI Business & Funding",
-              "AI in Enterprise"
+              "AI Infrastructure",
+              "AI Agents"
             ]
           },
           {
@@ -1511,13 +1634,81 @@
         ],
         "predictions": [
           {
-            "title": "Inference Cost (Per 1M Tokens, Frontier Models) Drops 5x+ by End of 2026",
-            "confidence": "75%",
-            "checkDate": "2027-01-15"
+            "title": "Apple Announces Multi-Model Siri at WWDC June 2026",
+            "confidence": "85%",
+            "checkDate": "2026-06-15"
           }
         ]
       },
-      "1": {
+      "3": {
+        "chains": [
+          {
+            "title": "China Hardware Independence Validated → Export Controls Accelerate",
+            "mechanism": "GLM-5.1 (a 744B-parameter frontier-scale model) trained entirely on Huawei Ascend chips demonstrates that China can produce frontier models without NVIDIA hardware. This is precisely the scenario that US export control policy aimed to prevent. Because the demonstrated capability exists, US policymak...",
+            "direction": "accelerating (China hardware independence) / constraining (US-China AI decoupling deepens)",
+            "strength": "strong",
+            "targets": [
+              "AI Policy & Regulation",
+              "Compute & Hardware"
+            ]
+          },
+          {
+            "title": "Investment-Grade GPU Debt Opens Institutional Capital to AI Infrastructure",
+            "mechanism": "Investment-grade rating on GPU-backed debt unlocks a new capital class for AI infrastructure. Pension funds, insurance companies, and sovereign wealth funds — collectively managing tens of trillions — typically require investment-grade assets. Before CoreWeave's A3 rating, these institutions couldn'...",
+            "direction": "accelerating",
+            "strength": "strong",
+            "targets": [
+              "Compute & Hardware",
+              "AI Infrastructure"
+            ]
+          },
+          {
+            "title": "DeepSeek V4 Huawei-First Optimization Closes China Software-Hardware Loop",
+            "mechanism": "When China's leading AI lab optimizes for domestic hardware *first* (not as a port from NVIDIA), it creates a software-hardware co-optimization loop. Huawei chips get tuned for the most demanding workloads, performance gaps narrow, other Chinese labs follow. Combined with IDC's 41% domestic chip sha...",
+            "direction": "accelerating (China ecosystem independence) / constraining (US-China AI interoperability)",
+            "strength": "strong",
+            "targets": [
+              "Open Source Models",
+              "AI Policy & Regulation",
+              "Compute & Hardware"
+            ]
+          }
+        ],
+        "convergences": [
+          {
+            "title": "Defense AI Becomes a Standalone Public Market Category by Mid-2027",
+            "confidence": "detected",
+            "predictedOutcome": "At least one defense-focused AI company (Shield AI, Anduril, or similar) will IPO at a $15B+ valuation by mid-2027, establishing defense AI as a distinct investable category separate from general AI o...",
+            "timeline": "Q1-Q2 2027"
+          },
+          {
+            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
+            "confidence": "imminent",
+            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
+            "timeline": "Q3-Q4 2026"
+          }
+        ],
+        "bottlenecks": [
+          {
+            "title": "Energy/Power Constraint on Datacenter Expansion",
+            "status": "loosening",
+            "summary": "How It's Blocked"
+          }
+        ],
+        "predictions": [
+          {
+            "title": "Apple Announces Multi-Model Siri at WWDC June 2026",
+            "confidence": "85%",
+            "checkDate": "2026-06-15"
+          },
+          {
+            "title": "MCP Protocol Gets Major Revision Addressing Formal Gaps by Q1 2027",
+            "confidence": "60%",
+            "checkDate": "2027-04-01"
+          }
+        ]
+      },
+      "4": {
         "chains": [
           {
             "title": "MCP Formal Gaps Constrain Agent Reliability",
@@ -1531,38 +1722,38 @@
             ]
           },
           {
-            "title": "Apple Multi-Model iOS Creates New AI Distribution Channel",
-            "mechanism": "Apple controls ~1.5 billion active devices. Opening Siri to Claude, Gemini, and other models via iOS 27 Extensions transforms the iPhone from a single-model platform into a multi-model orchestrator. This creates a new distribution channel: AI companies can now reach iPhone users directly through the...",
+            "title": "Arm AGI CPU Disrupts x86 Datacenter Duopoly",
+            "mechanism": "Arm's 136-core Neoverse V3 chip (co-developed with Meta) claims 2x performance per rack vs x86 for inference workloads. Because agentic AI workloads involve many concurrent lightweight inference tasks (not the GPU-heavy training workloads), CPU architecture matters for inference cost. If Arm deliver...",
             "direction": "enabling",
-            "strength": "strong",
+            "strength": "moderate",
             "targets": [
-              "Frontier Models",
-              "AI Business & Funding",
-              "AI in Enterprise"
+              "AI Infrastructure",
+              "AI Agents"
             ]
           },
           {
-            "title": "OpenAI Ad Revenue Validates New AI Business Model",
-            "mechanism": "$100M ARR in 6 weeks proves advertising works in AI assistants without degrading user experience (OpenAI reports \"no impact on consumer trust metrics\"). This validates a third business model for AI companies beyond subscriptions and API fees. Because advertising revenue scales with user volume (not ...",
-            "direction": "accelerating",
-            "strength": "moderate",
+            "title": "Corporate AI Management Replacement Creates \"Organizational World Model\" Demand",
+            "mechanism": "Dorsey's public declaration is not just a cost-cutting move — it is a leadership template. Other CEOs will replicate the announcement structure: \"AI replaces the coordination function, not just tasks.\" The mechanism is social: public companies benchmark against each other, and a visible, named restr...",
+            "direction": "accelerating (enterprise AI structural adoption) / enabling (new product category: organizational AI)",
+            "strength": "strong",
             "targets": [
-              "Frontier Models",
+              "AI Agents",
+              "AI Business & Funding",
               "AI in Enterprise"
             ]
           }
         ],
         "convergences": [
           {
-            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
-            "timeline": "Q3-Q4 2026"
-          },
-          {
             "title": "AI IPO Wave Creates Public Market Investment Window in H2 2026",
             "confidence": "strengthening",
             "predictedOutcome": "At least 3 major AI companies (from: Anthropic, OpenAI, Shield AI, Anduril, Databricks, Scale AI) will file for IPO in H2 2026, creating a concentrated public market entry window for AI-focused invest...",
+            "timeline": "Q3-Q4 2026"
+          },
+          {
+            "title": "Agent Orchestration Standardization",
+            "confidence": "strengthening",
+            "predictedOutcome": "Multi-agent orchestration emerges as a distinct infrastructure category with de facto standards, as 5+ independent projects converge on solving the same coordination problem simultaneously.",
             "timeline": "Q3-Q4 2026"
           }
         ],
@@ -1580,57 +1771,23 @@
         ],
         "predictions": [
           {
-            "title": "Apple Announces Multi-Model Siri at WWDC June 2026",
-            "confidence": "85%",
-            "checkDate": "2026-06-15"
-          },
-          {
-            "title": "Inference Cost (Per 1M Tokens, Frontier Models) Drops 5x+ by End of 2026",
-            "confidence": "75%",
-            "checkDate": "2027-01-15"
+            "title": "MCP Protocol Gets Major Revision Addressing Formal Gaps by Q1 2027",
+            "confidence": "60%",
+            "checkDate": "2027-04-01"
           }
         ]
       },
-      "2": {
+      "5": {
         "chains": [
           {
-            "title": "Inference Cost Collapse Enables Open-Source TTS Commercial Viability",
-            "mechanism": "Open-weight TTS at production quality (90ms latency, 9 languages, comparable to ElevenLabs) combined with embedding costs dropping 5-30x means two previously commercial-only AI capabilities are now freely deployable. The mechanism is straightforward: ElevenLabs charges per character of speech genera...",
-            "direction": "disrupting (commercial TTS) / enabling (voice-native applications)",
-            "strength": "strong",
-            "targets": [
-              "Multimodal AI",
-              "AI in Enterprise",
-              "AI Business & Funding"
-            ]
-          }
-        ],
-        "convergences": [],
-        "bottlenecks": [],
-        "predictions": [
-          {
-            "title": "Apple Announces Multi-Model Siri at WWDC June 2026",
-            "confidence": "85%",
-            "checkDate": "2026-06-15"
-          },
-          {
-            "title": "Inference Cost (Per 1M Tokens, Frontier Models) Drops 5x+ by End of 2026",
-            "confidence": "75%",
-            "checkDate": "2027-01-15"
-          }
-        ]
-      },
-      "3": {
-        "chains": [
-          {
-            "title": "Waymo Scale Validates Robotaxi Economics → Accelerates Competitor Capital",
-            "mechanism": "500,000 weekly paid rides is the first concrete data point proving that autonomous vehicle demand at scale is real and growing — not a niche or a demo. Because Waymo's ride volume is now publicly known, every mobility investor, competitor (Zoox/Amazon, Uber, Pony AI), and regulator now has a validat...",
-            "direction": "accelerating",
+            "title": "MCP Formal Gaps Constrain Agent Reliability",
+            "mechanism": "MCP is now the de facto protocol for connecting AI agents to tools (97M monthly SDK downloads, adopted by OpenAI, Anthropic, Google, Figma, GitHub, etc.). The formal analysis proves specific categories of tool schemas that MCP cannot represent correctly — meaning agent-tool interactions can silently...",
+            "direction": "constraining",
             "strength": "moderate",
             "targets": [
-              "AI Business & Funding",
-              "Compute & Hardware",
-              "AI Policy & Regulation"
+              "AI Agents",
+              "AI Coding Tools",
+              "AI in Enterprise"
             ]
           },
           {
@@ -1663,83 +1820,15 @@
             "timeline": "Q1-Q2 2027"
           },
           {
-            "title": "AI IPO Wave Creates Public Market Investment Window in H2 2026",
-            "confidence": "strengthening",
-            "predictedOutcome": "At least 3 major AI companies (from: Anthropic, OpenAI, Shield AI, Anduril, Databricks, Scale AI) will file for IPO in H2 2026, creating a concentrated public market entry window for AI-focused invest...",
-            "timeline": "Q3-Q4 2026"
-          }
-        ],
-        "bottlenecks": [],
-        "predictions": [
-          {
-            "title": "Inference Cost (Per 1M Tokens, Frontier Models) Drops 5x+ by End of 2026",
-            "confidence": "75%",
-            "checkDate": "2027-01-15"
-          },
-          {
-            "title": "At Least One Defense AI Company IPOs by End of Q2 2027",
-            "confidence": "65%",
-            "checkDate": "2027-07-01"
-          }
-        ]
-      },
-      "4": {
-        "chains": [
-          {
-            "title": "Mythos Cyber Capabilities Escalate Enterprise Security Demand",
-            "mechanism": "When a frontier lab's internal documents describe their own unreleased model as a cybersecurity risk, it immediately escalates the urgency for defensive tooling across the enterprise sector. CISOs and security teams now have concrete evidence (from the model creator itself) that AI-powered attacks a...",
-            "direction": "accelerating (security demand) / constraining (enterprise adoption pace)",
-            "strength": "strong",
-            "targets": [
-              "AI Safety",
-              "AI in Enterprise"
-            ]
-          },
-          {
-            "title": "MCP Formal Gaps Constrain Agent Reliability",
-            "mechanism": "MCP is now the de facto protocol for connecting AI agents to tools (97M monthly SDK downloads, adopted by OpenAI, Anthropic, Google, Figma, GitHub, etc.). The formal analysis proves specific categories of tool schemas that MCP cannot represent correctly — meaning agent-tool interactions can silently...",
-            "direction": "constraining",
-            "strength": "moderate",
-            "targets": [
-              "AI Agents",
-              "AI Coding Tools",
-              "AI in Enterprise"
-            ]
-          },
-          {
-            "title": "Apple Multi-Model iOS Creates New AI Distribution Channel",
-            "mechanism": "Apple controls ~1.5 billion active devices. Opening Siri to Claude, Gemini, and other models via iOS 27 Extensions transforms the iPhone from a single-model platform into a multi-model orchestrator. This creates a new distribution channel: AI companies can now reach iPhone users directly through the...",
-            "direction": "enabling",
-            "strength": "strong",
-            "targets": [
-              "Frontier Models",
-              "AI Business & Funding",
-              "AI in Enterprise"
-            ]
-          }
-        ],
-        "convergences": [
-          {
             "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
             "confidence": "imminent",
             "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
-            "timeline": "Q3-Q4 2026"
-          },
-          {
-            "title": "AI IPO Wave Creates Public Market Investment Window in H2 2026",
-            "confidence": "strengthening",
-            "predictedOutcome": "At least 3 major AI companies (from: Anthropic, OpenAI, Shield AI, Anduril, Databricks, Scale AI) will file for IPO in H2 2026, creating a concentrated public market entry window for AI-focused invest...",
             "timeline": "Q3-Q4 2026"
           }
         ],
         "bottlenecks": [
           {
             "title": "Agent Reliability Gap",
-            "status": "blocking",
-            "summary": "How It's Blocked"
-          },
-          {
-            "title": "MCP Protocol Expressivity Limitations",
             "status": "blocking",
             "summary": "How It's Blocked"
           }
@@ -1752,7 +1841,7 @@
           }
         ]
       },
-      "5": {
+      "6": {
         "chains": [
           {
             "title": "SoftBank $40B Funds Stargate Compute Buildout",
@@ -1776,23 +1865,18 @@
             ]
           },
           {
-            "title": "China Hardware Independence Validated → Export Controls Accelerate",
-            "mechanism": "GLM-5.1 (a 744B-parameter frontier-scale model) trained entirely on Huawei Ascend chips demonstrates that China can produce frontier models without NVIDIA hardware. This is precisely the scenario that US export control policy aimed to prevent. Because the demonstrated capability exists, US policymak...",
-            "direction": "accelerating (China hardware independence) / constraining (US-China AI decoupling deepens)",
+            "title": "Inference Cost Collapse Enables Open-Source TTS Commercial Viability",
+            "mechanism": "Open-weight TTS at production quality (90ms latency, 9 languages, comparable to ElevenLabs) combined with embedding costs dropping 5-30x means two previously commercial-only AI capabilities are now freely deployable. The mechanism is straightforward: ElevenLabs charges per character of speech genera...",
+            "direction": "disrupting (commercial TTS) / enabling (voice-native applications)",
             "strength": "strong",
             "targets": [
-              "AI Policy & Regulation",
-              "Compute & Hardware"
+              "Multimodal AI",
+              "AI in Enterprise",
+              "AI Business & Funding"
             ]
           }
         ],
         "convergences": [
-          {
-            "title": "Defense AI Becomes a Standalone Public Market Category by Mid-2027",
-            "confidence": "detected",
-            "predictedOutcome": "At least one defense-focused AI company (Shield AI, Anduril, or similar) will IPO at a $15B+ valuation by mid-2027, establishing defense AI as a distinct investable category separate from general AI o...",
-            "timeline": "Q1-Q2 2027"
-          },
           {
             "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
             "confidence": "imminent",
@@ -1814,9 +1898,9 @@
             "checkDate": "2026-06-15"
           },
           {
-            "title": "Inference Cost (Per 1M Tokens, Frontier Models) Drops 5x+ by End of 2026",
-            "confidence": "75%",
-            "checkDate": "2027-01-15"
+            "title": "MCP Protocol Gets Major Revision Addressing Formal Gaps by Q1 2027",
+            "confidence": "60%",
+            "checkDate": "2027-04-01"
           }
         ]
       }
@@ -1825,6 +1909,27 @@
       "0": {
         "chains": [
           {
+            "title": "SoftBank $40B Funds Stargate Compute Buildout",
+            "mechanism": "The $40B loan explicitly funds SoftBank's $30B OpenAI follow-on + Stargate infrastructure costs. Stargate is a joint venture between OpenAI and SoftBank building massive AI data centers. This capital injection directly translates into hardware orders (NVIDIA GPUs, networking equipment, power infrast...",
+            "direction": "accelerating",
+            "strength": "strong",
+            "targets": [
+              "Compute & Hardware",
+              "AI Infrastructure"
+            ]
+          },
+          {
+            "title": "Waymo Scale Validates Robotaxi Economics → Accelerates Competitor Capital",
+            "mechanism": "500,000 weekly paid rides is the first concrete data point proving that autonomous vehicle demand at scale is real and growing — not a niche or a demo. Because Waymo's ride volume is now publicly known, every mobility investor, competitor (Zoox/Amazon, Uber, Pony AI), and regulator now has a validat...",
+            "direction": "accelerating",
+            "strength": "moderate",
+            "targets": [
+              "AI Business & Funding",
+              "Compute & Hardware",
+              "AI Policy & Regulation"
+            ]
+          },
+          {
             "title": "China Hardware Independence Validated → Export Controls Accelerate",
             "mechanism": "GLM-5.1 (a 744B-parameter frontier-scale model) trained entirely on Huawei Ascend chips demonstrates that China can produce frontier models without NVIDIA hardware. This is precisely the scenario that US export control policy aimed to prevent. Because the demonstrated capability exists, US policymak...",
             "direction": "accelerating (China hardware independence) / constraining (US-China AI decoupling deepens)",
@@ -1833,13 +1938,67 @@
               "AI Policy & Regulation",
               "Compute & Hardware"
             ]
+          }
+        ],
+        "convergences": [
+          {
+            "title": "Defense AI Becomes a Standalone Public Market Category by Mid-2027",
+            "confidence": "detected",
+            "predictedOutcome": "At least one defense-focused AI company (Shield AI, Anduril, or similar) will IPO at a $15B+ valuation by mid-2027, establishing defense AI as a distinct investable category separate from general AI o...",
+            "timeline": "Q1-Q2 2027"
           },
           {
-            "title": "Anthropic $30B Revenue + 3.5GW TPU Deal Accelerates Power Bottleneck",
-            "mechanism": "3.5GW of TPU demand from a single customer creates $21-42B/year revenue for Broadcom, incentivizing massive ASIC investment. Combined with Terafab, existing NVIDIA GPU orders, and Meta/Microsoft/Oracle megaprojects, total AI compute demand is approaching the limits of US power grid capacity in key r...",
-            "direction": "accelerating (compute investment) / hardening (power constraint)",
+            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
+            "confidence": "imminent",
+            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
+            "timeline": "Q3-Q4 2026"
+          }
+        ],
+        "bottlenecks": [
+          {
+            "title": "Energy/Power Constraint on Datacenter Expansion",
+            "status": "loosening",
+            "summary": "How It's Blocked"
+          }
+        ],
+        "predictions": [
+          {
+            "title": "Inference Cost (Per 1M Tokens, Frontier Models) Drops 5x+ by End of 2026",
+            "confidence": "75%",
+            "checkDate": "2027-01-15"
+          }
+        ]
+      },
+      "1": {
+        "chains": [
+          {
+            "title": "SoftBank $40B Funds Stargate Compute Buildout",
+            "mechanism": "The $40B loan explicitly funds SoftBank's $30B OpenAI follow-on + Stargate infrastructure costs. Stargate is a joint venture between OpenAI and SoftBank building massive AI data centers. This capital injection directly translates into hardware orders (NVIDIA GPUs, networking equipment, power infrast...",
+            "direction": "accelerating",
             "strength": "strong",
             "targets": [
+              "Compute & Hardware",
+              "AI Infrastructure"
+            ]
+          },
+          {
+            "title": "TurboQuant Memory Compression Reshapes Hardware Economics",
+            "mechanism": "KV-cache memory is the bottleneck for long-context inference — it grows linearly with context length. 6x compression at zero accuracy loss means the same GPU can serve 6x more concurrent users or handle 6x longer contexts. This directly reduces the memory hardware needed per inference query, which t...",
+            "direction": "disrupting (memory hardware demand) / enabling (edge AI, long-context)",
+            "strength": "strong",
+            "targets": [
+              "Compute & Hardware",
+              "AI Infrastructure",
+              "Edge & On-Device AI"
+            ]
+          },
+          {
+            "title": "Waymo Scale Validates Robotaxi Economics → Accelerates Competitor Capital",
+            "mechanism": "500,000 weekly paid rides is the first concrete data point proving that autonomous vehicle demand at scale is real and growing — not a niche or a demo. Because Waymo's ride volume is now publicly known, every mobility investor, competitor (Zoox/Amazon, Uber, Pony AI), and regulator now has a validat...",
+            "direction": "accelerating",
+            "strength": "moderate",
+            "targets": [
+              "AI Business & Funding",
               "Compute & Hardware",
               "AI Policy & Regulation"
             ]
@@ -1858,36 +2017,37 @@
             "title": "Energy/Power Constraint on Datacenter Expansion",
             "status": "loosening",
             "summary": "How It's Blocked"
+          },
+          {
+            "title": "Talent Concentration in Frontier Labs",
+            "status": "loosening",
+            "summary": "How It's Blocked"
           }
         ],
-        "predictions": [
-          {
-            "title": "Apple Announces Multi-Model Siri at WWDC June 2026",
-            "confidence": "85%",
-            "checkDate": "2026-06-15"
-          }
-        ]
+        "predictions": []
       },
-      "1": {
+      "2": {
         "chains": [
           {
-            "title": "SoftBank $40B Funds Stargate Compute Buildout",
-            "mechanism": "The $40B loan explicitly funds SoftBank's $30B OpenAI follow-on + Stargate infrastructure costs. Stargate is a joint venture between OpenAI and SoftBank building massive AI data centers. This capital injection directly translates into hardware orders (NVIDIA GPUs, networking equipment, power infrast...",
-            "direction": "accelerating",
+            "title": "Apple Multi-Model iOS Creates New AI Distribution Channel",
+            "mechanism": "Apple controls ~1.5 billion active devices. Opening Siri to Claude, Gemini, and other models via iOS 27 Extensions transforms the iPhone from a single-model platform into a multi-model orchestrator. This creates a new distribution channel: AI companies can now reach iPhone users directly through the...",
+            "direction": "enabling",
             "strength": "strong",
             "targets": [
-              "Compute & Hardware",
-              "AI Infrastructure"
+              "Frontier Models",
+              "AI Business & Funding",
+              "AI in Enterprise"
             ]
           },
           {
-            "title": "Arm AGI CPU Disrupts x86 Datacenter Duopoly",
-            "mechanism": "Arm's 136-core Neoverse V3 chip (co-developed with Meta) claims 2x performance per rack vs x86 for inference workloads. Because agentic AI workloads involve many concurrent lightweight inference tasks (not the GPU-heavy training workloads), CPU architecture matters for inference cost. If Arm deliver...",
-            "direction": "enabling",
-            "strength": "moderate",
+            "title": "TurboQuant Memory Compression Reshapes Hardware Economics",
+            "mechanism": "KV-cache memory is the bottleneck for long-context inference — it grows linearly with context length. 6x compression at zero accuracy loss means the same GPU can serve 6x more concurrent users or handle 6x longer contexts. This directly reduces the memory hardware needed per inference query, which t...",
+            "direction": "disrupting (memory hardware demand) / enabling (edge AI, long-context)",
+            "strength": "strong",
             "targets": [
+              "Compute & Hardware",
               "AI Infrastructure",
-              "AI Agents"
+              "Edge & On-Device AI"
             ]
           },
           {
@@ -1919,649 +2079,7 @@
         ],
         "predictions": []
       },
-      "2": {
-        "chains": [
-          {
-            "title": "Inference Cost Collapse Enables Open-Source TTS Commercial Viability",
-            "mechanism": "Open-weight TTS at production quality (90ms latency, 9 languages, comparable to ElevenLabs) combined with embedding costs dropping 5-30x means two previously commercial-only AI capabilities are now freely deployable. The mechanism is straightforward: ElevenLabs charges per character of speech genera...",
-            "direction": "disrupting (commercial TTS) / enabling (voice-native applications)",
-            "strength": "strong",
-            "targets": [
-              "Multimodal AI",
-              "AI in Enterprise",
-              "AI Business & Funding"
-            ]
-          },
-          {
-            "title": "China Hardware Independence Validated → Export Controls Accelerate",
-            "mechanism": "GLM-5.1 (a 744B-parameter frontier-scale model) trained entirely on Huawei Ascend chips demonstrates that China can produce frontier models without NVIDIA hardware. This is precisely the scenario that US export control policy aimed to prevent. Because the demonstrated capability exists, US policymak...",
-            "direction": "accelerating (China hardware independence) / constraining (US-China AI decoupling deepens)",
-            "strength": "strong",
-            "targets": [
-              "AI Policy & Regulation",
-              "Compute & Hardware"
-            ]
-          },
-          {
-            "title": "Alibaba's Closed-Source Pivot Reduces Open-Source Cost Floor",
-            "mechanism": "China's most prolific open-source lab releasing proprietary models reduces the rate at which free alternatives catch up to frontier. Open-source users who relied on Qwen now face pay-or-wait. Creates brief pricing window for commercial providers.",
-            "direction": "constraining (open-source pace) / enabling (commercial model pricing power)",
-            "strength": "moderate",
-            "targets": [
-              "Open Source Models",
-              "AI Business & Funding"
-            ]
-          }
-        ],
-        "convergences": [
-          {
-            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
-            "timeline": "Q3-Q4 2026"
-          },
-          {
-            "title": "Agent Orchestration Standardization",
-            "confidence": "strengthening",
-            "predictedOutcome": "Multi-agent orchestration emerges as a distinct infrastructure category with de facto standards, as 5+ independent projects converge on solving the same coordination problem simultaneously.",
-            "timeline": "Q3-Q4 2026"
-          }
-        ],
-        "bottlenecks": [
-          {
-            "title": "Agent Reliability Gap",
-            "status": "blocking",
-            "summary": "How It's Blocked"
-          },
-          {
-            "title": "Talent Concentration in Frontier Labs",
-            "status": "loosening",
-            "summary": "How It's Blocked"
-          }
-        ],
-        "predictions": []
-      },
       "3": {
-        "chains": [
-          {
-            "title": "SoftBank $40B Funds Stargate Compute Buildout",
-            "mechanism": "The $40B loan explicitly funds SoftBank's $30B OpenAI follow-on + Stargate infrastructure costs. Stargate is a joint venture between OpenAI and SoftBank building massive AI data centers. This capital injection directly translates into hardware orders (NVIDIA GPUs, networking equipment, power infrast...",
-            "direction": "accelerating",
-            "strength": "strong",
-            "targets": [
-              "Compute & Hardware",
-              "AI Infrastructure"
-            ]
-          },
-          {
-            "title": "Arm AGI CPU Disrupts x86 Datacenter Duopoly",
-            "mechanism": "Arm's 136-core Neoverse V3 chip (co-developed with Meta) claims 2x performance per rack vs x86 for inference workloads. Because agentic AI workloads involve many concurrent lightweight inference tasks (not the GPU-heavy training workloads), CPU architecture matters for inference cost. If Arm deliver...",
-            "direction": "enabling",
-            "strength": "moderate",
-            "targets": [
-              "AI Infrastructure",
-              "AI Agents"
-            ]
-          },
-          {
-            "title": "TurboQuant Memory Compression Reshapes Hardware Economics",
-            "mechanism": "KV-cache memory is the bottleneck for long-context inference — it grows linearly with context length. 6x compression at zero accuracy loss means the same GPU can serve 6x more concurrent users or handle 6x longer contexts. This directly reduces the memory hardware needed per inference query, which t...",
-            "direction": "disrupting (memory hardware demand) / enabling (edge AI, long-context)",
-            "strength": "strong",
-            "targets": [
-              "Compute & Hardware",
-              "AI Infrastructure",
-              "Edge & On-Device AI"
-            ]
-          }
-        ],
-        "convergences": [
-          {
-            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
-            "timeline": "Q3-Q4 2026"
-          }
-        ],
-        "bottlenecks": [
-          {
-            "title": "Energy/Power Constraint on Datacenter Expansion",
-            "status": "loosening",
-            "summary": "How It's Blocked"
-          }
-        ],
-        "predictions": []
-      },
-      "4": {
-        "chains": [
-          {
-            "title": "MCP Formal Gaps Constrain Agent Reliability",
-            "mechanism": "MCP is now the de facto protocol for connecting AI agents to tools (97M monthly SDK downloads, adopted by OpenAI, Anthropic, Google, Figma, GitHub, etc.). The formal analysis proves specific categories of tool schemas that MCP cannot represent correctly — meaning agent-tool interactions can silently...",
-            "direction": "constraining",
-            "strength": "moderate",
-            "targets": [
-              "AI Agents",
-              "AI Coding Tools",
-              "AI in Enterprise"
-            ]
-          },
-          {
-            "title": "Arm AGI CPU Disrupts x86 Datacenter Duopoly",
-            "mechanism": "Arm's 136-core Neoverse V3 chip (co-developed with Meta) claims 2x performance per rack vs x86 for inference workloads. Because agentic AI workloads involve many concurrent lightweight inference tasks (not the GPU-heavy training workloads), CPU architecture matters for inference cost. If Arm deliver...",
-            "direction": "enabling",
-            "strength": "moderate",
-            "targets": [
-              "AI Infrastructure",
-              "AI Agents"
-            ]
-          },
-          {
-            "title": "Sub-15B Active Parameter Models at Frontier Agent Capability",
-            "mechanism": "Two open models shipping on the same day achieving frontier-competitive agent performance with <15B active parameters means production-quality agents can run on workstations, bypassing API costs and data-residency concerns. Accelerates enterprise agent adoption in regulated industries.",
-            "direction": "enabling",
-            "strength": "strong",
-            "targets": [
-              "AI in Enterprise",
-              "AI Agents",
-              "Edge & On-Device AI"
-            ]
-          }
-        ],
-        "convergences": [
-          {
-            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
-            "timeline": "Q3-Q4 2026"
-          },
-          {
-            "title": "AI Safety Evidence Cascade Triggers Regulatory Action Wave by Q4 2026",
-            "confidence": "strengthening",
-            "predictedOutcome": "At least 2 major regulatory actions (new laws, binding enforcement actions, or significant new mandatory compliance frameworks) specifically targeting AI behavioral safety (sycophancy, manipulation, s...",
-            "timeline": "Q3-Q4 2026"
-          }
-        ],
-        "bottlenecks": [
-          {
-            "title": "Agent Reliability Gap",
-            "status": "blocking",
-            "summary": "How It's Blocked"
-          },
-          {
-            "title": "MCP Protocol Expressivity Limitations",
-            "status": "blocking",
-            "summary": "How It's Blocked"
-          }
-        ],
-        "predictions": [
-          {
-            "title": "MCP Protocol Gets Major Revision Addressing Formal Gaps by Q1 2027",
-            "confidence": "60%",
-            "checkDate": "2027-04-01"
-          }
-        ]
-      },
-      "5": {
-        "chains": [
-          {
-            "title": "MCP Formal Gaps Constrain Agent Reliability",
-            "mechanism": "MCP is now the de facto protocol for connecting AI agents to tools (97M monthly SDK downloads, adopted by OpenAI, Anthropic, Google, Figma, GitHub, etc.). The formal analysis proves specific categories of tool schemas that MCP cannot represent correctly — meaning agent-tool interactions can silently...",
-            "direction": "constraining",
-            "strength": "moderate",
-            "targets": [
-              "AI Agents",
-              "AI Coding Tools",
-              "AI in Enterprise"
-            ]
-          },
-          {
-            "title": "Apple Multi-Model iOS Creates New AI Distribution Channel",
-            "mechanism": "Apple controls ~1.5 billion active devices. Opening Siri to Claude, Gemini, and other models via iOS 27 Extensions transforms the iPhone from a single-model platform into a multi-model orchestrator. This creates a new distribution channel: AI companies can now reach iPhone users directly through the...",
-            "direction": "enabling",
-            "strength": "strong",
-            "targets": [
-              "Frontier Models",
-              "AI Business & Funding",
-              "AI in Enterprise"
-            ]
-          },
-          {
-            "title": "OpenAI Ad Revenue Validates New AI Business Model",
-            "mechanism": "$100M ARR in 6 weeks proves advertising works in AI assistants without degrading user experience (OpenAI reports \"no impact on consumer trust metrics\"). This validates a third business model for AI companies beyond subscriptions and API fees. Because advertising revenue scales with user volume (not ...",
-            "direction": "accelerating",
-            "strength": "moderate",
-            "targets": [
-              "Frontier Models",
-              "AI in Enterprise"
-            ]
-          }
-        ],
-        "convergences": [
-          {
-            "title": "Defense AI Becomes a Standalone Public Market Category by Mid-2027",
-            "confidence": "detected",
-            "predictedOutcome": "At least one defense-focused AI company (Shield AI, Anduril, or similar) will IPO at a $15B+ valuation by mid-2027, establishing defense AI as a distinct investable category separate from general AI o...",
-            "timeline": "Q1-Q2 2027"
-          },
-          {
-            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
-            "timeline": "Q3-Q4 2026"
-          }
-        ],
-        "bottlenecks": [
-          {
-            "title": "Agent Reliability Gap",
-            "status": "blocking",
-            "summary": "How It's Blocked"
-          },
-          {
-            "title": "MCP Protocol Expressivity Limitations",
-            "status": "blocking",
-            "summary": "How It's Blocked"
-          }
-        ],
-        "predictions": []
-      },
-      "6": {
-        "chains": [],
-        "convergences": [
-          {
-            "title": "Defense AI Becomes a Standalone Public Market Category by Mid-2027",
-            "confidence": "detected",
-            "predictedOutcome": "At least one defense-focused AI company (Shield AI, Anduril, or similar) will IPO at a $15B+ valuation by mid-2027, establishing defense AI as a distinct investable category separate from general AI o...",
-            "timeline": "Q1-Q2 2027"
-          }
-        ],
-        "bottlenecks": [],
-        "predictions": []
-      },
-      "7": {
-        "chains": [
-          {
-            "title": "MCP Formal Gaps Constrain Agent Reliability",
-            "mechanism": "MCP is now the de facto protocol for connecting AI agents to tools (97M monthly SDK downloads, adopted by OpenAI, Anthropic, Google, Figma, GitHub, etc.). The formal analysis proves specific categories of tool schemas that MCP cannot represent correctly — meaning agent-tool interactions can silently...",
-            "direction": "constraining",
-            "strength": "moderate",
-            "targets": [
-              "AI Agents",
-              "AI Coding Tools",
-              "AI in Enterprise"
-            ]
-          },
-          {
-            "title": "Arm AGI CPU Disrupts x86 Datacenter Duopoly",
-            "mechanism": "Arm's 136-core Neoverse V3 chip (co-developed with Meta) claims 2x performance per rack vs x86 for inference workloads. Because agentic AI workloads involve many concurrent lightweight inference tasks (not the GPU-heavy training workloads), CPU architecture matters for inference cost. If Arm deliver...",
-            "direction": "enabling",
-            "strength": "moderate",
-            "targets": [
-              "AI Infrastructure",
-              "AI Agents"
-            ]
-          },
-          {
-            "title": "Sub-15B Active Parameter Models at Frontier Agent Capability",
-            "mechanism": "Two open models shipping on the same day achieving frontier-competitive agent performance with <15B active parameters means production-quality agents can run on workstations, bypassing API costs and data-residency concerns. Accelerates enterprise agent adoption in regulated industries.",
-            "direction": "enabling",
-            "strength": "strong",
-            "targets": [
-              "AI in Enterprise",
-              "AI Agents",
-              "Edge & On-Device AI"
-            ]
-          }
-        ],
-        "convergences": [
-          {
-            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
-            "timeline": "Q3-Q4 2026"
-          },
-          {
-            "title": "Agent Orchestration Standardization",
-            "confidence": "strengthening",
-            "predictedOutcome": "Multi-agent orchestration emerges as a distinct infrastructure category with de facto standards, as 5+ independent projects converge on solving the same coordination problem simultaneously.",
-            "timeline": "Q3-Q4 2026"
-          }
-        ],
-        "bottlenecks": [
-          {
-            "title": "Agent Reliability Gap",
-            "status": "blocking",
-            "summary": "How It's Blocked"
-          },
-          {
-            "title": "MCP Protocol Expressivity Limitations",
-            "status": "blocking",
-            "summary": "How It's Blocked"
-          }
-        ],
-        "predictions": [
-          {
-            "title": "MCP Protocol Gets Major Revision Addressing Formal Gaps by Q1 2027",
-            "confidence": "60%",
-            "checkDate": "2027-04-01"
-          }
-        ]
-      },
-      "8": {
-        "chains": [],
-        "convergences": [
-          {
-            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
-            "timeline": "Q3-Q4 2026"
-          }
-        ],
-        "bottlenecks": [
-          {
-            "title": "Talent Concentration in Frontier Labs",
-            "status": "loosening",
-            "summary": "How It's Blocked"
-          }
-        ],
-        "predictions": []
-      },
-      "9": {
-        "chains": [
-          {
-            "title": "AI Safety Research Convergence Increases Regulatory Pressure",
-            "mechanism": "Three independent, high-credibility safety studies published within the same scan window — one in Science (top-tier journal), one from the AI Safety Institute (government body), one from DeepMind. This is not a single researcher's result; it is a convergence of institutional evidence. The mechanism:...",
-            "direction": "constraining (enterprise AI deployment in regulated sectors) / accelerating (safety tooling demand)",
-            "strength": "moderate",
-            "targets": [
-              "AI Policy & Regulation",
-              "AI in Enterprise",
-              "Frontier Models"
-            ]
-          },
-          {
-            "title": "Anthropic Emotion Concepts Enable Inference-Time Alignment Tuning",
-            "mechanism": "If functional emotion representations can be measured and steered at inference time via vectors, enterprises gain a new alignment tool: suppress sycophancy for code review agents, reduce deference for adversarial testing, amplify caution for financial agents. This moves alignment from \"retrain the m...",
-            "direction": "enabling (enterprise AI customization) / accelerating (safety tooling)",
-            "strength": "moderate",
-            "targets": [
-              "AI in Enterprise",
-              "AI Agents",
-              "AI Safety"
-            ]
-          }
-        ],
-        "convergences": [
-          {
-            "title": "AI IPO Wave Creates Public Market Investment Window in H2 2026",
-            "confidence": "strengthening",
-            "predictedOutcome": "At least 3 major AI companies (from: Anthropic, OpenAI, Shield AI, Anduril, Databricks, Scale AI) will file for IPO in H2 2026, creating a concentrated public market entry window for AI-focused invest...",
-            "timeline": "Q3-Q4 2026"
-          },
-          {
-            "title": "AI Safety Evidence Cascade Triggers Regulatory Action Wave by Q4 2026",
-            "confidence": "strengthening",
-            "predictedOutcome": "At least 2 major regulatory actions (new laws, binding enforcement actions, or significant new mandatory compliance frameworks) specifically targeting AI behavioral safety (sycophancy, manipulation, s...",
-            "timeline": "Q3-Q4 2026"
-          }
-        ],
-        "bottlenecks": [
-          {
-            "title": "AI Cybersecurity Offense/Defense Asymmetry",
-            "status": "hardening",
-            "summary": "How It's Blocked"
-          }
-        ],
-        "predictions": []
-      },
-      "10": {
-        "chains": [
-          {
-            "title": "SoftBank $40B Funds Stargate Compute Buildout",
-            "mechanism": "The $40B loan explicitly funds SoftBank's $30B OpenAI follow-on + Stargate infrastructure costs. Stargate is a joint venture between OpenAI and SoftBank building massive AI data centers. This capital injection directly translates into hardware orders (NVIDIA GPUs, networking equipment, power infrast...",
-            "direction": "accelerating",
-            "strength": "strong",
-            "targets": [
-              "Compute & Hardware",
-              "AI Infrastructure"
-            ]
-          },
-          {
-            "title": "TurboQuant Memory Compression Reshapes Hardware Economics",
-            "mechanism": "KV-cache memory is the bottleneck for long-context inference — it grows linearly with context length. 6x compression at zero accuracy loss means the same GPU can serve 6x more concurrent users or handle 6x longer contexts. This directly reduces the memory hardware needed per inference query, which t...",
-            "direction": "disrupting (memory hardware demand) / enabling (edge AI, long-context)",
-            "strength": "strong",
-            "targets": [
-              "Compute & Hardware",
-              "AI Infrastructure",
-              "Edge & On-Device AI"
-            ]
-          },
-          {
-            "title": "China Hardware Independence Validated → Export Controls Accelerate",
-            "mechanism": "GLM-5.1 (a 744B-parameter frontier-scale model) trained entirely on Huawei Ascend chips demonstrates that China can produce frontier models without NVIDIA hardware. This is precisely the scenario that US export control policy aimed to prevent. Because the demonstrated capability exists, US policymak...",
-            "direction": "accelerating (China hardware independence) / constraining (US-China AI decoupling deepens)",
-            "strength": "strong",
-            "targets": [
-              "AI Policy & Regulation",
-              "Compute & Hardware"
-            ]
-          }
-        ],
-        "convergences": [
-          {
-            "title": "Defense AI Becomes a Standalone Public Market Category by Mid-2027",
-            "confidence": "detected",
-            "predictedOutcome": "At least one defense-focused AI company (Shield AI, Anduril, or similar) will IPO at a $15B+ valuation by mid-2027, establishing defense AI as a distinct investable category separate from general AI o...",
-            "timeline": "Q1-Q2 2027"
-          },
-          {
-            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
-            "timeline": "Q3-Q4 2026"
-          }
-        ],
-        "bottlenecks": [
-          {
-            "title": "Energy/Power Constraint on Datacenter Expansion",
-            "status": "loosening",
-            "summary": "How It's Blocked"
-          }
-        ],
-        "predictions": []
-      },
-      "11": {
-        "chains": [
-          {
-            "title": "Apple Multi-Model iOS Creates New AI Distribution Channel",
-            "mechanism": "Apple controls ~1.5 billion active devices. Opening Siri to Claude, Gemini, and other models via iOS 27 Extensions transforms the iPhone from a single-model platform into a multi-model orchestrator. This creates a new distribution channel: AI companies can now reach iPhone users directly through the...",
-            "direction": "enabling",
-            "strength": "strong",
-            "targets": [
-              "Frontier Models",
-              "AI Business & Funding",
-              "AI in Enterprise"
-            ]
-          },
-          {
-            "title": "OpenAI Ad Revenue Validates New AI Business Model",
-            "mechanism": "$100M ARR in 6 weeks proves advertising works in AI assistants without degrading user experience (OpenAI reports \"no impact on consumer trust metrics\"). This validates a third business model for AI companies beyond subscriptions and API fees. Because advertising revenue scales with user volume (not ...",
-            "direction": "accelerating",
-            "strength": "moderate",
-            "targets": [
-              "Frontier Models",
-              "AI in Enterprise"
-            ]
-          },
-          {
-            "title": "Arm AGI CPU Disrupts x86 Datacenter Duopoly",
-            "mechanism": "Arm's 136-core Neoverse V3 chip (co-developed with Meta) claims 2x performance per rack vs x86 for inference workloads. Because agentic AI workloads involve many concurrent lightweight inference tasks (not the GPU-heavy training workloads), CPU architecture matters for inference cost. If Arm deliver...",
-            "direction": "enabling",
-            "strength": "moderate",
-            "targets": [
-              "AI Infrastructure",
-              "AI Agents"
-            ]
-          }
-        ],
-        "convergences": [
-          {
-            "title": "AI IPO Wave Creates Public Market Investment Window in H2 2026",
-            "confidence": "strengthening",
-            "predictedOutcome": "At least 3 major AI companies (from: Anthropic, OpenAI, Shield AI, Anduril, Databricks, Scale AI) will file for IPO in H2 2026, creating a concentrated public market entry window for AI-focused invest...",
-            "timeline": "Q3-Q4 2026"
-          },
-          {
-            "title": "AI Safety Evidence Cascade Triggers Regulatory Action Wave by Q4 2026",
-            "confidence": "strengthening",
-            "predictedOutcome": "At least 2 major regulatory actions (new laws, binding enforcement actions, or significant new mandatory compliance frameworks) specifically targeting AI behavioral safety (sycophancy, manipulation, s...",
-            "timeline": "Q3-Q4 2026"
-          }
-        ],
-        "bottlenecks": [
-          {
-            "title": "Agent Reliability Gap",
-            "status": "blocking",
-            "summary": "How It's Blocked"
-          },
-          {
-            "title": "MCP Protocol Expressivity Limitations",
-            "status": "blocking",
-            "summary": "How It's Blocked"
-          }
-        ],
-        "predictions": []
-      },
-      "12": {
-        "chains": [
-          {
-            "title": "TurboQuant Memory Compression Reshapes Hardware Economics",
-            "mechanism": "KV-cache memory is the bottleneck for long-context inference — it grows linearly with context length. 6x compression at zero accuracy loss means the same GPU can serve 6x more concurrent users or handle 6x longer contexts. This directly reduces the memory hardware needed per inference query, which t...",
-            "direction": "disrupting (memory hardware demand) / enabling (edge AI, long-context)",
-            "strength": "strong",
-            "targets": [
-              "Compute & Hardware",
-              "AI Infrastructure",
-              "Edge & On-Device AI"
-            ]
-          }
-        ],
-        "convergences": [
-          {
-            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
-            "timeline": "Q3-Q4 2026"
-          }
-        ],
-        "bottlenecks": [],
-        "predictions": []
-      },
-      "13": {
-        "chains": [
-          {
-            "title": "Mythos Cyber Capabilities Escalate Enterprise Security Demand",
-            "mechanism": "When a frontier lab's internal documents describe their own unreleased model as a cybersecurity risk, it immediately escalates the urgency for defensive tooling across the enterprise sector. CISOs and security teams now have concrete evidence (from the model creator itself) that AI-powered attacks a...",
-            "direction": "accelerating (security demand) / constraining (enterprise adoption pace)",
-            "strength": "strong",
-            "targets": [
-              "AI Safety",
-              "AI in Enterprise"
-            ]
-          },
-          {
-            "title": "MCP Formal Gaps Constrain Agent Reliability",
-            "mechanism": "MCP is now the de facto protocol for connecting AI agents to tools (97M monthly SDK downloads, adopted by OpenAI, Anthropic, Google, Figma, GitHub, etc.). The formal analysis proves specific categories of tool schemas that MCP cannot represent correctly — meaning agent-tool interactions can silently...",
-            "direction": "constraining",
-            "strength": "moderate",
-            "targets": [
-              "AI Agents",
-              "AI Coding Tools",
-              "AI in Enterprise"
-            ]
-          },
-          {
-            "title": "Arm AGI CPU Disrupts x86 Datacenter Duopoly",
-            "mechanism": "Arm's 136-core Neoverse V3 chip (co-developed with Meta) claims 2x performance per rack vs x86 for inference workloads. Because agentic AI workloads involve many concurrent lightweight inference tasks (not the GPU-heavy training workloads), CPU architecture matters for inference cost. If Arm deliver...",
-            "direction": "enabling",
-            "strength": "moderate",
-            "targets": [
-              "AI Infrastructure",
-              "AI Agents"
-            ]
-          }
-        ],
-        "convergences": [
-          {
-            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
-            "timeline": "Q3-Q4 2026"
-          },
-          {
-            "title": "AI Safety Evidence Cascade Triggers Regulatory Action Wave by Q4 2026",
-            "confidence": "strengthening",
-            "predictedOutcome": "At least 2 major regulatory actions (new laws, binding enforcement actions, or significant new mandatory compliance frameworks) specifically targeting AI behavioral safety (sycophancy, manipulation, s...",
-            "timeline": "Q3-Q4 2026"
-          }
-        ],
-        "bottlenecks": [
-          {
-            "title": "Agent Reliability Gap",
-            "status": "blocking",
-            "summary": "How It's Blocked"
-          },
-          {
-            "title": "MCP Protocol Expressivity Limitations",
-            "status": "blocking",
-            "summary": "How It's Blocked"
-          }
-        ],
-        "predictions": []
-      },
-      "14": {
-        "chains": [
-          {
-            "title": "AI Safety Research Convergence Increases Regulatory Pressure",
-            "mechanism": "Three independent, high-credibility safety studies published within the same scan window — one in Science (top-tier journal), one from the AI Safety Institute (government body), one from DeepMind. This is not a single researcher's result; it is a convergence of institutional evidence. The mechanism:...",
-            "direction": "constraining (enterprise AI deployment in regulated sectors) / accelerating (safety tooling demand)",
-            "strength": "moderate",
-            "targets": [
-              "AI Policy & Regulation",
-              "AI in Enterprise",
-              "Frontier Models"
-            ]
-          },
-          {
-            "title": "Anthropic Emotion Concepts Enable Inference-Time Alignment Tuning",
-            "mechanism": "If functional emotion representations can be measured and steered at inference time via vectors, enterprises gain a new alignment tool: suppress sycophancy for code review agents, reduce deference for adversarial testing, amplify caution for financial agents. This moves alignment from \"retrain the m...",
-            "direction": "enabling (enterprise AI customization) / accelerating (safety tooling)",
-            "strength": "moderate",
-            "targets": [
-              "AI in Enterprise",
-              "AI Agents",
-              "AI Safety"
-            ]
-          }
-        ],
-        "convergences": [
-          {
-            "title": "AI Safety Evidence Cascade Triggers Regulatory Action Wave by Q4 2026",
-            "confidence": "strengthening",
-            "predictedOutcome": "At least 2 major regulatory actions (new laws, binding enforcement actions, or significant new mandatory compliance frameworks) specifically targeting AI behavioral safety (sycophancy, manipulation, s...",
-            "timeline": "Q3-Q4 2026"
-          }
-        ],
-        "bottlenecks": [
-          {
-            "title": "AI Cybersecurity Offense/Defense Asymmetry",
-            "status": "hardening",
-            "summary": "How It's Blocked"
-          }
-        ],
-        "predictions": []
-      },
-      "15": {
         "chains": [
           {
             "title": "TurboQuant Memory Compression Reshapes Hardware Economics",
@@ -2583,6 +2101,37 @@
               "AI Coding Tools",
               "AI Business & Funding"
             ]
+          }
+        ],
+        "convergences": [
+          {
+            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
+            "confidence": "imminent",
+            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
+            "timeline": "Q3-Q4 2026"
+          }
+        ],
+        "bottlenecks": [
+          {
+            "title": "Talent Concentration in Frontier Labs",
+            "status": "loosening",
+            "summary": "How It's Blocked"
+          }
+        ],
+        "predictions": []
+      },
+      "4": {
+        "chains": [
+          {
+            "title": "Anthropic Emotion Concepts Enable Inference-Time Alignment Tuning",
+            "mechanism": "If functional emotion representations can be measured and steered at inference time via vectors, enterprises gain a new alignment tool: suppress sycophancy for code review agents, reduce deference for adversarial testing, amplify caution for financial agents. This moves alignment from \"retrain the m...",
+            "direction": "enabling (enterprise AI customization) / accelerating (safety tooling)",
+            "strength": "moderate",
+            "targets": [
+              "AI in Enterprise",
+              "AI Agents",
+              "AI Safety"
+            ]
           },
           {
             "title": "Single-Agent vs Multi-Agent Paper Constrains Agent Framework Investment",
@@ -2610,15 +2159,51 @@
             "summary": "How It's Blocked"
           }
         ],
-        "predictions": [
-          {
-            "title": "Inference Cost (Per 1M Tokens, Frontier Models) Drops 5x+ by End of 2026",
-            "confidence": "75%",
-            "checkDate": "2027-01-15"
-          }
-        ]
+        "predictions": []
       },
-      "16": {
+      "5": {
+        "chains": [
+          {
+            "title": "AI Safety Research Convergence Increases Regulatory Pressure",
+            "mechanism": "Three independent, high-credibility safety studies published within the same scan window — one in Science (top-tier journal), one from the AI Safety Institute (government body), one from DeepMind. This is not a single researcher's result; it is a convergence of institutional evidence. The mechanism:...",
+            "direction": "constraining (enterprise AI deployment in regulated sectors) / accelerating (safety tooling demand)",
+            "strength": "moderate",
+            "targets": [
+              "AI Policy & Regulation",
+              "AI in Enterprise",
+              "Frontier Models"
+            ]
+          },
+          {
+            "title": "Anthropic Emotion Concepts Enable Inference-Time Alignment Tuning",
+            "mechanism": "If functional emotion representations can be measured and steered at inference time via vectors, enterprises gain a new alignment tool: suppress sycophancy for code review agents, reduce deference for adversarial testing, amplify caution for financial agents. This moves alignment from \"retrain the m...",
+            "direction": "enabling (enterprise AI customization) / accelerating (safety tooling)",
+            "strength": "moderate",
+            "targets": [
+              "AI in Enterprise",
+              "AI Agents",
+              "AI Safety"
+            ]
+          }
+        ],
+        "convergences": [
+          {
+            "title": "AI Safety Evidence Cascade Triggers Regulatory Action Wave by Q4 2026",
+            "confidence": "strengthening",
+            "predictedOutcome": "At least 2 major regulatory actions (new laws, binding enforcement actions, or significant new mandatory compliance frameworks) specifically targeting AI behavioral safety (sycophancy, manipulation, s...",
+            "timeline": "Q3-Q4 2026"
+          }
+        ],
+        "bottlenecks": [
+          {
+            "title": "AI Cybersecurity Offense/Defense Asymmetry",
+            "status": "hardening",
+            "summary": "How It's Blocked"
+          }
+        ],
+        "predictions": []
+      },
+      "6": {
         "chains": [
           {
             "title": "MCP Formal Gaps Constrain Agent Reliability",
@@ -2632,17 +2217,34 @@
             ]
           },
           {
-            "title": "Single-Agent vs Multi-Agent Paper Constrains Agent Framework Investment",
-            "mechanism": "The Data Processing Inequality argument that multi-agent coordination inherently loses information challenges the multi-agent trend (Cursor 3 Agents Window, oh-my-codex, CrewAI, AutoGen). If accepted, it constrains investment in multi-agent orchestration and redirects toward single-model inference s...",
-            "direction": "constraining",
+            "title": "Arm AGI CPU Disrupts x86 Datacenter Duopoly",
+            "mechanism": "Arm's 136-core Neoverse V3 chip (co-developed with Meta) claims 2x performance per rack vs x86 for inference workloads. Because agentic AI workloads involve many concurrent lightweight inference tasks (not the GPU-heavy training workloads), CPU architecture matters for inference cost. If Arm deliver...",
+            "direction": "enabling",
             "strength": "moderate",
             "targets": [
+              "AI Infrastructure",
+              "AI Agents"
+            ]
+          },
+          {
+            "title": "Corporate AI Management Replacement Creates \"Organizational World Model\" Demand",
+            "mechanism": "Dorsey's public declaration is not just a cost-cutting move — it is a leadership template. Other CEOs will replicate the announcement structure: \"AI replaces the coordination function, not just tasks.\" The mechanism is social: public companies benchmark against each other, and a visible, named restr...",
+            "direction": "accelerating (enterprise AI structural adoption) / enabling (new product category: organizational AI)",
+            "strength": "strong",
+            "targets": [
               "AI Agents",
-              "AI Coding Tools"
+              "AI Business & Funding",
+              "AI in Enterprise"
             ]
           }
         ],
         "convergences": [
+          {
+            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
+            "confidence": "imminent",
+            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
+            "timeline": "Q3-Q4 2026"
+          },
           {
             "title": "Agent Orchestration Standardization",
             "confidence": "strengthening",
@@ -2662,30 +2264,24 @@
             "summary": "How It's Blocked"
           }
         ],
-        "predictions": []
+        "predictions": [
+          {
+            "title": "MCP Protocol Gets Major Revision Addressing Formal Gaps by Q1 2027",
+            "confidence": "60%",
+            "checkDate": "2027-04-01"
+          }
+        ]
       },
-      "17": {
+      "7": {
         "chains": [
           {
-            "title": "Apple Multi-Model iOS Creates New AI Distribution Channel",
-            "mechanism": "Apple controls ~1.5 billion active devices. Opening Siri to Claude, Gemini, and other models via iOS 27 Extensions transforms the iPhone from a single-model platform into a multi-model orchestrator. This creates a new distribution channel: AI companies can now reach iPhone users directly through the...",
-            "direction": "enabling",
-            "strength": "strong",
-            "targets": [
-              "Frontier Models",
-              "AI Business & Funding",
-              "AI in Enterprise"
-            ]
-          },
-          {
-            "title": "TurboQuant Memory Compression Reshapes Hardware Economics",
-            "mechanism": "KV-cache memory is the bottleneck for long-context inference — it grows linearly with context length. 6x compression at zero accuracy loss means the same GPU can serve 6x more concurrent users or handle 6x longer contexts. This directly reduces the memory hardware needed per inference query, which t...",
-            "direction": "disrupting (memory hardware demand) / enabling (edge AI, long-context)",
+            "title": "SoftBank $40B Funds Stargate Compute Buildout",
+            "mechanism": "The $40B loan explicitly funds SoftBank's $30B OpenAI follow-on + Stargate infrastructure costs. Stargate is a joint venture between OpenAI and SoftBank building massive AI data centers. This capital injection directly translates into hardware orders (NVIDIA GPUs, networking equipment, power infrast...",
+            "direction": "accelerating",
             "strength": "strong",
             "targets": [
               "Compute & Hardware",
-              "AI Infrastructure",
-              "Edge & On-Device AI"
+              "AI Infrastructure"
             ]
           },
           {
@@ -2698,9 +2294,148 @@
               "Compute & Hardware",
               "AI Policy & Regulation"
             ]
+          },
+          {
+            "title": "China Hardware Independence Validated → Export Controls Accelerate",
+            "mechanism": "GLM-5.1 (a 744B-parameter frontier-scale model) trained entirely on Huawei Ascend chips demonstrates that China can produce frontier models without NVIDIA hardware. This is precisely the scenario that US export control policy aimed to prevent. Because the demonstrated capability exists, US policymak...",
+            "direction": "accelerating (China hardware independence) / constraining (US-China AI decoupling deepens)",
+            "strength": "strong",
+            "targets": [
+              "AI Policy & Regulation",
+              "Compute & Hardware"
+            ]
           }
         ],
         "convergences": [
+          {
+            "title": "Defense AI Becomes a Standalone Public Market Category by Mid-2027",
+            "confidence": "detected",
+            "predictedOutcome": "At least one defense-focused AI company (Shield AI, Anduril, or similar) will IPO at a $15B+ valuation by mid-2027, establishing defense AI as a distinct investable category separate from general AI o...",
+            "timeline": "Q1-Q2 2027"
+          },
+          {
+            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
+            "confidence": "imminent",
+            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
+            "timeline": "Q3-Q4 2026"
+          }
+        ],
+        "bottlenecks": [],
+        "predictions": [
+          {
+            "title": "Inference Cost (Per 1M Tokens, Frontier Models) Drops 5x+ by End of 2026",
+            "confidence": "75%",
+            "checkDate": "2027-01-15"
+          }
+        ]
+      },
+      "8": {
+        "chains": [
+          {
+            "title": "AI Safety Research Convergence Increases Regulatory Pressure",
+            "mechanism": "Three independent, high-credibility safety studies published within the same scan window — one in Science (top-tier journal), one from the AI Safety Institute (government body), one from DeepMind. This is not a single researcher's result; it is a convergence of institutional evidence. The mechanism:...",
+            "direction": "constraining (enterprise AI deployment in regulated sectors) / accelerating (safety tooling demand)",
+            "strength": "moderate",
+            "targets": [
+              "AI Policy & Regulation",
+              "AI in Enterprise",
+              "Frontier Models"
+            ]
+          },
+          {
+            "title": "Anti-Copying Coalition Accelerates Open-Source Demand",
+            "mechanism": "API access restrictions (traffic detection, output format changes, rate limit tightening) reduce the value of API-based distillation. This pushes demand toward: (1) self-hosted open-weight models, (2) synthetic data generation pipelines, (3) independent training infrastructure. Chinese developers wh...",
+            "direction": "enabling (open-source demand) / constraining (Chinese API distillation)",
+            "strength": "moderate",
+            "targets": [
+              "Open Source Models",
+              "AI Infrastructure"
+            ]
+          }
+        ],
+        "convergences": [
+          {
+            "title": "Defense AI Becomes a Standalone Public Market Category by Mid-2027",
+            "confidence": "detected",
+            "predictedOutcome": "At least one defense-focused AI company (Shield AI, Anduril, or similar) will IPO at a $15B+ valuation by mid-2027, establishing defense AI as a distinct investable category separate from general AI o...",
+            "timeline": "Q1-Q2 2027"
+          },
+          {
+            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
+            "confidence": "imminent",
+            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
+            "timeline": "Q3-Q4 2026"
+          }
+        ],
+        "bottlenecks": [],
+        "predictions": []
+      },
+      "9": {
+        "chains": [],
+        "convergences": [
+          {
+            "title": "Defense AI Becomes a Standalone Public Market Category by Mid-2027",
+            "confidence": "detected",
+            "predictedOutcome": "At least one defense-focused AI company (Shield AI, Anduril, or similar) will IPO at a $15B+ valuation by mid-2027, establishing defense AI as a distinct investable category separate from general AI o...",
+            "timeline": "Q1-Q2 2027"
+          },
+          {
+            "title": "AI IPO Wave Creates Public Market Investment Window in H2 2026",
+            "confidence": "strengthening",
+            "predictedOutcome": "At least 3 major AI companies (from: Anthropic, OpenAI, Shield AI, Anduril, Databricks, Scale AI) will file for IPO in H2 2026, creating a concentrated public market entry window for AI-focused invest...",
+            "timeline": "Q3-Q4 2026"
+          }
+        ],
+        "bottlenecks": [],
+        "predictions": [
+          {
+            "title": "Apple Announces Multi-Model Siri at WWDC June 2026",
+            "confidence": "85%",
+            "checkDate": "2026-06-15"
+          }
+        ]
+      },
+      "10": {
+        "chains": [
+          {
+            "title": "SoftBank $40B Funds Stargate Compute Buildout",
+            "mechanism": "The $40B loan explicitly funds SoftBank's $30B OpenAI follow-on + Stargate infrastructure costs. Stargate is a joint venture between OpenAI and SoftBank building massive AI data centers. This capital injection directly translates into hardware orders (NVIDIA GPUs, networking equipment, power infrast...",
+            "direction": "accelerating",
+            "strength": "strong",
+            "targets": [
+              "Compute & Hardware",
+              "AI Infrastructure"
+            ]
+          },
+          {
+            "title": "Apple Multi-Model iOS Creates New AI Distribution Channel",
+            "mechanism": "Apple controls ~1.5 billion active devices. Opening Siri to Claude, Gemini, and other models via iOS 27 Extensions transforms the iPhone from a single-model platform into a multi-model orchestrator. This creates a new distribution channel: AI companies can now reach iPhone users directly through the...",
+            "direction": "enabling",
+            "strength": "strong",
+            "targets": [
+              "Frontier Models",
+              "AI Business & Funding",
+              "AI in Enterprise"
+            ]
+          },
+          {
+            "title": "OpenAI Ad Revenue Validates New AI Business Model",
+            "mechanism": "$100M ARR in 6 weeks proves advertising works in AI assistants without degrading user experience (OpenAI reports \"no impact on consumer trust metrics\"). This validates a third business model for AI companies beyond subscriptions and API fees. Because advertising revenue scales with user volume (not ...",
+            "direction": "accelerating",
+            "strength": "moderate",
+            "targets": [
+              "Frontier Models",
+              "AI in Enterprise"
+            ]
+          }
+        ],
+        "convergences": [
+          {
+            "title": "Defense AI Becomes a Standalone Public Market Category by Mid-2027",
+            "confidence": "detected",
+            "predictedOutcome": "At least one defense-focused AI company (Shield AI, Anduril, or similar) will IPO at a $15B+ valuation by mid-2027, establishing defense AI as a distinct investable category separate from general AI o...",
+            "timeline": "Q1-Q2 2027"
+          },
           {
             "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
             "confidence": "imminent",
@@ -2710,8 +2445,76 @@
         ],
         "bottlenecks": [
           {
-            "title": "Energy/Power Constraint on Datacenter Expansion",
+            "title": "Talent Concentration in Frontier Labs",
             "status": "loosening",
+            "summary": "How It's Blocked"
+          }
+        ],
+        "predictions": [
+          {
+            "title": "Apple Announces Multi-Model Siri at WWDC June 2026",
+            "confidence": "85%",
+            "checkDate": "2026-06-15"
+          },
+          {
+            "title": "Inference Cost (Per 1M Tokens, Frontier Models) Drops 5x+ by End of 2026",
+            "confidence": "75%",
+            "checkDate": "2027-01-15"
+          }
+        ]
+      },
+      "11": {
+        "chains": [
+          {
+            "title": "MCP Formal Gaps Constrain Agent Reliability",
+            "mechanism": "MCP is now the de facto protocol for connecting AI agents to tools (97M monthly SDK downloads, adopted by OpenAI, Anthropic, Google, Figma, GitHub, etc.). The formal analysis proves specific categories of tool schemas that MCP cannot represent correctly — meaning agent-tool interactions can silently...",
+            "direction": "constraining",
+            "strength": "moderate",
+            "targets": [
+              "AI Agents",
+              "AI Coding Tools",
+              "AI in Enterprise"
+            ]
+          },
+          {
+            "title": "AI Coding Tool Price War Compresses Sector Margins",
+            "mechanism": "Three major AI coding tools competing simultaneously on price and features. Cursor at $2B ARR but rebuilt as agent platform. OpenAI drops ChatGPT Business 20% and introduces zero-fixed-cost Codex seats. Claude Code holds majority share. The market is large enough for all three, but margin pressure m...",
+            "direction": "accelerating (enterprise adoption) / constraining (startup margins)",
+            "strength": "moderate",
+            "targets": [
+              "AI Business & Funding",
+              "AI in Enterprise"
+            ]
+          },
+          {
+            "title": "Single-Agent vs Multi-Agent Paper Constrains Agent Framework Investment",
+            "mechanism": "The Data Processing Inequality argument that multi-agent coordination inherently loses information challenges the multi-agent trend (Cursor 3 Agents Window, oh-my-codex, CrewAI, AutoGen). If accepted, it constrains investment in multi-agent orchestration and redirects toward single-model inference s...",
+            "direction": "constraining",
+            "strength": "moderate",
+            "targets": [
+              "AI Agents",
+              "AI Coding Tools"
+            ]
+          }
+        ],
+        "convergences": [
+          {
+            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
+            "confidence": "imminent",
+            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
+            "timeline": "Q3-Q4 2026"
+          },
+          {
+            "title": "Agent Orchestration Standardization",
+            "confidence": "strengthening",
+            "predictedOutcome": "Multi-agent orchestration emerges as a distinct infrastructure category with de facto standards, as 5+ independent projects converge on solving the same coordination problem simultaneously.",
+            "timeline": "Q3-Q4 2026"
+          }
+        ],
+        "bottlenecks": [
+          {
+            "title": "Agent Reliability Gap",
+            "status": "blocking",
             "summary": "How It's Blocked"
           }
         ],

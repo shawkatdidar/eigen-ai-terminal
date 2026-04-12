@@ -44,6 +44,7 @@ Privacy is a primary driver: enterprises and individuals want AI without sending
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-11 | **DFlash speculative decoding** — 85 tok/s on M5 Max, 3.3x speedup Qwen3.5-9B via MLX | notable | reddit.com |
 | 2026-04-08 | **LM Studio acquires Locally AI for cross-device local inference** — LM Studio (a popular desktop app for running LLMs locally) acquired Locally AI, a platform focused on cross-device local inference (running models across multiple local devices in concert). → Consolidation in the local AI tooling space; cross-device inference could enable users to pool compute from multiple personal devices (laptop + desktop + phone) for running larger models locally. | notable | lmstudio.ai |
 | 2026-03-26 | **Apple opens Siri to rival AI in iOS 27** — Extensions will let users pick Claude, Gemini as AI handler. Multi-model orchestrator strategy. | significant | [Bloomberg](https://www.bloomberg.com/news/articles/2026-03-26/apple-plans-to-open-up-siri-to-rival-ai-assistants-beyond-chatgpt-in-ios-27) |
 | 2026-03-24 | **Apple testing standalone Siri app for iOS 27** — Bloomberg reports chatbot app with text/voice, chat history, Dynamic Island, "Ask Siri" button. WWDC June 8 target. → Apple's competitive response to Claude and ChatGPT. | notable | bloomberg.com |

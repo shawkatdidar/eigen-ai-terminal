@@ -1,6 +1,6 @@
 {
   "description": "Eigen AI Terminal Knowledge Base — the full wiki of AI landscape intelligence",
-  "lastUpdated": "2026-04-10T21:20:10.433Z",
+  "lastUpdated": "2026-04-12T21:38:02.332Z",
   "totalFiles": 51,
   "structure": {
     "nodes": "16 domain trackers covering the AI landscape",
@@ -49,7 +49,7 @@
         "autonomy",
         "tools"
       ],
-      "size": 15754
+      "size": 15893
     },
     {
       "path": "nodes/ai-business-funding.md",
@@ -85,7 +85,7 @@
         "startups",
         "acquisitions"
       ],
-      "size": 16733
+      "size": 16879
     },
     {
       "path": "nodes/ai-coding-tools.md",
@@ -119,7 +119,7 @@
         "developer-tools",
         "productivity"
       ],
-      "size": 9425
+      "size": 9895
     },
     {
       "path": "nodes/ai-for-science.md",
@@ -265,7 +265,7 @@
         "regulation",
         "government"
       ],
-      "size": 9681
+      "size": 9960
     },
     {
       "path": "nodes/ai-research-breakthroughs.md",
@@ -301,7 +301,7 @@
         "architecture",
         "training"
       ],
-      "size": 9836
+      "size": 10414
     },
     {
       "path": "nodes/ai-safety-alignment.md",
@@ -335,7 +335,7 @@
         "alignment",
         "interpretability"
       ],
-      "size": 17035
+      "size": 17364
     },
     {
       "path": "nodes/compute-hardware.md",
@@ -369,7 +369,7 @@
         "compute",
         "gpu"
       ],
-      "size": 14867
+      "size": 15308
     },
     {
       "path": "nodes/edge-on-device-ai.md",
@@ -405,7 +405,7 @@
         "local",
         "privacy"
       ],
-      "size": 5846
+      "size": 5972
     },
     {
       "path": "nodes/frontier-edges.md",
@@ -455,7 +455,7 @@
         "frontier",
         "moonshots"
       ],
-      "size": 29687
+      "size": 29825
     },
     {
       "path": "nodes/frontier-models.md",
@@ -489,7 +489,7 @@
         "models",
         "frontier"
       ],
-      "size": 12682
+      "size": 12816
     },
     {
       "path": "nodes/multimodal-ai.md",
@@ -559,7 +559,7 @@
         "models",
         "open-source"
       ],
-      "size": 10078
+      "size": 10225
     },
     {
       "path": "nodes/robotics-embodied-ai.md",
@@ -597,7 +597,7 @@
         "humanoid",
         "autonomous"
       ],
-      "size": 7472
+      "size": 7618
     },
     {
       "path": "entities/anthropic.md",
@@ -1124,6 +1124,44 @@
       "size": 7111
     },
     {
+      "path": "briefs/2026-04-11.md",
+      "frontmatter": {
+        "date": "2026-04-11T00:00:00.000Z",
+        "scan_time": "20:30",
+        "signals_total": 55,
+        "signals_notable": 12,
+        "signals_significant": 7,
+        "signals_breakthrough": 0,
+        "signals_filtered_noise": 15,
+        "signals_deduped": 8,
+        "nodes_updated": 13,
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "open-source-models",
+        "ai-business-funding",
+        "ai-safety-alignment",
+        "ai-policy-regulation",
+        "ai-in-enterprise",
+        "compute-hardware",
+        "frontier-models",
+        "ai-coding-tools",
+        "ai-agents",
+        "ai-infrastructure",
+        "robotics-embodied-ai",
+        "ai-research-breakthroughs",
+        "edge-on-device-ai",
+        "frontier-edges"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 22159
+    },
+    {
       "path": "briefs/2026-04-10.md",
       "frontmatter": {
         "date": "2026-04-10T00:00:00.000Z",
@@ -1344,42 +1382,6 @@
       "size": 18975
     },
     {
-      "path": "briefs/2026-04-03.md",
-      "frontmatter": {
-        "date": "2026-04-03T00:00:00.000Z",
-        "scan_time": "11:30",
-        "signals_total": 35,
-        "signals_notable": 22,
-        "signals_significant": 10,
-        "signals_breakthrough": 0,
-        "signals_filtered_noise": 18,
-        "signals_deduped": 12,
-        "nodes_updated": 15,
-        "node_status_changes": [],
-        "tags": [
-          "daily-brief"
-        ]
-      },
-      "wikilinks": [
-        "ai-coding-tools",
-        "ai-agents",
-        "ai-research-breakthroughs",
-        "ai-safety-alignment",
-        "frontier-models",
-        "compute-hardware",
-        "ai-in-enterprise",
-        "ai-policy-regulation",
-        "ai-business-funding",
-        "edge-on-device-ai",
-        "multimodal-ai",
-        "open-source-models"
-      ],
-      "tags": [
-        "daily-brief"
-      ],
-      "size": 26812
-    },
-    {
       "path": "force-dynamics.md",
       "frontmatter": {
         "name": "Force Dynamics — Propagation Graph",
@@ -1389,7 +1391,7 @@
           "force-dynamics",
           "causal"
         ],
-        "last_updated": "2026-04-07T00:00:00.000Z"
+        "last_updated": "2026-04-11T00:00:00.000Z"
       },
       "wikilinks": [
         "ai-business-funding",
@@ -1412,7 +1414,7 @@
         "force-dynamics",
         "causal"
       ],
-      "size": 36447
+      "size": 40159
     },
     {
       "path": "convergences.md",
@@ -1425,7 +1427,7 @@
           "trends",
           "predictions"
         ],
-        "last_updated": "2026-04-07T00:00:00.000Z"
+        "last_updated": "2026-04-11T00:00:00.000Z"
       },
       "wikilinks": [
         "ai-business-funding",
@@ -1446,7 +1448,7 @@
         "trends",
         "predictions"
       ],
-      "size": 18158
+      "size": 18819
     },
     {
       "path": "bottleneck-map.md",
@@ -1459,7 +1461,7 @@
           "bottlenecks",
           "constraints"
         ],
-        "last_updated": "2026-04-03T00:00:00.000Z"
+        "last_updated": "2026-04-11T00:00:00.000Z"
       },
       "wikilinks": [
         "ai-agents",
@@ -1477,7 +1479,7 @@
         "bottlenecks",
         "constraints"
       ],
-      "size": 16551
+      "size": 17269
     },
     {
       "path": "velocity-trackers.md",
@@ -1867,7 +1869,7 @@
           "dashboard",
           "radar"
         ],
-        "last_updated": "2026-04-10T00:00:00.000Z"
+        "last_updated": "2026-04-11T00:00:00.000Z"
       },
       "wikilinks": [
         "frontier-models",
@@ -1891,14 +1893,14 @@
         "dashboard",
         "radar"
       ],
-      "size": 4832
+      "size": 5167
     },
     {
       "path": "index.md",
       "frontmatter": {
         "name": "Wiki Index",
         "description": "Content catalog of the AI Radar wiki — navigational entry point",
-        "last_updated": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-11T00:00:00.000Z",
         "tags": [
           "index",
           "navigation"
@@ -1933,6 +1935,13 @@
         "xai",
         "apple",
         "entities/index",
+        "2026-04-11",
+        "2026-04-10",
+        "2026-04-09",
+        "2026-04-08",
+        "2026-04-07",
+        "2026-04-06",
+        "2026-04-04",
         "2026-04-03",
         "2026-04-02",
         "2026-03-31",
@@ -1964,7 +1973,7 @@
         "index",
         "navigation"
       ],
-      "size": 5197
+      "size": 5486
     },
     {
       "path": "watchlist.md",

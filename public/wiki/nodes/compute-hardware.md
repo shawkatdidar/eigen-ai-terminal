@@ -43,6 +43,9 @@ On the interconnect side, Marvell and Lumentum demonstrated optical switching th
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-11 | **3 OpenAI Stargate execs depart for Meta** — Hoeschele, Hemani, Saharan join Superintelligence Labs | significant | bloomberg.com |
+| 2026-04-11 | **Japan commits $16.3B to Rapidus for 2nm AI chips** — sovereign manufacturing push, IBM/ASML partners | significant | bloomberg.com |
+| 2026-04-10 | **PJM seeks 15GW emergency power for data centers** — 60GW shortfall over decade, 13-state grid | significant | bloomberg.com |
 | 2026-04-10 | **TSMC Q1 2026 $35.7B revenue, +35% YoY on AI demand** — TSMC's quarterly revenue hit $35.7B, up 35% year-over-year, driven almost entirely by AI chip fabrication demand. → Confirms AI is now the dominant revenue driver for the world's most important chipmaker; sustained 35% growth at this scale validates that AI hardware demand is not slowing. | notable | tsmc.com |
 | 2026-04-10 | **DeepSeek building Inner Mongolia DC with banned Blackwell chips** — DeepSeek is constructing a data center in Inner Mongolia reportedly equipped with NVIDIA Blackwell GPUs that are restricted for export to China under US chip controls. → Raises serious questions about export control enforcement; if confirmed, demonstrates that China's most capable AI labs are acquiring banned hardware through gray-market or pre-ban stockpiles. | significant | reuters.com |
 | 2026-04-10 | **cuBLAS 60% MatMul performance bug on RTX 5090 consumer GPUs** — A bug in NVIDIA's cuBLAS library (the core GPU math library used for matrix multiplication, the fundamental operation in neural network inference) causes 60% performance degradation on RTX 5090 consumer GPUs. → Significant issue for local AI inference on the latest consumer hardware; affects anyone running models locally on RTX 5090. | notable | nvidia.com |

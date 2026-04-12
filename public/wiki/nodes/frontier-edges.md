@@ -71,6 +71,7 @@ And an **impact rating** if cracked:
 **Recent Progress:**
 | Date | Signal | Significance |
 |------|--------|-------------|
+| 2026-04-09 | Kathleen: oscillator-based byte-level processing, 733K params, outperforms 16x larger models on classification | notable |
 | 2026-03-20 | Mamba-3 at ICLR 2026 — 1.8pp accuracy gain, half state size, linear compute | significant |
 | 2026-03-20 | Var-JEPA: variational formulation with single ELBO, no ad-hoc regularizers | notable |
 | 2026-03-09 | AMI Labs raises $1.03B for JEPA world models | breakthrough |

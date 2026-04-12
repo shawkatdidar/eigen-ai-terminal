@@ -1,7 +1,7 @@
 ---
 name: Wiki Index
 description: Content catalog of the AI Radar wiki — navigational entry point
-last_updated: 2026-04-04
+last_updated: 2026-04-11
 tags:
   - index
   - navigation
@@ -16,22 +16,22 @@ tags:
 
 | Node | Status | Last Updated |
 |------|--------|-------------|
-| [[frontier-models]] | accelerating | 2026-04-03 |
-| [[open-source-models]] | accelerating | 2026-04-03 |
-| [[compute-hardware]] | accelerating | 2026-04-03 |
-| [[ai-agents]] | accelerating | 2026-04-03 |
-| [[ai-coding-tools]] | accelerating | 2026-04-03 |
-| [[ai-infrastructure]] | accelerating | 2026-04-02 |
-| [[ai-safety-alignment]] | accelerating | 2026-04-03 |
-| [[ai-policy-regulation]] | accelerating | 2026-04-03 |
-| [[ai-business-funding]] | accelerating | 2026-04-03 |
-| [[multimodal-ai]] | accelerating | 2026-04-03 |
-| [[ai-for-science]] | accelerating | 2026-03-30 |
-| [[robotics-embodied-ai]] | accelerating | 2026-03-31 |
-| [[ai-research-breakthroughs]] | accelerating | 2026-04-03 |
-| [[edge-on-device-ai]] | accelerating | 2026-04-03 |
-| [[ai-in-enterprise]] | accelerating | 2026-04-03 |
-| [[frontier-edges]] | accelerating | 2026-04-03 |
+| [[frontier-models]] | accelerating | 2026-04-11 |
+| [[open-source-models]] | accelerating | 2026-04-11 |
+| [[compute-hardware]] | accelerating | 2026-04-11 |
+| [[ai-agents]] | accelerating | 2026-04-11 |
+| [[ai-coding-tools]] | accelerating | 2026-04-11 |
+| [[ai-infrastructure]] | accelerating | 2026-04-11 |
+| [[ai-safety-alignment]] | accelerating | 2026-04-11 |
+| [[ai-policy-regulation]] | accelerating | 2026-04-11 |
+| [[ai-business-funding]] | accelerating | 2026-04-11 |
+| [[multimodal-ai]] | accelerating | 2026-04-10 |
+| [[ai-for-science]] | accelerating | 2026-04-10 |
+| [[robotics-embodied-ai]] | accelerating | 2026-04-07 |
+| [[ai-research-breakthroughs]] | accelerating | 2026-04-11 |
+| [[edge-on-device-ai]] | accelerating | 2026-04-11 |
+| [[ai-in-enterprise]] | accelerating | 2026-04-11 |
+| [[frontier-edges]] | accelerating | 2026-04-10 |
 
 ## Entities (10)
 
@@ -73,6 +73,13 @@ See [[frontier-edges]] for full details.
 
 | Date | Significant | Notable | Brief |
 |------|------------|---------|-------|
+| 2026-04-11 | 7 | 12 | [[2026-04-11]] |
+| 2026-04-10 | 6 | 25 | [[2026-04-10]] |
+| 2026-04-09 | 10 | 21 | [[2026-04-09]] |
+| 2026-04-08 | 7 | 9 | [[2026-04-08]] |
+| 2026-04-07 | 11 | 20 | [[2026-04-07]] |
+| 2026-04-06 | 10 | 20 | [[2026-04-06]] |
+| 2026-04-04 | 7 | 13 | [[2026-04-04]] |
 | 2026-04-03 | 10 | 22 | [[2026-04-03]] |
 | 2026-04-02 | 9 | 12 | [[2026-04-02]] |
 | 2026-03-31 | 6 | 10 | [[2026-03-31]] |
@@ -88,7 +95,7 @@ See [[frontier-edges]] for full details.
 
 | Component | File | Active Items |
 |-----------|------|-------------|
-| Force Chains | [[system/force-dynamics]] | 19 active chains |
+| Force Chains | [[system/force-dynamics]] | 28 active chains |
 | Convergences | [[system/convergences]] | 5 active convergences |
 | Predictions | [[system/predictions]] | 5 pending predictions |
 | Bottlenecks | [[system/bottleneck-map]] | 4+ active bottlenecks |

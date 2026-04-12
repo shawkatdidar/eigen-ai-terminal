@@ -6,7 +6,7 @@ tags:
   - force-dynamics
   - trends
   - predictions
-last_updated: 2026-04-07
+last_updated: 2026-04-11
 ---
 
 # Developing Trends
@@ -74,6 +74,7 @@ A trend makes this list when it meets all four criteria:
 | 2 | Arm AGI CPU (2x perf/rack vs x86 for inference) + Alibaba XuanTie C950 (RISC-V for agents) | [[compute-hardware]] | Two non-x86 architectures launching simultaneously for inference workloads. Competition between Arm, RISC-V, and x86 creates downward price pressure on inference compute. | moderate |
 | 3 | NVIDIA gpt-oss-puzzle-88B (2.82x throughput via post-training optimization, no retraining) | [[open-source-models]] | Post-training neural architecture search achieves 2.8x speedup without any retraining — a purely software-side inference cost reduction that compounds with hardware improvements. | moderate |
 | 5 | Gemma 4 (4B-active MoE) achieves frontier-competitive agent performance at a fraction of compute | [[open-source-models]] | A 4B-active-parameter model matching much larger models on agent benchmarks means the compute required per agent task is dropping from the model architecture side — not just hardware/compression. This is a distinct, independent cost reduction vector that compounds with forces 1-4. | strong |
+| 6 | Spectral-AI: RT cores for O(log N) MoE routing — 48-89x faster, 731x VRAM reduction, runs on consumer RTX | [[compute-hardware]] | Repurposes existing consumer GPU hardware (ray tracing cores) for MoE expert routing. O(log N) complexity means the speedup increases as expert count scales — directly relevant as MoE models grow to thousands of experts. Independent from memory compression and attention optimization forces. | strong |
 
 **What would invalidate this:** Memory compression techniques turn out to have hidden quality costs at scale. Alternative CPU architectures fail to deliver claimed performance in production. Demand growth outpaces cost reduction (Jevons Paradox) so fast that per-agent costs don't actually fall.
 **Opportunity signal:** Businesses that were previously uneconomical to automate with AI agents become viable. Look for "automation as a service" opportunities in mid-market businesses where the primary blocker was cost, not capability.
@@ -85,6 +86,7 @@ A trend makes this list when it meets all four criteria:
 | 2026-03-30 | Strengthened — add 4th force | pplx-embed 5-30x cheaper (MTEB 81.96%, 1B+ Samsung deployments) + SID-1 1000x cheaper retrieval confirm the cost collapse is already happening in embedding/retrieval, not just theoretical. Confidence raised. |
 | 2026-04-02 | Strengthened — add 5th force | Gemma 4 (4B-active MoE) achieves frontier-competitive agent performance. Model architecture itself is now a cost reduction vector, independent of hardware/compression. Confidence moving toward `imminent`. |
 | 2026-04-07 | **→ IMMINENT — add 6th-8th forces** | Three new independent efficiency vectors in ONE DAY: (6) TriAttention 10.7x KV reduction via trigonometric estimation, (7) CoDE-Stop 25-50% reasoning token savings training-free, (8) Cursor warp decode 1.84x MoE inference on Blackwell. The cost collapse is now happening across compression, inference efficiency, and token generation simultaneously. |
+| 2026-04-11 | Add 9th force | Spectral-AI repurposes consumer RTX ray tracing cores for 48-89x faster MoE expert routing with 731x VRAM reduction. New independent vector: existing consumer hardware as MoE accelerator. |
 
 ---
 
