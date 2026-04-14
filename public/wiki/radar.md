@@ -2,7 +2,7 @@
 tags:
   - dashboard
   - radar
-last_updated: 2026-04-11
+last_updated: 2026-04-14
 ---
 
 # AI Radar Dashboard
@@ -13,22 +13,22 @@ last_updated: 2026-04-11
 
 | #   | Node                          | Status           | Impact   | Trend                                                                                      | Last Signal |
 | --- | ----------------------------- | ---------------- | -------- | ------------------------------------------------------------------------------------------ | ----------- |
-| 1   | [[frontier-models]]           | **accelerating** | critical | OpenAI Stargate execs depart to Meta, Alibaba revenue pivot                                | 2026-04-11  |
-| 2   | [[open-source-models]]        | **accelerating** | high     | Alibaba Qwen revenue pivot threatens open-weight ecosystem                                 | 2026-04-11  |
-| 3   | [[compute-hardware]]          | **accelerating** | high     | PJM 15GW emergency, 60GW decade shortfall, Japan Rapidus $16.3B                           | 2026-04-11  |
-| 4   | [[ai-agents]]                 | **accelerating** | high     | Claude Code Ultraplan, agent orchestration advances                                        | 2026-04-11  |
-| 5   | [[ai-coding-tools]]           | **accelerating** | high     | Claude Code Ultraplan, Linux kernel AI policy                                              | 2026-04-11  |
-| 6   | [[ai-infrastructure]]         | **accelerating** | high     | PJM 60GW shortfall constrains DC geography                                                 | 2026-04-11  |
-| 7   | [[ai-safety-alignment]]       | **accelerating** | critical | Central banks mobilize over Mythos, sovereign-level AI response                            | 2026-04-11  |
-| 8   | [[ai-policy-regulation]]      | **accelerating** | high     | Central banks mobilize over Mythos, Linux kernel AI-generated code policy                  | 2026-04-11  |
-| 9   | [[ai-business-funding]]       | **accelerating** | high     | Alibaba revenue pivot, Japan Rapidus $16.3B semiconductor investment                      | 2026-04-11  |
-| 10  | [[multimodal-ai]]             | **accelerating** | high     | Alibaba HappyHorse-1.0 #1 AI video model, open-source planned                             | 2026-04-10  |
-| 11  | [[ai-for-science]]            | **accelerating** | high     | Rhizome OS-1 drug discovery agents (2800 molecules/target)                                 | 2026-04-10  |
-| 12  | [[robotics-embodied-ai]]      | **accelerating** | high     | (no new in-window signals)                                                                 | 2026-04-07  |
-| 13  | [[ai-research-breakthroughs]] | **accelerating** | high     | Spectral-AI RT cores for MoE routing 48-89x faster                                        | 2026-04-11  |
-| 14  | [[edge-on-device-ai]]         | **accelerating** | high     | Spectral-AI consumer RTX for MoE, Alibaba pivot impacts local LLM community               | 2026-04-11  |
-| 15  | [[ai-in-enterprise]]          | **accelerating** | high     | Central bank Mythos response creates regulated AI market segment                           | 2026-04-11  |
-| 16  | [[frontier-edges]]            | **accelerating** | critical | Agent security convergence forming (4 signals), Advisor pattern advances reliability        | 2026-04-10  |
+| 1   | [[frontier-models]]           | **accelerating** | critical | OpenAI CRO memo: Microsoft "limited our ability", pivot to Amazon Bedrock                  | 2026-04-14  |
+| 2   | [[open-source-models]]        | **accelerating** | high     | MiniMax M2.7 open-sourced SOTA coding, Google TimesFM Apache 2.0                          | 2026-04-14  |
+| 3   | [[compute-hardware]]          | **accelerating** | high     | Microsoft takes Stargate Norway, hyperscalers building gas power plants                    | 2026-04-14  |
+| 4   | [[ai-agents]]                 | **accelerating** | high     | Claude Code Routines (autonomous scheduling), Meerkat multi-trace auditing                 | 2026-04-14  |
+| 5   | [[ai-coding-tools]]           | **accelerating** | high     | Claude Code Routines launch, CLAUDE.md rules study, Epitaxy coordinator mode               | 2026-04-14  |
+| 6   | [[ai-infrastructure]]         | **accelerating** | high     | Gas turbine supply crunch — no new orders until 2028                                       | 2026-04-14  |
+| 7   | [[ai-safety-alignment]]       | **accelerating** | critical | BOE/IMF/ECB Mythos response at Spring Meetings, Treasury seeking access                    | 2026-04-14  |
+| 8   | [[ai-policy-regulation]]      | **accelerating** | high     | NE/MD/ME 3 state AI laws one week, IMF Spring Meetings AI-dominated                       | 2026-04-14  |
+| 9   | [[ai-business-funding]]       | **accelerating** | high     | Fluidstack $18B, OpenAI CRO memo, Stanford $581.7B investment data                        | 2026-04-14  |
+| 10  | [[multimodal-ai]]             | **accelerating** | high     | (no new in-window signals)                                                                 | 2026-04-10  |
+| 11  | [[ai-for-science]]            | **accelerating** | high     | AlphaEvolve 23/67 math solutions improved, GigaTIME cancer AI                             | 2026-04-14  |
+| 12  | [[robotics-embodied-ai]]      | **accelerating** | high     | Alibaba readying first robot (quadruped, Amap unit)                                        | 2026-04-14  |
+| 13  | [[ai-research-breakthroughs]] | **accelerating** | high     | I-DLM diffusion LM matches AR quality 3x throughput, CLAUDE.md rules study                | 2026-04-14  |
+| 14  | [[edge-on-device-ai]]         | **accelerating** | high     | AMD GAIA local agent framework, Ryzen AI optimized                                         | 2026-04-14  |
+| 15  | [[ai-in-enterprise]]          | **accelerating** | high     | Revolut PRAGMA in-house LLM, PwC 20% capture 75% gains, Economist 500K jobs missing       | 2026-04-14  |
+| 16  | [[frontier-edges]]            | **accelerating** | critical | Photonic AI bottleneck paper (ADC energy wall), I-DLM non-AR architecture                  | 2026-04-14  |
 
 ## Status Legend
 
@@ -37,11 +37,11 @@ last_updated: 2026-04-11
 - **cooling** — decreasing activity or interest
 - **archived** — no longer actively tracked
 
-## Today's Top 3 Signals (2026-04-11)
+## Today's Top 3 Signals (2026-04-14)
 
-1. **Alibaba pivots Qwen to revenue** — Shifts AI strategy from open-source distribution to revenue generation, threatening the open-weight model ecosystem built on Qwen 3.5/3.6 series.
-2. **Central banks mobilize over Mythos** — BOE, BOC, Fed/Treasury summoning bank CEOs; JPMorgan, Goldman, Citi, BofA, Morgan Stanley testing Mythos. First sovereign-level AI model response.
-3. **OpenAI Stargate execs depart to Meta** — Key Stargate infrastructure executives leave for Meta, signaling talent competition at the infrastructure layer.
+1. **Stanford AI Index 2026: $581.7B investment, -20% developer employment** — The definitive annual benchmark confirms both acceleration and displacement. US-China gap just 2.7%. Scholar migration to US collapsed 89%.
+2. **Microsoft takes Stargate Norway + OpenAI pivots to Amazon** — OpenAI losing infrastructure to Microsoft while its own CRO memo calls Microsoft a channel constraint. The OpenAI-Microsoft relationship is fracturing at multiple layers simultaneously.
+3. **BOE/IMF/ECB escalate Mythos response at Spring Meetings** — Mythos cyber risk now the dominant topic at the IMF Spring Meetings. Global regulatory framework discussions accelerating.
 
 ## Recent Status Changes
 
@@ -58,6 +58,7 @@ last_updated: 2026-04-11
 
 | Date | Raw / Recorded | Significant | Breakthrough | Notes |
 |------|---------------|-------------|--------------|-------|
+| 2026-04-14 | 41 / 41 | 14 | 0 | Stanford AI Index, Microsoft takes Stargate Norway, Claude Code Routines, OpenAI CRO memo, Mythos at IMF |
 | 2026-04-11 | 55 / 19 | 7 | 0 | Alibaba open-source→revenue pivot, central banks mobilize over Mythos, Stargate execs→Meta |
 | 2026-04-10 | 31 / 31 | 6 | 0 | CoreWeave-Meta $21B, HappyHorse #1 video, OpenAI liability shield |
 

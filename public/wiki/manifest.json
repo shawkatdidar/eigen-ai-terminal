@@ -1,7 +1,7 @@
 {
   "description": "Eigen AI Terminal Knowledge Base — the full wiki of AI landscape intelligence",
-  "lastUpdated": "2026-04-12T21:38:02.332Z",
-  "totalFiles": 51,
+  "lastUpdated": "2026-04-14T20:37:10.506Z",
+  "totalFiles": 53,
   "structure": {
     "nodes": "16 domain trackers covering the AI landscape",
     "entities": "Company and model pages with timelines and connections",
@@ -1124,6 +1124,44 @@
       "size": 7111
     },
     {
+      "path": "briefs/2026-04-14.md",
+      "frontmatter": {
+        "date": "2026-04-14T00:00:00.000Z",
+        "scan_time": "14:00",
+        "signals_total": 41,
+        "signals_notable": 25,
+        "signals_significant": 14,
+        "signals_breakthrough": 0,
+        "signals_filtered_noise": 12,
+        "signals_deduped": 8,
+        "nodes_updated": 14,
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "ai-research-breakthroughs",
+        "ai-policy-regulation",
+        "compute-hardware",
+        "frontier-models",
+        "ai-coding-tools",
+        "ai-agents",
+        "ai-business-funding",
+        "ai-safety-alignment",
+        "open-source-models",
+        "ai-for-science",
+        "edge-on-device-ai",
+        "ai-in-enterprise",
+        "frontier-edges",
+        "robotics-embodied-ai"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 21543
+    },
+    {
       "path": "briefs/2026-04-11.md",
       "frontmatter": {
         "date": "2026-04-11T00:00:00.000Z",
@@ -1344,44 +1382,6 @@
       "size": 22818
     },
     {
-      "path": "briefs/2026-04-04.md",
-      "frontmatter": {
-        "date": "2026-04-04T00:00:00.000Z",
-        "scan_time": "14:00",
-        "signals_total": 20,
-        "signals_notable": 13,
-        "signals_significant": 7,
-        "signals_breakthrough": 0,
-        "signals_filtered_noise": 14,
-        "signals_deduped": 8,
-        "nodes_updated": 13,
-        "node_status_changes": [],
-        "tags": [
-          "daily-brief"
-        ]
-      },
-      "wikilinks": [
-        "ai-coding-tools",
-        "ai-agents",
-        "ai-business-funding",
-        "ai-safety-alignment",
-        "frontier-models",
-        "ai-for-science",
-        "ai-policy-regulation",
-        "compute-hardware",
-        "ai-infrastructure",
-        "ai-research-breakthroughs",
-        "multimodal-ai",
-        "ai-in-enterprise",
-        "open-source-models",
-        "edge-on-device-ai"
-      ],
-      "tags": [
-        "daily-brief"
-      ],
-      "size": 18975
-    },
-    {
       "path": "force-dynamics.md",
       "frontmatter": {
         "name": "Force Dynamics — Propagation Graph",
@@ -1391,7 +1391,7 @@
           "force-dynamics",
           "causal"
         ],
-        "last_updated": "2026-04-11T00:00:00.000Z"
+        "last_updated": "2026-04-14T00:00:00.000Z"
       },
       "wikilinks": [
         "ai-business-funding",
@@ -1414,7 +1414,7 @@
         "force-dynamics",
         "causal"
       ],
-      "size": 40159
+      "size": 42485
     },
     {
       "path": "convergences.md",
@@ -1427,7 +1427,7 @@
           "trends",
           "predictions"
         ],
-        "last_updated": "2026-04-11T00:00:00.000Z"
+        "last_updated": "2026-04-14T00:00:00.000Z"
       },
       "wikilinks": [
         "ai-business-funding",
@@ -1448,7 +1448,7 @@
         "trends",
         "predictions"
       ],
-      "size": 18819
+      "size": 19545
     },
     {
       "path": "bottleneck-map.md",
@@ -1514,11 +1514,11 @@
           "predictions",
           "accountability"
         ],
-        "last_updated": "2026-04-07T00:00:00.000Z",
-        "total_predictions": 5,
+        "last_updated": "2026-04-14T00:00:00.000Z",
+        "total_predictions": 6,
         "correct": 0,
         "incorrect": 0,
-        "pending": 5,
+        "pending": 6,
         "accuracy_rate": "N/A"
       },
       "wikilinks": [],
@@ -1528,7 +1528,7 @@
         "predictions",
         "accountability"
       ],
-      "size": 10724
+      "size": 12316
     },
     {
       "path": "opportunity-pipeline.md",
@@ -1566,6 +1566,8 @@
         ]
       },
       "wikilinks": [
+        "research-transfer-judgment",
+        "research-to-infrastructure-threat",
         "ai-company-moat-evaluation",
         "ai-self-improvement-hierarchy",
         "who-controls-the-dial",
@@ -1580,7 +1582,7 @@
         "frameworks",
         "learning"
       ],
-      "size": 2769
+      "size": 3417
     },
     {
       "path": "frameworks/ai-company-moat-evaluation.md",
@@ -1748,6 +1750,77 @@
       "size": 4339
     },
     {
+      "path": "frameworks/research-to-infrastructure-threat.md",
+      "frontmatter": {
+        "name": "Research-to-Infrastructure Threat Threshold",
+        "description": "Framework for judging when an AI research breakthrough becomes a real infrastructure disruption risk vs remaining academic",
+        "tags": [
+          "judgment",
+          "infrastructure",
+          "research-evaluation",
+          "investment"
+        ],
+        "discovered": "2026-04-14T00:00:00.000Z",
+        "session": 15,
+        "related": [
+          "[[compute-hardware]]",
+          "[[ai-research-breakthroughs]]",
+          "[[frontier-edges]]"
+        ],
+        "nodes": [
+          "compute-hardware",
+          "ai-research-breakthroughs"
+        ]
+      },
+      "wikilinks": [
+        "compute-hardware",
+        "ai-research-breakthroughs",
+        "frontier-edges"
+      ],
+      "tags": [
+        "judgment",
+        "infrastructure",
+        "research-evaluation",
+        "investment"
+      ],
+      "size": 3154
+    },
+    {
+      "path": "frameworks/research-transfer-judgment.md",
+      "frontmatter": {
+        "name": "Research Transfer Judgment",
+        "description": "Framework for deciding when AI research findings apply to your specific use case vs when they don't transfer",
+        "tags": [
+          "judgment",
+          "research-evaluation",
+          "agents"
+        ],
+        "discovered": "2026-04-14T00:00:00.000Z",
+        "session": 15,
+        "related": [
+          "[[ai-research-breakthroughs]]",
+          "[[ai-coding-tools]]",
+          "[[ai-agents]]"
+        ],
+        "nodes": [
+          "ai-research-breakthroughs",
+          "ai-coding-tools"
+        ]
+      },
+      "wikilinks": [
+        "ai-research-breakthroughs",
+        "ai-coding-tools",
+        "ai-agents",
+        "wikilinks"
+      ],
+      "tags": [
+        "judgment",
+        "research-evaluation",
+        "agents"
+      ],
+      "size": 3309
+    },
+    {
       "path": "frameworks/revenue-per-compute.md",
       "frontmatter": {
         "name": "Revenue-Per-Compute Strategic Framework",
@@ -1869,7 +1942,7 @@
           "dashboard",
           "radar"
         ],
-        "last_updated": "2026-04-11T00:00:00.000Z"
+        "last_updated": "2026-04-14T00:00:00.000Z"
       },
       "wikilinks": [
         "frontier-models",
@@ -1893,7 +1966,7 @@
         "dashboard",
         "radar"
       ],
-      "size": 5167
+      "size": 5430
     },
     {
       "path": "index.md",

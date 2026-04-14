@@ -15,6 +15,8 @@ tags:
 
 | Framework | Session | Core Question It Answers | Tags |
 |-----------|---------|-------------------------|------|
+| [[research-transfer-judgment]] | 15 (2026-04-14) | "Does this research finding apply to my specific use case, or only to the benchmark context?" | #research #evaluation #agents #judgment |
+| [[research-to-infrastructure-threat]] | 15 (2026-04-14) | "Is this research breakthrough a real infrastructure disruption or just an interesting paper?" | #research #infrastructure #investment #hardware |
 | [[ai-company-moat-evaluation]] | 12 (2026-04-09) | "Does this AI company have a durable moat, or will it get commoditized?" | #investment #moats #saas #strategy #evaluation |
 | [[ai-self-improvement-hierarchy]] | 9 (2026-04-04) | "Where does the new information come from, and what's the ceiling on self-improvement?" | #self-improvement #training #evaluation #reasoning |
 | [[who-controls-the-dial]] | 8 (2026-04-03) | "Is this safety capability also a misalignment tool? Who controls it, and is there an audit trail?" | #safety #governance #evaluation #alignment |
@@ -29,6 +31,8 @@ tags:
 - When evaluating a **training announcement or safety claim**: start with [[reward-signal-evaluation]]
 - When evaluating a **company strategic move**: start with [[revenue-per-compute]]
 - When evaluating an **AI/SaaS company for investment**: start with [[ai-company-moat-evaluation]]
+- When evaluating whether a **research finding applies to your deployment**: start with [[research-transfer-judgment]]
+- When evaluating whether a **research paper threatens existing infrastructure**: start with [[research-to-infrastructure-threat]]
 - When evaluating a **chip or hardware announcement**: see [[ai-compute-evaluation-framework]] (in parent directory)
 - When evaluating an **agent architecture**: see [[agent-architecture-skeleton]] (in parent directory)
 

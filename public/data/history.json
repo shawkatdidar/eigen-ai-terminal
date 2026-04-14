@@ -1,5 +1,270 @@
 [
   {
+    "date": "2026-04-14",
+    "signals": [
+      {
+        "title": "Claude Code \"Epitaxy\" coordinator mode leaked",
+        "description": "Internal build showing multi-agent IDE with parallel sub-agent orchestration and multi-repo support.  [Source](https://testingcatalog.com)",
+        "significance": "notable",
+        "domains": [
+          "AI Coding Tools"
+        ],
+        "source": "https://testingcatalog.com",
+        "practical": true,
+        "tags": [],
+        "actionLine": "[Source](https://testingcatalog.com)"
+      },
+      {
+        "title": "AMD GAIA local AI agent framework",
+        "description": "Open-source Python/C++ framework optimized for Ryzen AI NPU+GPU, with MCP integration. No cloud dependencies required.   [Source](https://amd-gaia.ai)",
+        "significance": "notable",
+        "domains": [
+          "Edge & On-Device AI",
+          "AI Agents"
+        ],
+        "source": "https://amd-gaia.ai",
+        "practical": true,
+        "tags": [
+          "amd",
+          "mcp"
+        ],
+        "actionLine": "[Source](https://amd-gaia.ai)"
+      },
+      {
+        "title": "MemPalace v3.3.0 \"Closets\" architecture",
+        "description": "+38% Recall@1 improvement for agent memory retrieval via hierarchical AAAK pre-filtering.  [Source](https://github.com/MemPalace/mempalace)",
+        "significance": "notable",
+        "domains": [
+          "AI Agents"
+        ],
+        "source": "https://github.com/MemPalace/mempalace",
+        "practical": true,
+        "tags": [
+          "github"
+        ],
+        "actionLine": "[Source](https://github.com/MemPalace/mempalace)"
+      },
+      {
+        "title": "Hermes Agent v0.9.0",
+        "description": "83K stars, persistent memory across sessions, security hardening. Weekly release cadence.  [Source](https://github.com/NousResearch/hermes-agent)",
+        "significance": "notable",
+        "domains": [
+          "AI Agents"
+        ],
+        "source": "https://github.com/NousResearch/hermes-agent",
+        "practical": true,
+        "tags": [
+          "github"
+        ],
+        "actionLine": "[Source](https://github.com/NousResearch/hermes-agent)"
+      },
+      {
+        "title": "Revolut PRAGMA",
+        "description": "In-house Transformer LLM trained on 26M users and 24B banking events, powering AIR assistant. Proprietary behavioral data as moat strategy.  [Source](https://revolut.com)",
+        "significance": "notable",
+        "domains": [
+          "AI in Enterprise"
+        ],
+        "source": "https://revolut.com",
+        "practical": false,
+        "tags": [
+          "transformer"
+        ],
+        "actionLine": "[Source](https://revolut.com)"
+      },
+      {
+        "title": "Vibe coding medical data breach",
+        "description": "Swiss medical app built via AI coding agent: zero backend access controls, patient data unencrypted on public internet, audio recordings sent to US AI services without consent. Violates nDSG and medical secrecy law.  [Source](https://www.tobru.ch/an-ai-vibe-coding-horror-story/)",
+        "significance": "notable",
+        "domains": [
+          "AI Safety"
+        ],
+        "source": "https://www.tobru.ch/an-ai-vibe-coding-horror-story/",
+        "practical": false,
+        "tags": [],
+        "actionLine": "[Source](https://www.tobru.ch/an-ai-vibe-coding-horror-story/)"
+      },
+      {
+        "title": "N-Day-Bench vulnerability benchmark",
+        "description": "Frontier LLMs tested on post-cutoff real vulnerabilities. Scores: GPT-5.4 (83.93), GLM-5.1 (80.13), Claude Opus 4.6 (79.95). Tight 5-point spread suggests capability convergence.  [Source](https://ndaybench.winfunc.com)",
+        "significance": "notable",
+        "domains": [
+          "AI Safety"
+        ],
+        "source": "https://ndaybench.winfunc.com",
+        "practical": false,
+        "tags": [
+          "gpt-5.4",
+          "opus",
+          "glm-5.1"
+        ],
+        "actionLine": "[Source](https://ndaybench.winfunc.com)"
+      },
+      {
+        "title": "Google TimesFM open-sourced",
+        "description": "Time-series forecasting foundation model, 100B real-world datapoints, zero-shot capable, Apache 2.0.  [Source](https://google.com)",
+        "significance": "notable",
+        "domains": [
+          "Open Source Models"
+        ],
+        "source": "https://google.com",
+        "practical": true,
+        "tags": [
+          "google"
+        ],
+        "actionLine": "[Source](https://google.com)"
+      },
+      {
+        "title": "OpenAI acquires Hiro Finance",
+        "description": "Personal AI CFO startup. 6th acquisition of 2026. Product shuts down April 20.  [Source](https://x.com/hirofinanceai)",
+        "significance": "notable",
+        "domains": [
+          "AI Business & Funding"
+        ],
+        "source": "https://x.com/hirofinanceai",
+        "practical": false,
+        "tags": [
+          "openai"
+        ],
+        "actionLine": "[Source](https://x.com/hirofinanceai)"
+      },
+      {
+        "title": "Photonic AI bottleneck review",
+        "description": "Systematic analysis identifying ADC energy wall and attention-mechanism incompatibility as fundamental constraints on photonic computing.  [Source](https://arxiv.org/abs/2604.10841)",
+        "significance": "notable",
+        "domains": [
+          "Frontier Edges"
+        ],
+        "source": "https://arxiv.org/abs/2604.10841",
+        "practical": true,
+        "tags": [
+          "attention"
+        ],
+        "actionLine": "[Source](https://arxiv.org/abs/2604.10841)"
+      },
+      {
+        "title": "Copilot v1.0.20-23",
+        "description": "Added --plan, --autopilot, --mode flags for agent mode granularity.  [Source](https://havoptic.com)",
+        "significance": "notable",
+        "domains": [
+          "AI Coding Tools"
+        ],
+        "source": "https://havoptic.com",
+        "practical": true,
+        "tags": [],
+        "actionLine": "[Source](https://havoptic.com)"
+      },
+      {
+        "title": "Multi-agent dev as distributed systems problem",
+        "description": "FLP impossibility theorem and Byzantine Generals applied to multi-agent coding coordination — smarter models reduce constants but can't eliminate fundamental bounds.  [Source](https://kirancodes.me)",
+        "significance": "notable",
+        "domains": [
+          "Research Breakthroughs"
+        ],
+        "source": "https://kirancodes.me",
+        "practical": true,
+        "tags": [],
+        "actionLine": "[Source](https://kirancodes.me)"
+      },
+      {
+        "title": "PwC: 20% of companies capture 75% of AI gains",
+        "description": "Leading cohort focuses on growth, not just productivity.  [Source](https://pwc.com)",
+        "significance": "notable",
+        "domains": [
+          "AI in Enterprise"
+        ],
+        "source": "https://pwc.com",
+        "practical": false,
+        "tags": [],
+        "actionLine": "[Source](https://pwc.com)"
+      },
+      {
+        "title": "Economist: tech jobs bust is real, don't blame AI yet",
+        "description": "500K tech jobs \"missing\" vs trend, but argues it's post-pandemic correction + interest rates, not yet AI displacement.  [Source](https://economist.com)",
+        "significance": "notable",
+        "domains": [
+          "AI in Enterprise"
+        ],
+        "source": "https://economist.com",
+        "practical": false,
+        "tags": [],
+        "actionLine": "[Source](https://economist.com)"
+      },
+      {
+        "title": "Alibaba readying first robot",
+        "description": "Amap unit developing quadruped robot, exploring humanoid feasibility.  [Source](https://bloomberg.com)",
+        "significance": "notable",
+        "domains": [
+          "Robotics & Embodied AI"
+        ],
+        "source": "https://bloomberg.com",
+        "practical": true,
+        "tags": [
+          "alibaba"
+        ],
+        "actionLine": "[Source](https://bloomberg.com)"
+      },
+      {
+        "title": "OpenAI investor concerns surface",
+        "description": "FT reporting on $852B valuation anxiety and revenue sustainability questions.  [Source](https://theweek.in)",
+        "significance": "notable",
+        "domains": [
+          "AI Business & Funding"
+        ],
+        "source": "https://theweek.in",
+        "practical": false,
+        "tags": [
+          "openai"
+        ],
+        "actionLine": "[Source](https://theweek.in)"
+      },
+      {
+        "title": "Microsoft GigaTIME cancer AI open-sourced",
+        "description": "Trained on 40M cancer cells, generates advanced immune cell imaging from $10 tissue slides.  [Source](https://microsoft.com)",
+        "significance": "notable",
+        "domains": [
+          "AI for Science"
+        ],
+        "source": "https://microsoft.com",
+        "practical": true,
+        "tags": [
+          "microsoft"
+        ],
+        "actionLine": "[Source](https://microsoft.com)"
+      },
+      {
+        "title": "Google Gemini Enterprise agent platform",
+        "description": "Internal screenshots show Tasks UI with human review toggles, expected at I/O.   [Source](https://testingcatalog.com)",
+        "significance": "notable",
+        "domains": [
+          "AI Agents",
+          "AI in Enterprise"
+        ],
+        "source": "https://testingcatalog.com",
+        "practical": true,
+        "tags": [
+          "google"
+        ],
+        "actionLine": "[Source](https://testingcatalog.com)"
+      },
+      {
+        "title": "Meta surpassing Google as largest digital ad business",
+        "description": "AI-optimized Advantage+ targeting driving 2026 overtake.  [Source](https://wsj.com)",
+        "significance": "notable",
+        "domains": [
+          "AI Business & Funding"
+        ],
+        "source": "https://wsj.com",
+        "practical": false,
+        "tags": [
+          "meta",
+          "google"
+        ],
+        "actionLine": "[Source](https://wsj.com)"
+      }
+    ]
+  },
+  {
     "date": "2026-04-11",
     "signals": [
       {
@@ -1983,304 +2248,6 @@
           "deepseek"
         ],
         "actionLine": "— multiple aggregators"
-      }
-    ]
-  },
-  {
-    "date": "2026-04-04",
-    "signals": [
-      {
-        "title": "Anthropic blocks OpenClaw and all third-party harnesses from Claude subscriptions",
-        "description": "Effective April 4 at noon PT, Claude Pro/Max subscribers can no longer use subscription token limits with third-party tools including OpenClaw. Must switch to pay-as-you-go \"extra usage\" billing. Boris Cherny (Head of Claude Code) cited \"outsized strain\" from third-party usage patterns. One-time credit offered equal to monthly sub price (redeemable by April 17). OpenClaw creator Peter Steinberger called it \"a betrayal of open-source developers.\" 985 HN points, 759 comments — massive community backlash. HuggingFace CEO Clement Delangue immediately posted instructions for running OpenClaw with local models via Gemma 4. → This is an ecosystem-defining moment. Anthropic is forcing the open-source agent ecosystem to either pay API rates or switch to local models. The immediate HuggingFace response suggests this could accelerate open model adoption faster than any technical improvement.",
-        "significance": "significant",
-        "domains": [
-          "AI Coding Tools",
-          "AI Agents",
-          "AI Business & Funding"
-        ],
-        "source": "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/",
-        "practical": true,
-        "tags": [
-          "anthropic",
-          "hugging face"
-        ],
-        "actionLine": "This is an ecosystem-defining moment."
-      },
-      {
-        "title": "Claude Code discovers 23-year-old Linux kernel vulnerability + \"MAD Bugs\" campaign finds 500+ zero-days",
-        "description": "Nicholas Carlini (Anthropic research scientist) used Claude Code to find a heap buffer overflow in Linux's NFSv4 driver undetected since March 2003. Server allocated 112 bytes for a buffer that could receive up to 1024 bytes, enabling remote kernel memory read. Separately, the \"Month of AI-Discovered Bugs\" initiative shows Claude autonomously finding 500+ high-severity zero-days including FreeBSD kernel RCE (working exploit in 8 hours), Vim RCE, Emacs RCE. → Automated vulnerability discovery is now practical. Defense lag (days-weeks to patch) vs offense speed (hours to find+exploit) creates a structural asymmetry that changes the entire cybersecurity economics.   — [mtlynch.io](https://mtlynch.io/claude-code-found-linux-vulnerability/) / [calif.io](https://blog.calif.io/p/mad-bugs-month-of-ai-discovered-bugs)",
-        "significance": "significant",
-        "domains": [
-          "AI Coding Tools",
-          "AI Safety"
-        ],
-        "source": "https://blog.calif.io/p/mad-bugs-month-of-ai-discovered-bugs",
-        "practical": true,
-        "tags": [
-          "anthropic"
-        ],
-        "actionLine": "Automated vulnerability discovery is now practical."
-      },
-      {
-        "title": "OpenAI leadership shuffle: three top executives change roles simultaneously pre-IPO",
-        "description": "Fidji Simo (product/business chief, AGI CEO) takes medical leave for POTS relapse. Greg Brockman takes over product. Brad Lightcap (COO) moves to \"special projects.\" Denise Dresser (CRO) assumes Lightcap's commercial duties. CMO Kate Rouch steps down for cancer recovery; former Meta CMO Gary Briggs stepping in. → Three top-tier executive transitions at the world's most valuable private company ($852B) during active IPO preparation. Brockman's return to product concentrates power in the founder cohort.",
-        "significance": "significant",
-        "domains": [
-          "AI Business & Funding",
-          "Frontier Models"
-        ],
-        "source": "https://techcrunch.com/2026/04/03/openai-executive-shuffle-new-roles-coo-brad-lightcap-fidji-simo-kate-rouch/",
-        "practical": false,
-        "tags": [
-          "meta",
-          "openai"
-        ],
-        "actionLine": "Three top-tier executive transitions at the world's most valuable private company ($852B) during active IPO preparation."
-      },
-      {
-        "title": "Anthropic acquires Coefficient Bio for ~$400M — first major acquisition, enters drug discovery",
-        "description": "All-stock deal for stealth biotech AI startup (<10 employees) founded by ex-Genentech/Prescient Design researchers. Team developed AI for drug research planning, clinical regulatory strategy, and new drug opportunity identification. Joins Anthropic's healthcare/life sciences group. → $400M for sub-10 people is an extraordinary talent premium (~$40M/head). Signals Anthropic's serious vertical expansion into life sciences beyond general-purpose AI. First frontier AI lab acquiring a biotech-specific company.",
-        "significance": "significant",
-        "domains": [
-          "AI for Science",
-          "AI Business & Funding"
-        ],
-        "source": "https://techcrunch.com/2026/04/03/anthropic-buys-biotech-startup-coefficient-bio-in-400m-deal-reports/",
-        "practical": false,
-        "tags": [
-          "anthropic"
-        ],
-        "actionLine": "$400M for sub-10 people is an extraordinary talent premium (~$40M/head)."
-      },
-      {
-        "title": "Anthropic launches AnthroPAC — enters direct political spending",
-        "description": "Filed statement of organization with FEC. Bipartisan, employee-funded (capped $5K/person/year). Adds to $20M already donated to Public Action First super PAC. AI companies have committed >$300M to 2026 midterm elections collectively. → The safety-first AI lab is now directly lobbying Congress. Signals the entire industry is moving from publishing papers to buying political influence as the primary mechanism for shaping regulation.",
-        "significance": "significant",
-        "domains": [
-          "AI Policy & Regulation"
-        ],
-        "source": "https://techcrunch.com/2026/04/03/anthropic-ramps-up-its-political-activities-with-a-new-pac/",
-        "practical": false,
-        "tags": [
-          "anthropic"
-        ],
-        "actionLine": "The safety-first AI lab is now directly lobbying Congress."
-      },
-      {
-        "title": "50% of planned US datacenter builds delayed or canceled — Chinese electrical equipment shortage",
-        "description": "Bloomberg: only 4GW of 12GW planned 2026 capacity under construction. For 2027: 6.3GW of 21.5GW. Root cause: China produces 30-40% of US transformers, switchgear, and batteries. Combined with the April 2 metals tariff restructuring (50% raw, 15% for grid equipment), US AI infrastructure buildout faces a double constraint: equipment scarcity AND tariff costs on what's available. → This is the physical-world bottleneck that could slow everything. When half the planned compute doesn't get built, model training timelines, inference capacity, and competitive dynamics all shift.   — [Bloomberg](https://www.bloomberg.com/news/features/2026-04-01/us-ai-data-center-expansion-relies-on-chinese-electrical-equipment-imports) / [Tom's Hardware](https://www.tomshardware.com/tech-industry/artificial-intelligence/half-of-planned-us-data-center-builds-have-been-delayed-or-canceled)",
-        "significance": "significant",
-        "domains": [
-          "Compute & Hardware",
-          "AI Infrastructure"
-        ],
-        "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/half-of-planned-us-data-center-builds-have-been-delayed-or-canceled",
-        "practical": true,
-        "tags": [
-          "inference",
-          "training"
-        ],
-        "actionLine": "This is the physical-world bottleneck that could slow everything."
-      },
-      {
-        "title": "Self-distillation improves code generation: Qwen3-30B 42.4% → 55.3% on LiveCodeBench with no external data",
-        "description": "Apple researchers show LLMs can self-improve code generation by sampling their own outputs and self-fine-tuning. No verifier, teacher model, or RL needed. Works across Qwen and Llama at 4B, 8B, and 30B scales. Gains concentrated on harder problems. Exploits \"precision-exploration conflict in LLM decoding.\" → An embarrassingly simple technique that yields a ~30% relative improvement. Practical implication: any open-source model can cheaply self-improve its code capabilities. Combined with Anthropic's OpenClaw ban, open models just got a new tool to close the capability gap.",
-        "significance": "significant",
-        "domains": [
-          "Research Breakthroughs",
-          "AI Coding Tools"
-        ],
-        "source": "https://arxiv.org/abs/2604.01193",
-        "practical": true,
-        "tags": [
-          "anthropic",
-          "apple",
-          "fine-tuning",
-          "distillation",
-          "qwen3-30",
-          "qwen"
-        ],
-        "actionLine": "An embarrassingly simple technique that yields a ~30% relative improvement."
-      },
-      {
-        "title": "GPT-Image-2 leaked on Arena.ai",
-        "description": "OpenAI's next-gen image model discovered under codenames maskingtape-alpha, gaffertape-alpha, packingtape-alpha. Features reliable text rendering and superior photorealism.",
-        "significance": "notable",
-        "domains": [
-          "Multimodal AI"
-        ],
-        "source": "https://officechai.com/ai/three-image-generation-models-named-maskingtape-gaffertape-and-packingtape-create-buzz-on-arena-rumoured-to-be-openais-gpt-image-2/",
-        "practical": true,
-        "tags": [
-          "openai"
-        ],
-        "actionLine": "Features reliable text rendering and superior photorealism."
-      },
-      {
-        "title": "Anthropic publishes \"Diff\" tool for comparing open-weight models",
-        "description": "Software-dev-style diff applied to neural networks. Identifies behavioral features unique to each model. Studied Llama-3.1-8B, Qwen3-8B, GPT-OSS-20B, DeepSeek-R1.",
-        "significance": "notable",
-        "domains": [
-          "AI Safety",
-          "Research Breakthroughs"
-        ],
-        "source": "https://www.anthropic.com/research/diff-tool",
-        "practical": true,
-        "tags": [
-          "anthropic",
-          "deepseek",
-          "deepseek-r1.",
-          "qwen3-8"
-        ],
-        "actionLine": "Studied Llama-3.1-8B, Qwen3-8B, GPT-OSS-20B, DeepSeek-R1."
-      },
-      {
-        "title": "Emollick field experiment: AI startups get 1.9x revenue, need 39% less capital",
-        "description": "515 startups; treatment group shown AI case studies used AI 44% more, achieved 1.9x revenue, needed 39% less capital. First large-scale RCT on AI's startup impact.",
-        "significance": "notable",
-        "domains": [
-          "AI in Enterprise",
-          "AI Business & Funding"
-        ],
-        "source": "https://x.com/emollick/status/2040436307176898897",
-        "practical": false,
-        "tags": [],
-        "actionLine": "First large-scale RCT on AI's startup impact."
-      },
-      {
-        "title": "Gemma 4 KV cache bug fixed",
-        "description": "470 points on r/LocalLLaMA. Users running 26B MoE on 2020 MacBook Air and Rockchip NPU at 4W. Bartowski quantizations dropped.",
-        "significance": "notable",
-        "domains": [
-          "Open Source Models",
-          "Edge & On-Device AI"
-        ],
-        "source": "https://old.reddit.com/r/LocalLLaMA/comments/1sbwkou/finally_gemma_4_kv_cache_is_fixed/",
-        "practical": true,
-        "tags": [
-          "moe"
-        ],
-        "actionLine": "Bartowski quantizations dropped."
-      },
-      {
-        "title": "DGX Spark NVFP4 still broken after 6 months",
-        "description": "Community backlash (139 pts). SM 12.1 hardware lacks PTX instruction for NVFP4. Official NVIDIA stack doesn't support its own advertised feature.",
-        "significance": "notable",
-        "domains": [
-          "Compute & Hardware"
-        ],
-        "source": "https://old.reddit.com/r/LocalLLaMA/comments/1scf1x8/dont_buy_the_dgx_spark_nvfp4_still_missing_after/",
-        "practical": false,
-        "tags": [
-          "nvidia"
-        ],
-        "actionLine": "Official NVIDIA stack doesn't support its own advertised feature."
-      },
-      {
-        "title": "Anthropic private market: 81:1 buy-sell ratio, $2B ready to deploy",
-        "description": "While OpenAI shares trade at discount ($765B vs $852B primary). Investor confidence shifting.",
-        "significance": "notable",
-        "domains": [
-          "AI Business & Funding"
-        ],
-        "source": "https://www.bloomberg.com/news/articles/2026-04-01/openai-demand-sinks-on-secondary-market-as-anthropic-runs-hot",
-        "practical": false,
-        "tags": [
-          "anthropic",
-          "openai"
-        ],
-        "actionLine": "Investor confidence shifting."
-      },
-      {
-        "title": "Yupp.ai shuts down after $33M a16z raise (< 1 year)",
-        "description": "Crowdsourced AI feedback startup. Founders cite shift to agentic systems making chatbot-layer evaluation \"less critical.\" Data point on AI startup mortality rate.",
-        "significance": "notable",
-        "domains": [
-          "AI Business & Funding"
-        ],
-        "source": "https://techcrunch.com/2026/03/31/yupp-ai-shuts-down-33m-a16z-crypto-chris-dixon/",
-        "practical": false,
-        "tags": [],
-        "actionLine": "Founders cite shift to agentic systems making chatbot-layer evaluation \"less critical.\" Data point on AI startup mortality rate."
-      },
-      {
-        "title": "Google-Crusoe 933MW gas plant, no carbon capture",
-        "description": "Armstrong County, TX. Would emit 4.5M tons CO2/year. Not grid-connected. Combined with Microsoft-Chevron $7B, 2,500MW in Permian Basin. AI companies now building utility-scale power plants.",
-        "significance": "notable",
-        "domains": [
-          "Compute & Hardware"
-        ],
-        "source": "https://www.distilled.earth/p/google-is-weighing-natural-gas-without",
-        "practical": false,
-        "tags": [
-          "google",
-          "microsoft"
-        ],
-        "actionLine": "AI companies now building utility-scale power plants."
-      },
-      {
-        "title": "Trump 100% pharmaceutical tariffs (Section 232)",
-        "description": "120-day window for large companies. Could accelerate AI drug discovery demand. Biosimilars/generics exempt.",
-        "significance": "notable",
-        "domains": [
-          "AI Policy & Regulation",
-          "AI for Science"
-        ],
-        "source": "https://www.cnbc.com/2026/04/02/trump-pharmaceutical-tariffs-100percent.html",
-        "practical": false,
-        "tags": [],
-        "actionLine": "Biosimilars/generics exempt."
-      },
-      {
-        "title": "ClawSafety benchmark: safe LLMs, unsafe agents (40-75% attack success)",
-        "description": "Elevated-privilege agents achieve high attack success rates despite safety-trained backbone models.",
-        "significance": "notable",
-        "domains": [
-          "AI Safety",
-          "AI Agents"
-        ],
-        "source": "https://arxiv.org/abs/2604.01438",
-        "practical": true,
-        "tags": [],
-        "actionLine": "Elevated-privilege agents achieve high attack success rates despite safety-trained backbone models."
-      },
-      {
-        "title": "CORAL: autonomous multi-agent evolution — 3-10x improvement rates",
-        "description": "Persistent shared memory, async execution for open-ended discovery.",
-        "significance": "notable",
-        "domains": [
-          "AI Agents",
-          "Research Breakthroughs"
-        ],
-        "source": "https://arxiv.org/abs/2604.01658",
-        "practical": true,
-        "tags": [],
-        "actionLine": "Persistent shared memory, async execution for open-ended discovery."
-      },
-      {
-        "title": "Karpathy publishes \"LLM Knowledge Bases\" post",
-        "description": "Shift from code-centric to knowledge-centric workflows. LLMs maintain markdown wikis; humans curate sources. \"There is room here for an incredible new product.\"",
-        "significance": "notable",
-        "domains": [
-          "AI Agents",
-          "AI Coding Tools"
-        ],
-        "source": "https://x.com/karpathy/status/2039805659525644595",
-        "practical": true,
-        "tags": [],
-        "actionLine": "\"There is room here for an incredible new product.\""
-      },
-      {
-        "title": "RSAC 2026: 48% of cybersecurity pros identify agentic AI as most dangerous attack vector",
-        "description": "40,000 attendees. Theme shifted from experimentation to governance. Government attendance reduced.",
-        "significance": "notable",
-        "domains": [
-          "AI Safety"
-        ],
-        "source": "https://siliconangle.com/2026/04/03/three-insights-ai-attack-thecube-rsac-2026-rsac26/",
-        "practical": false,
-        "tags": [],
-        "actionLine": "Government attendance reduced."
       }
     ]
   }

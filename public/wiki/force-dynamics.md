@@ -5,7 +5,7 @@ tags:
   - system
   - force-dynamics
   - causal
-last_updated: 2026-04-11
+last_updated: 2026-04-14
 ---
 
 # Force Dynamics — Propagation Graph
@@ -591,6 +591,43 @@ A **force** is a signal that pushes change in a domain other than its origin. Fo
 | Date | Update | Signal Evidence |
 |------|--------|----------------|
 | 2026-04-11 | Identified | Bloomberg: PJM emergency proposal, 60GW shortfall, natural gas construction costs 2x in 5 years |
+| 2026-04-14 | Hardening | Hyperscalers building own gas plants (MS 5GW, Google 933MW, Meta 7.46GW) but turbine supply crunch — no new orders until 2028, prices up 195% |
+
+---
+
+### FC-029: I-DLM Throughput Gain Disrupts Inference Hardware Assumptions
+
+**Date identified:** 2026-04-14
+**Origin signal:** I-DLM matches autoregressive quality at 2.9-4.1x throughput via diffusion architecture ([[ai-research-breakthroughs]])
+**Target(s):** [[compute-hardware]], [[ai-infrastructure]]
+**Mechanism:** Inference hardware procurement (memory bandwidth, KV-cache sizing, batch optimization) is designed around transformer autoregressive profiles. If diffusion LMs achieve production quality at 3x throughput, the compute-per-token economics change — less sequential memory bandwidth needed, more parallel compute. Hyperscaler capex plans built around transformer inference face architectural misalignment if this scales.
+**Direction:** disrupting
+**Strength:** moderate (unproven at production scale)
+**Lag:** months
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-04-14 | Identified | I-DLM paper: 69.6 AIME-24, 45.7 LiveCodeBench, 3x throughput. Tri Dao co-author. |
+
+---
+
+### FC-030: State AI Law Patchwork Accelerates Enterprise Vendor Consolidation
+
+**Date identified:** 2026-04-14
+**Origin signal:** Nebraska, Maryland, Maine pass AI laws in one week; 600+ bills in 2026 ([[ai-policy-regulation]])
+**Target(s):** [[ai-in-enterprise]], [[frontier-models]]
+**Mechanism:** Each new state law creates a distinct compliance obligation. Enterprise legal/compliance teams cannot navigate 50 different state-level AI regulations simultaneously. This creates pressure to consolidate toward large AI vendors (hyperscalers, frontier labs) who absorb compliance liability through their terms of service, compressing the market for mid-tier AI vendors and startups who cannot afford per-state compliance infrastructure.
+**Direction:** constraining (mid-tier vendors) / accelerating (hyperscaler adoption)
+**Strength:** moderate
+**Lag:** weeks-months
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-04-14 | Identified | NE LB 525, MD HB 895, ME LD 2082 — three states in one week. Troutman Privacy analysis. |
 
 ---
 

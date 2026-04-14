@@ -6,11 +6,11 @@ tags:
   - force-dynamics
   - predictions
   - accountability
-last_updated: 2026-04-07
-total_predictions: 5
+last_updated: 2026-04-14
+total_predictions: 6
 correct: 0
 incorrect: 0
-pending: 5
+pending: 6
 accuracy_rate: N/A
 ---
 
@@ -156,6 +156,29 @@ Never claim >95%. The world is too complex.
 | Date | Confidence Change | Reason |
 |------|-------------------|--------|
 | 2026-03-27 | Initial: 65% | Strong trajectory but defense companies often stay private longer |
+
+---
+
+### PRED-006: At Least One State AI Law Faces Legal Challenge Within 6 Months
+
+**Claim:** At least one of the three state AI laws passed the week of April 13, 2026 (Nebraska LB 525, Maryland HB 895, or Maine LD 2082) will face a legal challenge — either an industry lawsuit (trade association or company) or civil liberties challenge (ACLU or similar) — citing federal preemption or First Amendment grounds, by October 14, 2026.
+**Confidence:** 65%
+**Made:** 2026-04-14
+**Check date:** 2026-10-14
+
+**Based on:**
+- FC-030: State AI law patchwork creates compliance burden that incentivizes industry challenges
+- Pattern: AI industry has actively challenged state regulation (e.g., California SB 1047 opposition campaign in 2024)
+- Nebraska's chatbot disclosure requirements and Maine's therapy prohibition could face First Amendment challenges from the AI industry or free speech advocates
+- 600+ AI bills across states creates incentive for test-case litigation to establish federal preemption
+
+**Falsification criteria:** No lawsuit, formal legal challenge, or request for injunction filed against any of these three laws by 2026-10-14.
+**What would change my mind:** All three laws have broad bipartisan support with no industry opposition; federal AI legislation passes that explicitly preserves state authority; AI industry shifts to a cooperative regulatory posture.
+
+**Status updates:**
+| Date | Confidence Change | Reason |
+|------|-------------------|--------|
+| 2026-04-14 | Initial: 65% | Legal challenges to AI regulation are common but not guaranteed for any specific law |
 
 ---
 
