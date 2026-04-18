@@ -2,7 +2,7 @@
 tags:
   - dashboard
   - radar
-last_updated: 2026-04-14
+last_updated: 2026-04-17
 ---
 
 # AI Radar Dashboard
@@ -13,15 +13,15 @@ last_updated: 2026-04-14
 
 | #   | Node                          | Status           | Impact   | Trend                                                                                      | Last Signal |
 | --- | ----------------------------- | ---------------- | -------- | ------------------------------------------------------------------------------------------ | ----------- |
-| 1   | [[frontier-models]]           | **accelerating** | critical | OpenAI CRO memo: Microsoft "limited our ability", pivot to Amazon Bedrock                  | 2026-04-14  |
-| 2   | [[open-source-models]]        | **accelerating** | high     | MiniMax M2.7 open-sourced SOTA coding, Google TimesFM Apache 2.0                          | 2026-04-14  |
-| 3   | [[compute-hardware]]          | **accelerating** | high     | Microsoft takes Stargate Norway, hyperscalers building gas power plants                    | 2026-04-14  |
-| 4   | [[ai-agents]]                 | **accelerating** | high     | Claude Code Routines (autonomous scheduling), Meerkat multi-trace auditing                 | 2026-04-14  |
-| 5   | [[ai-coding-tools]]           | **accelerating** | high     | Claude Code Routines launch, CLAUDE.md rules study, Epitaxy coordinator mode               | 2026-04-14  |
+| 1   | [[frontier-models]]           | **accelerating** | critical | Claude Opus 4.7 GA, Qwen3.6-35B-A3B open-weight parity, Mythos withheld                    | 2026-04-17  |
+| 2   | [[open-source-models]]        | **accelerating** | high     | Qwen3.6-35B-A3B hits Opus 4.6 parity, Mistral Voxtral TTS, Tencent HY-World 2.0            | 2026-04-17  |
+| 3   | [[compute-hardware]]          | **accelerating** | high     | Tesla AI5 tape-out, Meta+Broadcom MTIA v3, NVIDIA Ising, Fairwater Wisconsin live          | 2026-04-17  |
+| 4   | [[ai-agents]]                 | **accelerating** | high     | Mininglamp Mano-P 92% GAIA, Slack MCP client, OpenAI Agents SDK native harness              | 2026-04-17  |
+| 5   | [[ai-coding-tools]]           | **accelerating** | high     | OpenAI Codex launch (3M WAU), Cursor CUDA kernels +38%, Opus 4.7 in Copilot                | 2026-04-17  |
 | 6   | [[ai-infrastructure]]         | **accelerating** | high     | Gas turbine supply crunch — no new orders until 2028                                       | 2026-04-14  |
-| 7   | [[ai-safety-alignment]]       | **accelerating** | critical | BOE/IMF/ECB Mythos response at Spring Meetings, Treasury seeking access                    | 2026-04-14  |
-| 8   | [[ai-policy-regulation]]      | **accelerating** | high     | NE/MD/ME 3 state AI laws one week, IMF Spring Meetings AI-dominated                       | 2026-04-14  |
-| 9   | [[ai-business-funding]]       | **accelerating** | high     | Fluidstack $18B, OpenAI CRO memo, Stanford $581.7B investment data                        | 2026-04-14  |
+| 7   | [[ai-safety-alignment]]       | **accelerating** | critical | Mythos withheld, subliminal-learning Nature paper, Project Glasswing, Anthropic KYC        | 2026-04-17  |
+| 8   | [[ai-policy-regulation]]      | **accelerating** | high     | White House OMB Mythos memo, UK rebukes OpenAI, Anthropic mandatory KYC                   | 2026-04-17  |
+| 9   | [[ai-business-funding]]       | **accelerating** | high     | Upscale AI $2B, Madison Air IPO, Darkbloom $200M                                          | 2026-04-17  |
 | 10  | [[multimodal-ai]]             | **accelerating** | high     | (no new in-window signals)                                                                 | 2026-04-10  |
 | 11  | [[ai-for-science]]            | **accelerating** | high     | AlphaEvolve 23/67 math solutions improved, GigaTIME cancer AI                             | 2026-04-14  |
 | 12  | [[robotics-embodied-ai]]      | **accelerating** | high     | Alibaba readying first robot (quadruped, Amap unit)                                        | 2026-04-14  |
@@ -37,11 +37,11 @@ last_updated: 2026-04-14
 - **cooling** — decreasing activity or interest
 - **archived** — no longer actively tracked
 
-## Today's Top 3 Signals (2026-04-14)
+## Today's Top 3 Signals (2026-04-17)
 
-1. **Stanford AI Index 2026: $581.7B investment, -20% developer employment** — The definitive annual benchmark confirms both acceleration and displacement. US-China gap just 2.7%. Scholar migration to US collapsed 89%.
-2. **Microsoft takes Stargate Norway + OpenAI pivots to Amazon** — OpenAI losing infrastructure to Microsoft while its own CRO memo calls Microsoft a channel constraint. The OpenAI-Microsoft relationship is fracturing at multiple layers simultaneously.
-3. **BOE/IMF/ECB escalate Mythos response at Spring Meetings** — Mythos cyber risk now the dominant topic at the IMF Spring Meetings. Global regulatory framework discussions accelerating.
+1. **Claude Opus 4.7 GA with published regressions list** — First major lab to publish a "what got worse" list alongside "what got better" at launch. Drop-in in Claude Code, Copilot Pro+, Cursor within hours. 79.4% SWE-bench Verified.
+2. **Qwen3.6-35B-A3B closes the open-weight frontier gap** — Apache 2.0 MoE matches Opus 4.6 on coding, runs on single H100 in 4-bit. First month where open-weight parity is real at a weight class small labs can fine-tune.
+3. **Anthropic withholds Mythos on capability grounds** — First frontier model voluntarily held back post-RSP eval. Gated deployment to federal agencies and vetted defenders only. White House OMB circulated allocation memo; UK/BOE/ECB escalating.
 
 ## Recent Status Changes
 

@@ -4,7 +4,7 @@ id: open-source-models
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-04-10
+last_updated: 2026-04-17
 related_nodes:
   - frontier-models
   - edge-on-device-ai
@@ -39,6 +39,11 @@ The tooling layer is surging: Microsoft BitNet gained 6,457 stars/week as 1-bit 
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-16 | **Qwen3.6-35B-A3B released — 35B total / 3B active MoE beats Opus on pelican-SVG** — Apache 2.0 license. 256 experts (8 routed + 1 shared per token, expert intermediate dim 512). SWE-bench Verified 73.4, SWE-bench Pro 49.5, LiveCodeBench v6 80.4, MMLU-Pro 85.2, GPQA Diamond 86.0, AIME 2026 92.7. 262K native context extensible to 1.01M via YaRN. Multi-token prediction training, vision encoder, thinking mode. Simon Willison's pelican-SVG benchmark: Qwen edged out the same-day Claude Opus 4.7. ~60 tok/s on RTX 4060 Ti 16GB. → Open-weight 35B model on a consumer GPU is now competing with closed frontier models on specific structured tasks. Shifts the "open vs closed" frontier line below consumer hardware cost. | breakthrough | [huggingface.co](https://huggingface.co/Qwen/Qwen3.6-35B-A3B) |
+| 2026-04-16 | **Ternary Bonsai 8B — 1.58-bit in-browser inference at 60 tok/s** — Weight quantization restricted to {-1, 0, +1} (ternary), eliminating most floating-point multiplies. 8B-param version ~2GB, 60 tok/s on M4 Max entirely in-browser via WebGPU. → Production-viable ternary LLMs at 8B scale on consumer laptops. Enables serverless, private LLM inference in a browser tab — a category that didn't exist at useful quality 60 days ago. | significant | huggingface.co |
+| 2026-04-15 | **Mistral Voxtral TTS open-weights — 4B, 70ms latency, 9 languages** — 4B-parameter open-weights TTS. 70ms time-to-first-audio, voice cloning from 3s reference, 9 languages with strong cross-lingual transfer. → Open-source TTS now competitive with ElevenLabs on latency/quality; removes voice-synthesis vendor lock for voice-agent builders. Voxtral-1 (March 30) was 3B/90ms — 30% latency improvement in ~6 weeks. | significant | mistral.ai |
+| 2026-04-15 | **Tencent HY-World 2.0 — fully open-source 3D world model** — Weights, code, technical details released. Generates, reconstructs, simulates interactive 3D worlds from text, images, video. Outputs integrate into game engines and embodied-simulation pipelines (one-click world generation). → Open-source world-model class now includes a Chinese tech-giant-scale release rivaling closed Genie/Lyra. Game-engine pipeline integration is the practical deployment path. | significant | [huggingface.co](https://huggingface.co/tencent/HY-World-2.0) |
+| 2026-04-15 | **Mozilla Thunderbolt — open-source enterprise AI client** — Mozilla announced Thunderbolt as an open-source enterprise AI client (Phoronix coverage). → Open-source enterprise AI front-end category expansion; Mozilla enters space dominated by closed-source workflow vendors. | notable | phoronix.com |
 | 2026-04-11 | **Alibaba pivots from open-source to revenue (FT report)** — Qwen parent shifting strategy to monetization | significant | ft.com |
 | 2026-04-10 | **GLM 5.1 tops code arena for open models, beats GPT-5.4** — Zhipu AI's GLM 5.1 (744B MoE, trained on Huawei chips) reached #1 on the code arena leaderboard among open-source models, and outperforms OpenAI's GPT-5.4 on coding benchmarks. → An open model trained entirely on Chinese domestic hardware beating a frontier closed model on coding tasks is a landmark signal for both open-source competitiveness and China's compute independence. | notable | zhipuai.cn |
 | 2026-04-10 | **Qwen 3.6 community voting: dense model wins, release imminent** — Alibaba ran a community vote on Qwen 3.6 architecture direction, and the community chose a dense model (all parameters active per query) over MoE. Release imminent. → Community-driven architecture decisions are a new dynamic in open-source model development; the preference for dense models suggests users value simplicity and deployment ease over theoretical efficiency gains from MoE. | notable | qwen.ai |

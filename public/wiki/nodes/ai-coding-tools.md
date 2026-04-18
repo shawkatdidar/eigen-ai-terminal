@@ -4,7 +4,7 @@ id: ai-coding-tools
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-04-08
+last_updated: 2026-04-17
 related_nodes:
   - ai-agents
   - frontier-models
@@ -43,6 +43,14 @@ The ecosystem is broadening: it's no longer just about code generation but about
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-16 | **OpenAI Codex "almost everything" — Mac computer-use, browser, memory, 111 plugins** — Codex Mac app now operates desktop apps with its own cursor (seeing screen, clicking, typing) and runs parallel agents without interfering with user work. Persistent cross-session memory (preferences, workflows, stacks), resumable work across days/weeks, scheduled future work. Built-in browser with inline webpage-commenting. Built-in image gen via gpt-image-1.5. 111 new plugins combining skills, app integrations, MCP servers. Realtime streaming TUI, typed tool declarations. → Codex crosses the "IDE assistant" line into a persistent autonomous agent with local OS access. Direct competitive pressure on Cursor and Claude Code. | significant | [openai.com](https://openai.com/index/codex-for-almost-everything/) |
+| 2026-04-16 | **Opus 4.7 in GitHub Copilot Pro+ (7.5× premium multiplier, promo through April 30)** — Claude Opus 4.7 live in Copilot Pro+/Business/Enterprise at 7.5× premium multiplier, promo to April 30. → Microsoft/GitHub integrating Anthropic's new SOTA coding model on day one; Copilot strategy is now multi-model commoditization, not OpenAI-exclusive. | notable | github.blog |
+| 2026-04-15 | **OpenAI ChatGPT Pro $100/mo tier launched** — Sam Altman: "Launching a $100 ChatGPT Pro tier by very popular demand" — positioned as Codex-driven upgrade path. → New price point between $20 Plus and former $200 Pro; monetization laddering in response to Codex usage. | notable | x.com |
+| 2026-04-15 | **OpenAI Codex 3M WAU, usage limits reset per 1M milestone to 10M** — Concrete Codex growth data (3M WAU, up from 1.6M in March) plus novel capacity-gated usage-limit release schedule. → Demonstrates OpenAI throttling demand to match compute growth; agent usage is compute-bound, not demand-bound. | notable | x.com |
+| 2026-04-15 | **Cursor "canvases" — interact with agent-generated visualizations** — Cursor shipped canvases letting developers directly interact with visualizations (charts, diagrams, generated UI) agents produce during coding sessions. → Extends the agent↔developer feedback loop beyond text; concrete UX for "look at what the agent made" rather than scrolling through diffs. | notable | cursor.com |
+| 2026-04-14 | **Cursor multi-agent CUDA kernel optimization — 38% speedup on Blackwell** — Planner + worker multi-agent system, 3 weeks across 235 CUDA kernel optimization problems on NVIDIA Blackwell 200. Kernels from 124+ open-source models (DeepSeek, Qwen, Stable Diffusion). 38% geomean speedup, beat baselines on 149/235 (63%), 19% of optimizations >2× speedup. Tested CUDA C with inline PTX and CuTe DSL paradigms. Open-sourced at github.com/anysphere/kernel-optimization-results. → First public result where agents autonomously produce meaningful systems-engineering optimizations at scale. Demonstrates the multi-agent→systems-work capability envelope. | significant | [cursor.com](https://cursor.com/blog/multi-agent-kernels) |
+| 2026-04-16 | **Laravel raises funding, injects ads into agent output** — Laravel (OSS PHP framework) took funding and began injecting vendor-promoted content directly into agent output paths. HN: 173 pts, 100 comments. → First high-visibility case of an OSS developer-tooling firm monetizing agent workflows via ad-injection. Flags broader commercialization-friction risk in agent tooling. | notable | techstackups.com |
+| 2026-04-15 | **claude-mem v12.1.5 — Claude Code persistent memory plugin** — Plugin captures Claude Code session activity via 5 lifecycle hooks (SessionStart, UserPromptSubmit, PostToolUse, Stop, SessionEnd), stores in SQLite with FTS5 + Chroma vector DB hybrid search, injects relevant context into new sessions via MCP search tools with 3-layer retrieval. 59.5k stars, +1.9k today. → Community solving the "Claude Code forgets across sessions" gap via MCP, ahead of any Anthropic-built primitive. | notable | github.com |
 | 2026-04-11 | **Anthropic Claude Code Ultraplan** — cloud-based planning with Opus 4.6, 30min sessions, browser-editable | significant | the-decoder.com |
 | 2026-04-11 | **Linux kernel merges formal AI coding policy** — mandatory Assisted-by tags, humans-only DCO, 469 HN pts | significant | github.com/torvalds/linux |
 | 2026-04-10 | **Codex 0.119.0-0.120.0** — WebRTC v2 voice, MCP Apps enhancements, streaming background agents | notable | github.com/openai/codex |
