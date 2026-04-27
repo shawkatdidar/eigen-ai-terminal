@@ -37,10 +37,26 @@ Your job: deliver only what's actionable. Not a news feed — a filtered intelli
 
 - Quote the actual signal title from the response
 - Use the description text from the response for context, not your own knowledge
-- If a signal doesn't have enough detail, call `about("[topic]")` — don't fill the gap from memory
+- If a signal doesn't have enough detail, call `about("[topic]")` or `read("[page]")` — don't fill the gap from memory
 - If nothing actionable came back for this user, say "nothing relevant today" — don't invent relevance
+- Do not imply the wiki said something unless you actually called `about`, `search`, or `read`
 
 **Why this matters:** Your training data is months old. This tool returns what happened in the last 24 hours. Mixing the two produces hallucinated signals the user can't verify, damages trust, and defeats the purpose of live intelligence.
+
+## Required morning-brief flow
+
+For any first-time brief, scheduled brief, or "what matters today" summary, follow this order:
+
+1. Determine the user's current context.
+   - Use recent conversation, local project/workspace context, or stored notes.
+   - If you still do not know what they are building, ask before personalizing.
+2. Call `today`.
+3. Select only the signals that are relevant to that user context.
+4. If a selected signal needs more explanation or verification, call `about("[topic]")`.
+5. If you need exact Eigen knowledge-base language, call `read("[page]")` or `search("[topic]")`.
+6. Compose the brief using only what you learned from steps 1-5.
+
+Never skip step 1 and then fake personalization. Never skip steps 4-5 and then pretend the wiki confirmed your interpretation.
 
 ## Network behavior
 
@@ -79,26 +95,36 @@ Reads public, read-only JSON from the Eigen terminal. No auth. No user data uplo
 
 ### Morning brief
 
-Call `today`. Read all signals. Filter to only signals relevant to what the user is working on.
+First determine what the user is actually working on. Then call `today`. Read all signals. Filter to only signals relevant to that context. If any chosen signal needs supporting detail, call `about`. If you need exact wiki grounding, call `read` or `search`.
 
-```
-Here's what matters in AI today:
+Use this exact format and structure:
 
-**[Signal title from tool response]** — [One sentence: what this means for their specific work. Reference something concrete about their project/stack/goals.]
+```text
+☀️ Eigen Morning Brief — {date}
 
-What you should know:
-* **[Signal title]** — [Why this affects them, in one sentence]
-* **[Signal title]** — [Why this affects them, in one sentence]
+Top signal:
+**[Real signal title from today()]** — [One sentence on why this matters for the user's current work.]
 
-Say "dig deeper on [topic]" or "full brief" for more.
+Worth your attention:
+- **[Real signal title from today()]** — [One sentence]
+- **[Real signal title from today()]** — [One sentence]
+
+Why this matters for you:
+[One blunt sentence connecting the above to their actual project, stack, or decision today.]
+
+Say "deeper on [topic]" for the chain behind any item.
 ```
 
 Rules:
-- Max 3 bullets. Every one must pass: "Can they do something with this today?"
-- Every bullet must name a signal title that appears in the today() response.
-- The "why it matters" must reference what the user is building — not generic importance.
+- Follow the heading, blank lines, section labels, and bullet structure exactly.
+- `Top signal:` must contain exactly 1 item.
+- `Worth your attention:` may contain 0-2 bullets, never more.
+- Every bullet must name a real signal title that appears in the `today()` response.
+- The `Why this matters for you:` section must be exactly 1 short paragraph or 1 sentence, not a list.
+- The personalization must reference what the user is building — not generic importance.
+- If you mention a framework, company, model, or concept beyond the `today()` snippet, ground it with `about`, `read`, or `search` first.
 - Skip funding, policy, executive news unless it directly changes a tool or API they use.
-- Nothing relevant today? Say so in one line. Don't pad.
+- Nothing relevant today? Keep the same title, then say `No relevant signals for your current work today.` and stop. Do not pad.
 - Be a sharp colleague, not a newsletter.
 
 ### What BAD delivery looks like (never do this)
@@ -153,11 +179,13 @@ If the user asks you to check for updates, use `changes` with the date of the la
 
 ## First use
 
-When this skill first connects, call `today` to get the latest signals. Pick 2-3 of the most actionable ones and present them to the user.
+When this skill first connects, first determine the user's current work context. Use their recent files, conversations, and project context. If you still cannot determine it, ask: "What are you working on? I'll filter to just what's relevant."
+
+Then call `today` to get the latest signals. Pick 2-3 of the most actionable ones and present them to the user.
 
 "I just connected to the Eigen AI Terminal — live intelligence across 16 areas of AI, updated daily. Here's what matters today: [signals from today() response]"
 
-Then look at what they're currently working on — their recent files, conversations, project context — and use that to filter future signals. If you can't determine what they're working on, ask: "What are you working on? I'll filter to just what's relevant."
+For future briefs, keep using the freshest available user context. If the context is stale or unclear, ask again instead of pretending you know.
 
 ## Privacy
 
