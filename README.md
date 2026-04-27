@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Eigen Terminal
 
-## Getting Started
+**ClawLab builds agent-first AI infrastructure. Eigen Terminal is the public surface.**
 
-First, run the development server:
+Live site: [terminal.clawlab.dev](https://terminal.clawlab.dev)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Why agent-first
+
+Tools ship, models improve, and discoveries drop every single day. No human keeps up. Agents can.
+
+The shape of useful AI tooling is changing. Dashboards, newsletters, and feeds assume a person sits at the other end reading them. That's the wrong end. The agent is at the other end now — it knows what you're building, it has your context, and it can absorb a hundred signals in the time you'd spend skimming three. Build for that.
+
+Eigen Terminal is what we expose to agents. Your agent reads it, filters it against your work, and tells you only what you can act on today. Not a news feed — a filtered intelligence stream tailored to what you're doing.
+
+## What's here
+
+This repo ships three things you can use:
+
+- **Eigen Terminal** — the live site at [terminal.clawlab.dev](https://terminal.clawlab.dev). Daily-updated intelligence across 16 areas of AI, with a public knowledge base at `/wiki` and a public read-only JSON feed at `/data/radar.json`. No auth. No account. One-way data flow.
+- **MCP server** — `eigen-ai-radar-mcp` on npm. 12 tools your agent uses to query today's signals, trace cause-and-effect chains, surface developing trends, check what's blocked, read the knowledge base, and watch for breaking developments. Source under [`mcp-server/`](./mcp-server).
+- **ClawHub skill** — drop-in skill for OpenClaw agents. Defines the morning-brief flow, the personalization rules, and the delivery format. Source under [`clawhub-skill/`](./clawhub-skill).
+
+Pick whichever surface fits your agent. They all read the same public data.
+
+## See it in operation
+
+[`@FenixShipAI`](https://x.com/FenixShipAI) is the transparent showcase agent. It runs on top of Eigen Terminal in public, on a real account, with real briefs. Watch it for a few days and you'll see what an agent does with this kind of feed — what it surfaces, what it skips, how the filtering reads when it's tuned to a real builder context. If you want to talk to the human behind it: [`@Shawkat_m1`](https://x.com/Shawkat_m1).
+
+## Install
+
+For OpenClaw agents, the one-liner is:
+
+```
+npx clawhub@latest install eigen-ai-terminal
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+That installs the skill, hooks up the MCP server, and gives your agent the morning-brief flow. Paste it into your OpenClaw chat and the agent walks itself through the rest.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For Claude Code or any other MCP-capable agent, add the server directly:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```json
+{
+  "mcpServers": {
+    "eigen-ai-terminal": {
+      "command": "npx",
+      "args": ["eigen-ai-radar-mcp"]
+    }
+  }
+}
+```
 
-## Learn More
+For agents that just fetch URLs, point them at `https://terminal.clawlab.dev/data/radar.json` — same data, no MCP required.
 
-To learn more about Next.js, take a look at the following resources:
+## Privacy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+One-way: your agent pulls public data, combines it with your local context, delivers to you. Nothing about what you build, ask, or work on leaves your machine. See [`PUBLIC-DATA-POLICY.md`](./PUBLIC-DATA-POLICY.md) for the boundary of what's public.

@@ -206,7 +206,7 @@ export default function ConnectAgent() {
         {/* Tools summary */}
         <div className="mt-6 pt-5 border-t border-[var(--color-border)]">
           <p className="text-[13px] text-[var(--color-text-muted)] leading-relaxed">
-            Your agent gets <span className="font-bold text-[var(--color-text)]">11 tools</span> — today&apos;s signals, topic deep-dives, cause-and-effect tracing, developing trends, predictions, and a 50-page knowledge base.
+            Your agent gets <span className="font-bold text-[var(--color-text)]">12 tools</span> — today&apos;s signals, topic deep-dives, cause-and-effect tracing, developing trends, predictions, and a 50-page knowledge base.
           </p>
         </div>
       </div>
