@@ -14,8 +14,11 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-// The wiki lives one directory above the web app
-const WIKI_ROOT = path.resolve(__dirname, "../../");
+// The wiki lives one directory above the web app by default (nested layout).
+// Override with WIKI_ROOT env var when eigen and the wiki are siblings.
+const WIKI_ROOT = process.env.WIKI_ROOT
+  ? path.resolve(process.env.WIKI_ROOT)
+  : path.resolve(__dirname, "../../");
 const OUTPUT_DIR = path.resolve(__dirname, "../public/data");
 
 // ── Helpers ──────────────────────────────────────────────────
