@@ -1,54 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap");
 @import "tailwindcss";
 
 :root {
-  --color-primary: #f0e7d6;
-  --color-primary-strong: #fff7ea;
-  --color-accent: #7ed8d0;
-  --color-accent-strong: #9ff2ea;
-  --color-accent-soft: rgba(126, 216, 208, 0.14);
-  --color-accent-warm: #d4a26a;
+  --color-bg-page: #f3ead4;
+  --color-bg-paper: #f6edda;
+  --color-text: #111111;
+  --color-text-secondary: #2b251d;
+  --color-text-muted: #756850;
+  --color-border: rgba(17, 17, 17, 0.18);
+  --color-border-strong: rgba(17, 17, 17, 0.36);
+  --color-primary: #111111;
+  --color-primary-strong: #000000;
+  --color-accent: #6f5423;
+  --color-accent-strong: #111111;
+  --color-accent-soft: rgba(111, 84, 35, 0.1);
 
-  --color-bg-page: #0a0b0c;
-  --color-bg-shell: #111315;
-  --color-bg-panel: #15181b;
-  --color-bg-panel-strong: #1b1f22;
-  --color-bg-subtle: #20252a;
-  --color-bg-inset: #0f1113;
-  --color-bg-paper: #e8ddca;
+  --color-breakthrough: #111111;
+  --color-significant: #6f5423;
+  --color-notable: #756850;
+  --color-accelerating: #111111;
+  --color-hardening: #111111;
+  --color-loosening: #6f5423;
 
-  --color-text: #f4efe6;
-  --color-text-secondary: #c7c0b4;
-  --color-text-muted: #8e887e;
-  --color-text-strong: #fffaf1;
-  --color-paper-text: #141210;
-  --color-paper-muted: #61554a;
-
-  --color-border: rgba(244, 239, 230, 0.12);
-  --color-border-strong: rgba(244, 239, 230, 0.2);
-  --color-border-soft: rgba(244, 239, 230, 0.07);
-
-  --color-breakthrough: #f48f87;
-  --color-significant: #e0b16f;
-  --color-notable: #7ed8d0;
-
-  --color-accelerating: #74d7b4;
-  --color-hardening: #f48f87;
-  --color-loosening: #74d7b4;
-
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.18);
-  --shadow-card: 0 24px 60px rgba(0, 0, 0, 0.24);
-  --shadow-card-hover: 0 28px 72px rgba(0, 0, 0, 0.34);
-  --shadow-section: 0 30px 90px rgba(0, 0, 0, 0.28);
-
-  --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 22px;
-  --radius-xl: 30px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
   --radius-full: 9999px;
 
-  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-ui: "SFMono-Regular", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
-  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --shadow-card: none;
+  --shadow-card-hover: none;
+  --shadow-section: none;
+
+  --font-body: "DM Mono", "SFMono-Regular", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  --font-ui: "DM Mono", "SFMono-Regular", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  --font-display: "Instrument Serif", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
 }
 
 @theme inline {
@@ -65,14 +51,25 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(126, 216, 208, 0.1), transparent 32%),
-    radial-gradient(circle at top right, rgba(212, 162, 106, 0.08), transparent 28%),
-    linear-gradient(180deg, #0b0c0d 0%, #090a0b 45%, #0b0d0f 100%);
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.45), transparent 32rem),
+    linear-gradient(180deg, #f6edda 0%, #f1e3c3 100%);
   color: var(--color-text);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(17, 17, 17, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.012) 1px, transparent 1px);
+  background-size: 5px 5px, 7px 7px;
+  opacity: 0.45;
 }
 
 h1,
@@ -88,17 +85,15 @@ a,
 button,
 [role="button"] {
   transition:
-    color 0.2s ease,
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    opacity 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    opacity 0.18s ease;
 }
 
 ::selection {
-  background: rgba(126, 216, 208, 0.3);
-  color: var(--color-text-strong);
+  background: rgba(17, 17, 17, 0.16);
+  color: var(--color-text);
 }
 
 .font-display {
@@ -109,29 +104,44 @@ button,
   font-family: var(--font-ui);
 }
 
-.terminal-panel {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 28%),
-    linear-gradient(180deg, rgba(14, 15, 16, 0.92), rgba(20, 22, 24, 0.96));
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-card);
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-text);
+  padding: 0.85rem 1.05rem;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
-.terminal-card {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 38%),
-    var(--color-bg-panel);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-card);
+.button-primary {
+  background: var(--color-text);
+  color: var(--color-bg-page);
 }
 
+.button-primary:hover {
+  background: var(--color-primary-strong);
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--color-text);
+}
+
+.button-secondary:hover {
+  background: rgba(17, 17, 17, 0.05);
+}
+
+.terminal-panel,
+.terminal-card,
 .paper-panel {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0)),
-    var(--color-bg-paper);
-  border: 1px solid rgba(20, 18, 16, 0.08);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
-  color: var(--color-paper-text);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  box-shadow: none;
+  color: var(--color-text);
 }
 
 .section-kicker {
@@ -143,10 +153,7 @@ button,
 }
 
 .subtle-grid {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 28px 28px;
+  display: none;
 }
 
 ::-webkit-scrollbar {
@@ -159,10 +166,6 @@ button,
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(244, 239, 230, 0.14);
+  background: rgba(17, 17, 17, 0.2);
   border-radius: var(--radius-full);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(244, 239, 230, 0.26);
 }
