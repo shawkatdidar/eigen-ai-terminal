@@ -4,7 +4,7 @@ id: frontier-edges
 status: accelerating
 impact: critical
 created: 2026-03-19
-last_updated: 2026-04-03
+last_updated: 2026-04-23
 related_nodes:
   - ai-research-breakthroughs
   - frontier-models
@@ -394,6 +394,45 @@ And an **impact rating** if cracked:
 | 2026-03-12 | Genspark Claw enterprise-secure alternative | notable |
 | 2026-03-19 | promptfoo red-teaming +5,060 stars/wk (acquired by OpenAI) | notable |
 
+### EDGE-13: Parametric Memory / Continual Learning
+**Maturity:** `research` | **Impact if cracked:** `paradigm-shift` | **Source nodes:** [[ai-research-breakthroughs]] [[ai-agents]] [[ai-safety-alignment]]
+
+**The Problem:** Deployed LLMs are stuck in "perpetual present" — frozen weights after pretraining, no ability to compress new experience into parameters. Knowledge acquired post-deployment lives in context windows (bounded, transient) or external retrieval (slow, shallow). Lossy compression into weights is what made pretraining powerful (it forces generalization); the absence of that mechanism post-deployment is why models cannot learn from their own deployment experience. The problem splits into three layers: (1) Context — better retrieval and orchestration harnesses; (2) Modules — attachable knowledge (adapter layers, compressed KV caches, external memory stores) that specialize without touching core weights; (3) Weights — true parametric updates via test-time training, meta-learning, self-distillation. Core blockers: catastrophic forgetting (new data destroys old representations), the stability-plasticity dilemma (stable models can't adapt, adaptive models lose prior capability), temporal disentanglement (invariant rules and mutable state share the same weights), logical integration failure (fact updates don't propagate to consequences), and unlearning (no differentiable way to surgically remove false or toxic knowledge). Per a16z's April 2026 framing, this is the defining research frontier for agent-era AI.
+
+**Who's Pushing:**
+| Player | Approach | Investment | Status |
+|--------|----------|------------|--------|
+| Letta | Agent memory layer / long-term memory infrastructure | VC-backed | Production SDK, enterprise focus |
+| mem0 | Open-source memory layer for LLM agents | Open source + commercial | Growing OSS adoption |
+| Subconscious | Continual learning harness | Early stage | Research + product |
+| Tucuxi | "Artificial Doubt Engine" — uncertainty-aware memory | Early stage | Research |
+| xmemory / Pinecone | External memory stores — retrieval backbone | Mature ecosystem | Production RAG |
+| Academic: Test-Time Training | Sun et al. 2020, In-Place TTT (ICLR 2026 Oral) | University research | 4B model matches larger on 128K+ context |
+| Academic: Meta-Learning | MAML (Finn 2017), Nested Learning (Behrouz 2025) | University research | Hierarchy of optimization timescales |
+| Academic: Distillation | LoRD (Liu 2025), SDFT (Shenfeld 2026) | University research | Avoids catastrophic forgetting in sequential fine-tuning |
+| Academic: Regularization | EWC (Kirkpatrick 2017), Weight Interpolation (Kozal 2024) | University research | Brittle at scale |
+| DeepMind | AlphaEvolve — recursive self-improvement (2025) | Internal R&D | Discovered algorithmic improvements untouched for decades |
+| OpenAI | ChatGPT memory features | Product | Consumer-surface deployment |
+
+**What Breakthrough Looks Like:** A deployed model that reliably compresses post-training experience into weights, demonstrates measurable capability gains from deployment data, preserves prior capabilities (no catastrophic forgetting), resists data-poisoning, and remains auditable for alignment. Or at minimum: a module-based system where swappable adapter layers deliver significantly-larger-model performance on narrow tasks (the article cites an 8B model with a module matching 109B performance as an early signal).
+
+**Current Distance:** Far on weights, medium on modules, close on context. Harness/context approaches (RAG, multi-agent swarms, long context) are mature. Module-based approaches (adapters, compressed KV caches) are productizing. True weight-level continual learning remains brittle — EWC and weight interpolation don't scale cleanly, TTT works on narrow tasks, meta-learning is early. The safety subproblems (unlearning, alignment degradation from fine-tuning, auditability) are described as "open problems, not fundamental impossibilities."
+
+**Recent Progress:**
+| Date | Signal | Significance |
+|------|--------|-------------|
+| 2026-04-21 | GenericAgent — 5-tier hierarchical memory, 6× lower token consumption vs competitors, token-density paradigm | notable |
+| 2026-04-22 | Microsoft AutoAdapt — end-to-end automated LLM domain-adaptation (RAG/fine-tune/HP-search selection) at ~$4/task | significant |
+| 2026-04-07 | In-Place Test-Time Training (ICLR 2026 Oral) — MLP final projection as "fast weights" during inference, 4B matches larger on 128K+ context | significant |
+| 2026-04 | a16z "Why We Need Continual Learning" — frames parametric memory as the defining post-scaling frontier; names Letta, mem0, Subconscious, Tucuxi as harness-layer companies | significant (framework) |
+
+**What to Watch For:**
+- First frontier lab deploying a module-based specialization layer in a production model (vs. fine-tuning or RAG)
+- First credible demonstration of non-brittle continual learning at >10B scale
+- Startup in Letta/mem0 category raising at >$1B valuation — signals enterprise pull
+- Safety paper quantifying alignment degradation from realistic continual learning setups
+- Auditability/versioning standard for continuously-updating models (currently impossible)
+
 ---
 
 ## Edge Summary Dashboard
@@ -412,6 +451,7 @@ And an **impact rating** if cracked:
 | 10 | Formal Verification of AI Code | research | transformative | Medium-far | Mistral, MCP formal semantics | 2026-03-27 |
 | 11 | Test-Time Compute Scaling | scaling | transformative | Close | OpenAI, Anthropic | 2026-03-27 |
 | 12 | Agent Security / Safe Execution | prototype | transformative | Medium | AISI (scheming 5x), Intercom (vertical safety) | 2026-03-30 |
+| 13 | Parametric Memory / Continual Learning | research | paradigm-shift | Far | In-Place TTT (ICLR), Letta, mem0, AlphaEvolve | 2026-04-22 |
 
 ---
 

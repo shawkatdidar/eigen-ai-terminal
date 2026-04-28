@@ -1,6 +1,6 @@
 {
   "description": "Eigen AI Terminal Knowledge Base — the full wiki of AI landscape intelligence",
-  "lastUpdated": "2026-04-18T21:42:39.820Z",
+  "lastUpdated": "2026-04-27T22:05:42.515Z",
   "totalFiles": 53,
   "structure": {
     "nodes": "16 domain trackers covering the AI landscape",
@@ -23,7 +23,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-04-10T00:00:00.000Z",
+        "last_updated": "2026-04-27T00:00:00.000Z",
         "related_nodes": [
           "frontier-models",
           "ai-coding-tools",
@@ -38,8 +38,12 @@
         ]
       },
       "wikilinks": [
-        "frontier-models",
+        "frontier-edges",
         "ai-coding-tools",
+        "ai-research-breakthroughs",
+        "robotics-embodied-ai",
+        "bottleneck-map",
+        "frontier-models",
         "ai-infrastructure",
         "ai-safety-alignment"
       ],
@@ -49,7 +53,7 @@
         "autonomy",
         "tools"
       ],
-      "size": 15893
+      "size": 21688
     },
     {
       "path": "nodes/ai-business-funding.md",
@@ -59,7 +63,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-04-10T00:00:00.000Z",
+        "last_updated": "2026-04-27T00:00:00.000Z",
         "related_nodes": [
           "frontier-models",
           "ai-in-enterprise",
@@ -85,7 +89,7 @@
         "startups",
         "acquisitions"
       ],
-      "size": 16879
+      "size": 24071
     },
     {
       "path": "nodes/ai-coding-tools.md",
@@ -95,7 +99,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-04-17T00:00:00.000Z",
+        "last_updated": "2026-04-27T00:00:00.000Z",
         "related_nodes": [
           "ai-agents",
           "frontier-models",
@@ -109,6 +113,7 @@
         ]
       },
       "wikilinks": [
+        "open-source-models",
         "ai-agents",
         "frontier-models",
         "ai-in-enterprise"
@@ -119,7 +124,7 @@
         "developer-tools",
         "productivity"
       ],
-      "size": 13828
+      "size": 17191
     },
     {
       "path": "nodes/ai-for-science.md",
@@ -129,7 +134,7 @@
         "status": "accelerating",
         "impact": "medium",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-04-10T00:00:00.000Z",
+        "last_updated": "2026-04-22T00:00:00.000Z",
         "related_nodes": [
           "ai-research-breakthroughs",
           "frontier-models",
@@ -155,7 +160,7 @@
         "materials",
         "biology"
       ],
-      "size": 7801
+      "size": 8396
     },
     {
       "path": "nodes/ai-in-enterprise.md",
@@ -165,7 +170,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-04-10T00:00:00.000Z",
+        "last_updated": "2026-04-22T00:00:00.000Z",
         "related_nodes": [
           "ai-coding-tools",
           "ai-infrastructure",
@@ -193,7 +198,7 @@
         "vertical",
         "workflow"
       ],
-      "size": 9974
+      "size": 12973
     },
     {
       "path": "nodes/ai-infrastructure.md",
@@ -203,7 +208,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-03-30T00:00:00.000Z",
+        "last_updated": "2026-04-27T00:00:00.000Z",
         "related_nodes": [
           "compute-hardware",
           "ai-agents",
@@ -231,7 +236,7 @@
         "serving",
         "rag"
       ],
-      "size": 10877
+      "size": 14759
     },
     {
       "path": "nodes/ai-policy-regulation.md",
@@ -241,7 +246,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-04-10T00:00:00.000Z",
+        "last_updated": "2026-04-27T00:00:00.000Z",
         "related_nodes": [
           "ai-safety-alignment",
           "ai-business-funding",
@@ -265,7 +270,7 @@
         "regulation",
         "government"
       ],
-      "size": 9960
+      "size": 13118
     },
     {
       "path": "nodes/ai-research-breakthroughs.md",
@@ -275,7 +280,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-04-10T00:00:00.000Z",
+        "last_updated": "2026-04-22T00:00:00.000Z",
         "related_nodes": [
           "frontier-models",
           "open-source-models",
@@ -290,6 +295,7 @@
         ]
       },
       "wikilinks": [
+        "frontier-edges",
         "frontier-models",
         "open-source-models",
         "ai-for-science"
@@ -301,7 +307,7 @@
         "architecture",
         "training"
       ],
-      "size": 10414
+      "size": 13366
     },
     {
       "path": "nodes/ai-safety-alignment.md",
@@ -311,7 +317,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-04-10T00:00:00.000Z",
+        "last_updated": "2026-04-27T00:00:00.000Z",
         "related_nodes": [
           "frontier-models",
           "ai-agents",
@@ -335,7 +341,7 @@
         "alignment",
         "interpretability"
       ],
-      "size": 17364
+      "size": 21811
     },
     {
       "path": "nodes/compute-hardware.md",
@@ -345,7 +351,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-04-10T00:00:00.000Z",
+        "last_updated": "2026-04-22T00:00:00.000Z",
         "related_nodes": [
           "frontier-models",
           "edge-on-device-ai",
@@ -369,7 +375,7 @@
         "compute",
         "gpu"
       ],
-      "size": 15308
+      "size": 18857
     },
     {
       "path": "nodes/edge-on-device-ai.md",
@@ -379,7 +385,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-04-10T00:00:00.000Z",
+        "last_updated": "2026-04-27T00:00:00.000Z",
         "related_nodes": [
           "open-source-models",
           "compute-hardware",
@@ -405,7 +411,7 @@
         "local",
         "privacy"
       ],
-      "size": 5972
+      "size": 7030
     },
     {
       "path": "nodes/frontier-edges.md",
@@ -415,7 +421,7 @@
         "status": "accelerating",
         "impact": "critical",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-04-03T00:00:00.000Z",
+        "last_updated": "2026-04-23T00:00:00.000Z",
         "related_nodes": [
           "ai-research-breakthroughs",
           "frontier-models",
@@ -455,7 +461,7 @@
         "frontier",
         "moonshots"
       ],
-      "size": 29825
+      "size": 35185
     },
     {
       "path": "nodes/frontier-models.md",
@@ -465,7 +471,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-04-17T00:00:00.000Z",
+        "last_updated": "2026-04-27T00:00:00.000Z",
         "related_nodes": [
           "open-source-models",
           "ai-safety-alignment",
@@ -489,7 +495,7 @@
         "models",
         "frontier"
       ],
-      "size": 17409
+      "size": 26964
     },
     {
       "path": "nodes/multimodal-ai.md",
@@ -535,7 +541,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-04-17T00:00:00.000Z",
+        "last_updated": "2026-04-27T00:00:00.000Z",
         "related_nodes": [
           "frontier-models",
           "edge-on-device-ai",
@@ -559,7 +565,7 @@
         "models",
         "open-source"
       ],
-      "size": 12847
+      "size": 19050
     },
     {
       "path": "nodes/robotics-embodied-ai.md",
@@ -569,7 +575,7 @@
         "status": "accelerating",
         "impact": "medium",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-03-30T00:00:00.000Z",
+        "last_updated": "2026-04-22T00:00:00.000Z",
         "related_nodes": [
           "multimodal-ai",
           "compute-hardware",
@@ -597,7 +603,7 @@
         "humanoid",
         "autonomous"
       ],
-      "size": 7618
+      "size": 9475
     },
     {
       "path": "entities/anthropic.md",
@@ -607,7 +613,7 @@
         "type": "company",
         "status": "active",
         "created": "2026-04-04T00:00:00.000Z",
-        "last_updated": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-22T00:00:00.000Z",
         "related_nodes": [
           "frontier-models",
           "ai-safety-alignment",
@@ -651,7 +657,7 @@
         "frontier-lab",
         "safety"
       ],
-      "size": 16924
+      "size": 22927
     },
     {
       "path": "entities/apple.md",
@@ -707,7 +713,7 @@
         "type": "company",
         "status": "active",
         "created": "2026-04-04T00:00:00.000Z",
-        "last_updated": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-22T00:00:00.000Z",
         "related_nodes": [
           "ai-coding-tools",
           "ai-agents",
@@ -739,7 +745,7 @@
         "ai-coding",
         "developer-tools"
       ],
-      "size": 6604
+      "size": 7583
     },
     {
       "path": "entities/deepseek.md",
@@ -749,7 +755,7 @@
         "type": "company",
         "status": "active",
         "created": "2026-04-04T00:00:00.000Z",
-        "last_updated": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-20T00:00:00.000Z",
         "related_nodes": [
           "frontier-models",
           "open-source-models",
@@ -785,7 +791,7 @@
         "frontier-lab",
         "open-source"
       ],
-      "size": 7243
+      "size": 9726
     },
     {
       "path": "entities/google-deepmind.md",
@@ -795,7 +801,7 @@
         "type": "company",
         "status": "active",
         "created": "2026-04-04T00:00:00.000Z",
-        "last_updated": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-22T00:00:00.000Z",
         "related_nodes": [
           "frontier-models",
           "open-source-models",
@@ -838,7 +844,7 @@
         "open-source",
         "research"
       ],
-      "size": 11966
+      "size": 14868
     },
     {
       "path": "entities/index.md",
@@ -846,7 +852,7 @@
         "name": "Entity Index",
         "description": "Catalog of all tracked entities in the AI Radar wiki",
         "type": "index",
-        "last_updated": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-23T00:00:00.000Z",
         "entity_count": 10,
         "tags": [
           "index",
@@ -869,7 +875,7 @@
         "index",
         "entities"
       ],
-      "size": 2409
+      "size": 2824
     },
     {
       "path": "entities/meta.md",
@@ -1035,7 +1041,7 @@
         "type": "company",
         "status": "active",
         "created": "2026-04-04T00:00:00.000Z",
-        "last_updated": "2026-04-04T00:00:00.000Z",
+        "last_updated": "2026-04-22T00:00:00.000Z",
         "related_nodes": [
           "frontier-models",
           "ai-coding-tools",
@@ -1079,7 +1085,7 @@
         "company",
         "frontier-lab"
       ],
-      "size": 16829
+      "size": 21273
     },
     {
       "path": "entities/xai.md",
@@ -1122,6 +1128,157 @@
         "elon-musk"
       ],
       "size": 7111
+    },
+    {
+      "path": "briefs/2026-04-27.md",
+      "frontmatter": {
+        "date": "2026-04-27T00:00:00.000Z",
+        "scan_time": "17:05",
+        "signals_total": 9,
+        "signals_notable": 6,
+        "signals_significant": 3,
+        "signals_breakthrough": 0,
+        "signals_filtered_noise": 13,
+        "signals_deduped": 3,
+        "nodes_updated": 7,
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "frontier-models",
+        "ai-business-funding",
+        "ai-policy-regulation",
+        "ai-agents",
+        "ai-coding-tools",
+        "ai-safety-alignment",
+        "ai-in-enterprise",
+        "ai-infrastructure",
+        "open-source-models",
+        "edge-on-device-ai"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 24220
+    },
+    {
+      "path": "briefs/2026-04-26.md",
+      "frontmatter": {
+        "date": "2026-04-26T00:00:00.000Z",
+        "scan_time": "14:09",
+        "signals_total": 58,
+        "signals_notable": 30,
+        "signals_significant": 27,
+        "signals_breakthrough": 1,
+        "signals_filtered_noise": 41,
+        "signals_deduped": 18,
+        "nodes_updated": 16,
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "open-source-models",
+        "frontier-models",
+        "compute-hardware",
+        "ai-policy-regulation",
+        "ai-agents",
+        "ai-coding-tools",
+        "ai-business-funding",
+        "ai-safety-alignment",
+        "robotics-embodied-ai",
+        "ai-in-enterprise",
+        "ai-infrastructure",
+        "ai-research-breakthroughs",
+        "frontier-edges",
+        "ai-for-science",
+        "edge-on-device-ai",
+        "multimodal-ai"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 87509
+    },
+    {
+      "path": "briefs/2026-04-22.md",
+      "frontmatter": {
+        "date": "2026-04-22T00:00:00.000Z",
+        "scan_time": "14:00",
+        "signals_total": 37,
+        "signals_notable": 20,
+        "signals_significant": 17,
+        "signals_breakthrough": 0,
+        "signals_filtered_noise": 25,
+        "signals_deduped": 22,
+        "nodes_updated": 13,
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "compute-hardware",
+        "frontier-models",
+        "ai-infrastructure",
+        "open-source-models",
+        "ai-coding-tools",
+        "ai-business-funding",
+        "ai-agents",
+        "ai-in-enterprise",
+        "robotics-embodied-ai",
+        "ai-research-breakthroughs",
+        "multimodal-ai",
+        "ai-policy-regulation",
+        "ai-safety-alignment",
+        "ai-for-science",
+        "edge-on-device-ai"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 47414
+    },
+    {
+      "path": "briefs/2026-04-20.md",
+      "frontmatter": {
+        "date": "2026-04-20T00:00:00.000Z",
+        "scan_time": "16:00",
+        "signals_total": 15,
+        "signals_notable": 7,
+        "signals_significant": 8,
+        "signals_breakthrough": 0,
+        "signals_filtered_noise": 22,
+        "signals_deduped": 10,
+        "nodes_updated": 7,
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "ai-coding-tools",
+        "ai-business-funding",
+        "open-source-models",
+        "frontier-models",
+        "ai-research-breakthroughs",
+        "compute-hardware",
+        "ai-safety-alignment",
+        "ai-agents",
+        "ai-infrastructure",
+        "multimodal-ai",
+        "ai-in-enterprise",
+        "robotics-embodied-ai",
+        "ai-for-science",
+        "ai-policy-regulation"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 28359
     },
     {
       "path": "briefs/2026-04-17.md",
@@ -1237,150 +1394,6 @@
         "daily-brief"
       ],
       "size": 22159
-    },
-    {
-      "path": "briefs/2026-04-10.md",
-      "frontmatter": {
-        "date": "2026-04-10T00:00:00.000Z",
-        "scan_time": "11:00",
-        "signals_total": 42,
-        "signals_notable": 25,
-        "signals_significant": 6,
-        "signals_breakthrough": 0,
-        "signals_filtered_noise": 14,
-        "signals_deduped": 8,
-        "nodes_updated": 12,
-        "node_status_changes": [],
-        "tags": [
-          "daily-brief"
-        ]
-      },
-      "wikilinks": [
-        "compute-hardware",
-        "ai-business-funding",
-        "frontier-models",
-        "ai-agents",
-        "multimodal-ai",
-        "ai-policy-regulation",
-        "ai-in-enterprise",
-        "ai-infrastructure",
-        "open-source-models",
-        "ai-coding-tools",
-        "ai-safety-alignment",
-        "edge-on-device-ai",
-        "ai-research-breakthroughs",
-        "ai-for-science"
-      ],
-      "tags": [
-        "daily-brief"
-      ],
-      "size": 21266
-    },
-    {
-      "path": "briefs/2026-04-09.md",
-      "frontmatter": {
-        "date": "2026-04-09T00:00:00.000Z",
-        "scan_time": 945,
-        "signals_total": 52,
-        "signals_notable": 21,
-        "signals_significant": 10,
-        "signals_breakthrough": 0,
-        "signals_filtered_noise": 12,
-        "signals_deduped": 8,
-        "nodes_updated": 13,
-        "node_status_changes": [],
-        "tags": [
-          "daily-brief"
-        ]
-      },
-      "wikilinks": [
-        "ai-business-funding",
-        "ai-in-enterprise",
-        "compute-hardware",
-        "frontier-models",
-        "ai-policy-regulation",
-        "ai-coding-tools",
-        "ai-agents",
-        "ai-research-breakthroughs",
-        "ai-infrastructure",
-        "ai-safety-alignment",
-        "open-source-models",
-        "multimodal-ai",
-        "ai-for-science"
-      ],
-      "tags": [
-        "daily-brief"
-      ],
-      "size": 24410
-    },
-    {
-      "path": "briefs/2026-04-08.md",
-      "frontmatter": {
-        "date": "2026-04-08T00:00:00.000Z",
-        "scan_time": 930,
-        "signals_total": 28,
-        "signals_notable": 9,
-        "signals_significant": 7,
-        "signals_breakthrough": 0,
-        "signals_filtered_noise": 8,
-        "signals_deduped": 4,
-        "nodes_updated": 8,
-        "node_status_changes": [],
-        "tags": [
-          "daily-brief"
-        ]
-      },
-      "wikilinks": [
-        "frontier-models",
-        "open-source-models",
-        "ai-agents",
-        "ai-in-enterprise",
-        "ai-coding-tools",
-        "ai-business-funding",
-        "ai-research-breakthroughs",
-        "frontier-edges",
-        "ai-infrastructure",
-        "ai-safety-alignment"
-      ],
-      "tags": [
-        "daily-brief"
-      ],
-      "size": 16130
-    },
-    {
-      "path": "briefs/2026-04-07.md",
-      "frontmatter": {
-        "date": "2026-04-07T00:00:00.000Z",
-        "scan_time": "13:30",
-        "signals_total": 78,
-        "signals_notable": 20,
-        "signals_significant": 11,
-        "signals_breakthrough": 1,
-        "signals_filtered_noise": 18,
-        "signals_deduped": 14,
-        "nodes_updated": "16/16",
-        "node_status_changes": [],
-        "tags": [
-          "daily-brief"
-        ]
-      },
-      "wikilinks": [
-        "frontier-models",
-        "ai-safety-alignment",
-        "ai-in-enterprise",
-        "compute-hardware",
-        "ai-business-funding",
-        "open-source-models",
-        "ai-policy-regulation",
-        "ai-coding-tools",
-        "ai-agents",
-        "ai-infrastructure",
-        "ai-research-breakthroughs"
-      ],
-      "tags": [
-        "daily-brief"
-      ],
-      "size": 20813
     },
     {
       "path": "force-dynamics.md",
@@ -1515,12 +1528,12 @@
           "predictions",
           "accountability"
         ],
-        "last_updated": "2026-04-14T00:00:00.000Z",
-        "total_predictions": 6,
+        "last_updated": "2026-04-26T00:00:00.000Z",
+        "total_predictions": 12,
         "correct": 0,
-        "incorrect": 0,
-        "pending": 6,
-        "accuracy_rate": "N/A"
+        "incorrect": 1,
+        "pending": 11,
+        "accuracy_rate": "0/1 resolved"
       },
       "wikilinks": [],
       "tags": [
@@ -1529,7 +1542,7 @@
         "predictions",
         "accountability"
       ],
-      "size": 12316
+      "size": 16040
     },
     {
       "path": "opportunity-pipeline.md",
@@ -1943,7 +1956,7 @@
           "dashboard",
           "radar"
         ],
-        "last_updated": "2026-04-17T00:00:00.000Z"
+        "last_updated": "2026-04-27T00:00:00.000Z"
       },
       "wikilinks": [
         "frontier-models",
@@ -1967,7 +1980,7 @@
         "dashboard",
         "radar"
       ],
-      "size": 5477
+      "size": 8567
     },
     {
       "path": "index.md",

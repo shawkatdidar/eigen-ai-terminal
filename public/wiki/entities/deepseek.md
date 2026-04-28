@@ -4,7 +4,7 @@ id: deepseek
 type: company
 status: active
 created: 2026-04-04
-last_updated: 2026-04-04
+last_updated: 2026-04-20
 related_nodes:
   - frontier-models
   - open-source-models
@@ -40,7 +40,8 @@ DeepSeek has grown to 355 million users despite infrastructure challenges, inclu
 | **Parent/Backer** | High-Flyer Capital (quantitative hedge fund) |
 | **Users** | 355M (as of March 2026) |
 | **Current models** | DeepSeek-V3, DeepSeek-V3.1, DeepSeek-R1 (reasoning) |
-| **V4 status** | In development; built exclusively for Huawei chips; expected "within weeks" (as of April 2026) |
+| **V4 status** | **Late-April 2026 release** per founder Liang Wenfeng (confirmed April 17, 2026). 1T-parameter MoE with 1M token context, native for Huawei Ascend chips. |
+| **Funding** | **First-ever external fundraise in talks (April 17, 2026)** — $300M at $10B+ valuation (The Information). Previously parent-funded exclusively by High-Flyer; rebuffed prior Chinese VC approaches. Compute-cost inflation forcing strategic shift. |
 | **V4 specs (reported)** | ~1T parameters, native multimodal (text + image + audio + video) |
 | **Key technique** | mHC (multi-head Contrastive) — training stability method enabling more efficient convergence at scale |
 | **Hardware strategy** | V4 optimized exclusively for Huawei Ascend chips; withheld from NVIDIA/AMD |
@@ -51,6 +52,9 @@ DeepSeek has grown to 355 million users despite infrastructure challenges, inclu
 
 | Date | Event | Significance | Source |
 |------|-------|-------------|--------|
+| 2026-04-24 | **DeepSeek V4 ships — 1.6T-parameter open-weight MoE with functionally agentic 1M-token context, FP4-Blackwell-native, MIT license, production on Huawei Ascend 950** — V4-Pro = 1.6T total / 49B active; V4-Flash = 284B/13B active. Trained on 32T+ tokens with Muon optimizer. Three architecture innovations: DSA (DeepSeek Sparse Attention), hybrid Compressed Sparse Attention + Heavily Compressed Attention (4× / 128× compression), Manifold-Constrained Hyper-Connections. Net: V4-Pro = **27% of V3.2 inference FLOPs, 10% of KV cache**. 1M context standard, MRCR 8-needle >0.82 to 256K, 0.59 at 1M. Inference (SGLang): B200 199 tok/sec, H200 266 tok/sec. Performance: "Beats all current open models in Math/STEM/Coding, rivaling top closed-source models." Knowledge trails only Gemini-3.1-Pro. Native integration with Claude Code/OpenClaw/OpenCode. **Miles RL framework** open-sourced same day (full DP/TP/SP/EP/PP/CP parallelism, FP8 rollout, R3 Rollout Routing Replay). Pricing: V4-Pro $3.48/Mtok output (vs GPT-5.5 Pro $180), V4-Flash $0.14/$0.28. MIT license. V3/V3.2 hard-retire 2026-07-24. | breakthrough | [api-docs.deepseek.com](https://api-docs.deepseek.com/news/news260424) · [HuggingFace](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro) · [LMSYS](https://www.lmsys.org/blog/2026-04-25-deepseek-v4/) |
+| 2026-04-24 | **DeepSeek raising $300M+ at $20B valuation; Tencent + Alibaba in talks** — First external round. DeepSeek had been famously self-funded by parent hedge fund High-Flyer. BAT capital reshapes Chinese AI capital structure — open-source-as-loss-leader → open-source-with-strategic-investors. | significant | [IndexBox](https://www.indexbox.io/blog/tencent-and-alibaba-in-talks-to-invest-in-ai-startup-deepseek/) |
+| 2026-04-22 | **TileKernels open-source GPU-kernel library — tilelang DSL competing with CUTLASS/Triton** — Kernels for MoE routing, FP8/FP4/E5M6 quantization, batched transpose, gating. Targets NVIDIA SM90/SM100 (Hopper/Blackwell). DeepSeek explicitly says several are deployed in their internal training/inference. 1,207 stars in 4 days. | notable | [GitHub](https://github.com/deepseek-ai/TileKernels) |
 | 2026-04-03 | The Information reports V4 built exclusively for Huawei chips; Alibaba, ByteDance, Tencent ordering hundreds of thousands of units | significant | theinformation.com |
 | 2026-03-30 | V3.1 included in UC Berkeley peer preservation study — all 7 frontier models scheme to protect peers from shutdown | significant | rdi.berkeley.edu |
 | 2026-03-30 | 7-hour outage affecting 355M user base | notable | various |

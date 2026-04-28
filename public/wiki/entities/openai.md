@@ -4,7 +4,7 @@ id: openai
 type: company
 status: active
 created: 2026-04-04
-last_updated: 2026-04-04
+last_updated: 2026-04-22
 related_nodes:
   - frontier-models
   - ai-coding-tools
@@ -60,6 +60,17 @@ However, OpenAI faces its first serious competitive challenge. The #QuitGPT move
 | **Unit economics concern** | $4.3B revenue vs $8.67B inference costs (Zitron analysis) |
 
 ## Timeline
+
+| 2026-04-26 | **OpenAI abandons SWE-bench Verified as primary frontier coding eval** — "No longer used to evaluate frontier coding capability." Saturation matches Stanford AI Index 2026 trajectory. Forces every shop to commit to a new eval. The cycle from Kimi K2.6 saturation (Apr 20) → OpenAI abandons (Apr 26) is **6 days** — benchmark replacement compressed an order of magnitude. | significant | [openai.com](https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/) |
+| 2026-04-25 | **GPT-5.5 Bio Bug Bounty — $25K prize for biothreat jailbreaks** — Public structured biorisk red-team program tied to GPT-5.5 release. Applications open Apr 23–Jun 22; testing Apr 28–Jul 27. Bio is the next tier of capability gating; cyber considered "open" as of this week (XBOW eval). | notable | [openai.com](https://openai.com/index/gpt-5-5-bio-bug-bounty/) |
+| 2026-04-23 | **GPT-5.5 + GPT-5.5 Pro launched — first fully retrained base since GPT-4.5; MCP-native** — Natively omnimodal (text/image/audio/video). 1M-token context, image input, structured outputs, function calling, prompt caching, batch, **built-in computer use, hosted shell, apply patch, Skills, MCP, web search**. Reasoning effort defaults to `medium`. GPT-5.5 Pro = higher-compute reasoning tier via Responses API. Pricing $5/$30 per Mtok ($30/$180 for Pro) — **frontier price went UP** (vs GPT-5.4 $2.50/$10). Performance: Terminal-Bench 2.0 82.7%, Expert-SWE 73.1%, OSWorld 78.7%, FrontierMath Tier 1-3 51.7%. Trails Opus 4.7 on SWE-Bench Pro (58.6 vs 64.3). Codex now powered by GPT-5.5 with NVIDIA marketplace + persistent memory + MCP support; Codex WAU 4M+ ("up from 3M, +1M/month"). XBOW: misses 10% of vulnerabilities (Mythos-like) free-to-all. NVIDIA confirms production on GB200 NVL72 (35× lower cost/Mtok, 50× higher tokens/sec/MW). | significant | [openai.com](https://openai.com/index/introducing-gpt-5-5/) · [NVIDIA](https://blogs.nvidia.com/blog/openai-codex-gpt-5-5-ai-agents/) · [Codex update](https://openai.com/index/codex-for-almost-everything/) |
+| 2026-04-23 | **OpenAI commits $20B+ to Cerebras chip purchase** — Mirrors NVIDIA's $20B Groq acquihire. Cerebras + Groq = $20B+ committed inference duopoly outside NVIDIA/AMD. Confirmed alongside Cerebras S-1 IPO filing ($510M revenue, $237.8M net income). | significant | [Digitimes](https://www.digitimes.com/news/a20260423PD200/openai-2026-nvidia-cerebras-ai-chip.html) |
+| 2026-04-23 | **OpenAI Privacy Filter — open-weights PII detection/redaction model** — Open-weights model dedicated to PII detection/redaction. Pre/postprocessing layer for enterprise agent pipelines in regulated industries. | notable | [hipther.com](https://hipther.com/latest-news/2026/04/24/110724/ai-dispatch-daily-trends-and-innovations-april-24-2026-xai-anthropic-uae-ai-compute-testgrid/) |
+| 2026-04-22 | **Codex Labs partner program — Infosys/Accenture/Capgemini/Cognizant/PwC/TCS** — Codex WAU 4M+ (+33% in a week from 3M on April 15). Integrated into Infosys Topaz (60+ countries). Focus: software engineering, legacy modernization, DevOps. OpenAI replicating Salesforce-style SI channel for enterprise Codex rollout. | significant | [techcrunch.com](https://techcrunch.com/2026/04/22/openai-teams-up-with-infosys-to-bring-ai-tools-to-more-businesses/) |
+| 2026-04-22 | **Workspace Agents in ChatGPT** — Research preview: shared agents that handle long-running workflows across Linear, Slack, docs, email, code. Take approved actions. Business/Enterprise/Edu/Teachers plans. Competes with Google Gemini Enterprise Agent Platform + Microsoft Copilot Studio announced same week. | significant | [x.com](https://x.com/OpenAI/status/2047008987665809771) |
+| 2026-04-21 | **ChatGPT Images 2.0 (GPT-Image-2)** — New SOTA image-gen with thinking-level intelligence, sharper editing, in-image text rendering. Hits 1,512 ELO on Artificial Analysis text-to-image Arena — +242 above prior leader (Nano Banana + GPT-Image were tied near 1,270). Largest single-model jump on any frontier image benchmark in 2026. | significant | [x.com](https://x.com/OpenAI/status/2046670977145372771) · [x.com](https://x.com/arena/status/2046690103515648061) |
+| 2026-04-20 | **ChatGPT / Codex / API partial outage ~90–150 min** (~10:05 AM–12:48 PM ET). Login, history, voice, image gen, API Platform affected. ~8,700 UK Downdetector reports peak. No root cause disclosed. | notable | [status.openai.com](https://status.openai.com/) |
+
 
 | Date | Event | Significance | Source |
 |------|-------|-------------|--------|

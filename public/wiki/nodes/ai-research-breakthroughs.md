@@ -4,7 +4,7 @@ id: ai-research-breakthroughs
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-04-10
+last_updated: 2026-04-22
 related_nodes:
   - frontier-models
   - open-source-models
@@ -19,11 +19,21 @@ tags:
 
 # AI Research Breakthroughs
 
+## Definition
+
+> **Invariant — what this node permanently tracks.** Edit rarely; only when the scope itself shifts.
+
+This node tracks novel research results that change what's technically possible in AI — new architectures, training methods, inference techniques, reasoning approaches, and empirical findings with reproducible claims. Signals live here when their value is the *technique or result itself*, independent of who shipped it. Product launches belong in `frontier-models` or `open-source-models`; infrastructure belongs in `ai-infrastructure`; science *applications* belong in `ai-for-science`.
+
+Structural player categories: **frontier labs** (publish selectively to protect moat), **open-research labs and Chinese universities** (publish openly, high volume), **academic groups** (foundational theory), **independent researchers** (cheap compute, narrow but novel claims). Durable sub-frontiers: post-Transformer architectures, continual/parametric learning, test-time compute scaling, mechanistic interpretability, reasoning enhancement, training efficiency, long-context methods, multimodal fusion. ArXiv is the primary venue; conferences (NeurIPS, ICLR, ICML, CVPR) confer credibility; peer review still matters for claims that cross into `ai-for-science`.
+
 ## Current State
 
-Research pace remains intense. Key active areas: post-Transformer architectures (state space models like Mamba, hybrid architectures), scaling laws refinement, training efficiency improvements (data quality > quantity), reasoning enhancement techniques (chain-of-thought, tree-of-thought, extended thinking), and synthetic data generation.
+> **Mutable — rewrites freely as signals arrive. Reflects last ~30 days.**
 
-Mixture-of-Experts (MoE) has become mainstream — most large models now use some form of conditional computation. Long-context solutions are advancing (ring attention, landmark attention). Test-time compute scaling (letting models "think longer") is a major research direction.
+Research pace remains intense. Key active areas: post-Transformer architectures (state space models like Mamba, hybrid architectures), scaling laws refinement, training efficiency improvements (data quality > quantity), reasoning enhancement techniques (chain-of-thought, tree-of-thought, extended thinking), and synthetic data generation. **Continual learning / parametric memory has emerged as a named frontier** (a16z April 2026 framing), with In-Place Test-Time Training (ICLR 2026 Oral) and Microsoft AutoAdapt as April milestones — see [[frontier-edges]] EDGE-13.
+
+Mixture-of-Experts (MoE) has become mainstream — most large models now use some form of conditional computation. Long-context solutions are advancing (ring attention, landmark attention, KV-cache quantization). Test-time compute scaling (letting models "think longer") is a major research direction.
 
 The publish-or-perish dynamic continues: labs publish selectively (keeping key innovations proprietary) while Chinese labs tend to publish more openly. ArXiv remains the primary venue, with 100+ AI papers daily.
 
@@ -42,6 +52,8 @@ The publish-or-perish dynamic continues: labs publish selectively (keeping key i
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-22 | **Microsoft Research AutoAdapt — end-to-end LLM domain-adaptation framework** — Three components: Adaptation Configuration Graph (ACG — a graph structure mapping valid adaptation pipelines: RAG, fine-tune, hyperparameter-search options), multi-agent Planning Agent, budget-aware AutoRefine loop. Consistent wins over baselines on reasoning/QA/coding/classification at ~30 min and ~$4 extra per task. Open-sourced on GitHub. → First open framework to fully automate the "which adaptation method should I use" decision — a task that currently requires weeks of senior ML engineering. | significant | [microsoft.com](https://www.microsoft.com/en-us/research/blog/autoadapt-automated-domain-adaptation-for-large-language-models/) |
+| 2026-04-21 | **GenericAgent — token-density over context-length paradigm (arXiv)** — Core agent loop ~100 lines; 9 atomic tools; 5-tier hierarchical memory (Meta Rules → Session Archive). Claims 6× lower token consumption vs competitors (<30K context vs 200K–1M) while achieving full OS-level control (browser, terminal, filesystem, vision, ADB mobile). → Contrarian bet against "massive context + massive codebase" agent paradigm — if density claims replicate, challenges the premise that agent capability scales with context window. | notable | [github.com](https://github.com/lsdefine/GenericAgent) |
 | 2026-04-11 | **Spectral-AI: RT cores for O(log N) MoE routing** — 48-89x faster, 731x less VRAM, consumer GPU | notable | github.com |
 | 2026-04-09 | **Kathleen: 733K-param oscillator architecture** — no tokenizer/attention, outperforms 16x larger on classification | notable | arxiv.org |
 | 2026-04-09 | **Dead Weights, Live Signals: frozen LLM ensemble** — 17.6M trainable params, +11.4pp ARC-Challenge | notable | arxiv.org |

@@ -2,7 +2,7 @@
 name: Entity Index
 description: Catalog of all tracked entities in the AI Radar wiki
 type: index
-last_updated: 2026-04-04
+last_updated: 2026-04-23
 entity_count: 10
 tags:
   - index
@@ -46,3 +46,7 @@ tags:
 | Alibaba/Qwen | ~20 | Could split from DeepSeek China narrative; monitor |
 | Mistral | ~15 | Growing signal frequency with Voxtral, Forge, Large 3 |
 | Huawei | ~12 | Rising fast via DeepSeek V4 + chip independence narrative |
+| Letta | 1 | Memory-layer infrastructure for agents; named in EDGE-13. Watch for funding signals or SDK adoption. |
+| mem0 | 1 | Open-source agent memory layer. Watch for GitHub growth, enterprise adoption. |
+| Subconscious | 1 | Continual-learning harness company. Early stage; watch for product or funding signal. |
+| Tucuxi | 1 | "Artificial Doubt Engine" — uncertainty-aware memory. Earliest stage; monitor. |

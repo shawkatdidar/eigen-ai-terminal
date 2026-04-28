@@ -1,12 +1,3 @@
 {
-  "active": true,
-  "since": "2026-04-18T21:42:39.807Z",
-  "title": "Claude Opus 4.7 GA",
-  "summary": "Anthropic released Opus 4.7 with a reported 79.4% on SWE-bench Verified (1pp above prior Opus 4.6 score), strong gains on MRCR (a long-context multi-needle retrieval benchmark — tests whether the model can recover multiple facts buried in ~200k tokens of input), and 63% on GPQA Diamond (graduate-lev",
-  "domains": [
-    "Frontier Models",
-    "AI Coding Tools",
-    "AI Safety"
-  ],
-  "expires": "2026-04-19T21:42:39.807Z"
+  "active": false
 }

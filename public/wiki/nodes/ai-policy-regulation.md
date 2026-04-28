@@ -4,7 +4,7 @@ id: ai-policy-regulation
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-04-10
+last_updated: 2026-04-27
 related_nodes:
   - ai-safety-alignment
   - ai-business-funding
@@ -41,6 +41,12 @@ Key tensions: AI safety commitments vs. national security demands, federal vs. s
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-27 | **China NDRC formally blocks Meta's $2B acquisition of Manus AI** — NDRC Foreign Investment Security Review issued prohibition; requires parties to cancel transaction. First NDRC block specifically targeting an AI agent company. Rationale: behavioral trace data and user data from Manus's agent interactions treated as national strategic asset non-transferable to US buyer. → Establishes that Chinese AI agent companies with large behavioral datasets are non-acquirable by US-domiciled entities. Removes ~15-20 agentic AI companies from the global M&A market. | significant | [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-27/china-blocks-meta-s-2-billion-acquisition-of-ai-startup-manus) |
+| 2026-04-21 | **EU split on Pax Silica US-led chip-supply alliance** — Member states divided on whether to join the December 2025 US-launched "Pax Silica" initiative coordinating "trusted" semiconductor supply chains. EU remains guest not signatory; US pursuing bilateral pressure via Netherlands/ASML leverage. → Fracture in Western chip-export coordination — Europe may pursue independent regime, complicating export-control enforcement against China. | significant | [mlex.com](https://www.mlex.com/mlex/artificial-intelligence/articles/2467215) |
+| 2026-04-21 | **Meta to record employee keystrokes for AI training** — Internal policy: keystrokes harvested as AI training data. → Self-sourcing proprietary agent/coding trajectory data; sets new employer-surveillance precedent for AI training data acquisition. Legal exposure on EU/California privacy law; watch for lawsuits. | significant | [techcrunch.com](https://techcrunch.com/2026/04/21/meta-will-record-employees-keystrokes-and-use-it-to-train-its-ai-models/) |
+| 2026-04-21 | **YouTube extends AI likeness detection to celebrities** — Platform-level deepfake/likeness-detection expanded beyond original creators. → Proactive deepfake mitigation at platform scale — first major platform to add celebrity-scope likeness protection. | notable | [techcrunch.com](https://techcrunch.com/2026/04/21/youtube-expands-its-ai-likeness-detection-technology-to-celebrities/) |
+| 2026-04-21 | **Clarifai deletes 3M OkCupid photos post-FTC settlement** — Facial-recognition training data acquired from OkCupid profiles deleted under FTC settlement. → Rare enforcement action on training data provenance; signals FTC continuing the "algorithmic disgorgement" pattern (remove model, not just data). | notable | [techcrunch.com](https://techcrunch.com/2026/04/21/clarifai-okcupid-facial-recognition-ai-ftc-settlement/) |
+| 2026-04-20 | **NSA reportedly using Anthropic Mythos despite Pentagon feud** — Intelligence community adopts Mythos (Anthropic's gated cyber-offensive-capable model) even as DoD tension continues. → NSA willing to consume an Anthropic gated-capability model while Pentagon is in active legal dispute over supply-chain risk designation; signals intelligence-vs-defense divergence within US government on Anthropic as a supplier. | significant | [techcrunch.com](https://techcrunch.com/2026/04/20/nsa-spies-are-reportedly-using-anthropics-mythos-despite-pentagon-feud/) |
 | 2026-04-11 | **India sovereign AI** — government funds 12 organizations for foundation models, Hyderabad DC mid-2026 | notable | asanify.com |
 | 2026-04-11 | **Altman home targeted with Molotov cocktail** — suspect arrested, anti-AI sentiment escalation | notable | cnbc.com |
 | 2026-04-10 | **State therapy bot bans advancing: Maine, Missouri — 78 chatbot bills in 27 states** — Maine and Missouri are advancing legislation to ban AI therapy bots (chatbots providing mental health counseling). Across the US, 78 separate chatbot-related bills are active in 27 states. → State-level AI regulation is proliferating rapidly in the absence of comprehensive federal legislation; therapy/mental health is emerging as the first domain where states are drawing hard regulatory lines against AI deployment. | notable | statnews.com |

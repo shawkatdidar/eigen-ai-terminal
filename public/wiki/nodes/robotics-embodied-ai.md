@@ -4,7 +4,7 @@ id: robotics-embodied-ai
 status: accelerating
 impact: medium
 created: 2026-03-19
-last_updated: 2026-03-30
+last_updated: 2026-04-22
 related_nodes:
   - multimodal-ai
   - compute-hardware
@@ -45,6 +45,9 @@ Key challenge: sim-to-real transfer, hardware costs, and the long tail of real-w
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-22 | **Sony AI "Ace" — first robot competitive with expert human table-tennis players (Nature)** — Vision sensors + model-free reinforcement learning on a crane-like lever + ping-pong bat. Autonomously locates ball in space, selects return technique, repeats until play ends. No prior knowledge of opponents' styles. vs elite amateurs (10+ years intensive training): won 7 of 13 games. vs officially-recognized league professionals: won 1 of 7. First robot competitive with experienced players at a task requiring split-second physical decisions. Peter Stone (chief scientist): "...operate at expert human level under these conditions." → Landmark for model-free RL in high-speed physical interaction; validates that agentic perception-action loops transfer from simulated benchmarks to real-world athletic opponents. | significant | [bloomberg.com](https://www.bloomberg.com/news/articles/2026-04-22/ping-pong-robot-uses-agentic-ai-to-beat-expert-human-players) |
+| 2026-04-22 | **Hannover Messe 2026 opens with humanoids + industrial AI as headline theme** — First time the world's largest industrial trade fair centers humanoid robots + industrial AI as primary focus rather than side exhibits. PaXini humanoid among exhibitors; multiple VLA-equipped platforms. → European industrial establishment now treating humanoids as near-term factory capex, not R&D curiosity. | notable | [english.news.cn](https://english.news.cn/20260422/72e58201e55a49b0a198309360872725/c.html) |
+| 2026-04-22 | **HuggingFace Gemma 4 VLA demo on Jetson Orin Nano Super** — Community demo: Gemma-4-based vision-language-action model running on $249 Jetson Orin Nano Super dev board. → Edge-robotics VLA inference now reaches consumer-price hardware; Gemma 4 repurposed as a robotics substrate. | notable | [huggingface.co](https://huggingface.co/blog/nvidia/gemma4) |
 | 2026-04-10 | **NVIDIA Physical AI suite GA** — GR00T open models, Cosmos world models, Newton 1.0, Isaac Sim 6.0 | notable | blogs.nvidia.com |
 | 2026-03-31 | **Also (Rivian spinoff) raises $200M at $1B valuation for autonomous delivery** — DoorDash autonomous delivery partnership. Greenoaks-led round. Pedal-by-wire EV platform (electronic control of steering/braking without mechanical linkages, enabling software-controlled driving) designed for last-mile autonomous delivery. → Rivian's autonomous driving technology spins into a dedicated delivery company with an immediate commercial partner (DoorDash); validates last-mile autonomous delivery as a distinct venture-scale category separate from robotaxis. | notable | bloomberg.com |
 | 2026-03-30 | **Waymo reaches 500,000 weekly paid rides milestone** — Waymo's fully driverless robotaxi service hit 500,000 paid rides per week, a 3x+ increase from approximately 150,000 weekly rides in mid-2025. → The fastest-growing transportation service in US history by some measures; the 3x growth in under a year demonstrates that autonomous vehicle demand is not constrained by consumer willingness — it is constrained by vehicle supply and operational expansion pace. | significant | waymo.com |

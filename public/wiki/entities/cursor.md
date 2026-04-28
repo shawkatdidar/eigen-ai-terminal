@@ -4,7 +4,7 @@ id: cursor
 type: company
 status: active
 created: 2026-04-04
-last_updated: 2026-04-04
+last_updated: 2026-04-22
 related_nodes:
   - ai-coding-tools
   - ai-agents
@@ -36,8 +36,8 @@ The competitive landscape is intense: Claude Code holds 54% market share (per Me
 |-----------|--------|
 | **Parent company** | Anysphere |
 | **Headquarters** | San Francisco, California, USA |
-| **ARR** | $2B (as of March 2026) |
-| **Valuation** | $29.3B (April 2026); $50B valuation talks reported March 2026 |
+| **ARR** | $2B current run rate, projects $6B by end of 2026 |
+| **Valuation** | **$50B+ in talks (April 17, 2026)** — Thrive + a16z lead, NVIDIA strategic, Battery Ventures new, oversubscribed. Prior $29.3B (October 2025, Cursor 3 launch round) |
 | **Current version** | Cursor 3 (launched April 2, 2026) |
 | **Architecture** | Rebuilt from scratch as agent-orchestration platform (no longer VS Code extension) |
 | **Key features** | Agents Window (parallel multi-agent), Design Mode, best-of-N model comparison, worktree isolation, local/cloud/mobile handoff |
@@ -46,6 +46,9 @@ The competitive landscape is intense: Claude Code holds 54% market share (per Me
 | **Market position** | Competes with Claude Code (54% share) and OpenAI Codex (2M+ weekly users) |
 
 ## Timeline
+
+| 2026-04-21 | **SpaceX/xAI Colossus + Cursor — $10B compute deal + $60B acquisition option** — Cursor blog: Composer (Cursor's agentic coding model) will "leverage xAI's Colossus infrastructure to dramatically scale up." Composer 1.5 scaled RL by 20×; Composer 2 added continued pretraining for "frontier-level performance at a fraction of the cost." TechCrunch: SpaceX provides Colossus access; Cursor eng leads Andrew Milich + Jason Ginsberg joined xAI reporting to Musk. $60B acquisition option exercisable later 2026. Conflicts with April 17 Thrive+a16z+NVIDIA $50B round; two contradictory cap-table narratives within 4 days. | significant | [cursor.com](https://cursor.com/blog/spacex-model-training) · [techcrunch.com](https://techcrunch.com/2026/04/21/spacex-is-working-with-cursor-and-has-an-option-to-buy-the-startup-for-60-billion/) |
+
 
 | Date | Event | Significance | Source |
 |------|-------|-------------|--------|

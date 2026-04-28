@@ -4,7 +4,7 @@ id: google-deepmind
 type: company
 status: active
 created: 2026-04-04
-last_updated: 2026-04-04
+last_updated: 2026-04-22
 related_nodes:
   - frontier-models
   - open-source-models
@@ -58,6 +58,13 @@ Google's enterprise AI positioning leverages its cloud infrastructure (TPU v6 Tr
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-22 | **Google Cloud Next 2026 — 8th-gen TPUs (TPU 8t / TPU 8i)** — TPU 8t: 9,600 chips per superpod, 2 PB shared HBM, 3× Ironwood training throughput, 2× perf/watt, 2.7× perf/dollar; 1M+ TPU single-pod clusters claimed. TPU 8i: 1,152 chips linked, 3× on-chip SRAM for concurrent agent inference. Positioned as default substrate for "agentic-era" training; complements (not replaces) NVIDIA Vera Rubin offerings at Google. | significant | [blog.google](https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/) |
+| 2026-04-22 | **NVIDIA + Google Cloud decade-long partnership** — A5X bare-metal on Vera Rubin NVL72 (10× lower cost/token, 10× tokens/MW); 80K Rubin GPUs/site scaling to ~960K across sites; Gemini on Blackwell/Blackwell Ultra preview in Google Distributed Cloud (sovereign); first Confidential Blackwell GPUs in G4 VMs; Nemotron 3 Super on Gemini Enterprise; NeMo RL managed API; Isaac Sim + Omniverse on GCP Marketplace; Cosmos Reason 2 on Vertex AI + GKE. | significant | [blogs.nvidia.com](https://blogs.nvidia.com/blog/google-cloud-agentic-physical-ai-factories/) |
+| 2026-04-22 | **Gemini Enterprise Agent Platform** — Vertex AI successor. 200+ models in Model Garden incl. Gemini 3.1 Pro, Gemini 3.1 Flash Image, Lyria 3, Gemma 4, Claude Opus/Sonnet/Haiku, Nano Banana 2, Nemotron 3 Super. Dual UX: developer Agent Platform + non-technical Gemini Enterprise app. Competitor to AWS Bedrock AgentCore + Microsoft Foundry + OpenAI Workspace Agents. | significant | [blog.google](https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/) |
+| 2026-04-22 | **Multi-billion Google Cloud deal with Thinking Machines Lab (Mira Murati)** — First TML cloud contract. GB300-powered systems for Tinker + RL workloads. Non-exclusive (TML keeps NVIDIA ties). | significant | [techcrunch.com](https://techcrunch.com/2026/04/22/exclusive-google-deepens-thinking-machines-lab-ties-with-new-multi-billion-dollar-deal/) |
+| 2026-04-22 | **Chrome Enterprise "AI co-worker" + AI Overviews in Gmail for Workspace** | notable | [techcrunch.com](https://techcrunch.com/2026/04/22/google-turns-chrome-into-an-ai-coworker-for-the-workplace/) |
+| 2026-04-22 | **Accenture / Bain / BCG / Deloitte / McKinsey AI partnership** — Big-5 consultancies partnering with Google on AI-in-production. "Only 25% of organizations have moved AI into production at scale" cited as the addressable gap. | notable | [x.com](https://x.com/GoogleDeepMind/status/2046927845851627657) |
+| 2026-04-21 | **Deep Research + Deep Research Max (Gemini 3.1 Pro)** — Autonomous research agents that navigate web + custom data (internal docs, specialized financial info), produce fully cited professional reports. Built on Gemini 3.1 Pro. | significant | [x.com](https://x.com/GoogleDeepMind/status/2046627042335060342) |
 | 2026-04-03 | Google Vids adds prompt-directed AI avatars — natural language avatar direction, character consistency, free Veo video generation, AI music. Available to paid Workspace accounts | notable | workspaceupdates.googleblog.com |
 | 2026-04-02 | Gemma 4 released — four variants under Apache 2.0: 31B Dense (#3 open model), 26B MoE with 4B active (#6 open), E4B and E2B edge. Multimodal inputs, 128K-256K context, native function-calling. Runs on Raspberry Pi to DGX | significant | ai.google.dev |
 | 2026-04-02 | Google upgrades AI Pro plan to 5TB storage — no price increase at $19.99/month, expanded Gemini integration across Workspace | notable | 9to5google.com |

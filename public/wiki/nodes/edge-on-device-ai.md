@@ -4,7 +4,7 @@ id: edge-on-device-ai
 status: accelerating
 impact: high
 created: 2026-03-19
-last_updated: 2026-04-10
+last_updated: 2026-04-27
 related_nodes:
   - open-source-models
   - compute-hardware
@@ -44,6 +44,8 @@ Privacy is a primary driver: enterprises and individuals want AI without sending
 
 | Date | Signal | Significance | Source |
 |------|--------|-------------|--------|
+| 2026-04-27 | **Luce DFlash: 2× speculative decoding speedup for Qwen3.6-27B on single RTX 3090** — MIT, standalone C++/CUDA (no Python/vLLM/llama.cpp). Mean 1.98× speedup: 2.24× HumanEval, 1.99× Math500, 1.71× GSM8K. KV cache compressed to TQ3_0 (3.5 bpv), fits 256K context in 24GB VRAM. Bit-identical to AR output in verify mode. → 2× inference speedup on consumer GPU, no retraining, embeddable in native apps. | notable | [Reddit LocalLLaMA](https://reddit.com/r/LocalLLaMA/comments/1sx8uok/luce_dflash_qwen3627b_at_up_to_2x_throughput_on_a) |
+| 2026-04-27 | **Multi-GPU VRAM pooling via Vulkan: 30B-dense models on 16GB + 6GB secondary GPU** — RTX 5070Ti + RTX 2060: 186 t/s prompt processing, 19 t/s generation (vs 4 t/s single card). Model fits in combined 22GB VRAM. Config: `dev=Vulkan1,Vulkan2`. → Practical ~5× throughput multiplier using a secondary low-end GPU; no hardware upgrade required for 30B model class access. | notable | [Reddit LocalLLaMA](https://reddit.com/r/LocalLLaMA/comments/1swzjnu/to_16gb_vram_users_plug_in_your_old_gpu) |
 | 2026-04-11 | **DFlash speculative decoding** — 85 tok/s on M5 Max, 3.3x speedup Qwen3.5-9B via MLX | notable | reddit.com |
 | 2026-04-08 | **LM Studio acquires Locally AI for cross-device local inference** — LM Studio (a popular desktop app for running LLMs locally) acquired Locally AI, a platform focused on cross-device local inference (running models across multiple local devices in concert). → Consolidation in the local AI tooling space; cross-device inference could enable users to pool compute from multiple personal devices (laptop + desktop + phone) for running larger models locally. | notable | lmstudio.ai |
 | 2026-03-26 | **Apple opens Siri to rival AI in iOS 27** — Extensions will let users pick Claude, Gemini as AI handler. Multi-model orchestrator strategy. | significant | [Bloomberg](https://www.bloomberg.com/news/articles/2026-03-26/apple-plans-to-open-up-siri-to-rival-ai-assistants-beyond-chatgpt-in-ios-27) |
