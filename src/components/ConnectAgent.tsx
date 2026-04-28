@@ -1,8 +1,19 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
-const INSTALL_PROMPT = `Install Eigen Terminal and turn it into my daily AI radar.
+const CLAWHUB_INSTALL_PROMPT = `Install Eigen Terminal through ClawHub and turn it into my daily AI radar.
+
+npx clawhub@latest install eigen-ai-terminal
+
+After installing:
+1. Ask what I am building.
+2. Fetch today's Eigen Terminal signals.
+3. Send me only the 2-3 items that affect my work.
+4. Set up a daily 7:00 AM brief.`;
+
+const DIRECT_INSTALL_PROMPT = `Install Eigen Terminal directly into my OpenClaw setup and turn it into my daily AI radar.
 
 npx eigen-terminal-install
 
@@ -70,12 +81,23 @@ export default function ConnectAgent() {
           <p>
             <strong className="text-[var(--color-text)]">Your agent gets:</strong> radar data, history, and a wiki it can query whenever the field moves.
           </p>
+          <p>
+            <strong className="text-[var(--color-text)]">Install paths:</strong> use the ClawHub one-liner for the standard OpenClaw flow, or the direct installer if you want to place the skill into your setup yourself.
+          </p>
         </div>
       </div>
 
       <div className="space-y-5">
-        <CopyBlock label="OpenClaw install prompt" text={INSTALL_PROMPT} />
+        <CopyBlock label="OpenClaw via ClawHub" text={CLAWHUB_INSTALL_PROMPT} />
+        <CopyBlock label="Direct OpenClaw install" text={DIRECT_INSTALL_PROMPT} />
         <CopyBlock label="Raw public endpoints" text={DATA_URLS} />
+        <p className="text-[12px] leading-[1.7] text-[var(--color-text-muted)]">
+          Want the details first? Read the{" "}
+          <Link href="/disclaimer" className="underline underline-offset-4 hover:text-[var(--color-text)]">
+            disclaimer
+          </Link>
+          .
+        </p>
       </div>
     </div>
   );
