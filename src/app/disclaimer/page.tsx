@@ -8,7 +8,7 @@ export default function DisclaimerPage() {
           Disclaimer
         </p>
         <h1 className="font-display mt-5 text-[3.25rem] leading-[0.95] tracking-[-0.05em] sm:text-[4.5rem]">
-          Read this before relying on Eigen Terminal.
+          Disclaimer
         </h1>
 
         <div className="mt-8 space-y-5 max-w-2xl text-[16px] leading-[1.8] text-[var(--color-text-secondary)]">
@@ -30,14 +30,6 @@ export default function DisclaimerPage() {
           <Link href="/" className="button-primary">
             Back to Eigen Terminal
           </Link>
-          <a
-            href="https://github.com/shawkatdidar/eigen-ai-terminal/blob/main/README.md#disclaimer"
-            className="button-secondary"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Full repo disclaimer
-          </a>
         </div>
       </div>
     </main>
