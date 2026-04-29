@@ -1,93 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap");
 @import "tailwindcss";
 
-/*
-  DESIGN TOKENS — Raindrop AI inspired
-  Light, clean, generous whitespace, strong contrast.
-*/
-
 :root {
-  /* Brand */
-  --color-primary: #0A2833;
-  --color-primary-light: #0D3442;
-  --color-accent: #1D6FA5;
-  --color-accent-light: #EEF6FF;
-  --color-accent-sky: #D6E8FF;
+  --color-bg-page: #f3ead4;
+  --color-bg-paper: #f6edda;
+  --color-text: #111111;
+  --color-text-secondary: #2b251d;
+  --color-text-muted: #756850;
+  --color-border: rgba(17, 17, 17, 0.18);
+  --color-border-strong: rgba(17, 17, 17, 0.36);
+  --color-primary: #111111;
+  --color-primary-strong: #000000;
+  --color-accent: #6f5423;
+  --color-accent-strong: #111111;
+  --color-accent-soft: rgba(111, 84, 35, 0.1);
 
-  /* Backgrounds */
-  --color-bg: #FFFFFF;
-  --color-bg-page: #F7F9FC;
-  --color-bg-card: #FFFFFF;
-  --color-bg-subtle: #F0F4F8;
+  --color-breakthrough: #111111;
+  --color-significant: #6f5423;
+  --color-notable: #756850;
+  --color-accelerating: #111111;
+  --color-hardening: #111111;
+  --color-loosening: #6f5423;
 
-  /* Text — high contrast */
-  --color-text: #0F172A;
-  --color-text-secondary: #475569;
-  --color-text-muted: #94A3B8;
-
-  /* Borders */
-  --color-border: #E2E8F0;
-  --color-border-light: #F1F5F9;
-
-  /* Signal severity */
-  --color-breakthrough: #DC2626;
-  --color-significant: #B45309;
-  --color-notable: #1D4ED8;
-
-  /* Status */
-  --color-accelerating: #059669;
-  --color-hardening: #DC2626;
-  --color-loosening: #059669;
-
-  /* Bars */
-  --color-bar-fill: #1D6FA5;
-  --color-bar-bg: #E2E8F0;
-
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.02);
-  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
-  --shadow-section: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.04);
-
-  /* Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 20px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
   --radius-full: 9999px;
 
-  /* Fonts — Geist loaded by Next.js */
-  --font-body: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
-  --font-mono: var(--font-geist-mono), monospace;
+  --shadow-card: none;
+  --shadow-card-hover: none;
+  --shadow-section: none;
+
+  --font-body: "DM Mono", "SFMono-Regular", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  --font-ui: "DM Mono", "SFMono-Regular", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  --font-display: "Instrument Serif", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
 }
 
 @theme inline {
   --color-background: var(--color-bg-page);
   --color-foreground: var(--color-text);
   --font-sans: var(--font-body);
-  --font-mono: var(--font-mono);
+  --font-mono: var(--font-ui);
+}
+
+html {
+  background: var(--color-bg-page);
 }
 
 body {
-  background: var(--color-bg-page);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.45), transparent 32rem),
+    linear-gradient(180deg, #f6edda 0%, #f1e3c3 100%);
   color: var(--color-text);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: "ss01", "ss02", "cv01";
-}
-
-/* Strong text rendering */
-h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
-  letter-spacing: -0.02em;
 }
 
-a, button, [role="button"] {
-  transition: all 0.2s ease-out;
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(17, 17, 17, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.012) 1px, transparent 1px);
+  background-size: 5px 5px, 7px 7px;
+  opacity: 0.45;
 }
 
-/* Clean scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: var(--radius-full); }
-::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizeLegibility;
+}
+
+a,
+button,
+[role="button"] {
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    opacity 0.18s ease;
+}
+
+::selection {
+  background: rgba(17, 17, 17, 0.16);
+  color: var(--color-text);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-ui {
+  font-family: var(--font-ui);
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-text);
+  padding: 0.85rem 1.05rem;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.button-primary {
+  background: var(--color-text);
+  color: var(--color-bg-page);
+}
+
+.button-primary:hover {
+  background: var(--color-primary-strong);
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--color-text);
+}
+
+.button-secondary:hover {
+  background: rgba(17, 17, 17, 0.05);
+}
+
+.terminal-panel,
+.terminal-card,
+.paper-panel {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  box-shadow: none;
+  color: var(--color-text);
+}
+
+.section-kicker {
+  color: var(--color-text-muted);
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.subtle-grid {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(17, 17, 17, 0.2);
+  border-radius: var(--radius-full);
+}

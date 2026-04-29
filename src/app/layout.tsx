@@ -1,21 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Eigen AI Terminal — What's happening in AI and what it means",
+  title: "Eigen Terminal — Public AI intelligence for builders",
   description:
-    "Live intelligence on the AI landscape. See what's happening, what it causes, and what it means for your work. Connect your agent for personalized insights.",
+    "A public-facing AI intelligence terminal for builders. Track live signals, developing trends, bottlenecks, and the parts of the AI landscape that matter to your work.",
 };
 
 export default function RootLayout({
@@ -24,10 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full`}
-    >
+    <html lang="en" className="h-full">
       <body className="min-h-full">{children}</body>
     </html>
   );

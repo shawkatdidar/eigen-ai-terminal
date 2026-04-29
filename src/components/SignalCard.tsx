@@ -6,21 +6,34 @@ import RippleMap from "./RippleMap";
 
 const severityConfig = {
   breakthrough: {
-    accent: "#DC2626",
-    badge: "bg-red-100 text-red-800",
+    accent: "var(--color-breakthrough)",
+    badgeBg: "rgba(244, 143, 135, 0.12)",
+    badgeText: "#f7b2ab",
     label: "Breakthrough",
   },
   significant: {
-    accent: "#B45309",
-    badge: "bg-amber-100 text-amber-800",
+    accent: "var(--color-significant)",
+    badgeBg: "rgba(224, 177, 111, 0.12)",
+    badgeText: "#f1d3a6",
     label: "Significant",
   },
   notable: {
-    accent: "#1D4ED8",
-    badge: "bg-blue-50 text-blue-700",
+    accent: "var(--color-notable)",
+    badgeBg: "rgba(126, 216, 208, 0.12)",
+    badgeText: "#b5f0eb",
     label: "Notable",
   },
 };
+
+function splitDescription(description: string) {
+  const arrowIdx = description.indexOf("→");
+  return {
+    whatHappened:
+      arrowIdx > -1 ? description.slice(0, arrowIdx).trim() : description.trim(),
+    whyItMatters:
+      arrowIdx > -1 ? description.slice(arrowIdx + 1).trim() : "",
+  };
+}
 
 export default function SignalCard({
   signal,
@@ -34,150 +47,165 @@ export default function SignalCard({
   const [expanded, setExpanded] = useState(false);
   const [showRippleModal, setShowRippleModal] = useState(false);
   const config = severityConfig[severity];
+  const { whatHappened, whyItMatters } = splitDescription(signal.description);
 
-  const arrowIdx = signal.description.indexOf("→");
-  const whatHappened = arrowIdx > -1 ? signal.description.slice(0, arrowIdx).trim() : signal.description;
-  const whyItMatters = arrowIdx > -1 ? signal.description.slice(arrowIdx + 1).trim() : "";
+  const isLong = whatHappened.length > 220;
+  const displayText =
+    !expanded && isLong ? `${whatHappened.slice(0, 220)}...` : whatHappened;
 
-  const isLong = whatHappened.length > 180;
-  const displayText = !expanded && isLong ? whatHappened.slice(0, 180) + "..." : whatHappened;
-
-  const hasRipple = ripple && (
-    ripple.chains.length > 0 ||
-    ripple.convergences.length > 0 ||
-    ripple.bottlenecks.length > 0 ||
-    ripple.predictions.length > 0
+  const hasRipple = Boolean(
+    ripple &&
+      (ripple.chains.length > 0 ||
+        ripple.convergences.length > 0 ||
+        ripple.bottlenecks.length > 0 ||
+        ripple.predictions.length > 0)
   );
 
   return (
     <>
       <div
-        className="bg-white rounded-[var(--radius-lg)] overflow-hidden
-          transition-all duration-300 hover:shadow-[var(--shadow-card-hover)]"
-        style={{
-          borderLeft: `3px solid ${config.accent}`,
-          boxShadow: "var(--shadow-card)",
-        }}
+        className="terminal-card rounded-[var(--radius-lg)] overflow-hidden transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card-hover)]"
+        style={{ boxShadow: "var(--shadow-card)" }}
       >
         <div
-          className="p-5 cursor-pointer"
+          className="w-full cursor-pointer px-5 py-5 text-left sm:px-6 sm:py-6"
           onClick={() => setExpanded(!expanded)}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              setExpanded(!expanded);
+            }
+          }}
         >
-          {/* Title + badge */}
-          <div className="flex items-start justify-between gap-3 mb-3">
-            <h3 className="text-[15px] font-bold text-[var(--color-text)] leading-[1.4]">
-              {signal.title}
-            </h3>
-            <span className={`${config.badge} text-[11px] font-bold px-2.5 py-1 rounded-full shrink-0 uppercase tracking-wide`}>
+          <div className="flex items-start justify-between gap-4">
+            <div className="min-w-0">
+              <p className="font-ui text-[10px] uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
+                {signal.view === "both"
+                  ? "Builder + strategic"
+                  : signal.view === "builder"
+                    ? "Builder"
+                    : "Strategic"}
+              </p>
+              <h3 className="mt-3 text-[17px] leading-[1.45] text-[var(--color-text-strong)]">
+                {signal.title}
+              </h3>
+            </div>
+            <span
+              className="shrink-0 rounded-full px-2.5 py-1 font-ui text-[10px] uppercase tracking-[0.16em]"
+              style={{ background: config.badgeBg, color: config.badgeText }}
+            >
               {config.label}
             </span>
           </div>
 
-          {/* Description */}
-          <p className="text-[14px] text-[var(--color-text-secondary)] leading-[1.7] mb-3">
+          <p className="mt-4 text-[14px] leading-[1.8] text-[var(--color-text-secondary)]">
             {displayText}
           </p>
 
-          {/* Why it matters — expanded */}
           {expanded && whyItMatters && (
-            <div className="mb-4 p-4 rounded-[var(--radius-md)] bg-[var(--color-accent-light)] border-l-2 border-[var(--color-accent)]">
-              <p className="text-[13px] font-bold text-[var(--color-accent)] mb-1 uppercase tracking-wide">
+            <div
+              className="mt-5 rounded-[var(--radius-md)] border px-4 py-4"
+              style={{
+                borderColor: "rgba(255,255,255,0.08)",
+                background: "rgba(255,255,255,0.025)",
+              }}
+            >
+              <p className="font-ui text-[10px] uppercase tracking-[0.18em]" style={{ color: config.badgeText }}>
                 Why it matters
               </p>
-              <p className="text-[14px] text-[var(--color-text)] leading-[1.7]">
+              <p className="mt-2 text-[14px] leading-[1.8] text-[var(--color-text)]">
                 {whyItMatters}
               </p>
             </div>
           )}
 
-          {/* Tags + ripple button */}
-          <div className="flex items-center flex-wrap gap-2 mt-1">
+          <div className="mt-5 flex flex-wrap items-center gap-2">
             {signal.nodeNames.map((name) => (
               <span
                 key={name}
-                className="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-[var(--color-bg-subtle)] text-[var(--color-text-secondary)]"
+                className="rounded-full border border-[var(--color-border)] bg-[var(--color-bg-inset)] px-2.5 py-1 font-ui text-[10px] uppercase tracking-[0.12em] text-[var(--color-text-muted)]"
               >
                 {name}
               </span>
             ))}
 
             {hasRipple && (
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
+              <span
+                onClick={(event) => {
+                  event.stopPropagation();
                   setShowRippleModal(true);
                 }}
-                className="ml-auto text-[12px] font-bold text-[var(--color-accent)]
-                  px-3 py-1.5 rounded-full border border-[var(--color-accent)] bg-[var(--color-accent-light)]
-                  hover:bg-[var(--color-accent)] hover:text-white transition-all duration-200"
+                className="ml-auto rounded-full border border-[var(--color-border-strong)] px-3 py-1.5 font-ui text-[10px] uppercase tracking-[0.16em] text-[var(--color-accent)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent-strong)]"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    setShowRippleModal(true);
+                  }
+                }}
               >
-                See ripple effects map →
-              </button>
+                Open ripple map
+              </span>
             )}
           </div>
         </div>
       </div>
 
-      {/* ── Ripple modal — full-screen overlay ── */}
       {showRippleModal && hasRipple && (
         <div
-          className="fixed inset-0 z-[100] flex items-start justify-center"
-          style={{ animation: "modalFadeIn 0.25s ease-out" }}
+          className="fixed inset-0 z-[100] flex items-start justify-center px-4 py-8 sm:py-12"
+          style={{ animation: "modalFadeIn 0.24s ease-out" }}
         >
-          {/* Backdrop */}
           <div
-            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/70 backdrop-blur-md"
             onClick={() => setShowRippleModal(false)}
           />
 
-          {/* Modal content */}
           <div
-            className="relative w-full max-w-5xl mx-4 mt-12 mb-12 bg-white rounded-[var(--radius-xl)] overflow-hidden"
+            className="terminal-panel relative w-full max-w-6xl overflow-hidden rounded-[var(--radius-xl)]"
             style={{
-              boxShadow: "0 24px 64px rgba(0,0,0,0.2)",
-              maxHeight: "calc(100vh - 96px)",
-              animation: "modalSlideUp 0.3s ease-out",
+              maxHeight: "calc(100vh - 64px)",
+              animation: "modalSlideUp 0.28s ease-out",
             }}
           >
-            {/* Modal header */}
-            <div className="sticky top-0 z-10 bg-white border-b border-[var(--color-border)] px-6 sm:px-8 py-5 flex items-start justify-between gap-4">
-              <div className="flex-1 min-w-0">
-                <span className={`${config.badge} text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide`}>
-                  {config.label}
-                </span>
-                <h2 className="text-[20px] font-bold text-[var(--color-text)] leading-[1.3] mt-2">
+            <div className="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-[var(--color-border)] bg-[rgba(17,19,21,0.96)] px-6 py-5 backdrop-blur-xl sm:px-8">
+              <div className="min-w-0 flex-1">
+                <p className="font-ui text-[10px] uppercase tracking-[0.18em]" style={{ color: config.badgeText }}>
+                  {config.label} ripple analysis
+                </p>
+                <h2 className="mt-3 max-w-3xl text-[22px] leading-[1.35] text-[var(--color-text-strong)]">
                   {signal.title}
                 </h2>
                 {whyItMatters && (
-                  <p className="text-[14px] text-[var(--color-text-secondary)] leading-[1.6] mt-2 max-w-2xl">
+                  <p className="mt-3 max-w-3xl text-[14px] leading-[1.75] text-[var(--color-text-secondary)]">
                     {whyItMatters}
                   </p>
                 )}
               </div>
               <button
+                type="button"
                 onClick={() => setShowRippleModal(false)}
-                className="shrink-0 w-10 h-10 flex items-center justify-center rounded-full
-                  bg-[var(--color-bg-subtle)] text-[var(--color-text-secondary)]
-                  hover:bg-[var(--color-border)] hover:text-[var(--color-text)] transition-colors text-lg"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--color-border)] bg-[var(--color-bg-inset)] text-[var(--color-text-secondary)] hover:border-[var(--color-accent)] hover:text-[var(--color-text-strong)]"
               >
                 ✕
               </button>
             </div>
 
-            {/* Modal body — the ripple map */}
-            <div className="overflow-y-auto px-6 sm:px-8 py-8" style={{ maxHeight: "calc(100vh - 250px)" }}>
+            <div className="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8" style={{ maxHeight: "calc(100vh - 220px)" }}>
               <RippleMap ripple={ripple!} signalTitle={signal.title} />
             </div>
           </div>
 
-          {/* Modal animations */}
           <style>{`
             @keyframes modalFadeIn {
               from { opacity: 0; }
               to { opacity: 1; }
             }
             @keyframes modalSlideUp {
-              from { opacity: 0; transform: translateY(24px); }
+              from { opacity: 0; transform: translateY(18px); }
               to { opacity: 1; transform: translateY(0); }
             }
           `}</style>

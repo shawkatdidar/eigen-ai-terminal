@@ -11,49 +11,61 @@ function strengthLabel(raw: string): string {
   return "Emerging";
 }
 
-export default function TrendCard({ convergence }: { convergence: Convergence }) {
+export default function TrendCard({
+  convergence,
+}: {
+  convergence: Convergence;
+}) {
   const [expanded, setExpanded] = useState(false);
   const label = strengthLabel(convergence.confidence);
 
   return (
-    <div
-      className="bg-white rounded-[var(--radius-lg)] p-6 cursor-pointer
-        transition-all duration-200 hover:shadow-[var(--shadow-card-hover)]"
+    <button
+      type="button"
+      className="terminal-card w-full rounded-[var(--radius-lg)] p-5 text-left transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card-hover)]"
       style={{ boxShadow: "var(--shadow-card)" }}
       onClick={() => setExpanded(!expanded)}
     >
-      {/* Title */}
-      <h3 className="text-[16px] font-bold text-[var(--color-text)] mb-3 leading-[1.4]">
+      <div className="flex items-center justify-between gap-3">
+        <p className="font-ui text-[10px] uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
+          Developing trend
+        </p>
+        <span className="rounded-full bg-[var(--color-accent-soft)] px-2.5 py-1 font-ui text-[10px] uppercase tracking-[0.16em] text-[var(--color-accent)]">
+          {label}
+        </span>
+      </div>
+
+      <h3 className="mt-4 text-[17px] leading-[1.45] text-[var(--color-text-strong)]">
         {convergence.title}
       </h3>
 
-      {/* What we think will happen */}
-      <p className="text-[14px] text-[var(--color-text-secondary)] leading-[1.6] mb-3">
-        {convergence.predictedOutcome.length > 200
-          ? convergence.predictedOutcome.slice(0, 200) + "..."
+      <p className="mt-3 text-[14px] leading-[1.75] text-[var(--color-text-secondary)]">
+        {convergence.predictedOutcome.length > 210
+          ? `${convergence.predictedOutcome.slice(0, 210)}...`
           : convergence.predictedOutcome}
       </p>
 
-      {/* Meta */}
-      <div className="flex items-center gap-3 text-[12px] font-semibold text-[var(--color-text-muted)]">
-        <span className="px-2.5 py-1 rounded-full bg-[var(--color-bg-subtle)]">{label}</span>
+      <div className="mt-4 flex flex-wrap items-center gap-2 font-ui text-[10px] uppercase tracking-[0.16em] text-[var(--color-text-muted)]">
         {convergence.timeline && (
-          <span>Expected {convergence.timeline}</span>
+          <span className="rounded-full border border-[var(--color-border)] px-2.5 py-1">
+            Expected {convergence.timeline}
+          </span>
         )}
-        <span>{convergence.forces.length} independent signals</span>
+        <span className="rounded-full border border-[var(--color-border)] px-2.5 py-1">
+          {convergence.forces.length} source signals
+        </span>
       </div>
 
-      {/* Expanded */}
       {expanded && (
-        <div className="mt-5 pt-5 border-t border-[var(--color-border)]">
-          <div className="space-y-2.5 mb-4">
-            <p className="text-[12px] font-bold text-[var(--color-text)] uppercase tracking-wider">
-              Why we think this
-            </p>
-            {convergence.forces.map((force, i) => (
-              <div key={i} className="flex items-start gap-2.5">
-                <span className="text-[var(--color-accent)] font-bold mt-0.5 shrink-0">&rarr;</span>
-                <span className="text-[13px] text-[var(--color-text-secondary)] leading-relaxed">
+        <div className="mt-5 border-t border-[var(--color-border)] pt-5">
+          <p className="font-ui text-[10px] uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
+            Why this is forming
+          </p>
+          <div className="mt-4 space-y-3">
+            {convergence.forces.map((force, index) => (
+              <div key={index} className="flex gap-3">
+                <span className="mt-1 text-[var(--color-accent)]">•</span>
+                <span className="text-[13px] leading-[1.75] text-[var(--color-text-secondary)]">
                   {force.description}
                 </span>
               </div>
@@ -61,13 +73,17 @@ export default function TrendCard({ convergence }: { convergence: Convergence })
           </div>
 
           {convergence.invalidation && (
-            <div className="text-[13px] text-[var(--color-text-muted)] bg-[var(--color-bg-subtle)] rounded-[var(--radius-md)] p-4">
-              <span className="font-bold text-[var(--color-text-secondary)]">What would stop this: </span>
-              {convergence.invalidation}
+            <div className="mt-5 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-bg-inset)] px-4 py-4">
+              <p className="font-ui text-[10px] uppercase tracking-[0.18em] text-[var(--color-text-muted)]">
+                What breaks the pattern
+              </p>
+              <p className="mt-2 text-[13px] leading-[1.7] text-[var(--color-text-secondary)]">
+                {convergence.invalidation}
+              </p>
             </div>
           )}
         </div>
       )}
-    </div>
+    </button>
   );
 }
