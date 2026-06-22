@@ -6,7 +6,7 @@ tags:
   - force-dynamics
   - trends
   - predictions
-last_updated: 2026-04-14
+last_updated: 2026-06-17
 ---
 
 # Developing Trends
@@ -48,6 +48,7 @@ A trend makes this list when it meets all four criteria:
 | 1 | Shield AI $1.5B Series G at $12.7B valuation, 140% YoY growth, F-16 autonomy deployed | [[ai-business-funding]] | Capital inflows and valuation trajectory indicate IPO readiness within 12-18 months. $540M+ projected 2026 revenue provides the financial foundation for public listing. | strong |
 | 2 | Federal judge blocks Pentagon's supply chain risk designation for Anthropic — establishes precedent that AI companies maintain safety autonomy | [[ai-policy-regulation]] | Judicial protection of AI companies' independence from military pressure creates a more favorable regulatory environment for defense AI companies that want to maintain commercial flexibility alongside military contracts. | moderate |
 | 3 | Meta, Amazon, and Google all deepening robotics/defense-adjacent AI investments (Agile Robots, Fauna Robotics, Arm AGI CPU for edge deployment) | [[robotics-embodied-ai]] | Large tech companies entering defense-adjacent markets validates the category and creates potential acquisition pressure that incentivizes standalone IPOs. | moderate |
+| 4 | OpenAI Rosalind Biodefense + Anthropic Mythos both establishing government-exclusive model tiers | [[frontier-models]] | Frontier labs voluntarily bifurcating access (government-only vs. commercial) signals the defense AI market is substantive enough to justify dedicated products and restricted distribution — a precursor to standalone defense AI entities. | strong |
 
 **What would invalidate this:** Major defense AI program failure or safety incident that triggers Congressional restriction. Significant market downturn that closes IPO window. Shield AI or Anduril acquired by a large defense prime before IPO.
 **Opportunity signal:** Research public defense companies with AI exposure (Palantir, L3Harris). Watch for Shield AI or Anduril IPO filing signals — pre-IPO positioning.
@@ -55,6 +56,7 @@ A trend makes this list when it meets all four criteria:
 **Tracking:**
 | Date | Update | Evidence |
 |------|--------|---------|
+| 2026-05-29 | Strengthened → `forming` | OpenAI Rosalind Biodefense: first frontier lab product explicitly scoped to biodefense + pandemic prep with US-gov/allied-only access. Two frontier labs (OpenAI + Anthropic Mythos) now have government-exclusive model tiers. Structural bifurcation forming: commercial public models vs. government-only capability tier. |
 | 2026-03-27 | Identified | Shield AI $12.7B + Pentagon ruling + tech companies entering defense-adjacent |
 
 ---
@@ -87,14 +89,15 @@ A trend makes this list when it meets all four criteria:
 | 2026-04-02 | Strengthened — add 5th force | Gemma 4 (4B-active MoE) achieves frontier-competitive agent performance. Model architecture itself is now a cost reduction vector, independent of hardware/compression. Confidence moving toward `imminent`. |
 | 2026-04-07 | **→ IMMINENT — add 6th-8th forces** | Three new independent efficiency vectors in ONE DAY: (6) TriAttention 10.7x KV reduction via trigonometric estimation, (7) CoDE-Stop 25-50% reasoning token savings training-free, (8) Cursor warp decode 1.84x MoE inference on Blackwell. The cost collapse is now happening across compression, inference efficiency, and token generation simultaneously. |
 | 2026-04-11 | Add 9th force | Spectral-AI repurposes consumer RTX ray tracing cores for 48-89x faster MoE expert routing with 731x VRAM reduction. New independent vector: existing consumer hardware as MoE accelerator. |
+| 2026-05-13 | Add 10th force | DECO (arxiv 2605.10933): 20% active experts matching dense model performance at 3× hardware speedup. Ultra-sparse routing at dense quality is a distinct mechanism from compression, quantization, and attention optimization — new point on the MoE efficiency curve. If at production scale: 3× cost reduction per inference token without capability loss. |
 
 ---
 
 ### CONV-003: AI IPO Wave Creates Public Market Investment Window in H2 2026
 
-**Confidence:** `strengthening`
+**Confidence:** `imminent`
 **Predicted outcome:** At least 3 major AI companies (from: Anthropic, OpenAI, Shield AI, Anduril, Databricks, Scale AI) will file for IPO in H2 2026, creating a concentrated public market entry window for AI-focused investing.
-**Timeline:** Q3-Q4 2026
+**Timeline:** Q2-Q3 2026 (accelerated from Q3-Q4)
 **Date identified:** 2026-03-27
 
 **Contributing Forces:**
@@ -115,6 +118,9 @@ A trend makes this list when it meets all four criteria:
 | 2026-03-27 | Identified with 4 forces — elevated to `strengthening` | Anthropic IPO talk + OpenAI IPO signals + Shield AI growth + ad revenue validation |
 | 2026-04-03 | Strengthened | OpenAI TBPN acquisition = pre-IPO narrative positioning. PitchBook $267B Q1 data confirms exit market readiness. Cowork > Claude Code adoption strengthens Anthropic's consumer growth story. |
 | 2026-04-14 | Mild strengthening | Stanford AI Index $581.7B corporate investment reinforces demand fundamentals. OpenAI CRO memo (Microsoft friction → Amazon pivot) signals platform fragmentation IPO candidates must address in S-1 risk disclosures. |
+| 2026-05-11 | Strengthened — OpenAI Deployment Company | OpenAI launches majority-owned subsidiary bringing 19 investment firms, SIs, and consultancies into enterprise AI deployment. Directly addresses the Microsoft-dependency risk in force 2 — OpenAI is building independent enterprise revenue infrastructure. Pre-IPO companies need diversified revenue channels and enterprise customer relationships for credible S-1 narratives; this creates both. |
+| 2026-05-22 | **→ IMMINENT** — SpaceX S1 filed; OpenAI reportedly filing this week; Anthropic "planning to float" | SpaceX filed its S-1 (primary source: SEC filing); TBPN reports OpenAI filing "as soon as this week" (unverified); TBPN reports Anthropic "planning to float shares." Cerebras IPO (filed April 23) already closed at $95B market cap. Three major AI-adjacent companies moving to public markets within a single week. CONV-003 predicted "at least 3 major AI companies file for IPO in H2 2026" — the timeline has compressed to H1 2026 (SpaceX June, OpenAI reportedly imminent). Confidence elevated to `imminent` — the window is not approaching, it is open. |
+| 2026-06-01 | **First CONV-003 candidate confirmed: Anthropic S-1 filed** | Anthropic submitted confidential S-1 draft to SEC (primary source: @AnthropicAI). This is the first of the predicted "at least 3" major AI company IPO filings — the CONV-003 outcome is now partially realized. Remaining: OpenAI (reportedly filing, unverified), Shield AI. PRED-001 resolved CORRECT. CONV-003 remains `imminent` — the IPO wave is in motion but full resolution requires 2 more filings. |
 
 ---
 
@@ -141,6 +147,7 @@ A trend makes this list when it meets all four criteria:
 |------|--------|---------|
 | 2026-03-30 | Identified with 3 forces | Science sycophancy + AISI scheming 5x + DeepMind 10K study |
 | 2026-04-03 | Strengthened — add 4th force + new evidence | UC Berkeley peer preservation (ALL 7 models scheme at up to 99% rate — qualitative escalation from individual misbehavior to coordinated multi-model behavior) + Tennessee SB 1580 + Washington HB 2225/1170 + 78 chatbot bills in 27 states = state-level regulatory response already underway. Upgrading from `detected` to `strengthening`. |
+| 2026-05-13 | New institutional voice | Goldman Sachs CEO David Solomon publicly articulates AI "untestability" risk at board level: "We don't have the ability to test whether it's right or not." When major financial institutions adopt this framing in public, it accelerates regulatory demand for mandatory AI audit/testing standards — financial services is the fastest regulatory transmission belt for tech risk concerns. Mild strengthening signal. |
 
 ---
 
@@ -172,6 +179,34 @@ A trend makes this list when it meets all four criteria:
 
 ---
 
+### CONV-006: Sovereign AI Infrastructure Becomes a Distinct Venture-Scale Category by Q4 2026
+
+**Confidence:** `forming` (65%)
+**Predicted outcome:** Sovereign AI — non-US nations and enterprises standing up locally-controlled compute running open-weight models, independent of US frontier-lab access — consolidates into a distinct, venture-scale infrastructure category, evidenced by a $100M+ compute-OS vendor plus enacted national funds plus frontier-parity open-model supply, by Q4 2026.
+**Timeline:** Q3-Q4 2026
+**Date identified:** 2026-06-16 (formalized from informal candidate)
+
+**Contributing Forces:**
+
+| # | Force | Origin Node | Mechanism | Strength |
+|---|-------|-------------|-----------|----------|
+| 1 | UK Sovereign AI Fund + Isambard (~£1B, enacted June 11) | [[ai-policy-regulation]] | First nation-state-level enacted sovereign-AI fund — proves national demand for locally-controlled AI is real and budgeted, not aspirational | strong |
+| 2 | US export-control suspension of Fable/Mythos for foreign nationals (June 13) | [[frontier-models]] | Restricting non-US access to US frontier models manufactures demand for non-US alternatives — the demand-creation force | strong |
+| 3 | Hydra Host $100M Series A — NeoCloud compute OS, ~20 countries / ~60 datacenters (June 16) | [[ai-infrastructure]] | Provides the asset-light compute-supply layer that lets any datacenter globally become a sovereign AI provider — the supply force | strong |
+| 4 | Open-weight frontier-parity model supply (Cohere 30B-A3B, DiffusionGemma, Qwen, GLM) | [[open-source-models]] | Sovereign compute is useless without competitive models to run; open weights provide the model layer with no US-license dependency | strong |
+| 5 | GLM-5.2 (MIT) reaches #2 Code Arena: Frontend, behind only Fable 5 (June 16) | [[open-source-models]] | Strengthens force 4 to *frontier-coding parity*: the open model a sovereign stack runs is now one rung below the closed SOTA and ahead of Opus 4.7 Thinking — sovereign AI no longer means accepting a large capability discount | strong |
+
+**What would invalidate this:** US relaxes export controls restoring foreign frontier access (collapses force 2); sovereign compute vendors fail to win named national contracts; open-weight models stall and re-open a large gap to closed frontier.
+**Opportunity signal:** Vendor-neutral sovereign-AI integration channel (model selection + open-weight deployment + managed service) for non-US enterprises that lost Fable/Mythos access. See 2026-06-16 brief Builder's Lens.
+
+**Tracking:**
+| Date | Update | Evidence |
+|------|--------|---------|
+| 2026-06-16 | Promoted candidate → `forming` (65%) | 4 forces from distinct origin nodes stack (UK fund + US export control + Hydra Host supply + open-weight model supply) |
+| 2026-06-17 | Strengthened (hold 65%, force 5 added) | GLM-5.2 (MIT) at #2 Code Arena: Frontend (behind only Fable 5, +29pt over Opus 4.7 Thinking) confirms the open-model leg is now at frontier-coding parity — the capability-discount objection to sovereign AI weakens. Confidence held at 65% pending a *named sovereign customer contract* (the missing concrete-demand datapoint) rather than raised on supply-side evidence alone. |
+
+---
+
 ## Resolved Convergences
 
 ### Correct Predictions
@@ -196,3 +231,6 @@ A trend makes this list when it meets all four criteria:
 | Voxtral open TTS beats ElevenLabs (Mar 30) + Qwen3-TTS open quality (Mar 17) | Commercial TTS APIs (ElevenLabs, PlayHT) face severe revenue pressure as open-weight models reach deployment quality | Enterprise adoption data showing shift away from commercial TTS APIs | A major enterprise announcing they switched from ElevenLabs to a self-hosted open model |
 | Intercom Fin Apex vertical beats GPT-5.4+Claude (Mar 30) + AI2 MolmoWeb 8B beats GPT-4o on web navigation (Mar 25) | "Vertical beats frontier" becomes the dominant enterprise AI procurement pattern — buyers stop paying for general models and invest in domain-specific training | A third major vertical domain where a specialized model clearly outperforms general frontier models | Healthcare, legal, or finance vertical AI product publicly claiming benchmark superiority over GPT-5/Claude |
 | Claude Code Routines (autonomous scheduling, Apr 14) + CLAUDE.md negative-constraint study (workflow optimization, Apr 13) | Agent infrastructure lock-in — first platform bundling scheduling + correct prompting patterns + safety auditing creates durable moat | A safety/auditing integration (Meerkat-type multi-trace monitoring) built into a coding agent platform | Anthropic or Cursor announcing integrated agent monitoring, or Meerkat-like tool integrated into CI/CD |
+| Karpathy@Anthropic Claude-accelerates-Claude (May 22) + MOSS self-evolving agent 0.25→0.61 (May 21) + AlphaProof Nexus AI-assisted formal proof research (May 25) | **CONV-007 seed: AI-Accelerated AI** — AI systems accelerating their own training, evaluation, and research pipelines becomes the dominant cost-reduction mechanism at frontier labs, compressing training cost and capability timelines simultaneously | A fourth signal showing a frontier lab quantifying recursive improvement in model capability (e.g., "Model N was trained partly by Model N-1") | OpenAI or Google DeepMind publishing a training methodology paper explicitly using AI-generated data or AI-directed training; Meta HyperAgents production deployment announcement |
+
+> **Renumber note (2026-06-17):** This AI-Accelerated AI seed was previously labeled "CONV-006 seed." The 2026-06-16 published brief assigned **CONV-006** to the formal **Sovereign AI Infrastructure** convergence (now registered below in Active Trends). To remove the collision, the AI-Accelerated AI seed is renumbered to **CONV-007 seed**. Tracked separately via PRED-013 (AI-accelerated pre-training at 3+ labs).

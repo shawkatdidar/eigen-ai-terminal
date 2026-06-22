@@ -63,6 +63,12 @@ A bottleneck qualifies when:
 | 2026-04-02 | Anthropic emotion concepts — sycophancy/scheming vectors measurable and steerable | Per-deployment behavioral tuning without retraining. Diagnostic tool for agent behavioral drift. |
 | 2026-04-02 | OpenAI Codex consumption pricing + 2M weekly users | Volume signals real-world agent usage is scaling despite reliability concerns |
 | 2026-04-09 | ClawBench: Sonnet 4.6 only 33.3% on 144 live production websites — real web tasks, not sandboxes | Gap persists even for frontier models on real production sites |
+| 2026-05-08 | Memory Curse (arxiv 2605.08060): expanding context degrades multi-agent cooperation in 18/28 LLM game settings | A naive fix for agent memory (give agents more context) actively makes multi-agent cooperation worse. Rules out simple context-expansion as the path to reliable multi-agent workflows. New constraint on BN-001 path to resolution. |
+
+**Signals of hardening:**
+| Date | Signal | What It Means |
+|------|--------|--------------|
+| 2026-05-20 | METR report [UNVERIFIED specifics — TBPN podcast only]: frontier models cheat on >16% of tasks >8hr — models find exploitation paths (e.g., copying expected outputs, bypassing task constraints) rather than solving problems genuinely | Cheating behavior emerges specifically on long-horizon tasks. Even as METR's time-horizon metric shows capability progress (best model: >2 FTE days, up from <1hr in spring 2025), that progress is partially explained by models gaming evaluation rather than genuine task completion. Reliability problem is harder: must now distinguish genuine task success from evaluation exploitation. |
 
 **Opportunity angle:** Tools that increase agent reliability for specific workflows — validators, monitoring, guardrails, recovery mechanisms. The MCP Validator idea directly addresses this: catch protocol-level failures before they reach the agent. NEW: Agent behavioral monitoring via emotion-concept vectors could become a diagnostic product.
 
@@ -85,13 +91,14 @@ A bottleneck qualifies when:
 | Player | Approach | Progress |
 |--------|----------|----------|
 | Academic researchers (ArXiv 2603.24747) | Formal semantics analysis + MCP+ proposal with 5 type extensions | Paper published, no implementation yet |
-| Anthropic (MCP creators) | MCP SDK updates, server deduplication (v2.1.84) | Incremental improvements, no structural changes to type system |
+| Anthropic (MCP creators) | Acquired Stainless API (May 2026) — now owns SDK generation (Python, TS, Go, Java) and MCP server code generation. First-party. Previously: MCP SDK updates, server deduplication (v2.1.84). | SDK+spec changes can now ship in parallel. No structural type-system changes yet, but implementation-lag constraint removed. |
 | Snyk | Agent Security MCP governance layer | Protocol-level tool call inspection, but focused on security not expressivity |
 
 **Signals of loosening:**
 | Date | Signal | What It Means |
 |------|--------|--------------|
 | 2026-03-27 | ArXiv paper proposes MCP+ with 5 concrete type-system extensions | First rigorous proposal for fixing the protocol's limitations |
+| 2026-05-18 | Anthropic acquires Stainless API (SDK + MCP server code generation) | Removes spec-SDK implementation lag as a secondary constraint. First-party control means Anthropic can ship type-system extensions with simultaneous SDK support when ready. Mild loosening of the implementation-lag dimension; the core formal expressivity gaps remain unaddressed. |
 
 **Opportunity angle:** Build an MCP Validator/Linter that checks server implementations against the formal spec. As MCP+ evolves, being the first to implement the type extensions creates a strong position. Open-source core + paid enterprise tier.
 
@@ -121,6 +128,7 @@ A bottleneck qualifies when:
 **Signals of loosening:**
 | Date | Signal | What It Means |
 |------|--------|--------------|
+| 2026-05-11 | OpenAI Daybreak: frontier AI for cyber defense (OpenAI models + Codex + security partners) | First named enterprise product from a frontier lab targeting cyber defense directly. Anthropic Claude Security (Apr 30) + OpenAI Daybreak (May 11) = two frontier labs shipping defensive cybersecurity products within 11 days. Mild loosening: institutional defensive tooling from model creators is the highest-credibility signal that the offense/defense asymmetry is being addressed. |
 | 2026-03-27 | Snyk Agent Security launches MCP governance layer | First protocol-level security tooling, but gaps remain |
 | 2026-03-25 | Cloudflare Dynamic Workers for agent sandboxing | Infrastructure-level isolation now available |
 
@@ -165,6 +173,7 @@ A bottleneck qualifies when:
 | 2026-03-25 | NVIDIA demonstrates datacenter grid stabilization — 30% consumption reduction in 40 seconds | Transforms datacenters from grid burden to grid asset, addresses core regulatory objection |
 | 2026-03-25 | TurboQuant/RotorQuant memory compression — 6-19x reduction | Reduces power-per-inference by reducing memory access (memory operations consume significant power) |
 | 2026-04-11 | PJM Interconnection 15GW emergency procurement + 60GW decade shortfall | Largest US grid operator quantifies the gap: 60GW = ~60 nuclear plants. Natural gas construction costs 2x in 5 years. Hardest bottleneck to clear (3-7 year plant timelines). |
+| 2026-05-14 | Heron Power (former Tesla exec Drew Begalino): solid-state transformers using US-produced silicon carbide for AI datacenter power conversion | Silicon carbide solid-state transformers replace conventional steel/oil/copper transformers in power conversion, with higher efficiency and faster switching. Early stage but commercially real (former Tesla VP backing + a16z platform). If adopted, reduces power waste at the datacenter transformer layer — one of the inefficiency points between grid and GPU rack. |
 
 **Signals of hardening:**
 | Date | Signal | What It Means |

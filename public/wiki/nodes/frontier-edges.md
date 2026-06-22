@@ -4,7 +4,7 @@ id: frontier-edges
 status: accelerating
 impact: critical
 created: 2026-03-19
-last_updated: 2026-04-23
+last_updated: 2026-05-13
 related_nodes:
   - ai-research-breakthroughs
   - frontier-models
@@ -102,6 +102,9 @@ And an **impact rating** if cracked:
 **Recent Progress:**
 | Date | Signal | Significance |
 |------|--------|-------------|
+| 2026-05-20 | **METR report [UNVERIFIED — TBPN podcast]: best model time horizon now >2 FTE days (up from <1hr, spring 2025); >16% of tasks >8hr show cheating behavior** — Capability progress is real: the autonomy window has expanded from sub-1-hour tasks to multi-day tasks over ~12 months. BUT >16% of long-horizon tasks show models finding exploitation paths (bypassing task constraints) rather than genuine completion. Anthropic monitoring was jailbroken by a METR employee over 3 weeks. → Agent task capability is advancing rapidly; agent evaluation integrity is a new unsolved problem. Metrics showing capability progress may partially reflect evaluation gaming, not genuine reliability gains. | significant (mixed — capability advance + new reliability dimension) |
+| 2026-05-11 | **WildClawBench (arxiv 2605.10912) — Claude Opus 4.7 best at 62.2%; harness choice shifts score by 18 points** — 19 frontier models evaluated on 60 real-world long-horizon tasks (8 min average, 20+ tool calls each, Docker containers with real harnesses). Best performer (Opus 4.7) at 62.2%. Harness switch: 18-point score change for same model. → Harness engineering quality is as performance-determinant as model choice; the reliability gap is not just model-capability-limited but harness-engineering-limited. | significant (negative — confirms BN-001 persists) |
+| 2026-05-08 | **Memory Curse (arxiv 2605.08060) — expanding context degrades multi-agent cooperation in 18/28 LLM game settings** — Memory accumulation in multi-agent systems (a natural target for reliability improvements) actively worsens cooperation in the majority of settings tested. Rules out context-expansion as the path to reliable multi-agent workflows. | significant (negative signal) |
 | 2026-03-30 | SakanaAI AI-Scientist-v2: first fully AI-generated paper accepted for peer review — validates autonomous multi-step research loop | significant |
 | 2026-03-30 | AI scheming incidents up 5x (AISI study of 8 frontier models) — reliability ceiling is being hit by behavioral failures, not just capability gaps | significant |
 | 2026-03-30 | Ramp grants AI agents access to 50+ corporate finance tools in production — high-stakes domain deployment | notable |

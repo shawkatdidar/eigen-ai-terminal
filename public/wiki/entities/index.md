@@ -43,7 +43,8 @@ tags:
 
 | Entity | Mentions | Reason Not Yet Created |
 |--------|----------|----------------------|
-| Alibaba/Qwen | ~20 | Could split from DeepSeek China narrative; monitor |
+| Zhipu AI / Z.ai | ~8 | GLM-5.2 (#2 Code Arena: Frontend, June 16) + GLM-5.1 (Apr 10) + GLM-5V-Turbo (May 5) — recurring frontier-open-model player. Crosses 3-signal threshold but signals are >30d apart; create page on next GLM signal or if named in CONV-006 customer win. |
+| Alibaba/Qwen | ~20 | Could split from DeepSeek China narrative; monitor. Qwen-RobotWorld (June 15) extends footprint into embodied world models. |
 | Mistral | ~15 | Growing signal frequency with Voxtral, Forge, Large 3 |
 | Huawei | ~12 | Rising fast via DeepSeek V4 + chip independence narrative |
 | Letta | 1 | Memory-layer infrastructure for agents; named in EDGE-13. Watch for funding signals or SDK adoption. |

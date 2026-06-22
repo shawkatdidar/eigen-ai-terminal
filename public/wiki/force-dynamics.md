@@ -156,6 +156,24 @@ A **force** is a signal that pushes change in a domain other than its origin. Fo
 
 ---
 
+### FC-NEW-003: WildClawBench Harness Gap Creates Agent Evaluation Infrastructure Market
+
+**Date identified:** 2026-05-13
+**Origin signal:** WildClawBench (arxiv 2605.10912) — 18-point performance gap from harness choice alone, equal to the spread between top and bottom frontier models ([[ai-research-breakthroughs]])
+**Target(s):** [[ai-coding-tools]], [[ai-in-enterprise]]
+**Mechanism:** An 18-point performance difference from switching harness configuration (scaffolding, retry logic, context management) for the *same model* means harness engineering quality is co-equal with model selection as a performance determinant. Enterprise buyers currently evaluate models, not harnesses. The gap means they are systematically leaving ~18 points of performance on the table. Once buyers internalize this — which the WildClawBench paper makes impossible to ignore — agent platform procurement requires evaluating two dimensions: model AND harness. This creates demand for harness benchmarking tools, standardized harness configurations, and harness audit services. The "agent evaluation infrastructure" market becomes distinct from "agent infrastructure."
+**Direction:** enabling (new product category)
+**Strength:** moderate
+**Lag:** months
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-05-13 | Identified | WildClawBench (arxiv 2605.10912): 18-point harness gap quantified across 19 frontier models |
+
+---
+
 ## Force Propagation Map (Node-to-Node)
 
 > Summary of which nodes push forces to which other nodes, based on active force chains.
@@ -167,8 +185,8 @@ A **force** is a signal that pushes change in a domain other than its origin. Fo
 | [[frontier-models]] | [[ai-safety-alignment]] | FC-002 | accelerating |
 | [[frontier-models]] | [[ai-in-enterprise]] | FC-002 | constraining |
 | [[ai-research-breakthroughs]] | [[ai-agents]] | FC-003 | constraining |
-| [[ai-research-breakthroughs]] | [[ai-coding-tools]] | FC-003 | constraining |
-| [[ai-research-breakthroughs]] | [[ai-in-enterprise]] | FC-003 | constraining |
+| [[ai-research-breakthroughs]] | [[ai-coding-tools]] | FC-003, FC-NEW-003 | constraining / enabling |
+| [[ai-research-breakthroughs]] | [[ai-in-enterprise]] | FC-003, FC-NEW-003 | constraining / enabling |
 | [[edge-on-device-ai]] | [[frontier-models]] | FC-004 | enabling |
 | [[edge-on-device-ai]] | [[ai-business-funding]] | FC-004 | enabling |
 | [[edge-on-device-ai]] | [[ai-in-enterprise]] | FC-004 | enabling |
@@ -214,6 +232,16 @@ A **force** is a signal that pushes change in a domain other than its origin. Fo
 | [[ai-policy-regulation]] | [[ai-in-enterprise]] | FC-027 | constraining (regulated deployment) |
 | [[compute-hardware]] | [[ai-business-funding]] | FC-028 | constraining |
 | [[compute-hardware]] | [[ai-infrastructure]] | FC-028 | constraining |
+| [[ai-for-science]] | [[ai-safety-alignment]] | FC-064 | enabling |
+| [[ai-for-science]] | [[ai-infrastructure]] | FC-064 | enabling |
+| [[compute-hardware]] | [[ai-business-funding]] | FC-065 | constraining (moats) |
+| [[compute-hardware]] | [[frontier-models]] | FC-065 | constraining (entry barrier) |
+| [[ai-research-breakthroughs]] | [[ai-coding-tools]] | FC-066 | accelerating |
+| [[ai-research-breakthroughs]] | [[ai-agents]] | FC-066 | accelerating |
+| [[frontier-models]] | [[ai-policy-regulation]] | FC-067 | accelerating (voluntary→mandatory tiering) |
+| [[frontier-models]] | [[ai-business-funding]] | FC-067 | accelerating (defense AI valuation comps) |
+| [[compute-hardware]] | [[ai-business-funding]] | FC-068 | constraining (pricing floor → margin preservation) |
+| [[ai-infrastructure]] | [[ai-business-funding]] | FC-068 | constraining (construction lag locked in) |
 
 ### FC-008: Waymo Scale Validates Robotaxi Economics → Accelerates Competitor Capital
 
@@ -631,12 +659,139 @@ A **force** is a signal that pushes change in a domain other than its origin. Fo
 
 ---
 
+### FC-062: Microsoft-OpenAI Exclusivity End → Multi-Cloud OpenAI API Market
+
+**Date identified:** 2026-04-27
+**Origin signal:** Microsoft-OpenAI end exclusive revenue-sharing deal ([[ai-business-funding]] [[frontier-models]])
+**Target(s):** [[ai-infrastructure]], [[frontier-models]], [[ai-business-funding]]
+**Mechanism:** Because Microsoft no longer has exclusive OpenAI API resale rights, other hyperscalers (AWS, GCP) can now offer OpenAI APIs on comparable commercial terms. Azure's AI-tier premium (justified by exclusivity) erodes. The frontier-model API market shifts to resemble cloud compute — multi-cloud, price-competitive.
+**Direction:** accelerating (multi-cloud adoption, competition)
+**Strength:** strong
+**Lag:** predicted 30-90 days; **actual: 1 day** (manifested 2026-04-28)
+**Status:** `manifested`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-04-27 | Identified | Microsoft-OpenAI deal ends; predicted AWS/GCP OpenAI availability within 30-90 days |
+| 2026-04-28 | **MANIFESTED (1 day)** | OpenAI models on Bedrock immediately. Lag 30-89 days shorter — enterprise API deals pre-negotiated, not built from scratch. |
+
+---
+
+### FC-063: China NDRC Blocks Meta-Manus → AI Agent Behavioral Data Non-Acquirable
+
+**Date identified:** 2026-04-27
+**Origin signal:** China NDRC blocks Meta's $2B Manus AI acquisition ([[ai-policy-regulation]])
+**Target(s):** [[ai-business-funding]], [[ai-agents]], [[ai-policy-regulation]]
+**Mechanism:** NDRC rationale: behavioral trace data from AI agent interactions is a national strategic asset non-transferable to US buyers. Establishes legal precedent — Chinese AI agent companies with large behavioral datasets become non-acquirable by US entities. Channels M&A toward domestic Chinese acquirers; compresses US investment exit opportunities in Chinese AI agents.
+**Direction:** constraining (US M&A from China), accelerating (China domestic AI consolidation)
+**Strength:** moderate-strong
+**Lag:** months
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-04-27 | Identified | NDRC blocks Meta-Manus; first explicit agent behavioral data = strategic non-transferable asset ruling |
+
+---
+
+### FC-064: AI Math Dual Breakthrough Validates Formal Reasoning Infrastructure Market
+
+**Date identified:** 2026-05-27
+**Origin signal:** OpenAI internal model disproves 80-year-old Erdős unit distance conjecture (May 20); AlphaProof Nexus solves 9 open Erdős problems with machine-verified formal proofs (May 25) ([[ai-for-science]])
+**Target(s):** [[ai-safety-alignment]], [[ai-infrastructure]]
+**Mechanism:** Two independent teams in five days proving 80-year-old unsolved mathematics with machine-verifiable formal proofs (Lean/Coq notation where correctness is checked algorithmically, not by human reviewers) demonstrates that AI reasoning can now produce provably correct outputs — not just empirically high-performing ones. This matters beyond mathematics: formal proof systems create a verification layer that cannot hallucinate. For ai-safety-alignment, this opens tractable paths to provably-safe AI decisions in restricted domains (prove that a policy never takes action X under condition Y). For ai-infrastructure, it creates a new product category — automated correctness proofs for critical software (financial algorithms, healthcare systems, aerospace control software) where "this code does exactly what the spec says" becomes computable, not just testable.
+**Direction:** enabling
+**Strength:** moderate
+**Lag:** quarters
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-05-27 | Identified | OpenAI Erdős disproof (openai.com, May 20) + AlphaProof Nexus 9 Erdős problems (DeepMind, May 25) — two independent teams, same week |
+
+---
+
+### FC-065: NVIDIA Jevons Loop Locks Frontier Compute Behind Hyperscaler Gatekeepers
+
+**Date identified:** 2026-05-27
+**Origin signal:** NVIDIA Q1 FY2027: $81.66B revenue (+85% YoY); hyperscaler capex $780B→$1T committed through 2026; demand "far exceeds supply" despite efficiency gains ([[compute-hardware]])
+**Target(s):** [[ai-business-funding]], [[frontier-models]]
+**Mechanism:** Jevons Paradox at the infrastructure layer: each efficiency improvement in AI compute (quantization, MoE routing, KV-cache compression) is absorbed by new demand rather than reducing costs — NVIDIA's 85% revenue growth despite hundreds of efficiency papers proves this is a structural pattern, not a temporary spike. The $1T committed hyperscaler capex is a multi-year, non-reversible capital commitment, meaning the loop runs regardless of future efficiency breakthroughs. The consequence: frontier model training at the largest scales is locked behind hyperscaler relationships. Labs without Google TPU access, Microsoft Azure credits, or AWS partnerships cannot acquire enough compute to compete at the top tier. The competitive moat is no longer model architecture — it is hyperscaler partnership. This constrains new entrant paths to frontier capability and creates a durable oligopoly of 4-6 labs with direct hyperscaler backing.
+**Direction:** constraining (competitive moats for frontier labs)
+**Strength:** strong
+**Lag:** quarters
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-05-27 | Identified | NVIDIA $81.66B Q1 earnings; hyperscaler capex $780B→$1T; SpaceX Colossus $1B+/month Anthropic payment in S-1 |
+
+---
+
+### FC-066: MOSS Production Source Rewriting Compresses Autonomous Coding Tool Timeline
+
+**Date identified:** 2026-05-27
+**Origin signal:** MOSS: self-evolving agent achieves 0.61 score on production source-level rewriting (up from 0.25 baseline) — arxiv 2605.22794 ([[ai-research-breakthroughs]])
+**Target(s):** [[ai-coding-tools]], [[ai-agents]]
+**Mechanism:** MOSS is the first agent evaluated on *production* (not synthetic) codebase modification — real source files, real dependencies, real test suites. Reaching 0.61 from a 0.25 baseline on this harder evaluation surface means the gap to a commercially viable ~0.75 threshold is smaller than the gap already crossed. The trajectory (0.25→0.61 in one generation of the approach) suggests the threshold is achievable in 12-18 months rather than 24-36 months. The force propagates differently to each target: for ai-coding-tools, it means the product roadmap of tools like Cursor, Windsurf, and Claude Code is being compressed — autonomous refactoring of existing production codebases is approaching the market sooner than competitive analysis assumed; for ai-agents, production source rewriting is the prerequisite capability for truly autonomous software agents (an agent that cannot modify its own toolchain is constrained to the original deployment environment).
+**Direction:** accelerating
+**Strength:** moderate
+**Lag:** months
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-05-27 | Identified | MOSS arxiv 2605.22794: 0.25→0.61 production source-level rewriting, self-evolving agent |
+
+---
+
+### FC-067: Frontier Labs Bifurcate Access into Government-Exclusive Tiers → Defense AI Standalone Market Accelerated
+
+**Date identified:** 2026-05-30
+**Origin signal:** OpenAI Rosalind Biodefense (US-gov/allied-only, May 29) + Anthropic Mythos (gov-gated, May 4) — [[frontier-models]]
+**Target(s):** [[ai-policy-regulation]], [[ai-business-funding]]
+**Mechanism:** When the two largest frontier labs independently create government-exclusive model tiers (Mythos: cyber-capable; Rosalind: biodefense), they are implicitly certifying that the defense AI market is large enough to justify dedicated products and restricted distribution. This creates a self-reinforcing dynamic: (1) government access tier → government willingness to pay premium → capital flows validate dedicated defense AI as a category; (2) voluntary access bifurcation sets a precedent that regulators will use to demand formal tiering — converting voluntary restriction into mandatory export control; (3) standalone defense AI companies (Shield AI, Anduril) can now point to frontier-lab gov tiers as market validation when filing for IPO. The force propagates to ai-policy-regulation by establishing the voluntary template regulators will formalize; to ai-business-funding by giving defense AI startups credible comps for valuation.
+**Direction:** accelerating
+**Strength:** moderate
+**Lag:** 6-18 months
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-05-30 | Identified | OpenAI Rosalind gov-only (May 29); Anthropic Mythos gov-gated (May 4); CONV-001 force 4 added |
+
+---
+
+### FC-068: Data Center Construction Bottleneck 2028/2029 → Inference Pricing Floor Structural, Not Cyclical
+
+**Date identified:** 2026-05-30
+**Origin signal:** a16z analysis: global data center capacity constrained through late 2028/early 2029; power grid approvals 12-24 months; Dell AI server 750% YoY ($1B→$16B) — [[compute-hardware]], [[ai-infrastructure]]
+**Target(s):** [[ai-business-funding]], [[ai-infrastructure]]
+**Mechanism:** The constraint is not GPU supply (NVIDIA Blackwell ramping) but physical facility lead times: power grid interconnect approvals take 12-24 months in most US markets; cooling infrastructure and construction add another 12-18 months. Combined, a new data center announced today cannot be operational before late 2026 at best, late 2027 more realistically. This means capacity shortage through 2028/2029 is already locked in — it cannot be resolved by capital deployment now. The force chain: structural supply constraint → inference prices cannot drop to marginal cost → frontier lab margins remain high → frontier lab valuations (Anthropic $965B, OpenAI $150B+) are justified by durable pricing power, not just growth. Counter-force: SpaceX Colossus (co-located power generation + compute) bypasses the grid interconnect bottleneck — companies that pre-built co-generation capacity have a structural moat.
+**Direction:** constraining (creates pricing floor)
+**Strength:** strong
+**Lag:** 24-36 months (duration of constraint)
+**Status:** `active`
+
+**Tracking:**
+| Date | Update | Signal Evidence |
+|------|--------|----------------|
+| 2026-05-30 | Identified | a16z via TBPN: data center capacity constrained late 2028/2029; power/cooling/construction bottleneck; Dell 750% YoY |
+
+---
+
 ## Retired Force Chains
 
 ### Manifested (force chain played out as predicted)
 | ID | Name | Predicted | Manifested | Notes |
 |----|------|-----------|------------|-------|
-| | | | | |
+| FC-062 | MS-OpenAI exclusivity end → multi-cloud OpenAI API | 30-90 days | 1 day (2026-04-28) | Enterprise API deals pre-negotiated — lag much shorter than assumed |
 
 ### Invalidated (prediction was wrong)
 | ID | Name | Why Wrong | Lesson |
