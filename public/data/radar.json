@@ -1,16 +1,34 @@
 {
-  "lastUpdated": "2026-05-06T08:13:35.569Z",
+  "lastUpdated": "2026-06-22T08:09:24.816Z",
   "brief": {
-    "date": "2026-05-06T00:00:00.000Z",
-    "scanTime": "03:00",
-    "signalsTotal": 13,
-    "signalsNotable": 10,
-    "signalsSignificant": 3,
+    "date": "2026-06-22T00:00:00.000Z",
+    "scanTime": "08:03",
+    "signalsTotal": 1,
+    "signalsNotable": 1,
+    "signalsSignificant": 0,
     "signalsBreakthrough": 0,
-    "nodesUpdated": 9,
+    "nodesUpdated": 1,
     "breakthrough": [],
     "significant": [],
-    "notable": []
+    "notable": [
+      {
+        "title": "Inside Anthropic, coding is no longer the engineering bottleneck — verification, review, and \"routines\" are** [[ai-coding-tools]] [[ai-agents]] — On Lenny's Podcast, Anthropic PM **Fiona Fung** (with host Lenny Rachitsky; Boris Cherny referenced) describes Anthropic's internal flow: with **Claude Code** + **Claude Code Reviews** doing the generation, the binding constraint is now *verification* — reviewing output against specs and \"what good looks like\" — plus evals/monitoring and *how ambitious* a team chooses to be. \"**Coding is no longer the bottleneck.**\" **\"Routines\"** (launched ~1–2 months earlier) autonomously monitor feedback channels, generate summaries, and **open PRs for human review",
+        "description": "an explicit feedback-to-PR automation loop. Lenny cites engineers shipping **\"8× as much code.\"** → First-party framing (not a vendor pitch) that the verification/review layer — not generation — is the gate *inside a frontier lab*, and that the lab is automating its own feedback→PR loop. **Single-source (podcast) → notable** per the 2-source rule. Reinforces the node's \"20× productivity\" / \"AI vampires\" thread and the  CONV-007 seed (Claude-accelerates-Claude). [Source: [LennysPodcast](youtube:Ybrl4FYM57c)]",
+        "nodes": [
+          "convergences"
+        ],
+        "source": "youtube:Ybrl4FYM57c",
+        "nodeNames": [
+          "convergences"
+        ],
+        "view": "both",
+        "practical": true,
+        "tags": [
+          "anthropic"
+        ],
+        "actionLine": "First-party framing (not a vendor pitch) that the verification/review layer — not generation — is the gate *inside a frontier lab*, and that the lab is automating its own feedback→PR loop."
+      }
+    ]
   },
   "forceChains": [
     {
@@ -488,6 +506,81 @@
       "lag": "months",
       "status": "active",
       "dateIdentified": "2026-04-27"
+    },
+    {
+      "id": "FC-064",
+      "title": "AI Math Dual Breakthrough Validates Formal Reasoning Infrastructure Market",
+      "origin": "OpenAI internal model disproves 80-year-old Erdős unit distance conjecture (May 20); AlphaProof Nexus solves 9 open Erdős problems with machine-verified formal proofs (May 25) ([[ai-for-science]])",
+      "targets": [
+        "ai-safety-alignment",
+        "ai-infrastructure"
+      ],
+      "mechanism": "Two independent teams in five days proving 80-year-old unsolved mathematics with machine-verifiable formal proofs (Lean/Coq notation where correctness is checked algorithmically, not by human reviewers) demonstrates that AI reasoning can now produce provably correct outputs — not just empirically high-performing ones. This matters beyond mathematics: formal proof systems create a verification layer that cannot hallucinate. For ai-safety-alignment, this opens tractable paths to provably-safe AI decisions in restricted domains (prove that a policy never takes action X under condition Y). For ai-infrastructure, it creates a new product category — automated correctness proofs for critical software (financial algorithms, healthcare systems, aerospace control software) where \"this code does exactly what the spec says\" becomes computable, not just testable.",
+      "direction": "enabling",
+      "strength": "moderate",
+      "lag": "quarters",
+      "status": "active",
+      "dateIdentified": "2026-05-27"
+    },
+    {
+      "id": "FC-065",
+      "title": "NVIDIA Jevons Loop Locks Frontier Compute Behind Hyperscaler Gatekeepers",
+      "origin": "NVIDIA Q1 FY2027: $81.66B revenue (+85% YoY); hyperscaler capex $780B→$1T committed through 2026; demand \"far exceeds supply\" despite efficiency gains ([[compute-hardware]])",
+      "targets": [
+        "ai-business-funding",
+        "frontier-models"
+      ],
+      "mechanism": "Jevons Paradox at the infrastructure layer: each efficiency improvement in AI compute (quantization, MoE routing, KV-cache compression) is absorbed by new demand rather than reducing costs — NVIDIA's 85% revenue growth despite hundreds of efficiency papers proves this is a structural pattern, not a temporary spike. The $1T committed hyperscaler capex is a multi-year, non-reversible capital commitment, meaning the loop runs regardless of future efficiency breakthroughs. The consequence: frontier model training at the largest scales is locked behind hyperscaler relationships. Labs without Google TPU access, Microsoft Azure credits, or AWS partnerships cannot acquire enough compute to compete at the top tier. The competitive moat is no longer model architecture — it is hyperscaler partnership. This constrains new entrant paths to frontier capability and creates a durable oligopoly of 4-6 labs with direct hyperscaler backing.",
+      "direction": "constraining (competitive moats for frontier labs)",
+      "strength": "strong",
+      "lag": "quarters",
+      "status": "active",
+      "dateIdentified": "2026-05-27"
+    },
+    {
+      "id": "FC-066",
+      "title": "MOSS Production Source Rewriting Compresses Autonomous Coding Tool Timeline",
+      "origin": "MOSS: self-evolving agent achieves 0.61 score on production source-level rewriting (up from 0.25 baseline) — arxiv 2605.22794 ([[ai-research-breakthroughs]])",
+      "targets": [
+        "ai-coding-tools",
+        "ai-agents"
+      ],
+      "mechanism": "MOSS is the first agent evaluated on *production* (not synthetic) codebase modification — real source files, real dependencies, real test suites. Reaching 0.61 from a 0.25 baseline on this harder evaluation surface means the gap to a commercially viable ~0.75 threshold is smaller than the gap already crossed. The trajectory (0.25→0.61 in one generation of the approach) suggests the threshold is achievable in 12-18 months rather than 24-36 months. The force propagates differently to each target: for ai-coding-tools, it means the product roadmap of tools like Cursor, Windsurf, and Claude Code is being compressed — autonomous refactoring of existing production codebases is approaching the market sooner than competitive analysis assumed; for ai-agents, production source rewriting is the prerequisite capability for truly autonomous software agents (an agent that cannot modify its own toolchain is constrained to the original deployment environment).",
+      "direction": "accelerating",
+      "strength": "moderate",
+      "lag": "months",
+      "status": "active",
+      "dateIdentified": "2026-05-27"
+    },
+    {
+      "id": "FC-067",
+      "title": "Frontier Labs Bifurcate Access into Government-Exclusive Tiers → Defense AI Standalone Market Accelerated",
+      "origin": "OpenAI Rosalind Biodefense (US-gov/allied-only, May 29) + Anthropic Mythos (gov-gated, May 4) — [[frontier-models]]",
+      "targets": [
+        "ai-policy-regulation",
+        "ai-business-funding"
+      ],
+      "mechanism": "When the two largest frontier labs independently create government-exclusive model tiers (Mythos: cyber-capable; Rosalind: biodefense), they are implicitly certifying that the defense AI market is large enough to justify dedicated products and restricted distribution. This creates a self-reinforcing dynamic: (1) government access tier → government willingness to pay premium → capital flows validate dedicated defense AI as a category; (2) voluntary access bifurcation sets a precedent that regulators will use to demand formal tiering — converting voluntary restriction into mandatory export control; (3) standalone defense AI companies (Shield AI, Anduril) can now point to frontier-lab gov tiers as market validation when filing for IPO. The force propagates to ai-policy-regulation by establishing the voluntary template regulators will formalize; to ai-business-funding by giving defense AI startups credible comps for valuation.",
+      "direction": "accelerating",
+      "strength": "moderate",
+      "lag": "6-18 months",
+      "status": "active",
+      "dateIdentified": "2026-05-30"
+    },
+    {
+      "id": "FC-068",
+      "title": "Data Center Construction Bottleneck 2028/2029 → Inference Pricing Floor Structural, Not Cyclical",
+      "origin": "a16z analysis: global data center capacity constrained through late 2028/early 2029; power grid approvals 12-24 months; Dell AI server 750% YoY ($1B→$16B) — [[compute-hardware]], [[ai-infrastructure]]",
+      "targets": [
+        "ai-business-funding",
+        "ai-infrastructure"
+      ],
+      "mechanism": "The constraint is not GPU supply (NVIDIA Blackwell ramping) but physical facility lead times: power grid interconnect approvals take 12-24 months in most US markets; cooling infrastructure and construction add another 12-18 months. Combined, a new data center announced today cannot be operational before late 2026 at best, late 2027 more realistically. This means capacity shortage through 2028/2029 is already locked in — it cannot be resolved by capital deployment now. The force chain: structural supply constraint → inference prices cannot drop to marginal cost → frontier lab margins remain high → frontier lab valuations (Anthropic $965B, OpenAI $150B+) are justified by durable pricing power, not just growth. Counter-force: SpaceX Colossus (co-located power generation + compute) bypasses the grid interconnect bottleneck — companies that pre-built co-generation capacity have a structural moat.",
+      "direction": "constraining (creates pricing floor)",
+      "strength": "strong",
+      "lag": "24-36 months (duration of constraint)",
+      "status": "active",
+      "dateIdentified": "2026-05-30"
     }
   ],
   "convergences": [
@@ -512,6 +605,11 @@
           "description": "Meta, Amazon, and Google all deepening robotics/defense-adjacent AI investments (Agile Robots, Fauna Robotics, Arm AGI CPU for edge deployment)",
           "origin": "robotics-embodied-ai",
           "strength": "moderate"
+        },
+        {
+          "description": "OpenAI Rosalind Biodefense + Anthropic Mythos both establishing government-exclusive model tiers",
+          "origin": "frontier-models",
+          "strength": "strong"
         }
       ],
       "invalidation": "Major defense AI program failure or safety incident that triggers Congressional restriction. Significant market downturn that closes IPO window. Shield AI or Anduril acquired by a large defense prime before IPO."
@@ -554,9 +652,9 @@
     {
       "id": "CONV-003",
       "title": "AI IPO Wave Creates Public Market Investment Window in H2 2026",
-      "confidence": "strengthening",
+      "confidence": "imminent",
       "predictedOutcome": "At least 3 major AI companies (from: Anthropic, OpenAI, Shield AI, Anduril, Databricks, Scale AI) will file for IPO in H2 2026, creating a concentrated public market entry window for AI-focused investing.",
-      "timeline": "Q3-Q4 2026",
+      "timeline": "Q2-Q3 2026 (accelerated from Q3-Q4)",
       "forces": [
         {
           "description": "Anthropic considering Q4 2026 IPO, bankers estimate $60B+ raise; revenue doubling ($9B→$19B in 3 months)",
@@ -635,6 +733,41 @@
         }
       ],
       "invalidation": "Single dominant platform (e.g., LangChain, CrewAI) absorbs all demand. Agent orchestration proves unnecessary because single-model agents become capable enough. The projects diverge into incompatible patterns rather than converging."
+    },
+    {
+      "id": "CONV-006",
+      "title": "Sovereign AI Infrastructure Becomes a Distinct Venture-Scale Category by Q4 2026",
+      "confidence": "forming (65%)",
+      "predictedOutcome": "Sovereign AI — non-US nations and enterprises standing up locally-controlled compute running open-weight models, independent of US frontier-lab access — consolidates into a distinct, venture-scale infrastructure category, evidenced by a $100M+ compute-OS vendor plus enacted national funds plus frontier-parity open-model supply, by Q4 2026.",
+      "timeline": "Q3-Q4 2026",
+      "forces": [
+        {
+          "description": "UK Sovereign AI Fund + Isambard (~£1B, enacted June 11)",
+          "origin": "ai-policy-regulation",
+          "strength": "strong"
+        },
+        {
+          "description": "US export-control suspension of Fable/Mythos for foreign nationals (June 13)",
+          "origin": "frontier-models",
+          "strength": "strong"
+        },
+        {
+          "description": "Hydra Host $100M Series A — NeoCloud compute OS, ~20 countries / ~60 datacenters (June 16)",
+          "origin": "ai-infrastructure",
+          "strength": "strong"
+        },
+        {
+          "description": "Open-weight frontier-parity model supply (Cohere 30B-A3B, DiffusionGemma, Qwen, GLM)",
+          "origin": "open-source-models",
+          "strength": "strong"
+        },
+        {
+          "description": "GLM-5.2 (MIT) reaches #2 Code Arena: Frontend, behind only Fable 5 (June 16)",
+          "origin": "open-source-models",
+          "strength": "strong"
+        }
+      ],
+      "invalidation": "US relaxes export controls restoring foreign frontier access (collapses force 2); sovereign compute vendors fail to win named national contracts; open-weight models stall and re-open a large gap to closed frontier."
     }
   ],
   "bottlenecks": [
@@ -661,7 +794,7 @@
         "ai-agents"
       ],
       "attackers": 3,
-      "looseningSignals": 1,
+      "looseningSignals": 2,
       "summary": "How It's Blocked"
     },
     {
@@ -674,7 +807,7 @@
         "ai-safety-alignment"
       ],
       "attackers": 4,
-      "looseningSignals": 2,
+      "looseningSignals": 3,
       "summary": "How It's Blocked"
     },
     {
@@ -687,7 +820,7 @@
         "ai-infrastructure"
       ],
       "attackers": 4,
-      "looseningSignals": 3,
+      "looseningSignals": 4,
       "summary": "How It's Blocked"
     },
     {
@@ -934,16 +1067,16 @@
   "predictions": [
     {
       "id": "PRED-001",
-      "title": "Anthropic Files for IPO by End of 2026",
-      "confidence": "83%",
-      "checkDate": "2027-01-15",
+      "title": "Anthropic Files for IPO by End of 2026 ✓ RESOLVED CORRECT",
+      "confidence": "",
+      "checkDate": "2027-01-15 (resolved early: 2026-06-01)",
       "basedOn": "- CONV-003: AI IPO wave convergence — 4 independent forces pointing at H2 2026 IPO window"
     },
     {
       "id": "PRED-002",
-      "title": "Apple Announces Multi-Model Siri at WWDC June 2026",
-      "confidence": "85%",
-      "checkDate": "2026-06-15",
+      "title": "Apple Announces Multi-Model Siri at WWDC June 2026 ◐ RESOLVED PARTIALLY CORRECT",
+      "confidence": "",
+      "checkDate": "2026-06-15 (resolved on date)",
       "basedOn": "- FC-004: Apple multi-model iOS force chain — Bloomberg (Gurman) report, typically highly reliable for Apple leaks"
     },
     {
@@ -994,6 +1127,20 @@
       "confidence": "70%",
       "checkDate": "2026-07-31",
       "basedOn": "- Meta + Microsoft set the public \"payroll → AI capex\" framing in same week (April 23-24)"
+    },
+    {
+      "id": "PRED-013",
+      "title": "AI-Accelerated Pre-Training Explicitly Adopted at 3+ Frontier Labs by Q4 2026",
+      "confidence": "72%",
+      "checkDate": "2027-01-15",
+      "basedOn": "- FC-066: MOSS 0.25→0.61 production source-level rewriting signals autonomous code modification approaching reliability threshold"
+    },
+    {
+      "id": "PRED-014",
+      "title": "An Open-Weight Model Reaches #1 on a Major Customer-Relevant Code Leaderboard by Q4 2026",
+      "confidence": "60%",
+      "checkDate": "2027-01-05",
+      "basedOn": "- **GLM-5.2 (Zhipu, MIT) at #2 Code Arena: Frontend, June 16** — behind only Fable 5 (closed), +29pt over Opus 4.7 Thinking. An open model is now a single rung below the closed SOTA. [Verified: Arena.ai benchmark operator + @mervenoyann — meets Verification Floor]"
     }
   ],
   "nodes": [
@@ -1002,112 +1149,112 @@
       "name": "AI Agents & Autonomy",
       "status": "accelerating",
       "currentState": "> **Mutable — rewrites freely as signals arrive. Reflects last ~30 days.**",
-      "lastUpdated": "2026-05-06T00:00:00.000Z"
+      "lastUpdated": "2026-06-19T00:00:00.000Z"
     },
     {
       "id": "ai-business-funding",
       "name": "AI Business & Funding",
       "status": "accelerating",
-      "currentState": "AI remains the dominant category for venture funding, with capital deployment reaching new highs in March 2026. Frontier labs command massive valuations: OpenAI ($150B+), Anthropic ($60B+), xAI ($50B+), while the developer tools layer is catching up (Cursor reportedly at $50B). Europe is asserting itself with AMI Labs (LeCun) raising $1.03B seed at $3.5B — the continent's largest. Infrastructure (Nexthop $500M, Andromeda $60M) and AI security (Xbow $120M unicorn) are the highest-conviction inves...",
-      "lastUpdated": "2026-05-02T00:00:00.000Z"
+      "currentState": "The AI IPO wave crossed its first definitive threshold: **Anthropic filed a confidential S-1 draft with the SEC on June 1, 2026** (primary source: @AnthropicAI official tweet), confirming the IPO path that had been reported for months. SpaceX S1 filed ($1.75T valuation, May 22); Cerebras IPO closed at $95B (+68% above issue); Anthropic reportedly raising $65B Series H at ~$965B [UNVERIFIED]. Anthropic is consolidating its position: acquired Stainless API (internalizing all SDK/MCP tooling, May 1...",
+      "lastUpdated": "2026-06-04T00:00:00.000Z"
     },
     {
       "id": "ai-coding-tools",
       "name": "AI Coding Tools",
       "status": "accelerating",
       "currentState": "AI coding tools are entering an expansion phase driven by three trends: deeper tool integration, new entrants, and methodology formalization. Claude Code v2.1.76-79 shipped 64K/128K output tokens with 45% faster resume, pushing CLI agent capability forward. The official ChromeDevTools MCP server (30K+ stars) and Anthropic's Claude Plugins Directory signal a maturing plugin ecosystem. QwenLM's qwen-code terminal agent (20K+ stars) shows Chinese labs entering the coding tools space directly.",
-      "lastUpdated": "2026-05-06T00:00:00.000Z"
+      "lastUpdated": "2026-06-22T00:00:00.000Z"
     },
     {
       "id": "ai-for-science",
       "name": "AI for Science",
       "status": "accelerating",
       "currentState": "AI's impact on scientific research continues to deepen following AlphaFold's breakthrough. Protein structure prediction is now routine; the frontier has moved to protein design, drug-target interaction, and de novo molecule generation. Materials science uses AI for novel material discovery. Mathematics saw AI-assisted proof advances.",
-      "lastUpdated": "2026-05-06T00:00:00.000Z"
+      "lastUpdated": "2026-06-20T00:00:00.000Z"
     },
     {
       "id": "ai-in-enterprise",
       "name": "AI in Enterprise",
       "status": "accelerating",
       "currentState": "Enterprise AI adoption is in the \"deployment at scale\" phase. Most large enterprises have moved past POC/experimentation and are deploying AI in production workflows. The dominant patterns: customer service automation, internal knowledge/search, document processing, code assistance, and data analysis.",
-      "lastUpdated": "2026-05-06T00:00:00.000Z"
+      "lastUpdated": "2026-06-04T00:00:00.000Z"
     },
     {
       "id": "ai-infrastructure",
       "name": "AI Infrastructure",
       "status": "accelerating",
-      "currentState": "AI infrastructure encompasses the full stack between models and applications: serving (vLLM, TGI, Ollama), orchestration (LangChain, LlamaIndex), vector databases (Qdrant, Pinecone, Weaviate, ChromaDB), fine-tuning platforms, evaluation frameworks, and observability tools.",
-      "lastUpdated": "2026-05-06T00:00:00.000Z"
+      "currentState": "The binding constraint has shifted from GPU supply to physical infrastructure: data center capacity is constrained through late 2028/early 2029 — power grid interconnect approvals (12-24 months) are now the bottleneck, not silicon (a16z, May 30). A concurrent memory shock is materializing: DRAM is 50% under-supplied with prices forecast 4-5× over 12 months (May 8), directly hitting KV-cache-heavy long-context workloads. Dedicated inference silicon is now validated infrastructure: Cerebras IPO at...",
+      "lastUpdated": "2026-06-19T00:00:00.000Z"
     },
     {
       "id": "ai-policy-regulation",
       "name": "AI Policy & Regulation",
       "status": "accelerating",
       "currentState": "AI regulation is entering a turbulent new phase. In the US, the Anthropic-Pentagon confrontation is reshaping the landscape: Anthropic has sued the Pentagon over a supply-chain risk designation, while DOD officials publicly characterize Anthropic's safety \"red lines\" as a national security risk. Senator Blackburn's TRUMP AMERICA AI Act draft proposes comprehensive federal preemption of state-level AI regulation. NIST has entered an active engagement phase on AI Agent Standards, reflecting the ur...",
-      "lastUpdated": "2026-05-06T00:00:00.000Z"
+      "lastUpdated": "2026-06-17T00:00:00.000Z"
     },
     {
       "id": "ai-research-breakthroughs",
       "name": "AI Research Breakthroughs",
       "status": "accelerating",
       "currentState": "> **Mutable — rewrites freely as signals arrive. Reflects last ~30 days.**",
-      "lastUpdated": "2026-05-06T00:00:00.000Z"
+      "lastUpdated": "2026-06-20T00:00:00.000Z"
     },
     {
       "id": "ai-safety-alignment",
       "name": "AI Safety & Alignment",
       "status": "accelerating",
       "currentState": "AI safety has moved from academic concern to urgent operational crisis on two fronts. First, agent security vulnerabilities remain the top concern: OpenClaw has accumulated 7+ CVEs, Bitdefender reports 20% of ClawHub skills are malicious, Flowise has a CVSS 10.0 RCE being actively exploited across 15K exposed instances, and AI agent non-human identities are fueling ransomware attacks.",
-      "lastUpdated": "2026-05-06T00:00:00.000Z"
+      "lastUpdated": "2026-06-19T00:00:00.000Z"
     },
     {
       "id": "compute-hardware",
       "name": "Compute & Hardware",
       "status": "accelerating",
       "currentState": "NVIDIA's GTC 2026 reshaped the compute landscape. The Vera Rubin platform delivers 10x perf/watt with a 7-chip architecture, backed by $1T in orders, with the Feynman generation already on the 2028 roadmap. NVIDIA also unveiled standalone Vera CPUs in 256-chip liquid-cooled rack configurations, signaling a push beyond GPUs into full data-center compute. The $20B Groq acquisition brought the Groq 3 LPU into NVIDIA's portfolio — at 35x tokens/watt, it represents a step-change in inference efficien...",
-      "lastUpdated": "2026-04-22T00:00:00.000Z"
+      "lastUpdated": "2026-06-02T00:00:00.000Z"
     },
     {
       "id": "edge-on-device-ai",
       "name": "Edge & On-Device AI",
       "status": "accelerating",
       "currentState": "Running AI locally — on phones, laptops, and edge devices — has gone from hobbyist to mainstream. Apple Intelligence runs on-device for iPhone/Mac. Samsung and Google embed AI into their devices. NVIDIA DGX Spark ($4,699) makes local inference of 200B-parameter models possible on a desktop device.",
-      "lastUpdated": "2026-05-06T00:00:00.000Z"
+      "lastUpdated": "2026-06-18T00:00:00.000Z"
     },
     {
       "id": "frontier-edges",
       "name": "Frontier Edges",
       "status": "accelerating",
       "currentState": "",
-      "lastUpdated": "2026-04-23T00:00:00.000Z"
+      "lastUpdated": "2026-05-13T00:00:00.000Z"
     },
     {
       "id": "frontier-models",
       "name": "Frontier Models",
       "status": "accelerating",
       "currentState": "The frontier model landscape as of late March 2026 is being reshaped by a dramatic user migration and intensifying multi-lab competition. The #QuitGPT movement — a coordinated wave of 2.5M users abandoning ChatGPT — pushed Anthropic's Claude to #1 on the App Store with a reported 70% enterprise win rate (meaning Claude is chosen over competitors in 7 out of 10 enterprise evaluation processes). This is the first time OpenAI has lost its dominant distribution position, and it signals that model qu...",
-      "lastUpdated": "2026-05-06T00:00:00.000Z"
+      "lastUpdated": "2026-06-17T00:00:00.000Z"
     },
     {
       "id": "multimodal-ai",
       "name": "Multimodal AI",
       "status": "accelerating",
       "currentState": "Multimodal AI — models that process and generate text, images, audio, video, and 3D — has become the default rather than the exception. All frontier models now accept multiple input types. Video generation hit a major inflection point: OpenAI shut down Sora after just 6 months (downloads fell from 3.3M to 1.1M) and terminated a $1B Disney licensing deal, redirecting compute to core LLM products. This is the first major product death from a frontier lab and signals that standalone AI video genera...",
-      "lastUpdated": "2026-05-06T00:00:00.000Z"
+      "lastUpdated": "2026-06-20T00:00:00.000Z"
     },
     {
       "id": "open-source-models",
       "name": "Open Source Models",
       "status": "accelerating",
       "currentState": "Open source AI is accelerating on multiple fronts simultaneously, with a new development that directly threatens the commercial voice AI market: Mistral's Voxtral (3B parameters, 90ms latency, open-weight) outperforms ElevenLabs in human preference evaluations 63% of the time. This follows the earlier Qwen3-TTS pattern — open-source TTS is now production-quality and free to deploy. Alibaba's Qwen 3.5-Omni brings open-source multimodal AI (text + image + audio + video in one model) to the open-we...",
-      "lastUpdated": "2026-05-06T00:00:00.000Z"
+      "lastUpdated": "2026-06-17T00:00:00.000Z"
     },
     {
       "id": "robotics-embodied-ai",
       "name": "Robotics & Embodied AI",
       "status": "accelerating",
       "currentState": "Robotics is experiencing a renaissance driven by foundation models and massive investment. Humanoid robots (Figure, Tesla Optimus, 1X, Unitree) are advancing from demos to early deployments. The key enabler: vision-language-action (VLA) models that allow robots to understand natural language instructions and generalize across tasks.",
-      "lastUpdated": "2026-05-02T00:00:00.000Z"
+      "lastUpdated": "2026-06-19T00:00:00.000Z"
     }
   ],
   "nodeNames": {
@@ -1142,6 +1289,37 @@
   },
   "ripples": {
     "significant": {},
-    "notable": {}
+    "notable": {
+      "0": {
+        "chains": [],
+        "convergences": [
+          {
+            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
+            "confidence": "imminent",
+            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
+            "timeline": "Q3-Q4 2026"
+          },
+          {
+            "title": "Sovereign AI Infrastructure Becomes a Distinct Venture-Scale Category by Q4 2026",
+            "confidence": "forming (65%)",
+            "predictedOutcome": "Sovereign AI — non-US nations and enterprises standing up locally-controlled compute running open-weight models, independent of US frontier-lab access — consolidates into a distinct, venture-scale inf...",
+            "timeline": "Q3-Q4 2026"
+          }
+        ],
+        "bottlenecks": [],
+        "predictions": [
+          {
+            "title": "Anthropic Files for IPO by End of 2026 ✓ RESOLVED CORRECT",
+            "confidence": "",
+            "checkDate": "2027-01-15 (resolved early: 2026-06-01)"
+          },
+          {
+            "title": "Inference Cost (Per 1M Tokens, Frontier Models) Drops 5x+ by End of 2026",
+            "confidence": "75%",
+            "checkDate": "2027-01-15"
+          }
+        ]
+      }
+    }
   }
 }
