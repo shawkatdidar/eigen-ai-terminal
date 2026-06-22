@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 
 const CLAWHUB_INSTALL_PROMPT = `Install Eigen Terminal through ClawHub and turn it into my daily AI radar.
@@ -13,7 +12,7 @@ After installing:
 3. Send me only the 2-3 items that affect my work.
 4. Set up a daily 7:00 AM brief.`;
 
-const DIRECT_INSTALL_PROMPT = `Install Eigen Terminal directly into my OpenClaw setup and turn it into my daily AI radar.
+const DIRECT_INSTALL_PROMPT = `Install Eigen Terminal directly for my agent setup and turn it into my daily AI radar.
 
 npx eigen-terminal-install
 
@@ -22,17 +21,6 @@ After installing:
 2. Fetch today's Eigen Terminal signals.
 3. Send me only the 2-3 items that affect my work.
 4. Set up a daily 7:00 AM brief.`;
-
-const DATA_URLS = `Public data surfaces:
-
-Today's radar:
-https://terminal.clawlab.dev/data/radar.json
-
-7-day history:
-https://terminal.clawlab.dev/data/history.json
-
-Knowledge base manifest:
-https://terminal.clawlab.dev/wiki/manifest.json`;
 
 function CopyBlock({ label, text }: { label: string; text: string }) {
   const [copied, setCopied] = useState(false);
@@ -82,22 +70,14 @@ export default function ConnectAgent() {
             <strong className="text-[var(--color-text)]">Your agent gets:</strong> radar data, history, and a wiki it can query whenever the field moves.
           </p>
           <p>
-            <strong className="text-[var(--color-text)]">Install paths:</strong> use the ClawHub one-liner for the standard OpenClaw flow, or the direct installer if you want to place the skill into your setup yourself.
+            <strong className="text-[var(--color-text)]">Install paths:</strong> use the direct installer for any agent setup, or the ClawHub one-liner for the standard OpenClaw flow.
           </p>
         </div>
       </div>
 
       <div className="space-y-5">
+        <CopyBlock label="Any agent install (Recommended)" text={DIRECT_INSTALL_PROMPT} />
         <CopyBlock label="OpenClaw via ClawHub" text={CLAWHUB_INSTALL_PROMPT} />
-        <CopyBlock label="Direct OpenClaw install" text={DIRECT_INSTALL_PROMPT} />
-        <CopyBlock label="Raw public endpoints" text={DATA_URLS} />
-        <p className="text-[12px] leading-[1.7] text-[var(--color-text-muted)]">
-          Want the details first? Read the{" "}
-          <Link href="/disclaimer" className="underline underline-offset-4 hover:text-[var(--color-text)]">
-            disclaimer
-          </Link>
-          .
-        </p>
       </div>
     </div>
   );
