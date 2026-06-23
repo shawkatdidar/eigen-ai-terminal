@@ -1,32 +1,32 @@
 {
-  "lastUpdated": "2026-06-22T08:10:32.966Z",
+  "lastUpdated": "2026-06-23T08:10:28.483Z",
   "brief": {
-    "date": "2026-06-22T00:00:00.000Z",
+    "date": "2026-06-23T00:00:00.000Z",
     "scanTime": "08:03",
-    "signalsTotal": 1,
-    "signalsNotable": 1,
+    "signalsTotal": 3,
+    "signalsNotable": 3,
     "signalsSignificant": 0,
     "signalsBreakthrough": 0,
-    "nodesUpdated": 1,
+    "nodesUpdated": 3,
     "breakthrough": [],
     "significant": [],
     "notable": [
       {
-        "title": "Inside Anthropic, coding is no longer the engineering bottleneck — verification, review, and \"routines\" are** [[ai-coding-tools]] [[ai-agents]] — On Lenny's Podcast, Anthropic PM **Fiona Fung** (with host Lenny Rachitsky; Boris Cherny referenced) describes Anthropic's internal flow: with **Claude Code** + **Claude Code Reviews** doing the generation, the binding constraint is now *verification* — reviewing output against specs and \"what good looks like\" — plus evals/monitoring and *how ambitious* a team chooses to be. \"**Coding is no longer the bottleneck.**\" **\"Routines\"** (launched ~1–2 months earlier) autonomously monitor feedback channels, generate summaries, and **open PRs for human review",
-        "description": "an explicit feedback-to-PR automation loop. Lenny cites engineers shipping **\"8× as much code.\"** → First-party framing (not a vendor pitch) that the verification/review layer — not generation — is the gate *inside a frontier lab*, and that the lab is automating its own feedback→PR loop. **Single-source (podcast) → notable** per the 2-source rule. Reinforces the node's \"20× productivity\" / \"AI vampires\" thread and the  CONV-007 seed (Claude-accelerates-Claude). [Source: [LennysPodcast](youtube:Ybrl4FYM57c)]",
+        "title": "PP-OCRv6 — PaddlePaddle ships a 50-language OCR family at 1.5M–34.5M parameters** [[multimodal-ai]] [[open-source-models]] — PaddlePaddle released PP-OCRv6 on Hugging Face: optical character recognition across **50 languages** in sizes from **1.5M to 34.5M parameters",
+        "description": "small enough for CPU/edge/on-device document pipelines. → Lowers the cost floor for multilingual document AI (invoices, forms, ingestion) and pushes OCR toward  deployment. Open release, metrics not independently verified, confidence medium → notable. [Source: [HF/PaddlePaddle](https://huggingface.co/blog/PaddlePaddle/pp-ocrv6)]",
         "nodes": [
-          "convergences"
+          "edge-on-device-ai"
         ],
-        "source": "youtube:Ybrl4FYM57c",
+        "source": "https://huggingface.co/blog/PaddlePaddle/pp-ocrv6",
         "nodeNames": [
-          "convergences"
+          "Edge & On-Device AI"
         ],
-        "view": "both",
+        "view": "builder",
         "practical": true,
         "tags": [
-          "anthropic"
+          "hugging face"
         ],
-        "actionLine": "First-party framing (not a vendor pitch) that the verification/review layer — not generation — is the gate *inside a frontier lab*, and that the lab is automating its own feedback→PR loop."
+        "actionLine": "Lowers the cost floor for multilingual document AI (invoices, forms, ingestion) and pushes OCR toward  deployment."
       }
     ]
   },
@@ -1163,7 +1163,7 @@
       "name": "AI Coding Tools",
       "status": "accelerating",
       "currentState": "AI coding tools are entering an expansion phase driven by three trends: deeper tool integration, new entrants, and methodology formalization. Claude Code v2.1.76-79 shipped 64K/128K output tokens with 45% faster resume, pushing CLI agent capability forward. The official ChromeDevTools MCP server (30K+ stars) and Anthropic's Claude Plugins Directory signal a maturing plugin ecosystem. QwenLM's qwen-code terminal agent (20K+ stars) shows Chinese labs entering the coding tools space directly.",
-      "lastUpdated": "2026-06-22T00:00:00.000Z"
+      "lastUpdated": "2026-06-23T00:00:00.000Z"
     },
     {
       "id": "ai-for-science",
@@ -1205,7 +1205,7 @@
       "name": "AI Safety & Alignment",
       "status": "accelerating",
       "currentState": "AI safety has moved from academic concern to urgent operational crisis on two fronts. First, agent security vulnerabilities remain the top concern: OpenClaw has accumulated 7+ CVEs, Bitdefender reports 20% of ClawHub skills are malicious, Flowise has a CVSS 10.0 RCE being actively exploited across 15K exposed instances, and AI agent non-human identities are fueling ransomware attacks.",
-      "lastUpdated": "2026-06-19T00:00:00.000Z"
+      "lastUpdated": "2026-06-23T00:00:00.000Z"
     },
     {
       "id": "compute-hardware",
@@ -1240,7 +1240,7 @@
       "name": "Multimodal AI",
       "status": "accelerating",
       "currentState": "Multimodal AI — models that process and generate text, images, audio, video, and 3D — has become the default rather than the exception. All frontier models now accept multiple input types. Video generation hit a major inflection point: OpenAI shut down Sora after just 6 months (downloads fell from 3.3M to 1.1M) and terminated a $1B Disney licensing deal, redirecting compute to core LLM products. This is the first major product death from a frontier lab and signals that standalone AI video genera...",
-      "lastUpdated": "2026-06-20T00:00:00.000Z"
+      "lastUpdated": "2026-06-23T00:00:00.000Z"
     },
     {
       "id": "open-source-models",
@@ -1291,7 +1291,40 @@
     "significant": {},
     "notable": {
       "0": {
-        "chains": [],
+        "chains": [
+          {
+            "title": "TurboQuant Memory Compression Reshapes Hardware Economics",
+            "mechanism": "KV-cache memory is the bottleneck for long-context inference — it grows linearly with context length. 6x compression at zero accuracy loss means the same GPU can serve 6x more concurrent users or handle 6x longer contexts. This directly reduces the memory hardware needed per inference query, which t...",
+            "direction": "disrupting (memory hardware demand) / enabling (edge AI, long-context)",
+            "strength": "strong",
+            "targets": [
+              "Compute & Hardware",
+              "AI Infrastructure",
+              "Edge & On-Device AI"
+            ]
+          },
+          {
+            "title": "Sub-15B Active Parameter Models at Frontier Agent Capability",
+            "mechanism": "Two open models shipping on the same day achieving frontier-competitive agent performance with <15B active parameters means production-quality agents can run on workstations, bypassing API costs and data-residency concerns. Accelerates enterprise agent adoption in regulated industries.",
+            "direction": "enabling",
+            "strength": "strong",
+            "targets": [
+              "AI in Enterprise",
+              "AI Agents",
+              "Edge & On-Device AI"
+            ]
+          },
+          {
+            "title": "Alibaba Revenue Pivot Threatens Open-Source Model Ecosystem",
+            "mechanism": "Qwen models (3.5, 3.6 series) are among the most-used open-weight models globally. If Alibaba restricts future releases, thousands of companies and developers who built on free Qwen weights face dependency risk. Enterprise deployments using Qwen fine-tunes would need to migrate. Local LLM community ...",
+            "direction": "constraining (open-source), enabling (Google/Meta leverage)",
+            "strength": "moderate",
+            "targets": [
+              "AI in Enterprise",
+              "Edge & On-Device AI"
+            ]
+          }
+        ],
         "convergences": [
           {
             "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
@@ -1309,14 +1342,14 @@
         "bottlenecks": [],
         "predictions": [
           {
-            "title": "Anthropic Files for IPO by End of 2026 ✓ RESOLVED CORRECT",
-            "confidence": "",
-            "checkDate": "2027-01-15 (resolved early: 2026-06-01)"
-          },
-          {
             "title": "Inference Cost (Per 1M Tokens, Frontier Models) Drops 5x+ by End of 2026",
             "confidence": "75%",
             "checkDate": "2027-01-15"
+          },
+          {
+            "title": "An Open-Weight Model Reaches #1 on a Major Customer-Relevant Code Leaderboard by Q4 2026",
+            "confidence": "60%",
+            "checkDate": "2027-01-05"
           }
         ]
       }
