@@ -1,6 +1,6 @@
 {
   "description": "Eigen AI Terminal Knowledge Base — the full wiki of AI landscape intelligence",
-  "lastUpdated": "2026-06-22T08:10:32.974Z",
+  "lastUpdated": "2026-06-23T08:10:28.497Z",
   "totalFiles": 54,
   "structure": {
     "nodes": "16 domain trackers covering the AI landscape",
@@ -101,7 +101,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-06-22T00:00:00.000Z",
+        "last_updated": "2026-06-23T00:00:00.000Z",
         "related_nodes": [
           "ai-agents",
           "frontier-models",
@@ -130,7 +130,7 @@
         "developer-tools",
         "productivity"
       ],
-      "size": 36285
+      "size": 37431
     },
     {
       "path": "nodes/ai-for-science.md",
@@ -333,7 +333,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-06-19T00:00:00.000Z",
+        "last_updated": "2026-06-23T00:00:00.000Z",
         "related_nodes": [
           "frontier-models",
           "ai-agents",
@@ -347,13 +347,13 @@
         ]
       },
       "wikilinks": [
-        "robotics-embodied-ai",
+        "ai-coding-tools",
         "ai-in-enterprise",
+        "robotics-embodied-ai",
         "ai-policy-regulation",
         "ai-business-funding",
         "ai-research-breakthroughs",
         "ai-agents",
-        "ai-coding-tools",
         "frontier-models"
       ],
       "tags": [
@@ -362,7 +362,7 @@
         "alignment",
         "interpretability"
       ],
-      "size": 54099
+      "size": 55289
     },
     {
       "path": "nodes/compute-hardware.md",
@@ -530,7 +530,7 @@
         "status": "accelerating",
         "impact": "high",
         "created": "2026-03-19T00:00:00.000Z",
-        "last_updated": "2026-06-20T00:00:00.000Z",
+        "last_updated": "2026-06-23T00:00:00.000Z",
         "related_nodes": [
           "frontier-models",
           "ai-research-breakthroughs",
@@ -545,6 +545,8 @@
         ]
       },
       "wikilinks": [
+        "open-source-models",
+        "edge-on-device-ai",
         "frontier-models",
         "ai-research-breakthroughs",
         "robotics-embodied-ai"
@@ -556,7 +558,7 @@
         "audio",
         "video"
       ],
-      "size": 21258
+      "size": 23099
     },
     {
       "path": "nodes/open-source-models.md",
@@ -1157,6 +1159,36 @@
       "size": 7111
     },
     {
+      "path": "briefs/2026-06-23.md",
+      "frontmatter": {
+        "date": "2026-06-23T00:00:00.000Z",
+        "scan_time": "08:03",
+        "signals_total": 3,
+        "signals_notable": 3,
+        "signals_significant": 0,
+        "signals_breakthrough": 0,
+        "signals_filtered_noise": 3,
+        "signals_deduped": 0,
+        "nodes_updated": 3,
+        "node_status_changes": [],
+        "tags": [
+          "daily-brief"
+        ]
+      },
+      "wikilinks": [
+        "ai-safety-alignment",
+        "ai-coding-tools",
+        "ai-in-enterprise",
+        "multimodal-ai",
+        "open-source-models",
+        "edge-on-device-ai"
+      ],
+      "tags": [
+        "daily-brief"
+      ],
+      "size": 13661
+    },
+    {
       "path": "briefs/2026-06-22.md",
       "frontmatter": {
         "date": "2026-06-22T00:00:00.000Z",
@@ -1337,43 +1369,6 @@
       "size": 23689
     },
     {
-      "path": "briefs/2026-06-16.md",
-      "frontmatter": {
-        "date": "2026-06-16T00:00:00.000Z",
-        "scan_time": "03:00",
-        "signals_total": 11,
-        "signals_notable": 8,
-        "signals_significant": 3,
-        "signals_breakthrough": 0,
-        "signals_filtered_noise": 2,
-        "signals_deduped": 0,
-        "nodes_updated": 7,
-        "node_status_changes": [],
-        "tags": [
-          "daily-brief"
-        ]
-      },
-      "wikilinks": [
-        "ai-policy-regulation",
-        "frontier-models",
-        "ai-business-funding",
-        "ai-infrastructure",
-        "compute-hardware",
-        "open-source-models",
-        "ai-coding-tools",
-        "ai-safety-alignment",
-        "ai-agents",
-        "ai-in-enterprise",
-        "ai-research-breakthroughs",
-        "multimodal-ai",
-        "ai-for-science"
-      ],
-      "tags": [
-        "daily-brief"
-      ],
-      "size": 29191
-    },
-    {
       "path": "force-dynamics.md",
       "frontmatter": {
         "name": "Force Dynamics — Propagation Graph",
@@ -1442,7 +1437,7 @@
         "trends",
         "predictions"
       ],
-      "size": 27120
+      "size": 28025
     },
     {
       "path": "bottleneck-map.md",
@@ -1973,7 +1968,7 @@
           "dashboard",
           "radar"
         ],
-        "last_updated": "2026-06-22T00:00:00.000Z"
+        "last_updated": "2026-06-23T00:00:00.000Z"
       },
       "wikilinks": [
         "frontier-models",
@@ -1999,14 +1994,14 @@
         "dashboard",
         "radar"
       ],
-      "size": 59847
+      "size": 63320
     },
     {
       "path": "index.md",
       "frontmatter": {
         "name": "Wiki Index",
         "description": "Content catalog of the AI Radar wiki — navigational entry point",
-        "last_updated": "2026-06-22T00:00:00.000Z",
+        "last_updated": "2026-06-23T00:00:00.000Z",
         "tags": [
           "index",
           "navigation"
@@ -2041,6 +2036,7 @@
         "xai",
         "apple",
         "entities/index",
+        "2026-06-23",
         "2026-06-22",
         "2026-06-21",
         "weekly/2026-W25",
@@ -2086,7 +2082,7 @@
         "index",
         "navigation"
       ],
-      "size": 6009
+      "size": 6118
     },
     {
       "path": "watchlist.md",

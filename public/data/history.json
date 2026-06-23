@@ -1,5 +1,24 @@
 [
   {
+    "date": "2026-06-23",
+    "signals": [
+      {
+        "title": "PP-OCRv6 — PaddlePaddle ships a 50-language OCR family at 1.5M–34.5M parameters** [[multimodal-ai]] [[open-source-models]] — PaddlePaddle released PP-OCRv6 on Hugging Face: optical character recognition across **50 languages** in sizes from **1.5M to 34.5M parameters",
+        "description": "small enough for CPU/edge/on-device document pipelines. → Lowers the cost floor for multilingual document AI (invoices, forms, ingestion) and pushes OCR toward  deployment. Open release, metrics not independently verified, confidence medium → notable. [Source: [HF/PaddlePaddle](https://huggingface.co/blog/PaddlePaddle/pp-ocrv6)]",
+        "significance": "notable",
+        "domains": [
+          "Edge & On-Device AI"
+        ],
+        "source": "https://huggingface.co/blog/PaddlePaddle/pp-ocrv6",
+        "practical": true,
+        "tags": [
+          "hugging face"
+        ],
+        "actionLine": "Lowers the cost floor for multilingual document AI (invoices, forms, ingestion) and pushes OCR toward  deployment."
+      }
+    ]
+  },
+  {
     "date": "2026-06-22",
     "signals": [
       {
@@ -72,29 +91,6 @@
           "glm-5.1"
         ],
         "actionLine": "**The first open-weight model to sit a single rung below the closed frontier on a customer-relevant coding leaderboard** — #2 behind closed Fable 5, *ahead* of closed Opus 4.7 Thinking — arriving one week after the June 13 US export-control suspension of Fable/Mythos for foreign nationals."
-      }
-    ]
-  },
-  {
-    "date": "2026-06-16",
-    "signals": [
-      {
-        "title": "Hydra Host closes $100M Series A — NeoCloud operating system enabling any data center globally to become a sovereign AI provider; present in ~20 countries with ~60 data centers + several billions in signed contracts; asset-light (no GPU purchasing)** [TBPN YouTube, June 16 — secondary; Hydra Host CEO Aaron Gin on camera, authority-1 within episode] — Hydra Host raised $100M Series A to expand its NeoCloud OS — a software layer that manages GPUs and allows any datacenter operator globally to position as a \"sovereign AI\" provider for national customers. **Asset-light model**: Hydra Host does not buy GPUs; it sells the operating system. Footprint: ~20 countries, ~60 data centers, \"several billions\" in signed contracts. Sovereign AI is named as the primary customer segment — nation-states prefer renting from local providers over having US companies build datacenters and supply infrastructure inside their borders. → This is the direct counterpart to the June 13 export-control event. While US frontier-lab models are now nationality-restricted, Hydra Host enables non-US nations to stand up sovereign compute infrastructure that runs *open* models (Qwen, Gemma, Llama, Cohere 30B-A3B, DiffusionGemma) — sidestepping the access restriction entirely by serving open weights on locally-controlled compute. Three structural implications: (1) **First public sovereign-AI-compute-OS at $100M+ scale",
-        "description": "analogous to AWS-for-sovereign-AI; (2) **Sovereign AI bull case acquires a concrete vendor** beyond the UK Sovereign AI Fund (June 11 enacted, ~£1B + Isambard) — Hydra Host serves the *international demand side* the UK fund proved exists; (3) **Multi-billion signed-contract claim** is the most concrete sovereign-AI revenue datapoint observed to date. Verify the multi-billion claim against named-customer announcements.",
-        "significance": "significant",
-        "domains": [
-          "AI Infrastructure",
-          "Compute & Hardware",
-          "AI Policy & Regulation",
-          "Open Source Models"
-        ],
-        "source": "",
-        "practical": true,
-        "tags": [
-          "cohere",
-          "qwen"
-        ],
-        "actionLine": "Verify the multi-billion claim against named-customer announcements."
       }
     ]
   }
