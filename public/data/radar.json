@@ -1,34 +1,52 @@
 {
-  "lastUpdated": "2026-06-23T08:10:28.483Z",
+  "lastUpdated": "2026-06-25T08:20:33.331Z",
   "brief": {
-    "date": "2026-06-23T00:00:00.000Z",
-    "scanTime": "08:03",
-    "signalsTotal": 3,
-    "signalsNotable": 3,
-    "signalsSignificant": 0,
+    "date": "2026-06-25T00:00:00.000Z",
+    "scanTime": "03:00",
+    "signalsTotal": 8,
+    "signalsNotable": 5,
+    "signalsSignificant": 3,
     "signalsBreakthrough": 0,
-    "nodesUpdated": 3,
+    "nodesUpdated": 8,
     "breakthrough": [],
-    "significant": [],
-    "notable": [
+    "significant": [
       {
-        "title": "PP-OCRv6 — PaddlePaddle ships a 50-language OCR family at 1.5M–34.5M parameters** [[multimodal-ai]] [[open-source-models]] — PaddlePaddle released PP-OCRv6 on Hugging Face: optical character recognition across **50 languages** in sizes from **1.5M to 34.5M parameters",
-        "description": "small enough for CPU/edge/on-device document pipelines. → Lowers the cost floor for multilingual document AI (invoices, forms, ingestion) and pushes OCR toward  deployment. Open release, metrics not independently verified, confidence medium → notable. [Source: [HF/PaddlePaddle](https://huggingface.co/blog/PaddlePaddle/pp-ocrv6)]",
+        "title": "Google ships computer use in Gemini 3.5 Flash — agentic GUI control in the fast/low-cost tier** [[ai-agents]] [[multimodal-ai]] [[ai-in-enterprise]] — Google introduced **computer use** (the model perceives a rendered screen and issues mouse/keyboard/browser actions to operate software UIs autonomously, rather than calling structured APIs) in **Gemini 3.5 Flash",
+        "description": "its *fast, low-cost* model tier, not the premium Pro/Ultra ceiling. Verified against `hackernews.db` (hn_id 48662999, posted 2026-06-24 17:21Z, 154 pts / 97 comments) → blog.google primary. → Computer use already exists across labs (Anthropic Computer Use, OpenAI Operator, prior Gemini); the new datapoint is *tier*. Shipping it in Flash drops the per-action cost of GUI-level automation — the economic blocker for long-tail RPA-style workloads that were uneconomical at premium-model prices. The captured source carries no reliability benchmark, so no  EDGE-02 move yet, but it is a cost-structure shift for agentic automation. [Source: [blog.google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/)]",
         "nodes": [
-          "edge-on-device-ai"
+          "frontier-edges"
         ],
-        "source": "https://huggingface.co/blog/PaddlePaddle/pp-ocrv6",
+        "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
         "nodeNames": [
-          "Edge & On-Device AI"
+          "Frontier Edges"
         ],
         "view": "builder",
         "practical": true,
         "tags": [
-          "hugging face"
+          "anthropic",
+          "openai",
+          "google",
+          "gemini 3.5"
         ],
-        "actionLine": "Lowers the cost floor for multilingual document AI (invoices, forms, ingestion) and pushes OCR toward  deployment."
+        "actionLine": "blog.google primary."
+      },
+      {
+        "title": "Krea 2 — SOTA open-weights 12B image model, weights + full technical report released** [[multimodal-ai]] [[open-source-models]] — Krea released the **weights** and a technical report for **Krea 2",
+        "description": "a **12B-parameter** text-to-image model — in two variants, **Krea 2 Turbo** (8-step fast generation) and **Krea 2 RAW**. The report covers data curation/captioning, architecture, post-training, RL pipelines, prompt expansion, style references, and serving infrastructure. Community testing put it ahead on ~6 of 15 head-to-head tests vs. Ideogram 4, Nano Banana 2, Images 2.0, and Qwen 3 VL. Verified against `hackernews.db` (hn_id 48646659, 326 pts / 35 comments, 2026-06-23 15:31Z) → krea.ai primary. → An *image-gen company* (not a research lab) open-weighting a 12B frontier-class image model *with* a full recipe is a meaningful open-weights drop in a category where the leaders (Midjourney, Imagen/Nano Banana, Ideogram) are closed. The mixed head-to-head (6/15) keeps it short of breakthrough, but weights + a detailed report lower the floor for open image generation — the image-gen analog of GLM-5.2's open coding parity. [Source: [krea.ai](https://www.krea.ai/blog/krea-2-technical-report)]",
+        "nodes": [],
+        "source": "https://www.krea.ai/blog/krea-2-technical-report",
+        "nodeNames": [],
+        "view": "both",
+        "practical": true,
+        "tags": [
+          "training",
+          "qwen",
+          "glm-5.2"
+        ],
+        "actionLine": "krea.ai primary."
       }
-    ]
+    ],
+    "notable": []
   },
   "forceChains": [
     {
@@ -645,6 +663,11 @@
           "description": "Spectral-AI: RT cores for O(log N) MoE routing — 48-89x faster, 731x VRAM reduction, runs on consumer RTX",
           "origin": "compute-hardware",
           "strength": "strong"
+        },
+        {
+          "description": "OpenAI + Broadcom \"Jalapeño\" — a frontier lab's own from-scratch LLM-inference ASIC in production (June 24)",
+          "origin": "compute-hardware",
+          "strength": "moderate"
         }
       ],
       "invalidation": "Memory compression techniques turn out to have hidden quality costs at scale. Alternative CPU architectures fail to deliver claimed performance in production. Demand growth outpaces cost reduction (Jevons Paradox) so fast that per-agent costs don't actually fall."
@@ -1149,7 +1172,7 @@
       "name": "AI Agents & Autonomy",
       "status": "accelerating",
       "currentState": "> **Mutable — rewrites freely as signals arrive. Reflects last ~30 days.**",
-      "lastUpdated": "2026-06-19T00:00:00.000Z"
+      "lastUpdated": "2026-06-25T00:00:00.000Z"
     },
     {
       "id": "ai-business-funding",
@@ -1163,7 +1186,7 @@
       "name": "AI Coding Tools",
       "status": "accelerating",
       "currentState": "AI coding tools are entering an expansion phase driven by three trends: deeper tool integration, new entrants, and methodology formalization. Claude Code v2.1.76-79 shipped 64K/128K output tokens with 45% faster resume, pushing CLI agent capability forward. The official ChromeDevTools MCP server (30K+ stars) and Anthropic's Claude Plugins Directory signal a maturing plugin ecosystem. QwenLM's qwen-code terminal agent (20K+ stars) shows Chinese labs entering the coding tools space directly.",
-      "lastUpdated": "2026-06-23T00:00:00.000Z"
+      "lastUpdated": "2026-06-25T00:00:00.000Z"
     },
     {
       "id": "ai-for-science",
@@ -1184,7 +1207,7 @@
       "name": "AI Infrastructure",
       "status": "accelerating",
       "currentState": "The binding constraint has shifted from GPU supply to physical infrastructure: data center capacity is constrained through late 2028/early 2029 — power grid interconnect approvals (12-24 months) are now the bottleneck, not silicon (a16z, May 30). A concurrent memory shock is materializing: DRAM is 50% under-supplied with prices forecast 4-5× over 12 months (May 8), directly hitting KV-cache-heavy long-context workloads. Dedicated inference silicon is now validated infrastructure: Cerebras IPO at...",
-      "lastUpdated": "2026-06-19T00:00:00.000Z"
+      "lastUpdated": "2026-06-25T00:00:00.000Z"
     },
     {
       "id": "ai-policy-regulation",
@@ -1212,7 +1235,7 @@
       "name": "Compute & Hardware",
       "status": "accelerating",
       "currentState": "NVIDIA's GTC 2026 reshaped the compute landscape. The Vera Rubin platform delivers 10x perf/watt with a 7-chip architecture, backed by $1T in orders, with the Feynman generation already on the 2028 roadmap. NVIDIA also unveiled standalone Vera CPUs in 256-chip liquid-cooled rack configurations, signaling a push beyond GPUs into full data-center compute. The $20B Groq acquisition brought the Groq 3 LPU into NVIDIA's portfolio — at 35x tokens/watt, it represents a step-change in inference efficien...",
-      "lastUpdated": "2026-06-02T00:00:00.000Z"
+      "lastUpdated": "2026-06-25T00:00:00.000Z"
     },
     {
       "id": "edge-on-device-ai",
@@ -1233,28 +1256,28 @@
       "name": "Frontier Models",
       "status": "accelerating",
       "currentState": "The frontier model landscape as of late March 2026 is being reshaped by a dramatic user migration and intensifying multi-lab competition. The #QuitGPT movement — a coordinated wave of 2.5M users abandoning ChatGPT — pushed Anthropic's Claude to #1 on the App Store with a reported 70% enterprise win rate (meaning Claude is chosen over competitors in 7 out of 10 enterprise evaluation processes). This is the first time OpenAI has lost its dominant distribution position, and it signals that model qu...",
-      "lastUpdated": "2026-06-17T00:00:00.000Z"
+      "lastUpdated": "2026-06-25T00:00:00.000Z"
     },
     {
       "id": "multimodal-ai",
       "name": "Multimodal AI",
       "status": "accelerating",
       "currentState": "Multimodal AI — models that process and generate text, images, audio, video, and 3D — has become the default rather than the exception. All frontier models now accept multiple input types. Video generation hit a major inflection point: OpenAI shut down Sora after just 6 months (downloads fell from 3.3M to 1.1M) and terminated a $1B Disney licensing deal, redirecting compute to core LLM products. This is the first major product death from a frontier lab and signals that standalone AI video genera...",
-      "lastUpdated": "2026-06-23T00:00:00.000Z"
+      "lastUpdated": "2026-06-25T00:00:00.000Z"
     },
     {
       "id": "open-source-models",
       "name": "Open Source Models",
       "status": "accelerating",
       "currentState": "Open source AI is accelerating on multiple fronts simultaneously, with a new development that directly threatens the commercial voice AI market: Mistral's Voxtral (3B parameters, 90ms latency, open-weight) outperforms ElevenLabs in human preference evaluations 63% of the time. This follows the earlier Qwen3-TTS pattern — open-source TTS is now production-quality and free to deploy. Alibaba's Qwen 3.5-Omni brings open-source multimodal AI (text + image + audio + video in one model) to the open-we...",
-      "lastUpdated": "2026-06-17T00:00:00.000Z"
+      "lastUpdated": "2026-06-25T00:00:00.000Z"
     },
     {
       "id": "robotics-embodied-ai",
       "name": "Robotics & Embodied AI",
       "status": "accelerating",
       "currentState": "Robotics is experiencing a renaissance driven by foundation models and massive investment. Humanoid robots (Figure, Tesla Optimus, 1X, Unitree) are advancing from demos to early deployments. The key enabler: vision-language-action (VLA) models that allow robots to understand natural language instructions and generalize across tasks.",
-      "lastUpdated": "2026-06-19T00:00:00.000Z"
+      "lastUpdated": "2026-06-25T00:00:00.000Z"
     }
   ],
   "nodeNames": {
@@ -1288,43 +1311,9 @@
     "xAI": "entities/xai.md"
   },
   "ripples": {
-    "significant": {},
-    "notable": {
+    "significant": {
       "0": {
-        "chains": [
-          {
-            "title": "TurboQuant Memory Compression Reshapes Hardware Economics",
-            "mechanism": "KV-cache memory is the bottleneck for long-context inference — it grows linearly with context length. 6x compression at zero accuracy loss means the same GPU can serve 6x more concurrent users or handle 6x longer contexts. This directly reduces the memory hardware needed per inference query, which t...",
-            "direction": "disrupting (memory hardware demand) / enabling (edge AI, long-context)",
-            "strength": "strong",
-            "targets": [
-              "Compute & Hardware",
-              "AI Infrastructure",
-              "Edge & On-Device AI"
-            ]
-          },
-          {
-            "title": "Sub-15B Active Parameter Models at Frontier Agent Capability",
-            "mechanism": "Two open models shipping on the same day achieving frontier-competitive agent performance with <15B active parameters means production-quality agents can run on workstations, bypassing API costs and data-residency concerns. Accelerates enterprise agent adoption in regulated industries.",
-            "direction": "enabling",
-            "strength": "strong",
-            "targets": [
-              "AI in Enterprise",
-              "AI Agents",
-              "Edge & On-Device AI"
-            ]
-          },
-          {
-            "title": "Alibaba Revenue Pivot Threatens Open-Source Model Ecosystem",
-            "mechanism": "Qwen models (3.5, 3.6 series) are among the most-used open-weight models globally. If Alibaba restricts future releases, thousands of companies and developers who built on free Qwen weights face dependency risk. Enterprise deployments using Qwen fine-tunes would need to migrate. Local LLM community ...",
-            "direction": "constraining (open-source), enabling (Google/Meta leverage)",
-            "strength": "moderate",
-            "targets": [
-              "AI in Enterprise",
-              "Edge & On-Device AI"
-            ]
-          }
-        ],
+        "chains": [],
         "convergences": [
           {
             "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
@@ -1333,26 +1322,57 @@
             "timeline": "Q3-Q4 2026"
           },
           {
-            "title": "Sovereign AI Infrastructure Becomes a Distinct Venture-Scale Category by Q4 2026",
-            "confidence": "forming (65%)",
-            "predictedOutcome": "Sovereign AI — non-US nations and enterprises standing up locally-controlled compute running open-weight models, independent of US frontier-lab access — consolidates into a distinct, venture-scale inf...",
+            "title": "AI IPO Wave Creates Public Market Investment Window in H2 2026",
+            "confidence": "imminent",
+            "predictedOutcome": "At least 3 major AI companies (from: Anthropic, OpenAI, Shield AI, Anduril, Databricks, Scale AI) will file for IPO in H2 2026, creating a concentrated public market entry window for AI-focused invest...",
+            "timeline": "Q2-Q3 2026 (accelerated from Q3-Q4)"
+          }
+        ],
+        "bottlenecks": [],
+        "predictions": [
+          {
+            "title": "Anthropic Files for IPO by End of 2026 ✓ RESOLVED CORRECT",
+            "confidence": "",
+            "checkDate": "2027-01-15 (resolved early: 2026-06-01)"
+          },
+          {
+            "title": "Apple Announces Multi-Model Siri at WWDC June 2026 ◐ RESOLVED PARTIALLY CORRECT",
+            "confidence": "",
+            "checkDate": "2026-06-15 (resolved on date)"
+          }
+        ]
+      },
+      "1": {
+        "chains": [],
+        "convergences": [
+          {
+            "title": "Defense AI Becomes a Standalone Public Market Category by Mid-2027",
+            "confidence": "detected",
+            "predictedOutcome": "At least one defense-focused AI company (Shield AI, Anduril, or similar) will IPO at a $15B+ valuation by mid-2027, establishing defense AI as a distinct investable category separate from general AI o...",
+            "timeline": "Q1-Q2 2027"
+          },
+          {
+            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
+            "confidence": "imminent",
+            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
             "timeline": "Q3-Q4 2026"
           }
         ],
         "bottlenecks": [],
         "predictions": [
           {
+            "title": "Apple Announces Multi-Model Siri at WWDC June 2026 ◐ RESOLVED PARTIALLY CORRECT",
+            "confidence": "",
+            "checkDate": "2026-06-15 (resolved on date)"
+          },
+          {
             "title": "Inference Cost (Per 1M Tokens, Frontier Models) Drops 5x+ by End of 2026",
             "confidence": "75%",
             "checkDate": "2027-01-15"
-          },
-          {
-            "title": "An Open-Weight Model Reaches #1 on a Major Customer-Relevant Code Leaderboard by Q4 2026",
-            "confidence": "60%",
-            "checkDate": "2027-01-05"
           }
         ]
       }
-    }
+    },
+    "notable": {}
   }
 }
