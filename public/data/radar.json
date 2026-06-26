@@ -1,52 +1,30 @@
 {
-  "lastUpdated": "2026-06-25T08:20:33.331Z",
+  "lastUpdated": "2026-06-26T08:07:31.070Z",
   "brief": {
-    "date": "2026-06-25T00:00:00.000Z",
+    "date": "2026-06-26T00:00:00.000Z",
     "scanTime": "03:00",
-    "signalsTotal": 8,
-    "signalsNotable": 5,
-    "signalsSignificant": 3,
+    "signalsTotal": 2,
+    "signalsNotable": 2,
+    "signalsSignificant": 0,
     "signalsBreakthrough": 0,
-    "nodesUpdated": 8,
+    "nodesUpdated": 2,
     "breakthrough": [],
-    "significant": [
+    "significant": [],
+    "notable": [
       {
-        "title": "Google ships computer use in Gemini 3.5 Flash — agentic GUI control in the fast/low-cost tier** [[ai-agents]] [[multimodal-ai]] [[ai-in-enterprise]] — Google introduced **computer use** (the model perceives a rendered screen and issues mouse/keyboard/browser actions to operate software UIs autonomously, rather than calling structured APIs) in **Gemini 3.5 Flash",
-        "description": "its *fast, low-cost* model tier, not the premium Pro/Ultra ceiling. Verified against `hackernews.db` (hn_id 48662999, posted 2026-06-24 17:21Z, 154 pts / 97 comments) → blog.google primary. → Computer use already exists across labs (Anthropic Computer Use, OpenAI Operator, prior Gemini); the new datapoint is *tier*. Shipping it in Flash drops the per-action cost of GUI-level automation — the economic blocker for long-tail RPA-style workloads that were uneconomical at premium-model prices. The captured source carries no reliability benchmark, so no  EDGE-02 move yet, but it is a cost-structure shift for agentic automation. [Source: [blog.google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/)]",
-        "nodes": [
-          "frontier-edges"
-        ],
-        "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
-        "nodeNames": [
-          "Frontier Edges"
-        ],
-        "view": "builder",
-        "practical": true,
-        "tags": [
-          "anthropic",
-          "openai",
-          "google",
-          "gemini 3.5"
-        ],
-        "actionLine": "blog.google primary."
-      },
-      {
-        "title": "Krea 2 — SOTA open-weights 12B image model, weights + full technical report released** [[multimodal-ai]] [[open-source-models]] — Krea released the **weights** and a technical report for **Krea 2",
-        "description": "a **12B-parameter** text-to-image model — in two variants, **Krea 2 Turbo** (8-step fast generation) and **Krea 2 RAW**. The report covers data curation/captioning, architecture, post-training, RL pipelines, prompt expansion, style references, and serving infrastructure. Community testing put it ahead on ~6 of 15 head-to-head tests vs. Ideogram 4, Nano Banana 2, Images 2.0, and Qwen 3 VL. Verified against `hackernews.db` (hn_id 48646659, 326 pts / 35 comments, 2026-06-23 15:31Z) → krea.ai primary. → An *image-gen company* (not a research lab) open-weighting a 12B frontier-class image model *with* a full recipe is a meaningful open-weights drop in a category where the leaders (Midjourney, Imagen/Nano Banana, Ideogram) are closed. The mixed head-to-head (6/15) keeps it short of breakthrough, but weights + a detailed report lower the floor for open image generation — the image-gen analog of GLM-5.2's open coding parity. [Source: [krea.ai](https://www.krea.ai/blog/krea-2-technical-report)]",
+        "title": "Legal-AI practitioner (Zack Shapiro): Claude is \"the best LLM for law\"; prompt-first → custom Claude skills deployed at two AmLaw 50 firms** [[ai-in-enterprise]] [[ai-coding-tools]] [[frontier-models]] — Zack Shapiro, a lawyer building legal-AI workflows, says Claude is \"really really excellent at law\" and that the differentiator is **prompting",
+        "description": "\"you don't need a different harness. It is the prompt you give it.\" His two-step method: (1) get good at prompting (detailed, specific output specs); (2) once enough prompt history accumulates, point Claude back at those prompts and have it build **custom skills/plugins/workflows** that automate the lawyer's patterns. He reports ~2 months working with **two AmLaw 50 law firms** translating lawyer tasks into AI workflows, and in his own boutique practice uses the Claude app's voice mode (3–4 minutes of free-association) to produce first drafts instead of **4–6 hours/day in Microsoft Word**. → A concrete top-of-market (AmLaw 50) vertical-legal-AI adoption datapoint, and a clean example of the \"prompts → Skills\" productization path: the durable artifact is the accumulated domain-prompt corpus turned into reusable skills, not a bespoke harness or fine-tune. Single secondary (podcast) → notable. [Source: [mtsituation](youtube:woy8IpPAdjA)]",
         "nodes": [],
-        "source": "https://www.krea.ai/blog/krea-2-technical-report",
+        "source": "youtube:woy8IpPAdjA",
         "nodeNames": [],
         "view": "both",
         "practical": true,
         "tags": [
-          "training",
-          "qwen",
-          "glm-5.2"
+          "microsoft"
         ],
-        "actionLine": "krea.ai primary."
+        "actionLine": "A concrete top-of-market (AmLaw 50) vertical-legal-AI adoption datapoint, and a clean example of the \"prompts → Skills\" productization path: the durable artifact is the accumulated domain-prompt corpus turned into reusable skills, not a bespoke harness or fine-tune."
       }
-    ],
-    "notable": []
+    ]
   },
   "forceChains": [
     {
@@ -1200,7 +1178,7 @@
       "name": "AI in Enterprise",
       "status": "accelerating",
       "currentState": "Enterprise AI adoption is in the \"deployment at scale\" phase. Most large enterprises have moved past POC/experimentation and are deploying AI in production workflows. The dominant patterns: customer service automation, internal knowledge/search, document processing, code assistance, and data analysis.",
-      "lastUpdated": "2026-06-04T00:00:00.000Z"
+      "lastUpdated": "2026-06-26T00:00:00.000Z"
     },
     {
       "id": "ai-infrastructure",
@@ -1311,7 +1289,8 @@
     "xAI": "entities/xai.md"
   },
   "ripples": {
-    "significant": {
+    "significant": {},
+    "notable": {
       "0": {
         "chains": [],
         "convergences": [
@@ -1322,57 +1301,26 @@
             "timeline": "Q3-Q4 2026"
           },
           {
-            "title": "AI IPO Wave Creates Public Market Investment Window in H2 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "At least 3 major AI companies (from: Anthropic, OpenAI, Shield AI, Anduril, Databricks, Scale AI) will file for IPO in H2 2026, creating a concentrated public market entry window for AI-focused invest...",
-            "timeline": "Q2-Q3 2026 (accelerated from Q3-Q4)"
-          }
-        ],
-        "bottlenecks": [],
-        "predictions": [
-          {
-            "title": "Anthropic Files for IPO by End of 2026 ✓ RESOLVED CORRECT",
-            "confidence": "",
-            "checkDate": "2027-01-15 (resolved early: 2026-06-01)"
-          },
-          {
-            "title": "Apple Announces Multi-Model Siri at WWDC June 2026 ◐ RESOLVED PARTIALLY CORRECT",
-            "confidence": "",
-            "checkDate": "2026-06-15 (resolved on date)"
-          }
-        ]
-      },
-      "1": {
-        "chains": [],
-        "convergences": [
-          {
-            "title": "Defense AI Becomes a Standalone Public Market Category by Mid-2027",
-            "confidence": "detected",
-            "predictedOutcome": "At least one defense-focused AI company (Shield AI, Anduril, or similar) will IPO at a $15B+ valuation by mid-2027, establishing defense AI as a distinct investable category separate from general AI o...",
-            "timeline": "Q1-Q2 2027"
-          },
-          {
-            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
+            "title": "Sovereign AI Infrastructure Becomes a Distinct Venture-Scale Category by Q4 2026",
+            "confidence": "forming (65%)",
+            "predictedOutcome": "Sovereign AI — non-US nations and enterprises standing up locally-controlled compute running open-weight models, independent of US frontier-lab access — consolidates into a distinct, venture-scale inf...",
             "timeline": "Q3-Q4 2026"
           }
         ],
         "bottlenecks": [],
         "predictions": [
           {
-            "title": "Apple Announces Multi-Model Siri at WWDC June 2026 ◐ RESOLVED PARTIALLY CORRECT",
-            "confidence": "",
-            "checkDate": "2026-06-15 (resolved on date)"
-          },
-          {
             "title": "Inference Cost (Per 1M Tokens, Frontier Models) Drops 5x+ by End of 2026",
             "confidence": "75%",
             "checkDate": "2027-01-15"
+          },
+          {
+            "title": "At Least One State AI Law Faces Legal Challenge Within 6 Months",
+            "confidence": "65%",
+            "checkDate": "2026-10-14"
           }
         ]
       }
-    },
-    "notable": {}
+    }
   }
 }
