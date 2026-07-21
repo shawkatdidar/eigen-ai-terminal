@@ -1,31 +1,15 @@
 {
-  "lastUpdated": "2026-07-20T08:25:57.805Z",
+  "lastUpdated": "2026-07-21T08:12:03.291Z",
   "brief": {
-    "date": "2026-07-20T00:00:00.000Z",
+    "date": "2026-07-21T00:00:00.000Z",
     "scanTime": "08:00",
-    "signalsTotal": 32,
-    "signalsNotable": 23,
-    "signalsSignificant": 7,
-    "signalsBreakthrough": 2,
-    "nodesUpdated": 14,
+    "signalsTotal": 7,
+    "signalsNotable": 8,
+    "signalsSignificant": 0,
+    "signalsBreakthrough": 0,
+    "nodesUpdated": 5,
     "breakthrough": [],
-    "significant": [
-      {
-        "title": "Moonshot AI suspends new subscriptions due to Kimi K3 demand",
-        "description": "See Breakthrough above; listed again here for the  angle: a hard capacity ceiling hit three days post-release is a rare demand-outstrips-supply signal in a market usually characterized by overcapacity. [Source: [x.com/kimi_moonshot](https://twitter.com/kimi_moonshot/status/2078855608565207130), event 2026-07-19]",
-        "nodes": [
-          "ai-business-funding"
-        ],
-        "source": "https://twitter.com/kimi_moonshot/status/2078855608565207130",
-        "nodeNames": [
-          "AI Business & Funding"
-        ],
-        "view": "strategic",
-        "practical": false,
-        "tags": [],
-        "actionLine": "[Source: [x.com/kimi_moonshot](https://twitter.com/kimi_moonshot/status/2078855608565207130), event 2026-07-19]"
-      }
-    ],
+    "significant": [],
     "notable": []
   },
   "forceChains": [
@@ -1173,14 +1157,14 @@
       "name": "AI for Science",
       "status": "accelerating",
       "currentState": "AI's impact on scientific research continues to deepen following AlphaFold's breakthrough. Protein structure prediction is now routine; the frontier has moved to protein design, drug-target interaction, and de novo molecule generation. Materials science uses AI for novel material discovery. Mathematics saw AI-assisted proof advances.",
-      "lastUpdated": "2026-07-20T00:00:00.000Z"
+      "lastUpdated": "2026-07-21T00:00:00.000Z"
     },
     {
       "id": "ai-in-enterprise",
       "name": "AI in Enterprise",
       "status": "accelerating",
       "currentState": "Enterprise AI adoption is in the \"deployment at scale\" phase. Most large enterprises have moved past POC/experimentation and are deploying AI in production workflows. The dominant patterns: customer service automation, internal knowledge/search, document processing, code assistance, and data analysis.",
-      "lastUpdated": "2026-07-20T00:00:00.000Z"
+      "lastUpdated": "2026-07-21T00:00:00.000Z"
     },
     {
       "id": "ai-infrastructure",
@@ -1207,8 +1191,8 @@
       "id": "ai-safety-alignment",
       "name": "AI Safety & Alignment",
       "status": "accelerating",
-      "currentState": "AI safety has moved from academic concern to urgent operational crisis on two fronts. First, agent security vulnerabilities remain the top concern: OpenClaw has accumulated 7+ CVEs, Bitdefender reports 20% of ClawHub skills are malicious, Flowise has a CVSS 10.0 RCE being actively exploited across 15K exposed instances, and AI agent non-human identities are fueling ransomware attacks.",
-      "lastUpdated": "2026-07-20T00:00:00.000Z"
+      "currentState": "_Distilled 2026-07-21 (Phase 10, covering June–July 2026). The March-era agent-security-crisis material below is condensed rather than dropped — no signal in the last 60 days has contradicted it, but none has revisited it either, so it's demoted from lead narrative to background context pending fresh evidence._",
+      "lastUpdated": "2026-07-21T00:00:00.000Z"
     },
     {
       "id": "compute-hardware",
@@ -1235,8 +1219,8 @@
       "id": "frontier-models",
       "name": "Frontier Models",
       "status": "accelerating",
-      "currentState": "The frontier model landscape as of late March 2026 is being reshaped by a dramatic user migration and intensifying multi-lab competition. The #QuitGPT movement — a coordinated wave of 2.5M users abandoning ChatGPT — pushed Anthropic's Claude to #1 on the App Store with a reported 70% enterprise win rate (meaning Claude is chosen over competitors in 7 out of 10 enterprise evaluation processes). This is the first time OpenAI has lost its dominant distribution position, and it signals that model qu...",
-      "lastUpdated": "2026-07-20T00:00:00.000Z"
+      "currentState": "_Distilled 2026-07-21 (Phase 10, covering April–July 2026). The March 2026 baseline narrative (#QuitGPT migration outcome, Grok 4.20's four-agent architecture, OpenAI's PE-fundraising structure, Apple's \"multi-model Siri\" framing) is dropped as superseded — see \"No longer supported\" below for what changed and why._",
+      "lastUpdated": "2026-07-21T00:00:00.000Z"
     },
     {
       "id": "multimodal-ai",
@@ -1257,7 +1241,7 @@
       "name": "Robotics & Embodied AI",
       "status": "accelerating",
       "currentState": "Robotics is experiencing a renaissance driven by foundation models and massive investment. Humanoid robots (Figure, Tesla Optimus, 1X, Unitree) are advancing from demos to early deployments. The key enabler: vision-language-action (VLA) models that allow robots to understand natural language instructions and generalize across tasks.",
-      "lastUpdated": "2026-06-25T00:00:00.000Z"
+      "lastUpdated": "2026-07-21T00:00:00.000Z"
     }
   ],
   "nodeNames": {
@@ -1293,65 +1277,7 @@
     "xAI": "entities/xai.md"
   },
   "ripples": {
-    "significant": {
-      "0": {
-        "chains": [
-          {
-            "title": "Waymo Scale Validates Robotaxi Economics → Accelerates Competitor Capital",
-            "mechanism": "500,000 weekly paid rides is the first concrete data point proving that autonomous vehicle demand at scale is real and growing — not a niche or a demo. Because Waymo's ride volume is now publicly known, every mobility investor, competitor (Zoox/Amazon, Uber, Pony AI), and regulator now has a validat...",
-            "direction": "accelerating",
-            "strength": "moderate",
-            "targets": [
-              "AI Business & Funding",
-              "Compute & Hardware",
-              "AI Policy & Regulation"
-            ]
-          },
-          {
-            "title": "AI Coding Tool Price War Compresses Sector Margins",
-            "mechanism": "Three major AI coding tools competing simultaneously on price and features. Cursor at $2B ARR but rebuilt as agent platform. OpenAI drops ChatGPT Business 20% and introduces zero-fixed-cost Codex seats. Claude Code holds majority share. The market is large enough for all three, but margin pressure m...",
-            "direction": "accelerating (enterprise adoption) / constraining (startup margins)",
-            "strength": "moderate",
-            "targets": [
-              "AI Business & Funding",
-              "AI in Enterprise"
-            ]
-          },
-          {
-            "title": "Anthropic $30B Revenue + 3.5GW TPU Deal Accelerates Power Bottleneck",
-            "mechanism": "3.5GW of TPU demand from a single customer creates $21-42B/year revenue for Broadcom, incentivizing massive ASIC investment. Combined with Terafab, existing NVIDIA GPU orders, and Meta/Microsoft/Oracle megaprojects, total AI compute demand is approaching the limits of US power grid capacity in key r...",
-            "direction": "accelerating (compute investment) / hardening (power constraint)",
-            "strength": "strong",
-            "targets": [
-              "Compute & Hardware",
-              "AI Policy & Regulation"
-            ]
-          }
-        ],
-        "convergences": [
-          {
-            "title": "Defense AI Becomes a Standalone Public Market Category by Mid-2027",
-            "confidence": "detected",
-            "predictedOutcome": "At least one defense-focused AI company (Shield AI, Anduril, or similar) will IPO at a $15B+ valuation by mid-2027, establishing defense AI as a distinct investable category separate from general AI o...",
-            "timeline": "Q1-Q2 2027"
-          },
-          {
-            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
-            "timeline": "Q3-Q4 2026"
-          }
-        ],
-        "bottlenecks": [],
-        "predictions": [
-          {
-            "title": "AI-Accelerated Pre-Training Explicitly Adopted at 3+ Frontier Labs by Q4 2026",
-            "confidence": "72%",
-            "checkDate": "2027-01-15"
-          }
-        ]
-      }
-    },
+    "significant": {},
     "notable": {}
   }
 }
