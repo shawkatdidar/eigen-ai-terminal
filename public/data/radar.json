@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-07-22T08:13:33.272Z",
+  "lastUpdated": "2026-07-23T08:05:40.579Z",
   "brief": {
-    "date": "2026-07-22T00:00:00.000Z",
+    "date": "2026-07-23T00:00:00.000Z",
     "scanTime": "08:00",
-    "signalsTotal": 16,
-    "signalsNotable": 7,
-    "signalsSignificant": 6,
+    "signalsTotal": 7,
+    "signalsNotable": 3,
+    "signalsSignificant": 2,
     "signalsBreakthrough": 0,
-    "nodesUpdated": 11,
+    "nodesUpdated": 4,
     "breakthrough": [],
     "significant": [],
     "notable": []
@@ -1164,14 +1164,14 @@
       "name": "AI in Enterprise",
       "status": "accelerating",
       "currentState": "Enterprise AI adoption is in the \"deployment at scale\" phase. Most large enterprises have moved past POC/experimentation and are deploying AI in production workflows. The dominant patterns: customer service automation, internal knowledge/search, document processing, code assistance, and data analysis.",
-      "lastUpdated": "2026-07-22T00:00:00.000Z"
+      "lastUpdated": "2026-07-23T00:00:00.000Z"
     },
     {
       "id": "ai-infrastructure",
       "name": "AI Infrastructure",
       "status": "accelerating",
       "currentState": "The binding constraint has shifted from GPU supply to physical infrastructure: data center capacity is constrained through late 2028/early 2029 — power grid interconnect approvals (12-24 months) are now the bottleneck, not silicon (a16z, May 30). A concurrent memory shock is materializing: DRAM is 50% under-supplied with prices forecast 4-5× over 12 months (May 8), directly hitting KV-cache-heavy long-context workloads. Dedicated inference silicon is now validated infrastructure: Cerebras IPO at...",
-      "lastUpdated": "2026-07-22T00:00:00.000Z"
+      "lastUpdated": "2026-07-23T00:00:00.000Z"
     },
     {
       "id": "ai-policy-regulation",
@@ -1206,7 +1206,7 @@
       "name": "Edge & On-Device AI",
       "status": "accelerating",
       "currentState": "Running AI locally — on phones, laptops, and edge devices — has gone from hobbyist to mainstream. Apple Intelligence runs on-device for iPhone/Mac. Samsung and Google embed AI into their devices. NVIDIA DGX Spark ($4,699) makes local inference of 200B-parameter models possible on a desktop device.",
-      "lastUpdated": "2026-07-20T00:00:00.000Z"
+      "lastUpdated": "2026-07-23T00:00:00.000Z"
     },
     {
       "id": "frontier-edges",
@@ -1241,7 +1241,7 @@
       "name": "Robotics & Embodied AI",
       "status": "accelerating",
       "currentState": "Robotics is experiencing a renaissance driven by foundation models and massive investment. Humanoid robots (Figure, Tesla Optimus, 1X, Unitree) are advancing from demos to early deployments. The key enabler: vision-language-action (VLA) models that allow robots to understand natural language instructions and generalize across tasks.",
-      "lastUpdated": "2026-07-22T00:00:00.000Z"
+      "lastUpdated": "2026-07-23T00:00:00.000Z"
     }
   ],
   "nodeNames": {
