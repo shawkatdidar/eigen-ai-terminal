@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-07-26T08:05:31.541Z",
+  "lastUpdated": "2026-07-27T08:06:14.985Z",
   "brief": {
-    "date": "2026-07-26T00:00:00.000Z",
+    "date": "2026-07-27T00:00:00.000Z",
     "scanTime": "08:00",
-    "signalsTotal": 3,
-    "signalsNotable": 2,
+    "signalsTotal": 2,
+    "signalsNotable": 1,
     "signalsSignificant": 0,
     "signalsBreakthrough": 0,
     "nodesUpdated": 1,
@@ -1143,15 +1143,15 @@
       "id": "ai-business-funding",
       "name": "AI Business & Funding",
       "status": "accelerating",
-      "currentState": "The AI IPO wave crossed its first definitive threshold: **Anthropic filed a confidential S-1 draft with the SEC on June 1, 2026** (primary source: @AnthropicAI official tweet), confirming the IPO path that had been reported for months. SpaceX S1 filed ($1.75T valuation, May 22); Cerebras IPO closed at $95B (+68% above issue); Anthropic reportedly raising $65B Series H at ~$965B [UNVERIFIED]. Anthropic is consolidating its position: acquired Stainless API (internalizing all SDK/MCP tooling, May 1...",
-      "lastUpdated": "2026-07-22T00:00:00.000Z"
+      "currentState": "_Distilled 2026-07-27 (Phase 10, covering May–July 2026)._",
+      "lastUpdated": "2026-07-27T00:00:00.000Z"
     },
     {
       "id": "ai-coding-tools",
       "name": "AI Coding Tools",
       "status": "accelerating",
       "currentState": "AI coding tools are entering an expansion phase driven by three trends: deeper tool integration, new entrants, and methodology formalization. Claude Code v2.1.76-79 shipped 64K/128K output tokens with 45% faster resume, pushing CLI agent capability forward. The official ChromeDevTools MCP server (30K+ stars) and Anthropic's Claude Plugins Directory signal a maturing plugin ecosystem. QwenLM's qwen-code terminal agent (20K+ stars) shows Chinese labs entering the coding tools space directly.",
-      "lastUpdated": "2026-07-24T00:00:00.000Z"
+      "lastUpdated": "2026-07-27T00:00:00.000Z"
     },
     {
       "id": "ai-for-science",
@@ -1241,8 +1241,8 @@
       "id": "robotics-embodied-ai",
       "name": "Robotics & Embodied AI",
       "status": "accelerating",
-      "currentState": "Robotics is experiencing a renaissance driven by foundation models and massive investment. Humanoid robots (Figure, Tesla Optimus, 1X, Unitree) are advancing from demos to early deployments. The key enabler: vision-language-action (VLA) models that allow robots to understand natural language instructions and generalize across tasks.",
-      "lastUpdated": "2026-07-25T00:00:00.000Z"
+      "currentState": "_Distilled 2026-07-27 (Phase 10, covering July 2026). The March baseline below is condensed to background — still directionally accurate, but July's signals are specific enough to warrant a dedicated synthesis rather than folding into the generic renaissance framing._",
+      "lastUpdated": "2026-07-27T00:00:00.000Z"
     }
   ],
   "nodeNames": {
