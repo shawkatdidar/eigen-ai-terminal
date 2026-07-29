@@ -1,34 +1,16 @@
 {
-  "lastUpdated": "2026-07-28T08:15:45.231Z",
+  "lastUpdated": "2026-07-29T08:11:34.175Z",
   "brief": {
-    "date": "2026-07-28T00:00:00.000Z",
+    "date": "2026-07-29T00:00:00.000Z",
     "scanTime": "08:00",
-    "signalsTotal": 11,
-    "signalsNotable": 9,
+    "signalsTotal": 7,
+    "signalsNotable": 6,
     "signalsSignificant": 1,
-    "signalsBreakthrough": 1,
-    "nodesUpdated": 8,
+    "signalsBreakthrough": 0,
+    "nodesUpdated": 6,
     "breakthrough": [],
     "significant": [],
-    "notable": [
-      {
-        "title": "OpenAI publishes \"How AI is expanding what people do at work\"",
-        "description": "primary-source usage-data framing that ChatGPT use clusters around tasks people weren't doing before (role-boundary expansion), not automating existing tasks away . [openai.com](https://openai.com), event 2026-07-27",
-        "nodes": [
-          "ai-in-enterprise"
-        ],
-        "source": "https://openai.com",
-        "nodeNames": [
-          "AI in Enterprise"
-        ],
-        "view": "strategic",
-        "practical": false,
-        "tags": [
-          "openai"
-        ],
-        "actionLine": "[openai.com](https://openai.com), event 2026-07-27"
-      }
-    ]
+    "notable": []
   },
   "forceChains": [
     {
@@ -1155,7 +1137,7 @@
       "name": "AI Agents & Autonomy",
       "status": "accelerating",
       "currentState": "> **Mutable — rewrites freely as signals arrive. Reflects last ~30 days.**",
-      "lastUpdated": "2026-07-25T00:00:00.000Z"
+      "lastUpdated": "2026-07-29T00:00:00.000Z"
     },
     {
       "id": "ai-business-funding",
@@ -1183,7 +1165,7 @@
       "name": "AI in Enterprise",
       "status": "accelerating",
       "currentState": "Enterprise AI adoption is in the \"deployment at scale\" phase. Most large enterprises have moved past POC/experimentation and are deploying AI in production workflows. The dominant patterns: customer service automation, internal knowledge/search, document processing, code assistance, and data analysis.",
-      "lastUpdated": "2026-07-28T00:00:00.000Z"
+      "lastUpdated": "2026-07-29T00:00:00.000Z"
     },
     {
       "id": "ai-infrastructure",
@@ -1204,14 +1186,14 @@
       "name": "AI Research Breakthroughs",
       "status": "accelerating",
       "currentState": "> **Mutable — rewrites freely as signals arrive. Reflects last ~30 days.**",
-      "lastUpdated": "2026-07-28T00:00:00.000Z"
+      "lastUpdated": "2026-07-29T00:00:00.000Z"
     },
     {
       "id": "ai-safety-alignment",
       "name": "AI Safety & Alignment",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-21 (Phase 10, covering June–July 2026). The March-era agent-security-crisis material below is condensed rather than dropped — no signal in the last 60 days has contradicted it, but none has revisited it either, so it's demoted from lead narrative to background context pending fresh evidence._",
-      "lastUpdated": "2026-07-28T00:00:00.000Z"
+      "lastUpdated": "2026-07-29T00:00:00.000Z"
     },
     {
       "id": "compute-hardware",
@@ -1232,7 +1214,7 @@
       "name": "Frontier Edges",
       "status": "accelerating",
       "currentState": "",
-      "lastUpdated": "2026-07-28T00:00:00.000Z"
+      "lastUpdated": "2026-07-29T00:00:00.000Z"
     },
     {
       "id": "frontier-models",
@@ -1253,14 +1235,14 @@
       "name": "Open Source Models",
       "status": "accelerating",
       "currentState": "Open source AI is accelerating on multiple fronts simultaneously, with a new development that directly threatens the commercial voice AI market: Mistral's Voxtral (3B parameters, 90ms latency, open-weight) outperforms ElevenLabs in human preference evaluations 63% of the time. This follows the earlier Qwen3-TTS pattern — open-source TTS is now production-quality and free to deploy. Alibaba's Qwen 3.5-Omni brings open-source multimodal AI (text + image + audio + video in one model) to the open-we...",
-      "lastUpdated": "2026-07-28T00:00:00.000Z"
+      "lastUpdated": "2026-07-29T00:00:00.000Z"
     },
     {
       "id": "robotics-embodied-ai",
       "name": "Robotics & Embodied AI",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-27 (Phase 10, covering July 2026). The March baseline below is condensed to background — still directionally accurate, but July's signals are specific enough to warrant a dedicated synthesis rather than folding into the generic renaissance framing._",
-      "lastUpdated": "2026-07-28T00:00:00.000Z"
+      "lastUpdated": "2026-07-29T00:00:00.000Z"
     }
   ],
   "nodeNames": {
@@ -1298,70 +1280,6 @@
   },
   "ripples": {
     "significant": {},
-    "notable": {
-      "0": {
-        "chains": [
-          {
-            "title": "Corporate AI Management Replacement Creates \"Organizational World Model\" Demand",
-            "mechanism": "Dorsey's public declaration is not just a cost-cutting move — it is a leadership template. Other CEOs will replicate the announcement structure: \"AI replaces the coordination function, not just tasks.\" The mechanism is social: public companies benchmark against each other, and a visible, named restr...",
-            "direction": "accelerating (enterprise AI structural adoption) / enabling (new product category: organizational AI)",
-            "strength": "strong",
-            "targets": [
-              "AI Agents",
-              "AI Business & Funding",
-              "AI in Enterprise"
-            ]
-          },
-          {
-            "title": "AI Coding Tool Price War Compresses Sector Margins",
-            "mechanism": "Three major AI coding tools competing simultaneously on price and features. Cursor at $2B ARR but rebuilt as agent platform. OpenAI drops ChatGPT Business 20% and introduces zero-fixed-cost Codex seats. Claude Code holds majority share. The market is large enough for all three, but margin pressure m...",
-            "direction": "accelerating (enterprise adoption) / constraining (startup margins)",
-            "strength": "moderate",
-            "targets": [
-              "AI Business & Funding",
-              "AI in Enterprise"
-            ]
-          }
-        ],
-        "convergences": [
-          {
-            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
-            "timeline": "Q3-Q4 2026"
-          },
-          {
-            "title": "AI IPO Wave Creates Public Market Investment Window in H2 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "At least 3 major AI companies (from: Anthropic, OpenAI, Shield AI, Anduril, Databricks, Scale AI) will file for IPO in H2 2026, creating a concentrated public market entry window for AI-focused invest...",
-            "timeline": "Q2-Q3 2026 (accelerated from Q3-Q4)"
-          }
-        ],
-        "bottlenecks": [
-          {
-            "title": "Agent Reliability Gap",
-            "status": "blocking",
-            "summary": "How It's Blocked"
-          },
-          {
-            "title": "AI Cybersecurity Offense/Defense Asymmetry",
-            "status": "hardening",
-            "summary": "How It's Blocked"
-          }
-        ],
-        "predictions": [
-          {
-            "title": "Additional Hyperscaler Publicly Converts ≥5,000 Jobs into AI-Capex Framing by July 31, 2026",
-            "confidence": "70%",
-            "checkDate": "2026-07-31"
-          },
-          {
-            "title": "AI-Accelerated Pre-Training Explicitly Adopted at 3+ Frontier Labs by Q4 2026",
-            "confidence": "72%",
-            "checkDate": "2027-01-15"
-          }
-        ]
-      }
-    }
+    "notable": {}
   }
 }
