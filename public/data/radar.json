@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-07-30T08:14:53.198Z",
+  "lastUpdated": "2026-07-31T08:13:50.575Z",
   "brief": {
-    "date": "2026-07-30T00:00:00.000Z",
+    "date": "2026-07-31T00:00:00.000Z",
     "scanTime": "08:00",
-    "signalsTotal": 11,
-    "signalsNotable": 8,
-    "signalsSignificant": 3,
-    "signalsBreakthrough": 0,
+    "signalsTotal": 10,
+    "signalsNotable": 7,
+    "signalsSignificant": 2,
+    "signalsBreakthrough": 1,
     "nodesUpdated": 8,
     "breakthrough": [],
     "significant": [],
@@ -1165,7 +1165,7 @@
       "name": "AI in Enterprise",
       "status": "accelerating",
       "currentState": "Enterprise AI adoption is in the \"deployment at scale\" phase. Most large enterprises have moved past POC/experimentation and are deploying AI in production workflows. The dominant patterns: customer service automation, internal knowledge/search, document processing, code assistance, and data analysis.",
-      "lastUpdated": "2026-07-29T00:00:00.000Z"
+      "lastUpdated": "2026-07-31T00:00:00.000Z"
     },
     {
       "id": "ai-infrastructure",
@@ -1186,21 +1186,21 @@
       "name": "AI Research Breakthroughs",
       "status": "accelerating",
       "currentState": "> **Mutable — rewrites freely as signals arrive. Reflects last ~30 days.**",
-      "lastUpdated": "2026-07-30T00:00:00.000Z"
+      "lastUpdated": "2026-07-31T00:00:00.000Z"
     },
     {
       "id": "ai-safety-alignment",
       "name": "AI Safety & Alignment",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-21 (Phase 10, covering June–July 2026). The March-era agent-security-crisis material below is condensed rather than dropped — no signal in the last 60 days has contradicted it, but none has revisited it either, so it's demoted from lead narrative to background context pending fresh evidence._",
-      "lastUpdated": "2026-07-30T00:00:00.000Z"
+      "lastUpdated": "2026-07-31T00:00:00.000Z"
     },
     {
       "id": "compute-hardware",
       "name": "Compute & Hardware",
       "status": "accelerating",
       "currentState": "NVIDIA's GTC 2026 reshaped the compute landscape. The Vera Rubin platform delivers 10x perf/watt with a 7-chip architecture, backed by $1T in orders, with the Feynman generation already on the 2028 roadmap. NVIDIA also unveiled standalone Vera CPUs in 256-chip liquid-cooled rack configurations, signaling a push beyond GPUs into full data-center compute. The $20B Groq acquisition brought the Groq 3 LPU into NVIDIA's portfolio — at 35x tokens/watt, it represents a step-change in inference efficien...",
-      "lastUpdated": "2026-07-20T00:00:00.000Z"
+      "lastUpdated": "2026-07-31T00:00:00.000Z"
     },
     {
       "id": "edge-on-device-ai",
@@ -1214,14 +1214,14 @@
       "name": "Frontier Edges",
       "status": "accelerating",
       "currentState": "",
-      "lastUpdated": "2026-07-29T00:00:00.000Z"
+      "lastUpdated": "2026-07-31T00:00:00.000Z"
     },
     {
       "id": "frontier-models",
       "name": "Frontier Models",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-21 (Phase 10, covering April–July 2026). The March 2026 baseline narrative (#QuitGPT migration outcome, Grok 4.20's four-agent architecture, OpenAI's PE-fundraising structure, Apple's \"multi-model Siri\" framing) is dropped as superseded — see \"No longer supported\" below for what changed and why._",
-      "lastUpdated": "2026-07-30T00:00:00.000Z"
+      "lastUpdated": "2026-07-31T00:00:00.000Z"
     },
     {
       "id": "multimodal-ai",
@@ -1235,14 +1235,14 @@
       "name": "Open Source Models",
       "status": "accelerating",
       "currentState": "Open source AI is accelerating on multiple fronts simultaneously, with a new development that directly threatens the commercial voice AI market: Mistral's Voxtral (3B parameters, 90ms latency, open-weight) outperforms ElevenLabs in human preference evaluations 63% of the time. This follows the earlier Qwen3-TTS pattern — open-source TTS is now production-quality and free to deploy. Alibaba's Qwen 3.5-Omni brings open-source multimodal AI (text + image + audio + video in one model) to the open-we...",
-      "lastUpdated": "2026-07-29T00:00:00.000Z"
+      "lastUpdated": "2026-07-31T00:00:00.000Z"
     },
     {
       "id": "robotics-embodied-ai",
       "name": "Robotics & Embodied AI",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-27 (Phase 10, covering July 2026). The March baseline below is condensed to background — still directionally accurate, but July's signals are specific enough to warrant a dedicated synthesis rather than folding into the generic renaissance framing._",
-      "lastUpdated": "2026-07-30T00:00:00.000Z"
+      "lastUpdated": "2026-07-31T00:00:00.000Z"
     }
   ],
   "nodeNames": {
