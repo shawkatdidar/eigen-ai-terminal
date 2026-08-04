@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-08-03T08:06:42.170Z",
+  "lastUpdated": "2026-08-04T08:17:10.171Z",
   "brief": {
-    "date": "2026-08-03T00:00:00.000Z",
-    "scanTime": "08:00",
-    "signalsTotal": 1,
-    "signalsNotable": 0,
-    "signalsSignificant": 0,
+    "date": "2026-08-04T00:00:00.000Z",
+    "scanTime": "08:06",
+    "signalsTotal": 7,
+    "signalsNotable": 6,
+    "signalsSignificant": 1,
     "signalsBreakthrough": 0,
-    "nodesUpdated": 0,
+    "nodesUpdated": 9,
     "breakthrough": [],
     "significant": [],
     "notable": []
@@ -1173,7 +1173,7 @@
       "name": "AI Business & Funding",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-27 (Phase 10, covering May–July 2026)._",
-      "lastUpdated": "2026-07-28T00:00:00.000Z"
+      "lastUpdated": "2026-08-04T00:00:00.000Z"
     },
     {
       "id": "ai-coding-tools",
@@ -1187,21 +1187,21 @@
       "name": "AI for Science",
       "status": "accelerating",
       "currentState": "AI's impact on scientific research continues to deepen following AlphaFold's breakthrough. Protein structure prediction is now routine; the frontier has moved to protein design, drug-target interaction, and de novo molecule generation. Materials science uses AI for novel material discovery. Mathematics saw AI-assisted proof advances.",
-      "lastUpdated": "2026-08-02T00:00:00.000Z"
+      "lastUpdated": "2026-08-04T00:00:00.000Z"
     },
     {
       "id": "ai-in-enterprise",
       "name": "AI in Enterprise",
       "status": "accelerating",
       "currentState": "Enterprise AI adoption is in the \"deployment at scale\" phase. Most large enterprises have moved past POC/experimentation and are deploying AI in production workflows. The dominant patterns: customer service automation, internal knowledge/search, document processing, code assistance, and data analysis.",
-      "lastUpdated": "2026-08-01T00:00:00.000Z"
+      "lastUpdated": "2026-08-04T00:00:00.000Z"
     },
     {
       "id": "ai-infrastructure",
       "name": "AI Infrastructure",
       "status": "accelerating",
       "currentState": "_Distilled 2026-08-01 (Phase 10, covering May–August 2026). The March baseline (llama.cpp/MCP ecosystem milestones, early KV-cache compression) is condensed to background below — still directionally valid but superseded as the lead narrative by the physical-infrastructure and inference-silicon threads._",
-      "lastUpdated": "2026-07-24T00:00:00.000Z"
+      "lastUpdated": "2026-08-04T00:00:00.000Z"
     },
     {
       "id": "ai-policy-regulation",
@@ -1215,7 +1215,7 @@
       "name": "AI Research Breakthroughs",
       "status": "accelerating",
       "currentState": "> **Mutable — rewrites freely as signals arrive. Reflects last ~30 days.**",
-      "lastUpdated": "2026-07-31T00:00:00.000Z"
+      "lastUpdated": "2026-08-04T00:00:00.000Z"
     },
     {
       "id": "ai-safety-alignment",
@@ -1236,7 +1236,7 @@
       "name": "Edge & On-Device AI",
       "status": "accelerating",
       "currentState": "Running AI locally — on phones, laptops, and edge devices — has gone from hobbyist to mainstream. Apple Intelligence runs on-device for iPhone/Mac. Samsung and Google embed AI into their devices. NVIDIA DGX Spark ($4,699) makes local inference of 200B-parameter models possible on a desktop device.",
-      "lastUpdated": "2026-07-30T00:00:00.000Z"
+      "lastUpdated": "2026-08-04T00:00:00.000Z"
     },
     {
       "id": "frontier-edges",
@@ -1250,14 +1250,14 @@
       "name": "Frontier Models",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-21 (Phase 10, covering April–July 2026). The March 2026 baseline narrative (#QuitGPT migration outcome, Grok 4.20's four-agent architecture, OpenAI's PE-fundraising structure, Apple's \"multi-model Siri\" framing) is dropped as superseded — see \"No longer supported\" below for what changed and why._",
-      "lastUpdated": "2026-07-31T00:00:00.000Z"
+      "lastUpdated": "2026-08-04T00:00:00.000Z"
     },
     {
       "id": "multimodal-ai",
       "name": "Multimodal AI",
       "status": "accelerating",
       "currentState": "Multimodal AI — models that process and generate text, images, audio, video, and 3D — has become the default rather than the exception. All frontier models now accept multiple input types. Video generation hit a major inflection point: OpenAI shut down Sora after just 6 months (downloads fell from 3.3M to 1.1M) and terminated a $1B Disney licensing deal, redirecting compute to core LLM products. This is the first major product death from a frontier lab and signals that standalone AI video genera...",
-      "lastUpdated": "2026-07-22T00:00:00.000Z"
+      "lastUpdated": "2026-08-04T00:00:00.000Z"
     },
     {
       "id": "open-source-models",
@@ -1271,7 +1271,7 @@
       "name": "Robotics & Embodied AI",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-27 (Phase 10, covering July 2026). The March baseline below is condensed to background — still directionally accurate, but July's signals are specific enough to warrant a dedicated synthesis rather than folding into the generic renaissance framing._",
-      "lastUpdated": "2026-08-01T00:00:00.000Z"
+      "lastUpdated": "2026-08-04T00:00:00.000Z"
     }
   ],
   "nodeNames": {
