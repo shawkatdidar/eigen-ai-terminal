@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-08-05T08:16:10.275Z",
+  "lastUpdated": "2026-08-06T08:10:56.106Z",
   "brief": {
-    "date": "2026-08-05T00:00:00.000Z",
-    "scanTime": "08:10",
-    "signalsTotal": 9,
-    "signalsNotable": 8,
+    "date": "2026-08-06T00:00:00.000Z",
+    "scanTime": "08:15",
+    "signalsTotal": 6,
+    "signalsNotable": 4,
     "signalsSignificant": 1,
-    "signalsBreakthrough": 0,
-    "nodesUpdated": 8,
+    "signalsBreakthrough": 1,
+    "nodesUpdated": 7,
     "breakthrough": [],
     "significant": [],
     "notable": []
@@ -1166,21 +1166,21 @@
       "name": "AI Agents & Autonomy",
       "status": "accelerating",
       "currentState": "_Distilled 2026-08-01 (Phase 10, covering April–August 2026). The March baseline (OpenClaw Foundation transition, MCP protocol consolidation, METR's autonomy-doubling scaling law) is condensed to background below — still true, but no longer the active narrative four months on._",
-      "lastUpdated": "2026-08-05T00:00:00.000Z"
+      "lastUpdated": "2026-08-06T00:00:00.000Z"
     },
     {
       "id": "ai-business-funding",
       "name": "AI Business & Funding",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-27 (Phase 10, covering May–July 2026)._",
-      "lastUpdated": "2026-08-04T00:00:00.000Z"
+      "lastUpdated": "2026-08-06T00:00:00.000Z"
     },
     {
       "id": "ai-coding-tools",
       "name": "AI Coding Tools",
       "status": "accelerating",
       "currentState": "AI coding tools are entering an expansion phase driven by three trends: deeper tool integration, new entrants, and methodology formalization. Claude Code v2.1.76-79 shipped 64K/128K output tokens with 45% faster resume, pushing CLI agent capability forward. The official ChromeDevTools MCP server (30K+ stars) and Anthropic's Claude Plugins Directory signal a maturing plugin ecosystem. QwenLM's qwen-code terminal agent (20K+ stars) shows Chinese labs entering the coding tools space directly.",
-      "lastUpdated": "2026-08-05T00:00:00.000Z"
+      "lastUpdated": "2026-08-06T00:00:00.000Z"
     },
     {
       "id": "ai-for-science",
@@ -1194,14 +1194,14 @@
       "name": "AI in Enterprise",
       "status": "accelerating",
       "currentState": "Enterprise AI adoption is in the \"deployment at scale\" phase. Most large enterprises have moved past POC/experimentation and are deploying AI in production workflows. The dominant patterns: customer service automation, internal knowledge/search, document processing, code assistance, and data analysis.",
-      "lastUpdated": "2026-08-04T00:00:00.000Z"
+      "lastUpdated": "2026-08-06T00:00:00.000Z"
     },
     {
       "id": "ai-infrastructure",
       "name": "AI Infrastructure",
       "status": "accelerating",
       "currentState": "_Distilled 2026-08-01 (Phase 10, covering May–August 2026). The March baseline (llama.cpp/MCP ecosystem milestones, early KV-cache compression) is condensed to background below — still directionally valid but superseded as the lead narrative by the physical-infrastructure and inference-silicon threads._",
-      "lastUpdated": "2026-08-05T00:00:00.000Z"
+      "lastUpdated": "2026-08-06T00:00:00.000Z"
     },
     {
       "id": "ai-policy-regulation",
@@ -1215,7 +1215,7 @@
       "name": "AI Research Breakthroughs",
       "status": "accelerating",
       "currentState": "> **Mutable — rewrites freely as signals arrive. Reflects last ~30 days.**",
-      "lastUpdated": "2026-08-05T00:00:00.000Z"
+      "lastUpdated": "2026-08-06T00:00:00.000Z"
     },
     {
       "id": "ai-safety-alignment",
@@ -1264,7 +1264,7 @@
       "name": "Open Source Models",
       "status": "accelerating",
       "currentState": "_Distilled 2026-08-01 (Phase 10, covering June–August 2026). The March-April baseline (Voxtral vs. ElevenLabs, GLM-5.1 on Huawei chips, Xiaomi MiMo-V2-Pro 1T, tooling-layer surge) is condensed to background below — the density-of-scale story it told has since been superseded by the July 2T+ wave._",
-      "lastUpdated": "2026-08-05T00:00:00.000Z"
+      "lastUpdated": "2026-08-06T00:00:00.000Z"
     },
     {
       "id": "robotics-embodied-ai",
