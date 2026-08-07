@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-08-06T08:10:56.106Z",
+  "lastUpdated": "2026-08-07T08:08:03.814Z",
   "brief": {
-    "date": "2026-08-06T00:00:00.000Z",
-    "scanTime": "08:15",
-    "signalsTotal": 6,
-    "signalsNotable": 4,
+    "date": "2026-08-07T00:00:00.000Z",
+    "scanTime": "08:12",
+    "signalsTotal": 5,
+    "signalsNotable": 2,
     "signalsSignificant": 1,
-    "signalsBreakthrough": 1,
-    "nodesUpdated": 7,
+    "signalsBreakthrough": 0,
+    "nodesUpdated": 4,
     "breakthrough": [],
     "significant": [],
     "notable": []
@@ -1180,14 +1180,14 @@
       "name": "AI Coding Tools",
       "status": "accelerating",
       "currentState": "AI coding tools are entering an expansion phase driven by three trends: deeper tool integration, new entrants, and methodology formalization. Claude Code v2.1.76-79 shipped 64K/128K output tokens with 45% faster resume, pushing CLI agent capability forward. The official ChromeDevTools MCP server (30K+ stars) and Anthropic's Claude Plugins Directory signal a maturing plugin ecosystem. QwenLM's qwen-code terminal agent (20K+ stars) shows Chinese labs entering the coding tools space directly.",
-      "lastUpdated": "2026-08-06T00:00:00.000Z"
+      "lastUpdated": "2026-08-07T00:00:00.000Z"
     },
     {
       "id": "ai-for-science",
       "name": "AI for Science",
       "status": "accelerating",
       "currentState": "AI's impact on scientific research continues to deepen following AlphaFold's breakthrough. Protein structure prediction is now routine; the frontier has moved to protein design, drug-target interaction, and de novo molecule generation. Materials science uses AI for novel material discovery. Mathematics saw AI-assisted proof advances.",
-      "lastUpdated": "2026-08-05T00:00:00.000Z"
+      "lastUpdated": "2026-08-07T00:00:00.000Z"
     },
     {
       "id": "ai-in-enterprise",
@@ -1222,14 +1222,14 @@
       "name": "AI Safety & Alignment",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-21 (Phase 10, covering June–July 2026). The March-era agent-security-crisis material below is condensed rather than dropped — no signal in the last 60 days has contradicted it, but none has revisited it either, so it's demoted from lead narrative to background context pending fresh evidence._",
-      "lastUpdated": "2026-08-05T00:00:00.000Z"
+      "lastUpdated": "2026-08-07T00:00:00.000Z"
     },
     {
       "id": "compute-hardware",
       "name": "Compute & Hardware",
       "status": "accelerating",
       "currentState": "NVIDIA's GTC 2026 reshaped the compute landscape. The Vera Rubin platform delivers 10x perf/watt with a 7-chip architecture, backed by $1T in orders, with the Feynman generation already on the 2028 roadmap. NVIDIA also unveiled standalone Vera CPUs in 256-chip liquid-cooled rack configurations, signaling a push beyond GPUs into full data-center compute. The $20B Groq acquisition brought the Groq 3 LPU into NVIDIA's portfolio — at 35x tokens/watt, it represents a step-change in inference efficien...",
-      "lastUpdated": "2026-07-31T00:00:00.000Z"
+      "lastUpdated": "2026-08-07T00:00:00.000Z"
     },
     {
       "id": "edge-on-device-ai",
