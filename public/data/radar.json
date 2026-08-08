@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-08-07T08:08:03.814Z",
+  "lastUpdated": "2026-08-08T08:08:19.443Z",
   "brief": {
-    "date": "2026-08-07T00:00:00.000Z",
-    "scanTime": "08:12",
+    "date": "2026-08-08T00:00:00.000Z",
+    "scanTime": "08:14",
     "signalsTotal": 5,
-    "signalsNotable": 2,
+    "signalsNotable": 4,
     "signalsSignificant": 1,
     "signalsBreakthrough": 0,
-    "nodesUpdated": 4,
+    "nodesUpdated": 5,
     "breakthrough": [],
     "significant": [],
     "notable": []
@@ -1187,7 +1187,7 @@
       "name": "AI for Science",
       "status": "accelerating",
       "currentState": "AI's impact on scientific research continues to deepen following AlphaFold's breakthrough. Protein structure prediction is now routine; the frontier has moved to protein design, drug-target interaction, and de novo molecule generation. Materials science uses AI for novel material discovery. Mathematics saw AI-assisted proof advances.",
-      "lastUpdated": "2026-08-07T00:00:00.000Z"
+      "lastUpdated": "2026-08-08T00:00:00.000Z"
     },
     {
       "id": "ai-in-enterprise",
@@ -1201,28 +1201,28 @@
       "name": "AI Infrastructure",
       "status": "accelerating",
       "currentState": "_Distilled 2026-08-01 (Phase 10, covering May–August 2026). The March baseline (llama.cpp/MCP ecosystem milestones, early KV-cache compression) is condensed to background below — still directionally valid but superseded as the lead narrative by the physical-infrastructure and inference-silicon threads._",
-      "lastUpdated": "2026-08-06T00:00:00.000Z"
+      "lastUpdated": "2026-08-08T00:00:00.000Z"
     },
     {
       "id": "ai-policy-regulation",
       "name": "AI Policy & Regulation",
       "status": "accelerating",
       "currentState": "_Distilled 2026-08-01 (Phase 10, covering April–August 2026). The March baseline (Anthropic-Pentagon confrontation as the dominant tension) is condensed to background below — the conflict itself resolved months ago and no longer drives the current narrative._",
-      "lastUpdated": "2026-08-05T00:00:00.000Z"
+      "lastUpdated": "2026-08-08T00:00:00.000Z"
     },
     {
       "id": "ai-research-breakthroughs",
       "name": "AI Research Breakthroughs",
       "status": "accelerating",
       "currentState": "> **Mutable — rewrites freely as signals arrive. Reflects last ~30 days.**",
-      "lastUpdated": "2026-08-06T00:00:00.000Z"
+      "lastUpdated": "2026-08-08T00:00:00.000Z"
     },
     {
       "id": "ai-safety-alignment",
       "name": "AI Safety & Alignment",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-21 (Phase 10, covering June–July 2026). The March-era agent-security-crisis material below is condensed rather than dropped — no signal in the last 60 days has contradicted it, but none has revisited it either, so it's demoted from lead narrative to background context pending fresh evidence._",
-      "lastUpdated": "2026-08-07T00:00:00.000Z"
+      "lastUpdated": "2026-08-08T00:00:00.000Z"
     },
     {
       "id": "compute-hardware",
