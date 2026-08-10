@@ -1,35 +1,16 @@
 {
-  "lastUpdated": "2026-08-09T08:09:33.493Z",
+  "lastUpdated": "2026-08-10T08:04:14.134Z",
   "brief": {
-    "date": "2026-08-09T00:00:00.000Z",
-    "scanTime": "08:16",
-    "signalsTotal": 3,
-    "signalsNotable": 3,
+    "date": "2026-08-10T00:00:00.000Z",
+    "scanTime": "08:10",
+    "signalsTotal": 0,
+    "signalsNotable": 0,
     "signalsSignificant": 0,
     "signalsBreakthrough": 0,
-    "nodesUpdated": 4,
+    "nodesUpdated": 0,
     "breakthrough": [],
     "significant": [],
-    "notable": [
-      {
-        "title": "Found incidentally while researching Astra (not from today's Entropy feed): Meta's already-recorded Muse Code/Muse Spark 1.2 post (08-05, primary) also claims gold-medal-level performance across five STEM Olympiads (perfect theory scores at APhO/IPhO, gold-level at IMO/IChO/RMM), explicitly without external tools — attributed partly to multi-agent orchestration, drawing methodology pushback from other researchers",
-        "description": "Same primary source already cited; Entropy's thin capture never surfaced this detail.",
-        "nodes": [
-          "ai-coding-tools"
-        ],
-        "source": "",
-        "nodeNames": [
-          "AI Coding Tools"
-        ],
-        "view": "builder",
-        "practical": true,
-        "tags": [
-          "meta",
-          "muse"
-        ],
-        "actionLine": "Same primary source already cited; Entropy's thin capture never surfaced this detail."
-      }
-    ]
+    "notable": []
   },
   "forceChains": [
     {
@@ -1328,75 +1309,6 @@
   },
   "ripples": {
     "significant": {},
-    "notable": {
-      "0": {
-        "chains": [
-          {
-            "title": "MCP Formal Gaps Constrain Agent Reliability",
-            "mechanism": "MCP is now the de facto protocol for connecting AI agents to tools (97M monthly SDK downloads, adopted by OpenAI, Anthropic, Google, Figma, GitHub, etc.). The formal analysis proves specific categories of tool schemas that MCP cannot represent correctly — meaning agent-tool interactions can silently...",
-            "direction": "constraining",
-            "strength": "moderate",
-            "targets": [
-              "AI Agents",
-              "AI Coding Tools",
-              "AI in Enterprise"
-            ]
-          },
-          {
-            "title": "AI Coding Tool Price War Compresses Sector Margins",
-            "mechanism": "Three major AI coding tools competing simultaneously on price and features. Cursor at $2B ARR but rebuilt as agent platform. OpenAI drops ChatGPT Business 20% and introduces zero-fixed-cost Codex seats. Claude Code holds majority share. The market is large enough for all three, but margin pressure m...",
-            "direction": "accelerating (enterprise adoption) / constraining (startup margins)",
-            "strength": "moderate",
-            "targets": [
-              "AI Business & Funding",
-              "AI in Enterprise"
-            ]
-          },
-          {
-            "title": "GrandCode Live Competition Victory Validates Agentic RL for Coding",
-            "mechanism": "Live competitive programming requires real-time strategic reasoning under time pressure — a superset of everyday coding challenges. GrandCode's Agentic GRPO algorithm (designed for multi-stage agent rollouts with delayed rewards) is directly applicable to production coding agents where quality feedb...",
-            "direction": "accelerating",
-            "strength": "moderate",
-            "targets": [
-              "AI Coding Tools",
-              "AI Business & Funding"
-            ]
-          }
-        ],
-        "convergences": [
-          {
-            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
-            "confidence": "imminent",
-            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
-            "timeline": "Q3-Q4 2026"
-          },
-          {
-            "title": "Agent Orchestration Standardization",
-            "confidence": "strengthening",
-            "predictedOutcome": "Multi-agent orchestration emerges as a distinct infrastructure category with de facto standards, as 5+ independent projects converge on solving the same coordination problem simultaneously.",
-            "timeline": "Q3-Q4 2026"
-          }
-        ],
-        "bottlenecks": [
-          {
-            "title": "Agent Reliability Gap",
-            "status": "blocking",
-            "summary": "How It's Blocked"
-          }
-        ],
-        "predictions": [
-          {
-            "title": "Additional Hyperscaler Publicly Converts ≥5,000 Jobs into AI-Capex Framing by July 31, 2026",
-            "confidence": "70%",
-            "checkDate": "2026-07-31"
-          },
-          {
-            "title": "AI-Accelerated Pre-Training Explicitly Adopted at 3+ Frontier Labs by Q4 2026",
-            "confidence": "72%",
-            "checkDate": "2027-01-15"
-          }
-        ]
-      }
-    }
+    "notable": {}
   }
 }
