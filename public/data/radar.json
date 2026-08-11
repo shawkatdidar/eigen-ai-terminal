@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-08-10T08:04:14.134Z",
+  "lastUpdated": "2026-08-11T08:11:46.387Z",
   "brief": {
-    "date": "2026-08-10T00:00:00.000Z",
-    "scanTime": "08:10",
-    "signalsTotal": 0,
-    "signalsNotable": 0,
-    "signalsSignificant": 0,
-    "signalsBreakthrough": 0,
-    "nodesUpdated": 0,
+    "date": "2026-08-11T00:00:00.000Z",
+    "scanTime": "08:20",
+    "signalsTotal": 9,
+    "signalsNotable": 8,
+    "signalsSignificant": 1,
+    "signalsBreakthrough": 1,
+    "nodesUpdated": 8,
     "breakthrough": [],
     "significant": [],
     "notable": []
@@ -1166,14 +1166,14 @@
       "name": "AI Agents & Autonomy",
       "status": "accelerating",
       "currentState": "_Distilled 2026-08-01 (Phase 10, covering April–August 2026). The March baseline (OpenClaw Foundation transition, MCP protocol consolidation, METR's autonomy-doubling scaling law) is condensed to background below — still true, but no longer the active narrative four months on._",
-      "lastUpdated": "2026-08-06T00:00:00.000Z"
+      "lastUpdated": "2026-08-11T00:00:00.000Z"
     },
     {
       "id": "ai-business-funding",
       "name": "AI Business & Funding",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-27 (Phase 10, covering May–July 2026)._",
-      "lastUpdated": "2026-08-06T00:00:00.000Z"
+      "lastUpdated": "2026-08-11T00:00:00.000Z"
     },
     {
       "id": "ai-coding-tools",
@@ -1194,7 +1194,7 @@
       "name": "AI in Enterprise",
       "status": "accelerating",
       "currentState": "Enterprise AI adoption is in the \"deployment at scale\" phase. Most large enterprises have moved past POC/experimentation and are deploying AI in production workflows. The dominant patterns: customer service automation, internal knowledge/search, document processing, code assistance, and data analysis.",
-      "lastUpdated": "2026-08-06T00:00:00.000Z"
+      "lastUpdated": "2026-08-11T00:00:00.000Z"
     },
     {
       "id": "ai-infrastructure",
@@ -1215,14 +1215,14 @@
       "name": "AI Research Breakthroughs",
       "status": "accelerating",
       "currentState": "> **Mutable — rewrites freely as signals arrive. Reflects last ~30 days.**",
-      "lastUpdated": "2026-08-08T00:00:00.000Z"
+      "lastUpdated": "2026-08-11T00:00:00.000Z"
     },
     {
       "id": "ai-safety-alignment",
       "name": "AI Safety & Alignment",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-21 (Phase 10, covering June–July 2026). The March-era agent-security-crisis material below is condensed rather than dropped — no signal in the last 60 days has contradicted it, but none has revisited it either, so it's demoted from lead narrative to background context pending fresh evidence._",
-      "lastUpdated": "2026-08-09T00:00:00.000Z"
+      "lastUpdated": "2026-08-11T00:00:00.000Z"
     },
     {
       "id": "compute-hardware",
@@ -1236,7 +1236,7 @@
       "name": "Edge & On-Device AI",
       "status": "accelerating",
       "currentState": "Running AI locally — on phones, laptops, and edge devices — has gone from hobbyist to mainstream. Apple Intelligence runs on-device for iPhone/Mac. Samsung and Google embed AI into their devices. NVIDIA DGX Spark ($4,699) makes local inference of 200B-parameter models possible on a desktop device.",
-      "lastUpdated": "2026-08-04T00:00:00.000Z"
+      "lastUpdated": "2026-08-11T00:00:00.000Z"
     },
     {
       "id": "frontier-edges",
@@ -1257,14 +1257,14 @@
       "name": "Multimodal AI",
       "status": "accelerating",
       "currentState": "Multimodal AI — models that process and generate text, images, audio, video, and 3D — has become the default rather than the exception. All frontier models now accept multiple input types. Video generation hit a major inflection point: OpenAI shut down Sora after just 6 months (downloads fell from 3.3M to 1.1M) and terminated a $1B Disney licensing deal, redirecting compute to core LLM products. This is the first major product death from a frontier lab and signals that standalone AI video genera...",
-      "lastUpdated": "2026-08-04T00:00:00.000Z"
+      "lastUpdated": "2026-08-11T00:00:00.000Z"
     },
     {
       "id": "open-source-models",
       "name": "Open Source Models",
       "status": "accelerating",
       "currentState": "_Distilled 2026-08-01 (Phase 10, covering June–August 2026). The March-April baseline (Voxtral vs. ElevenLabs, GLM-5.1 on Huawei chips, Xiaomi MiMo-V2-Pro 1T, tooling-layer surge) is condensed to background below — the density-of-scale story it told has since been superseded by the July 2T+ wave._",
-      "lastUpdated": "2026-08-09T00:00:00.000Z"
+      "lastUpdated": "2026-08-11T00:00:00.000Z"
     },
     {
       "id": "robotics-embodied-ai",
