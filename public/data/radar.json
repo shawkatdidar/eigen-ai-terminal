@@ -1,15 +1,34 @@
 {
-  "lastUpdated": "2026-08-11T08:11:46.387Z",
+  "lastUpdated": "2026-08-12T08:13:50.366Z",
   "brief": {
-    "date": "2026-08-11T00:00:00.000Z",
-    "scanTime": "08:20",
-    "signalsTotal": 9,
-    "signalsNotable": 8,
-    "signalsSignificant": 1,
+    "date": "2026-08-12T00:00:00.000Z",
+    "scanTime": "08:35",
+    "signalsTotal": 15,
+    "signalsNotable": 11,
+    "signalsSignificant": 3,
     "signalsBreakthrough": 1,
-    "nodesUpdated": 8,
+    "nodesUpdated": 9,
     "breakthrough": [],
-    "significant": [],
+    "significant": [
+      {
+        "title": "Meta open-sources Muse Glimmer (30B, always-on local agents) — HN 1023pts/570 comments, one of the highest engagement scores this session",
+        "description": "Carried forward from 08-11; community GGUF quantizations already available.",
+        "nodes": [
+          "open-source-models"
+        ],
+        "source": "",
+        "nodeNames": [
+          "Open Source Models"
+        ],
+        "view": "builder",
+        "practical": true,
+        "tags": [
+          "meta",
+          "muse"
+        ],
+        "actionLine": "Carried forward from 08-11; community GGUF quantizations already available."
+      }
+    ],
     "notable": []
   },
   "forceChains": [
@@ -1166,14 +1185,14 @@
       "name": "AI Agents & Autonomy",
       "status": "accelerating",
       "currentState": "_Distilled 2026-08-01 (Phase 10, covering April–August 2026). The March baseline (OpenClaw Foundation transition, MCP protocol consolidation, METR's autonomy-doubling scaling law) is condensed to background below — still true, but no longer the active narrative four months on._",
-      "lastUpdated": "2026-08-11T00:00:00.000Z"
+      "lastUpdated": "2026-08-12T00:00:00.000Z"
     },
     {
       "id": "ai-business-funding",
       "name": "AI Business & Funding",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-27 (Phase 10, covering May–July 2026)._",
-      "lastUpdated": "2026-08-11T00:00:00.000Z"
+      "lastUpdated": "2026-08-12T00:00:00.000Z"
     },
     {
       "id": "ai-coding-tools",
@@ -1187,7 +1206,7 @@
       "name": "AI for Science",
       "status": "accelerating",
       "currentState": "AI's impact on scientific research continues to deepen following AlphaFold's breakthrough. Protein structure prediction is now routine; the frontier has moved to protein design, drug-target interaction, and de novo molecule generation. Materials science uses AI for novel material discovery. Mathematics saw AI-assisted proof advances.",
-      "lastUpdated": "2026-08-09T00:00:00.000Z"
+      "lastUpdated": "2026-08-12T00:00:00.000Z"
     },
     {
       "id": "ai-in-enterprise",
@@ -1215,21 +1234,21 @@
       "name": "AI Research Breakthroughs",
       "status": "accelerating",
       "currentState": "> **Mutable — rewrites freely as signals arrive. Reflects last ~30 days.**",
-      "lastUpdated": "2026-08-11T00:00:00.000Z"
+      "lastUpdated": "2026-08-12T00:00:00.000Z"
     },
     {
       "id": "ai-safety-alignment",
       "name": "AI Safety & Alignment",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-21 (Phase 10, covering June–July 2026). The March-era agent-security-crisis material below is condensed rather than dropped — no signal in the last 60 days has contradicted it, but none has revisited it either, so it's demoted from lead narrative to background context pending fresh evidence._",
-      "lastUpdated": "2026-08-11T00:00:00.000Z"
+      "lastUpdated": "2026-08-12T00:00:00.000Z"
     },
     {
       "id": "compute-hardware",
       "name": "Compute & Hardware",
       "status": "accelerating",
       "currentState": "NVIDIA's GTC 2026 reshaped the compute landscape. The Vera Rubin platform delivers 10x perf/watt with a 7-chip architecture, backed by $1T in orders, with the Feynman generation already on the 2028 roadmap. NVIDIA also unveiled standalone Vera CPUs in 256-chip liquid-cooled rack configurations, signaling a push beyond GPUs into full data-center compute. The $20B Groq acquisition brought the Groq 3 LPU into NVIDIA's portfolio — at 35x tokens/watt, it represents a step-change in inference efficien...",
-      "lastUpdated": "2026-08-07T00:00:00.000Z"
+      "lastUpdated": "2026-08-12T00:00:00.000Z"
     },
     {
       "id": "edge-on-device-ai",
@@ -1250,7 +1269,7 @@
       "name": "Frontier Models",
       "status": "accelerating",
       "currentState": "_Distilled 2026-07-21 (Phase 10, covering April–July 2026). The March 2026 baseline narrative (#QuitGPT migration outcome, Grok 4.20's four-agent architecture, OpenAI's PE-fundraising structure, Apple's \"multi-model Siri\" framing) is dropped as superseded — see \"No longer supported\" below for what changed and why._",
-      "lastUpdated": "2026-08-04T00:00:00.000Z"
+      "lastUpdated": "2026-08-12T00:00:00.000Z"
     },
     {
       "id": "multimodal-ai",
@@ -1264,7 +1283,7 @@
       "name": "Open Source Models",
       "status": "accelerating",
       "currentState": "_Distilled 2026-08-01 (Phase 10, covering June–August 2026). The March-April baseline (Voxtral vs. ElevenLabs, GLM-5.1 on Huawei chips, Xiaomi MiMo-V2-Pro 1T, tooling-layer surge) is condensed to background below — the density-of-scale story it told has since been superseded by the July 2T+ wave._",
-      "lastUpdated": "2026-08-11T00:00:00.000Z"
+      "lastUpdated": "2026-08-12T00:00:00.000Z"
     },
     {
       "id": "robotics-embodied-ai",
@@ -1308,7 +1327,55 @@
     "xAI": "entities/xai.md"
   },
   "ripples": {
-    "significant": {},
+    "significant": {
+      "0": {
+        "chains": [
+          {
+            "title": "Sub-15B Active Parameter Models at Frontier Agent Capability",
+            "mechanism": "Two open models shipping on the same day achieving frontier-competitive agent performance with <15B active parameters means production-quality agents can run on workstations, bypassing API costs and data-residency concerns. Accelerates enterprise agent adoption in regulated industries.",
+            "direction": "enabling",
+            "strength": "strong",
+            "targets": [
+              "AI in Enterprise",
+              "AI Agents",
+              "Edge & On-Device AI"
+            ]
+          },
+          {
+            "title": "Alibaba Revenue Pivot Threatens Open-Source Model Ecosystem",
+            "mechanism": "Qwen models (3.5, 3.6 series) are among the most-used open-weight models globally. If Alibaba restricts future releases, thousands of companies and developers who built on free Qwen weights face dependency risk. Enterprise deployments using Qwen fine-tunes would need to migrate. Local LLM community ...",
+            "direction": "constraining (open-source), enabling (Google/Meta leverage)",
+            "strength": "moderate",
+            "targets": [
+              "AI in Enterprise",
+              "Edge & On-Device AI"
+            ]
+          }
+        ],
+        "convergences": [
+          {
+            "title": "Inference Cost Collapse Enables Mass Agent Deployment by Late 2026",
+            "confidence": "imminent",
+            "predictedOutcome": "The combined effect of memory compression, alternative CPU architectures, and post-training optimization will reduce inference costs by 5-10x within 6 months, making it economically viable to deploy p...",
+            "timeline": "Q3-Q4 2026"
+          },
+          {
+            "title": "Sovereign AI Infrastructure Becomes a Distinct Venture-Scale Category by Q4 2026",
+            "confidence": "forming (65%)",
+            "predictedOutcome": "Sovereign AI — non-US nations and enterprises standing up locally-controlled compute running open-weight models, independent of US frontier-lab access — consolidates into a distinct, venture-scale inf...",
+            "timeline": "Q3-Q4 2026"
+          }
+        ],
+        "bottlenecks": [
+          {
+            "title": "Talent Concentration in Frontier Labs",
+            "status": "loosening",
+            "summary": "How It's Blocked"
+          }
+        ],
+        "predictions": []
+      }
+    },
     "notable": {}
   }
 }
