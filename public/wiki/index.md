@@ -1,7 +1,7 @@
 ---
 name: Wiki Index
 description: Content catalog of the AI Radar wiki — navigational entry point
-last_updated: 2026-04-11
+last_updated: 2026-06-23
 tags:
   - index
   - navigation
@@ -20,12 +20,12 @@ tags:
 | [[open-source-models]] | accelerating | 2026-04-11 |
 | [[compute-hardware]] | accelerating | 2026-04-11 |
 | [[ai-agents]] | accelerating | 2026-04-11 |
-| [[ai-coding-tools]] | accelerating | 2026-04-11 |
+| [[ai-coding-tools]] | accelerating | 2026-06-22 |
 | [[ai-infrastructure]] | accelerating | 2026-04-11 |
-| [[ai-safety-alignment]] | accelerating | 2026-04-11 |
+| [[ai-safety-alignment]] | accelerating | 2026-06-23 |
 | [[ai-policy-regulation]] | accelerating | 2026-04-11 |
 | [[ai-business-funding]] | accelerating | 2026-04-11 |
-| [[multimodal-ai]] | accelerating | 2026-04-10 |
+| [[multimodal-ai]] | accelerating | 2026-06-23 |
 | [[ai-for-science]] | accelerating | 2026-04-10 |
 | [[robotics-embodied-ai]] | accelerating | 2026-04-07 |
 | [[ai-research-breakthroughs]] | accelerating | 2026-04-11 |
@@ -73,6 +73,14 @@ See [[frontier-edges]] for full details.
 
 | Date | Significant | Notable | Brief |
 |------|------------|---------|-------|
+| 2026-06-23 | 0 | 3 | [[2026-06-23]] (OpenAI Daybreak cyber expansion; Moebius 0.2B inpainting; PP-OCRv6) |
+| 2026-06-22 | 0 | 1 | [[2026-06-22]] (Anthropic: coding no longer the bottleneck — verification is) |
+| 2026-06-21 | 0 | 0 | [[2026-06-21]] (no new signals; weekly [[weekly/2026-W25]] generated) |
+| 2026-06-20 | 0 | 2 | [[2026-06-20]] |
+| 2026-06-19 | 1 | 6 | [[2026-06-19]] |
+| 2026-06-18 | 0 | 3 | [[2026-06-18]] |
+| 2026-06-17 | 1 | 6 | [[2026-06-17]] |
+| ... | ... | ... | _(Apr 12 – Jun 16 briefs exist in `briefs/`; this index table was not maintained daily — see `radar.md` Scan Log for the full per-day record)_ |
 | 2026-04-11 | 7 | 12 | [[2026-04-11]] |
 | 2026-04-10 | 6 | 25 | [[2026-04-10]] |
 | 2026-04-09 | 10 | 21 | [[2026-04-09]] |

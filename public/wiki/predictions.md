@@ -6,12 +6,13 @@ tags:
   - force-dynamics
   - predictions
   - accountability
-last_updated: 2026-04-26
-total_predictions: 12
-correct: 0
+last_updated: 2026-06-17
+total_predictions: 14
+correct: 1
 incorrect: 1
+partial: 1
 pending: 11
-accuracy_rate: 0/1 resolved
+accuracy_rate: 1 correct / 1 incorrect / 1 partial of 3 resolved (small sample)
 ---
 
 # Prediction Registry
@@ -42,12 +43,13 @@ Never claim >95%. The world is too complex.
 
 ## Active Predictions
 
-### PRED-001: Anthropic Files for IPO by End of 2026
+### PRED-001: Anthropic Files for IPO by End of 2026 ✓ RESOLVED CORRECT
 
 **Claim:** Anthropic will file an S-1 (IPO registration document) with the SEC by December 31, 2026.
-**Confidence:** 83%
+**Resolution:** CORRECT — Anthropic submitted a confidential S-1 draft to the SEC on June 1, 2026. Primary source: @AnthropicAI official tweet. Satisfies falsification criteria verbatim: "Filing doesn't have to price — just the initial registration."
+**Final Confidence:** 91% → RESOLVED
 **Made:** 2026-03-27
-**Check date:** 2027-01-15
+**Check date:** 2027-01-15 (resolved early: 2026-06-01)
 
 **Based on:**
 - CONV-003: AI IPO wave convergence — 4 independent forces pointing at H2 2026 IPO window
@@ -65,15 +67,18 @@ Never claim >95%. The world is too complex.
 | 2026-04-01 | 75% → 82% | Bloomberg secondary market: record Anthropic demand + Epoch AI projection Anthropic overtakes OpenAI revenue by mid-2026. Growth rate differential is accelerating, not converging. |
 | 2026-04-02 | 82% → 83% | DOJ appeal of Pentagon ruling + Rep. Gottheimer letter elevates Anthropic political profile. Increased public/regulatory visibility strengthens the IPO narrative as Anthropic becomes a recognized policy player. |
 | 2026-04-07 | 83% → 88% | Anthropic revenue surpasses $30B run rate (3x in 4 months). 1,000+ enterprise customers at $1M+/year (doubled in 2 months). Mythos/Glasswing demonstrates category leadership in cybersecurity. 3.5GW TPU deal through 2031 shows long-term infrastructure commitment. Financial case for IPO is now overwhelming. |
+| 2026-05-22 | 88% → 91% | SpaceX S1 filing (primary source) references Anthropic as a named infrastructure tenant paying $1B+/month for Colossus data centers — this commitment appears in a public SEC document, showing Anthropic locked into a multi-year multi-billion compute contract structure that is only justifiable as a going concern with long-term planning. OpenAI reportedly filing IPO paperwork "as soon as this week" (TBPN — unverified but from TBPN which has been reliable for IPO signals). CONV-003 strengthened substantially. Anthropic #1 in Ramp paid business adoption (surpasses OpenAI). IPO window is now open with multiple candidates filing simultaneously — herd dynamics raise the probability that Anthropic files to avoid being the last major holdout. |
+| 2026-06-01 | 91% → RESOLVED CORRECT | Anthropic submitted confidential S-1 draft to SEC. Primary source: @AnthropicAI official tweet. Falsification criteria satisfied: "Filing doesn't have to price — just the initial registration." Resolution is early — check date was 2027-01-15, but the filing occurred 7 months ahead of the deadline. Confidence calibration: initial estimate was 75%; actual outcome aligns with high-confidence updating. |
 
 ---
 
-### PRED-002: Apple Announces Multi-Model Siri at WWDC June 2026
+### PRED-002: Apple Announces Multi-Model Siri at WWDC June 2026 ◐ RESOLVED PARTIALLY CORRECT
 
 **Claim:** Apple will announce at WWDC 2026 (expected June 8-12) that iOS 27 allows users to select alternative AI assistants (Claude, Gemini, etc.) as Siri backends, extending the current ChatGPT integration model.
-**Confidence:** 85%
+**Resolution (2026-06-15):** PARTIALLY CORRECT — **Direction right, specifics wrong.** Apple did rebuild Siri on a frontier model (Apple–Gemini multi-year partnership, June 12 signal), confirming the core thesis that Apple would outsource Siri's "brain" to a frontier lab. BUT the deal is **exclusive to Google Gemini**, not the user-selectable *multi-model* backend PRED-002 specifically claimed. Notably, "Apple signs exclusive deal with one AI provider" was listed verbatim in this prediction's own "What would change my mind" — that falsifier triggered. Classification: WRONG_SPECIFICS / RIGHT_DIRECTION.
+**Final Confidence:** 85% → RESOLVED (partial)
 **Made:** 2026-03-27
-**Check date:** 2026-06-15
+**Check date:** 2026-06-15 (resolved on date)
 
 **Based on:**
 - FC-004: Apple multi-model iOS force chain — Bloomberg (Gurman) report, typically highly reliable for Apple leaks
@@ -87,6 +92,7 @@ Never claim >95%. The world is too complex.
 | Date | Confidence Change | Reason |
 |------|-------------------|--------|
 | 2026-03-27 | Initial: 85% | Gurman report + 2 supporting signals from consecutive days |
+| 2026-06-15 | RESOLVED PARTIALLY CORRECT | Apple–Gemini exclusive multi-year Siri partnership (June 12 signal) confirms direction (Apple rents a frontier "brain") but contradicts the multi-model specific (exclusive, not user-selectable). Lesson: when the underlying force is "company X outsources capability," the *structure* (exclusive vs. open-market) is a separate, harder-to-call variable than the *direction*. Don't bundle a structural claim into a directional prediction at high confidence. |
 
 ---
 
@@ -109,6 +115,7 @@ Never claim >95%. The world is too complex.
 | Date | Confidence Change | Reason |
 |------|-------------------|--------|
 | 2026-03-27 | Initial: 60% | Strong need, but protocol evolution is slow and Anthropic may have other priorities |
+| 2026-05-18 | 60% → 65% | Anthropic acquires Stainless API (SDK generation + MCP server code). First-party control means spec changes and SDK updates can ship simultaneously — removes the implementation-lag bottleneck that was a secondary constraint on PRED-003. Does not directly address the type-system expressivity gaps (the core of PRED-003), but demonstrates Anthropic's institutional priority on MCP ecosystem investment. The acquisition is evidence against "Anthropic deprioritizes MCP maintenance" as a falsification scenario. |
 
 ---
 
@@ -134,6 +141,8 @@ Never claim >95%. The world is too complex.
 | 2026-03-27 | Initial: 70% | Multiple technical pathways to cost reduction, but demand growth could absorb gains |
 | 2026-04-02 | 70% → 75% | Gemma 4 (4B-active MoE) achieves frontier-competitive agent performance + Arcee Trinity 96% cheaper than Opus while ranking #2 on PinchBench. Model architecture efficiency is now an independent cost reduction vector compounding with hardware/compression gains. CONV-002 adds 5th force. |
 | 2026-04-07 | 75% → 82% | THREE new independent efficiency vectors in one day: TriAttention (10.7x KV reduction), CoDE-Stop (25-50% reasoning token savings), Cursor warp decode (1.84x MoE inference). CONV-002 moved to `imminent`. Cost collapse is happening simultaneously across compression, token generation efficiency, and hardware-specific optimization. |
+| 2026-05-20 | 82% → 82% (hold) | Gemini 3.5 Flash (Google I/O, May 20): priced at $1.50/$9.00 per 1M input/output tokens — approximately 3.6× MORE expensive per output token than Gemini 2.5 Flash (~$2.50/1M output). HOWEVER: (1) PRED-004 measures "most capable model" pricing — 3.5 Flash is a speed tier, not the frontier ceiling; the relevant comparison is Gemini 2.5 Pro pricing, not Flash-vs-Flash. (2) Google's token generation volume is 7× YoY — demand growth is absorbing efficiency gains, which is exactly the Jevons Paradox scenario in "what would change my mind." (3) 4× inference speed improvement at flash tier with claimed frontier capability means cost-per-task likely fell even if cost-per-token rose. Net: ambiguous signal. Flash-tier pricing increase is NOT a direct counter to PRED-004, but the 7× volume growth is early evidence the Jevons Paradox scenario is live. Watch Q3 pricing announcements for frontier-tier (Pro/Ultra) pricing trajectory. |
+| 2026-05-22 | 82% → 80% | NVIDIA Q1 FY2026 earnings: revenue $81.66B (+85% YoY), supply constrained, demand "far exceeding supply." Jensen Huang: hyperscaler capex going $780B→$1T. This confirms Jevons Paradox at the infrastructure level: efficiency gains (Cerebras 1,000 tok/s, multiple compression techniques) are being absorbed by demand, not flowing to price reductions. The "demand growth outpaces efficiency gains" scenario from "what would change my mind" is now evidenced by multiple data points simultaneously. Mild confidence reduction: the demand absorption mechanism is real, not just theoretical. Still well-supported by the technical efficiency vectors in CONV-002. Watching for Gemini 3.5 Pro pricing (expected June per Logan Kilpatrick) as the frontier-tier data point. |
 
 ---
 
@@ -240,6 +249,53 @@ Never claim >95%. The world is too complex.
 
 ---
 
+### PRED-013: AI-Accelerated Pre-Training Explicitly Adopted at 3+ Frontier Labs by Q4 2026
+
+**Claim:** At least 3 of the top 7 frontier labs (Anthropic, OpenAI, Google DeepMind, Meta, xAI, Mistral, DeepSeek) will publicly acknowledge using AI-generated data, AI-directed data curation, or AI-assisted training pipeline management to accelerate their own model pre-training by December 31, 2026.
+**Confidence:** 72%
+**Made:** 2026-05-27
+**Check date:** 2027-01-15
+
+**Based on:**
+- FC-066: MOSS 0.25→0.61 production source-level rewriting signals autonomous code modification approaching reliability threshold
+- Karpathy confirmed at Anthropic: Claude-accelerates-Claude pre-training (May 22, peterdiamandis podcast — Karpathy explicitly describing his initiative at Anthropic)
+- Meta HyperAgents recursive self-improvement (Mar 23, arxiv) — Meta academic research directly on recursive self-improvement agents
+- AlphaProof Nexus (May 25) — DeepMind using AI to discover and verify mathematical proofs means AI-assisted research pipeline is already operational at Google DeepMind
+- The mechanism is cost-driven: labs paying $1B+/month for compute are highly incentivized to use AI to reduce the data-curation labor and the number of training steps required
+
+**Falsification criteria:** Fewer than 3 frontier labs make a public acknowledgment (blog post, paper, or executive statement) of AI-assisted pre-training by 2027-01-15.
+**What would change my mind:** The Karpathy project at Anthropic is quietly cancelled or pivots away from pre-training acceleration; AlphaProof Nexus turns out to be post-training only; MOSS-style approaches hit a hard wall at 0.65 and don't improve further in 2026.
+
+**Status updates:**
+| Date | Confidence Change | Reason |
+|------|-------------------|--------|
+| 2026-05-27 | Initial: 72% | 3 independent signals (Karpathy/Anthropic, Meta HyperAgents, AlphaProof Nexus) from 3 separate labs pointing at the same mechanism. Not yet 80%+ because "public acknowledgment" is a higher bar than internal adoption — labs may be doing this without announcing it. |
+
+---
+
+### PRED-014: An Open-Weight Model Reaches #1 on a Major Customer-Relevant Code Leaderboard by Q4 2026
+
+**Claim:** At least one open-weight model (MIT/Apache/permissive or open-weights license) will hold the **#1** position on a major customer-relevant coding leaderboard (Code Arena / LMArena coding categories, or equivalent) — ahead of all closed frontier models — at some point on or before December 31, 2026.
+**Confidence:** 60%
+**Made:** 2026-06-17
+**Check date:** 2027-01-05
+
+**Based on:**
+- **GLM-5.2 (Zhipu, MIT) at #2 Code Arena: Frontend, June 16** — behind only Fable 5 (closed), +29pt over Opus 4.7 Thinking. An open model is now a single rung below the closed SOTA. [Verified: Arena.ai benchmark operator + @mervenoyann — meets Verification Floor]
+- Open-weight coding trajectory: GLM-5.1 #1-open on code arena (Apr 10), Kimi K2.6 beat GPT-5.4 + Opus 4.6 on SWE-Bench Pro (Apr 20), Qwen3.6-35B-A3B beat Opus on pelican-SVG (Apr 16) — open models have repeatedly taken #1 on *specific* benchmarks already.
+- Release cadence: Chinese open labs (Zhipu, Moonshot, MiniMax, Alibaba, DeepSeek) ship every few weeks; the closed #1 (Fable 5) is a fixed target between releases.
+- CONV-006 demand: export controls + sovereign-AI demand reward open labs that close the last rung.
+
+**Falsification criteria:** No open-weight model holds outright #1 on a major customer-relevant coding leaderboard (beating every closed model) at any measured point by 2027-01-05. Holding #2 (current GLM-5.2 state) does NOT satisfy the claim.
+**What would change my mind:** A closed lab ships a large discontinuous coding jump (another +8pp Fable-5-style step) that opens the gap back up; major leaderboards saturate or stop reporting closed-vs-open; Chinese open-lab release cadence slows due to commercialization (cf. Alibaba revenue pivot, Apr 11).
+
+**Status updates:**
+| Date | Confidence Change | Reason |
+|------|-------------------|--------|
+| 2026-06-17 | Initial: 60% | GLM-5.2 at #2 (behind only Fable 5) is the closest an open model has come to closed-SOTA #1 on a customer-relevant coding board. 60% (not higher) because #1 requires either an open jump or a closed stall, and Anthropic's +8pp Fable-5 step shows closed labs can still discontinuously extend the lead. |
+
+---
+
 ## Resolved Predictions
 
 ### Correct
@@ -255,7 +311,7 @@ Never claim >95%. The world is too complex.
 ### Partially Correct
 | ID | Claim | What Was Right | What Was Wrong | Lesson |
 |----|-------|---------------|---------------|--------|
-| | | | | |
+| PRED-002 | Apple announces user-selectable multi-model Siri at WWDC 2026 | Apple rebuilt Siri on a frontier model (Apple–Gemini partnership, June 12) — directional thesis correct | Deal is exclusive to Gemini, not user-selectable multi-model — the structural specific was wrong (and was its own listed falsifier) | Separate the *directional* claim ("Apple rents a frontier brain") from the *structural* claim ("user-selectable, multiple providers"). The structure is a distinct, lower-confidence variable; don't bundle it into a high-confidence directional bet. |
 
 ## Prediction Performance Dashboard
 
